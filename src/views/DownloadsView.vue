@@ -1,0 +1,194 @@
+<template>
+  <v-container>
+    <v-row>
+      <v-col cols="12">
+        <h1 class="text-h3 mb-6 text-center">Downloads</h1>
+      </v-col>
+
+      <v-col cols="12">
+        <v-card>
+          <v-card-text>
+            <v-row>
+              <v-col
+                v-for="(category, index) in downloadCategories"
+                :key="index"
+                cols="12"
+                md="6"
+              >
+                <v-card>
+                  <v-card-title class="text-h6">
+                    <v-icon start>{{ category.icon }}</v-icon>
+                    {{ category.title }}
+                  </v-card-title>
+
+                  <v-list>
+                    <v-list-item
+                      v-for="(file, fIndex) in category.files"
+                      :key="fIndex"
+                      :prepend-icon="file.icon"
+                    >
+                      <v-list-item-title>{{ file.name }}</v-list-item-title>
+                      <v-list-item-subtitle>{{ file.description }}</v-list-item-subtitle>
+                      <template v-slot:append>
+                        <v-btn
+                          color="primary"
+                          variant="text"
+                          :href="file.url"
+                          download
+                          :disabled="!file.url"
+                        >
+                          Download
+                          <v-icon end>mdi-download</v-icon>
+                        </v-btn>
+                      </template>
+                    </v-list-item>
+                  </v-list>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <!-- Additional Resources -->
+      <v-col cols="12" class="mt-4">
+        <v-card>
+          <v-card-title class="text-h5">
+            <v-icon start>mdi-link-variant</v-icon>
+            Additional Resources
+          </v-card-title>
+          <v-card-text>
+            <v-list>
+              <v-list-item
+                v-for="(resource, index) in additionalResources"
+                :key="index"
+                :prepend-icon="resource.icon"
+                :href="resource.url"
+                target="_blank"
+              >
+                <v-list-item-title>{{ resource.name }}</v-list-item-title>
+                <v-list-item-subtitle>{{ resource.description }}</v-list-item-subtitle>
+              </v-list-item>
+            </v-list>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script setup lang="ts">
+const downloadCategories = [
+  {
+    title: 'Templates',
+    icon: 'mdi-file-document-outline',
+    files: [
+      {
+        name: 'Paper Template (LaTeX)',
+        description: 'LaTeX template for full paper submission',
+        icon: 'mdi-language-cpp',
+        url: '@/assets/templates/paper_template_latex.zip'
+      },
+      {
+        name: 'Paper Template (Word)',
+        description: 'Microsoft Word template for full paper submission',
+        icon: 'mdi-microsoft-word',
+        url: '@/assets/templates/paper_template_word.docx'
+      },
+      {
+        name: 'Presentation Template',
+        description: 'PowerPoint template for oral presentations',
+        icon: 'mdi-microsoft-powerpoint',
+        url: '@/assets/templates/presentation_template.pptx'
+      }
+    ]
+  },
+  {
+    title: 'Guidelines',
+    icon: 'mdi-book-open-page-variant',
+    files: [
+      {
+        name: 'Author Guidelines',
+        description: 'Detailed guidelines for paper submission',
+        icon: 'mdi-file-pdf-box',
+        url: '@/assets/docs/author_guidelines.pdf'
+      },
+      {
+        name: 'Presentation Guidelines',
+        description: 'Instructions for oral presentations',
+        icon: 'mdi-file-pdf-box',
+        url: '@/assets/docs/presentation_guidelines.pdf'
+      },
+      {
+        name: 'Formatting Guide',
+        description: 'Detailed formatting instructions',
+        icon: 'mdi-file-pdf-box',
+        url: '@/assets/docs/formatting_guide.pdf'
+      }
+    ]
+  },
+  {
+    title: 'Forms',
+    icon: 'mdi-form-select',
+    files: [
+      {
+        name: 'Copyright Form',
+        description: 'Required for paper publication',
+        icon: 'mdi-file-pdf-box',
+        url: '@/assets/forms/copyright_form.pdf'
+      },
+      {
+        name: 'Registration Form',
+        description: 'Offline registration form',
+        icon: 'mdi-file-pdf-box',
+        url: '@/assets/forms/registration_form.pdf'
+      }
+    ]
+  },
+  {
+    title: 'Conference Materials',
+    icon: 'mdi-folder-outline',
+    files: [
+      {
+        name: 'Conference Schedule',
+        description: 'Detailed program schedule',
+        icon: 'mdi-calendar',
+        url: '@/assets/docs/conference_schedule.pdf'
+      },
+      {
+        name: 'Venue Map',
+        description: 'Conference venue and facilities map',
+        icon: 'mdi-map',
+        url: '@/assets/docs/venue_map.pdf'
+      }
+    ]
+  }
+]
+
+const additionalResources = [
+  {
+    name: 'IEEE Citation Guidelines',
+    description: 'Official IEEE reference formatting guidelines',
+    icon: 'mdi-book-open-variant',
+    url: 'https://ieee.org/citations'
+  },
+  {
+    name: 'LaTeX Tutorial',
+    description: 'Basic tutorial for LaTeX users',
+    icon: 'mdi-language-cpp',
+    url: 'https://latex-tutorial.com'
+  },
+  {
+    name: 'Conference FAQ',
+    description: 'Frequently asked questions about the conference',
+    icon: 'mdi-frequently-asked-questions',
+    url: '/faq'
+  }
+]
+</script>
+
+<style scoped>
+.v-list-item {
+  margin-bottom: 0.5rem;
+}
+</style> 
