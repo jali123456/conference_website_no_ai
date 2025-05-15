@@ -191,4 +191,18 @@ const additionalResources = [
 .v-list-item {
   margin-bottom: 0.5rem;
 }
+
+:deep(.v-list-item),
+:deep(.v-list-item-title),
+:deep(.v-list-item-subtitle),
+:deep(.v-list-item__content),
+:deep(.v-icon),
+:deep(.v-card-title),
+:deep(.v-card-subtitle) {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+:deep(.v-btn) {
+  color: #1976D2 !important;
+}
 </style> 

@@ -9,7 +9,7 @@
       <v-col cols="12" md="8">
         <v-card>
           <v-img
-            src="@/assets/venue.jpg"
+            src="@/assets/images/venue_1.jpg"
             height="400"
             cover
           ></v-img>
@@ -44,12 +44,16 @@
           <v-card-title class="text-h6">Location Map</v-card-title>
           <v-card-text>
             <div class="map-placeholder">
-              <!-- Replace this with actual map integration -->
-              <v-img
-                src="@/assets/map.jpg"
+              <iframe
+                width="100%"
                 height="300"
-                cover
-              ></v-img>
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                :src="`https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.002},${latitude - 0.002},${longitude + 0.002},${latitude + 0.002}&layer=mapnik&marker=${latitude},${longitude}&zoom=17`"
+                style="border: 1px solid #ccc"
+              ></iframe>
             </div>
           </v-card-text>
         </v-card>
@@ -64,11 +68,11 @@
               <v-col cols="12" md="6">
                 <v-card>
                   <v-img
-                    src="@/assets/hotel.jpg"
+                    src="@/assets/images/hotel/hotel_1.jpg"
                     height="250"
                     cover
                   ></v-img>
-                  <v-card-title>Grand Conference Hotel</v-card-title>
+                  <v-card-title>Sheraton Kuching Hotel</v-card-title>
                   <v-card-text>
                     <p class="mb-2">⭐⭐⭐⭐</p>
                     <p class="mb-2">Distance from venue: 0.5 km</p>
@@ -108,6 +112,9 @@
 </template>
 
 <script setup lang="ts">
+const longitude = 110.34449799256214;
+const latitude = 1.558768992436371;
+
 const transportation = [
   {
     mode: 'From Airport',

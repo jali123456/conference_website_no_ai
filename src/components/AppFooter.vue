@@ -1,7 +1,7 @@
 <!-- Appfooter.vue -->
 <template>
     <v-footer class="bg-custom-dark text-white footer-border pa-4">
-      <v-container class="pa-0">
+      <v-container fluid class="pa-0">
        <v-row class="d-flex mb-6">
          <v-col cols="4" class="text-center text-sm-left mb-2 mb-sm-0 me-auto">
            <h4 class="text-subtitle-1 mb-2">Hubungi Kami</h4>

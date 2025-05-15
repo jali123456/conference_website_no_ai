@@ -1,76 +1,121 @@
 <template>
-  <v-navigation-drawer
-    v-model="drawer"
-    :permanent="!mobile"
-    :temporary="mobile"
-    :rail="rail && !mobile"
-    @click="rail = false"
-    image="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
-    theme="dark"
-  >
-    <v-list>
-      <v-list-item
-        v-for="item in menuItems"
-        :key="item.title"
-        :to="item.path"
-        :prepend-icon="item.icon"
-        :title="item.title"
-      />
-    </v-list>
-  </v-navigation-drawer>
+  <v-app-bar :height="appBarHeight" color="white">
+    <v-container fluid class="px-4">
+      <!-- Top Row -->
+      <div class="d-flex justify-space-between align-center mt-2 w-100">
+        <v-sheet :class="{'d-none': display.width.value <= 550}">
+          <v-btn
+            v-for="(item, index) in leftIcons"
+            :key="index"
+            :to="item.to"
+            class="mx-1"
+          >
+            <v-icon start>{{ item.icon }}</v-icon>
+            <span class="text-h6">{{ item.text }}</span>
+          </v-btn>
+        </v-sheet>
 
-  <v-app-bar>
-    <v-app-bar-nav-icon 
-      @click="toggleDrawer"
-      :icon="rail && !mobile ? 'mdi-menu' : 'mdi-menu'"
-    ></v-app-bar-nav-icon>
-    <v-app-bar-title>Conference 2024</v-app-bar-title>
+        <v-sheet width="250" :class="{'mx-auto': display.width.value <= 550}" class="d-flex align-center justify-center mt-4">
+          <v-img
+            src="@/assets/logo.png"
+            :width="250"
+            :height="125"
+            cover
+            @click="navigateToHome"
+            class="logo-image"
+          ></v-img>
+        </v-sheet>
+
+        <v-sheet :class="{'d-none': display.width.value <= 550}">
+          <v-btn
+            v-for="(item, index) in rightIcons"
+            :key="index"
+            :to="item.to"
+            class="mx-1"
+          >
+            <v-icon start>{{ item.icon }}</v-icon>
+            <span class="text-h6">{{ item.text }}</span>
+          </v-btn>
+        </v-sheet>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="d-flex justify-space-between align-center w-100">
+        <v-sheet>
+          <v-chip
+            @click="toggleDrawer"
+            :class="{'d-none': $vuetify.display.width > 959}"
+            variant="elevated"
+            class="pa-2"
+          >
+            <span class="mr-2">Menu</span>
+            <v-icon>mdi-chevron-down</v-icon>
+          </v-chip>
+        </v-sheet>
+
+        <v-sheet>
+          <!-- Empty sheet for balanced spacing -->
+        </v-sheet>
+
+        <v-sheet>
+          <!-- Empty sheet for balanced spacing -->
+        </v-sheet>
+      </div>
+    </v-container>
   </v-app-bar>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { computed } from 'vue'
+import { useDisplay } from 'vuetify'
+import router from '@/router'
 
-const drawer = ref(true)
-const rail = ref(false)
-const mobile = ref(false)
-
-const updateMobile = () => {
-  mobile.value = window.innerWidth < 960
-  drawer.value = !mobile.value
-}
-
-const toggleDrawer = () => {
-  if (mobile.value) {
-    drawer.value = !drawer.value
-  } else {
-    rail.value = !rail.value
-  }
-}
-
-onMounted(() => {
-  updateMobile()
-  window.addEventListener('resize', updateMobile)
+const display = useDisplay()
+const appBarHeight = computed(() => {
+  return display.width.value <= 612 ? 300 : 250
 })
 
-onUnmounted(() => {
-  window.removeEventListener('resize', updateMobile)
-})
+const navigateToHome = (): void => {
+  window.location.href = '/'
+}
 
-const menuItems = [
-  { title: 'Home', path: '/', icon: 'mdi-home' },
-  { title: 'Keynote Speakers', path: '/keynote-speakers', icon: 'mdi-account-group' },
-  { title: 'Fees & Registration', path: '/fees-registration', icon: 'mdi-currency-usd' },
-  { title: 'Venue & Accommodation', path: '/venue-accommodation', icon: 'mdi-map-marker' },
-  { title: 'Programme & Dates', path: '/programme-dates', icon: 'mdi-calendar' },
-  { title: 'Guidelines & Publication', path: '/guidelines-publication', icon: 'mdi-book-open-variant' },
-  { title: 'Paper Submission', path: '/paper-submission', icon: 'mdi-file-document' },
-  { title: 'Downloads', path: '/downloads', icon: 'mdi-download' }
+const emit = defineEmits(['update:drawer'])
+
+const toggleDrawer = (): void => {
+  emit('update:drawer')
+}
+
+const leftIcons = [
+  { icon: 'mdi-information', text: 'About', to: '/about' },
+  { icon: 'mdi-frequently-asked-questions', text: 'FAQ', to: '/faq' },
+  { icon: 'mdi-newspaper', text: 'News', to: '/news' },
+  { icon: 'mdi-calendar-clock', text: 'Schedule', to: '/schedule' }
+]
+
+const rightIcons = [
+  { icon: 'mdi-account', text: 'Profile', to: '/profile' },
+  { icon: 'mdi-cog', text: 'Settings', to: '/settings' }
 ]
 </script>
 
 <style scoped>
-.v-navigation-drawer {
-  transition: 0.2s ease-in-out;
+.v-app-bar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.v-btn {
+  text-transform: none;
+}
+
+.logo-image {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
 }
 </style>
