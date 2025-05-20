@@ -75,7 +75,12 @@ const MainRoutes = {
             path: 'downloads',
             name: 'Downloads',
             component: () => import('@/views/DownloadsView.vue'),
-        }   
+        },
+        {
+            path: 'contact',
+            name: 'Contact',
+            component: () => import('@/views/ContactView.vue'),
+        },
     ]
 }
 

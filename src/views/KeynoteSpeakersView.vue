@@ -9,7 +9,7 @@
         <v-card>
           <v-img
             src="@/assets/speakers-banner.jpg"
-            height="400"
+            height="1400"
             cover
           ></v-img>
 
