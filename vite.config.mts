@@ -66,7 +66,7 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    allowedHosts: ['testing.jali123456.win'],
+    allowedHosts: ['testing.jali123456.win', 'testing2.jali123456.win'],
   },
   css: {
     preprocessorOptions: {
