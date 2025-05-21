@@ -14,5 +14,6 @@ declare module 'vue' {
     ParticipantQRCode: typeof import('./components/ParticipantQRCode.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Transportation: typeof import('./components/Transportation.vue')['default']
   }
 }

@@ -1,3 +1,4 @@
+<!-- Default.vue -->
 <template>
   <v-app>
     <app-header @update:drawer="drawer = !drawer" />
@@ -41,6 +42,7 @@
                   ></v-list-item>
                 </v-list>
               </v-sheet>
+              <CountdownTimer />
 
               <!-- Bottom List - Only shown on Home page -->
               <v-sheet
@@ -48,7 +50,7 @@
                 rounded="lg"
                 class="mt-auto"
               >
-                <v-list
+                <!-- <v-list
                   rounded="lg"
                   :bg-color="'rgba(18, 30, 57, 0.8)'"
                   class="py-2"
@@ -90,7 +92,7 @@
                     title="Quick Submit"
                     to="/paper-submission"
                   ></v-list-item>
-                </v-list>
+                </v-list> -->
               </v-sheet>
             </div>
           </v-col>
@@ -125,7 +127,7 @@ onUnmounted(() => {
 
 const menuItems = [
   { title: 'Home', path: '/', icon: 'mdi-home' },
-  { title: 'Keynote Speakers', path: '/keynote-speakers', icon: 'mdi-account-group' },
+  { title: 'Panel List', path: '/panel-list', icon: 'mdi-account-group' },
   { title: 'Fees & Registration', path: '/fees-registration', icon: 'mdi-currency-usd' },
   { title: 'Venue & Accommodation', path: '/venue-accommodation', icon: 'mdi-map-marker' },
   { title: 'Programme & Dates', path: '/programme-dates', icon: 'mdi-calendar' },

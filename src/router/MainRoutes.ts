@@ -42,9 +42,9 @@ const MainRoutes = {
             component: () => import('@/views/SettingsView.vue'),
         },
         {
-            path: 'keynote-speakers',
-            name: 'KeynoteSpeakers',
-            component: () => import('@/views/KeynoteSpeakersView.vue'),
+            path: 'panel-list',
+            name: 'PanelList',
+            component: () => import('@/views/PanelList.vue'),
         },
         {
             path: 'fees-registration',

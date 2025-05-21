@@ -4,7 +4,6 @@
       <v-col cols="12">
         <h1 class="text-h3 mb-6 text-center">Downloads</h1>
       </v-col>
-
       <v-col cols="12">
         <v-card>
           <v-card-text>
@@ -160,6 +159,12 @@ const downloadCategories = [
         description: 'Conference venue and facilities map',
         icon: 'mdi-map',
         url: '@/assets/docs/venue_map.pdf'
+      },
+            {
+        name: 'Booklet',
+        description: 'Conference booklet and informations',
+        icon: 'mdi-book',
+        url: '@/assets/docs/booklet.pdf'
       }
     ]
   }

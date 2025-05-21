@@ -29,54 +29,23 @@
           </v-card-text>
         </v-card>
       </v-col>
-
-      <!-- Mission & Vision -->
-      <v-col cols="12" md="6">
+      <!-- Objectives -->
+      <v-col cols="12">
         <v-card class="mb-6">
           <v-card-title class="text-h5">
             <v-icon start>mdi-bullseye-arrow</v-icon>
-            Our Mission
+            Conference Objectives
           </v-card-title>
           <v-card-text>
             <p class="text-body-1">
-              Our mission is to accelerate technological advancement through meaningful exchange 
-              of ideas, methodologies, and research outcomes. We provide a platform where scholars, 
-              practitioners, and innovators can showcase their work, receive constructive feedback, 
-              and build relationships that extend beyond the conference.
+              i. Provide a scholarly platform for researchers, legal practitioners, and policymakers to share ideas, research findings, and best practices.<br><br>
+              ii. Strengthen strategic collaboration networks between academic institutions, enforcement agencies, and industry to enhance the quality of governance and integrity.<br><br>
+              iii. Encourage the production of high-quality research that directly contributes to policy improvements and the effective implementation of laws.<br><br>
+              iv. Attract the involvement of researchers and experts from within and outside the country to establish cross-border collaboration with ELMU in the fields of enforcement, law, and integrity.
             </p>
-            <div class="mt-4">
-              <div v-for="(point, index) in missionPoints" :key="index" class="d-flex align-center mb-2">
-                <v-icon color="primary" class="mr-2">mdi-check-circle</v-icon>
-                <span>{{ point }}</span>
-              </div>
-            </div>
           </v-card-text>
         </v-card>
       </v-col>
-
-      <v-col cols="12" md="6">
-        <v-card class="mb-6">
-          <v-card-title class="text-h5">
-            <v-icon start>mdi-eye</v-icon>
-            Our Vision
-          </v-card-title>
-          <v-card-text>
-            <p class="text-body-1">
-              We envision a future where technology serves humanity by addressing global 
-              challenges and enhancing quality of life. Our conference strives to be at the 
-              forefront of technological discourse, driving innovation that is ethical, 
-              sustainable, and beneficial to society.
-            </p>
-            <div class="mt-4">
-              <div v-for="(point, index) in visionPoints" :key="index" class="d-flex align-center mb-2">
-                <v-icon color="primary" class="mr-2">mdi-lightbulb-on</v-icon>
-                <span>{{ point }}</span>
-              </div>
-            </div>
-          </v-card-text>
-        </v-card>
-      </v-col>
-
       <!-- Organizing Committee -->
       <v-col cols="12">
         <v-card>
@@ -86,13 +55,27 @@
           </v-card-title>
           <v-card-text>
             <v-row>
-              <v-col v-for="(member, index) in committeeMembers" :key="index" cols="12" md="4">
+              <v-col cols="12" md="4">
                 <v-card variant="outlined">
-                  <v-card-title>{{ member.name }}</v-card-title>
-                  <v-card-subtitle>{{ member.position }}</v-card-subtitle>
+                  <v-card-title>Law Enforcement</v-card-title>
                   <v-card-text>
-                    <p>{{ member.affiliation }}</p>
-                    <p class="text-caption mt-2">{{ member.bio }}</p>
+                    At the heart of the ICELIn26 Conference is a commitment to enhancing the effectiveness and professionalism of law enforcement institutions. This theme explores current challenges faced by enforcement agencies and highlights innovative strategies to strengthen operational integrity, inter-agency collaboration, and public accountability. Through focused discussions and knowledge exchange, the conference aims to support enforcement bodies in upholding justice, protecting citizens' rights, and responding effectively to emerging threats in a rapidly evolving global landscape.
+                  </v-card-text>
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="4">
+                <v-card variant="outlined">
+                  <v-card-title>Law</v-card-title>
+                  <v-card-text>
+                    The theme of Law at ICELIn26 provides a critical platform to examine the foundations, evolution, and reform of legal systems. It brings together legal scholars, practitioners, and policymakers to discuss contemporary legal issues, legislative developments, and the need for responsive legal frameworks that reflect the values of fairness, equality, and the rule of law. By addressing gaps in legal access and judicial processes, this theme supports the development of a more inclusive and just legal environment, aligned with democratic principles and societal needs.
+                  </v-card-text>
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="4">
+                <v-card variant="outlined">
+                  <v-card-title>Integrity</v-card-title>
+                  <v-card-text>
+                    Integrity lies at the core of trustworthy governance and effective public institutions. This theme focuses on promoting ethical leadership, anti-corruption measures, and transparent governance practices. ICELIn26 will showcase best practices, case studies, and policy innovations aimed at embedding integrity into institutional culture across sectors. By fostering dialogue among stakeholders from academia, government, civil society, and the private sector, the conference encourages a shared commitment to accountability, ethical conduct, and the restoration of public trust in the justice system.
                   </v-card-text>
                 </v-card>
               </v-col>

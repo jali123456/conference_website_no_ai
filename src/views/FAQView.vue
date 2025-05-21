@@ -26,7 +26,7 @@
                       :key="faqIndex"
                       class="mb-4"
                     >
-                      <v-card variant="outlined" class="w-100">
+                      <v-card variant="outlined" class="w-100 text-black">
                         <v-card-title class="text-subtitle-1 font-weight-bold">
                           {{ faq.question }}
                         </v-card-title>
@@ -146,24 +146,6 @@ const faqCategories = [
       {
         question: "What dining options are available at the venue?",
         answer: "The venue has a cafeteria and several restaurants within walking distance. Lunch is included in the registration fee for all conference days."
-      }
-    ]
-  },
-  {
-    title: "Virtual Participation",
-    icon: "mdi-laptop",
-    items: [
-      {
-        question: "Can I attend the conference virtually?",
-        answer: "Yes, we offer a virtual attendance option. Virtual attendees will have access to livestreams of keynotes and selected sessions, as well as an online platform for networking."
-      },
-      {
-        question: "How can I present my paper virtually?",
-        answer: "Virtual presenters will be given a time slot and will present via our virtual conference platform. Technical guidelines will be sent to all virtual presenters."
-      },
-      {
-        question: "Is there a discount for virtual attendance?",
-        answer: "Yes, virtual attendance has a reduced registration fee. Please see the Registration page for details."
       }
     ]
   }

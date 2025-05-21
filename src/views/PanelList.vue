@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h1 class="text-h3 mb-6 text-center">Keynote Speakers</h1>
+        <h1 class="text-h3 mb-6 text-center">Conference Panel</h1>
       </v-col>
 
       <v-col cols="12">

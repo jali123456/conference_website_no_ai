@@ -1,9 +1,11 @@
+<!-- AppHeader.vue -->
 <template>
   <v-app-bar :height="appBarHeight" color="white">
     <v-container fluid class="px-4">
       <!-- Top Row -->
-      <div class="d-flex justify-space-between align-center mt-2 w-100">
-        <v-sheet :class="{'d-none': display.width.value <= 550}">
+      <v-row class="d-flex justify-space-between mb-6 align-stretch">
+        <!-- Left section: Menu items -->
+        <v-col cols="4" :class="{'d-none': display.width.value <= 550}" class="mt-3">
           <v-btn
             v-for="(item, index) in leftIcons"
             :key="index"
@@ -13,21 +15,24 @@
             <v-icon start>{{ item.icon }}</v-icon>
             <span class="text-h6">{{ item.text }}</span>
           </v-btn>
-        </v-sheet>
+        </v-col>
 
-        <v-sheet width="250" :class="{'mx-auto': display.width.value <= 550}" class="d-flex align-center justify-center mt-4">
+        <!-- Middle section: Logo -->
+        <v-col cols="4" :class="{'mx-auto': display.width.value <= 550}" class="text-center">
           <v-img
             src="@/assets/logo.png"
-            :width="250"
-            :height="125"
-            cover
+            :width="300"
+            :height="200"
+            contain
             @click="navigateToHome"
-            class="logo-image"
+            class="logo-image mx-auto"
           ></v-img>
-        </v-sheet>
+        </v-col>
 
-        <v-sheet :class="{'d-none': display.width.value <= 550}">
-          <v-btn
+        <!-- Right section: Empty for now but reserved for future menu items -->
+        <v-col cols="4" :class="{'d-none': display.width.value <= 550}" class="text-right">
+          <!-- Placeholder for future content -->
+          <!-- <v-btn
             v-for="(item, index) in rightIcons"
             :key="index"
             :to="item.to"
@@ -35,9 +40,9 @@
           >
             <v-icon start>{{ item.icon }}</v-icon>
             <span class="text-h6">{{ item.text }}</span>
-          </v-btn>
-        </v-sheet>
-      </div>
+          </v-btn> -->
+        </v-col>
+      </v-row>
 
       <!-- Bottom Row -->
       <div class="d-flex justify-space-between align-center w-100">
@@ -89,7 +94,7 @@ const leftIcons = [
   { icon: 'mdi-information', text: 'About', to: '/about' },
   { icon: 'mdi-frequently-asked-questions', text: 'FAQ', to: '/faq' },
   { icon: 'mdi-newspaper', text: 'News', to: '/news' },
-  { icon: 'mdi-calendar-clock', text: 'Schedule', to: '/schedule' }
+  // { icon: 'mdi-calendar-clock', text: 'Schedule', to: '/schedule' }
 ]
 
 const rightIcons = [

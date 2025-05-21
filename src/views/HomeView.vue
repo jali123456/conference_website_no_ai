@@ -3,9 +3,6 @@
     <v-row>
       <v-col cols="12">
         <v-card class="mx-auto" max-width="1200">
-          <div class="d-flex justify-center">
-            <CountdownTimer class="ma-4"/>
-          </div>
           <div class="position-relative">
             <v-img
               src="@/assets/conference-banner.png"
@@ -91,11 +88,26 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-row class="mt-6">
+    <v-col cols="12" class="sponsor-section">
+      <v-card class="mx-auto" max-width="1200">
+        <v-img
+          src="https://placehold.co/1200x600?text=Sponsor+Logo"
+          alt="Sponsor Logo"
+          height="600"
+          width="1200"
+          cover
+          class="text-white"
+        >
+          <!-- You can add sponsor logo or text here if needed -->
+        </v-img>
+      </v-card>
+    </v-col>
+  </v-row>
   </v-container>
 </template>
 
 <script setup lang="ts">
-import CountdownTimer from '@/components/CountdownTimer.vue'
 // Component logic can be added here if needed
 </script>
 
