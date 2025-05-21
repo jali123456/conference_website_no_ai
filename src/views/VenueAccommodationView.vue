@@ -14,12 +14,12 @@
             cover
           ></v-img>
           
-          <v-card-title class="text-h5">Sheraton Kuching Hotel</v-card-title>
+          <v-card-title class="text-h5">Waterfront Hotel Kuching</v-card-title>
           <v-card-text>
-            <div class="text-h6 mb-2">University Convention Center</div>
+            <div class="text-h6 mb-2">Waterfront Events Hall</div>
             <p class="mb-4">
-              2, Jalan Padungan, Kuching, Malaysia<br>
-              Kuching, Sarawak<br>
+              68 Jalan Tun Abang Haji Openg,<br>
+              93000 Kuching, Sarawak<br>
               Malaysia
             </p>
             
@@ -120,8 +120,8 @@
 </template>
 
 <script setup lang="ts">
-const longitude = 110.35308737771425;
-const latitude = 1.5565921503017193;
+const longitude = 110.34449804478993;
+const latitude = 1.5587105547653426;
 
 import theRaneeImage from '@/assets/images/hotel/hotel_8.jpg';
 import theMarianImage from '@/assets/images/hotel/hotel_7.jpg';

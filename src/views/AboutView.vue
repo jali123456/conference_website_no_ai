@@ -51,13 +51,13 @@
         <v-card>
           <v-card-title class="text-h5">
             <v-icon start>mdi-account-group</v-icon>
-            Organizing Committee
+            Cluster
           </v-card-title>
           <v-card-text>
             <v-row>
               <v-col cols="12" md="4">
                 <v-card variant="outlined">
-                  <v-card-title>Law Enforcement</v-card-title>
+                  <v-card-title>Enforcement</v-card-title>
                   <v-card-text>
                     At the heart of the ICELIn26 Conference is a commitment to enhancing the effectiveness and professionalism of law enforcement institutions. This theme explores current challenges faced by enforcement agencies and highlights innovative strategies to strengthen operational integrity, inter-agency collaboration, and public accountability. Through focused discussions and knowledge exchange, the conference aims to support enforcement bodies in upholding justice, protecting citizens' rights, and responding effectively to emerging threats in a rapidly evolving global landscape.
                   </v-card-text>

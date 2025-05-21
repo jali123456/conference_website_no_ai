@@ -169,7 +169,7 @@ const newsCategories = [
 
 const featuredNews = {
   title: 'Renowned AI Expert Dr. Lisa Chen to Deliver Keynote',
-  date: 'June 5, 2023',
+  date: 'June 5, 2026',
   summary: "We are thrilled to announce that Dr. Lisa Chen, leading AI researcher and CEO of FutureTech AI, will deliver the opening keynote address at this year's conference. Dr. Chen will discuss 'The Future of Ethical AI in Society' and share insights from her groundbreaking work in responsible AI development.",
   image: '@/assets/news/keynote-announcement.jpg',
   link: '/news/keynote-announcement',
@@ -179,49 +179,49 @@ const featuredNews = {
 const newsItems: NewsItem[] = [
   {
     title: 'Paper Submission Deadline Extended',
-    date: 'May 20, 2023',
+    date: 'May 20, 2026',
     summary: 'Due to numerous requests, we have extended the paper submission deadline by two weeks to June 1, 2023. This is the final extension, and no further extensions will be granted.',
-    image: '@/assets/news/deadline-extension.jpg',
+    image: 'https://placehold.co/600x200',
     link: '/news/submission-extended',
     categories: ['Call for Papers']
   },
   {
     title: 'Early Bird Registration Now Open',
-    date: 'May 15, 2023',
+    date: 'May 15, 2026',
     summary: 'Take advantage of our early bird registration rates before June 30. Early registrants receive a 20% discount on conference fees and guaranteed accommodation at our partner hotels.',
-    image: '@/assets/news/early-registration.jpg',
+    image: 'https://placehold.co/600x200',
     link: '/news/early-registration',
     categories: ['Registration']
   },
   {
     title: 'New Platinum Sponsor Announced',
-    date: 'May 10, 2023',
+    date: 'May 10, 2026',
     summary: 'We are pleased to welcome TechInnovate as our newest Platinum sponsor. Their support will enable us to enhance the conference experience with additional networking events.',
-    image: '@/assets/news/sponsor-announcement.jpg',
+    image: 'https://placehold.co/600x200',
     link: '/news/new-sponsor',
     categories: ['Sponsors']
   },
   {
     title: 'Workshop on Quantum Computing Added',
-    date: 'May 5, 2023',
+    date: 'May 5, 2026',
     summary: 'A new pre-conference workshop on "Practical Applications of Quantum Computing" has been added to the program. The workshop will be led by Dr. James Wilson from Quantum Labs.',
-    image: '@/assets/news/workshop-announcement.jpg',
+    image: 'https://placehold.co/600x200',
     link: '/news/quantum-workshop',
     categories: ['Program Updates']
   },
   {
     title: 'Virtual Attendance Option Available',
-    date: 'April 28, 2023',
+    date: 'April 28, 2026',
     summary: 'For those unable to travel, we now offer a comprehensive virtual attendance option. Virtual attendees will have access to livestreams of all main sessions and interactive networking opportunities.',
-    image: '@/assets/news/virtual-attendance.jpg',
+    image: 'https://placehold.co/600x200',
     link: '/news/virtual-option',
     categories: ['Registration']
   },
   {
     title: 'Conference Venue Tour Available Online',
-    date: 'April 20, 2023',
+    date: 'April 20, 2026',
     summary: 'Take a virtual tour of our conference venue and surrounding facilities. The tour includes the main hall, workshop rooms, dining areas, and nearby accommodations.',
-    image: '@/assets/news/venue-tour.jpg',
+    image: 'https://placehold.co/600x200',
     link: '/news/venue-tour',
     categories: ['Venue']
   }

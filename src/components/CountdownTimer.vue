@@ -1,4 +1,4 @@
-<!-- CountdownTimer -->
+<!-- CountdownTimer.vue -->
 <template>
   <div :class="wrapperClass">
     <v-card
@@ -7,7 +7,7 @@
       rounded="lg"  
       :color="'rgba(18, 30, 57, 1)'"
     >
-      <v-card-text class="countdown-container">
+      <v-card-text class="countdown-container pa-2">
         <div class="time-section text-white"> 
           <div class="time-value">{{ days }}</div>
           <div class="time-label">Days</div>
@@ -23,12 +23,12 @@
           <div class="time-label">Minutes</div>
         </div>
         <div class="time-divider text-white">:</div>
-        <div class="time-section text-white">
+        <div class="time-section text-white seconds-section">
           <div class="time-value">{{ seconds }}</div>
           <div class="time-label">Seconds</div>
         </div>
       </v-card-text>
-      <v-card-text class="text-center text-body-1 text-white">
+      <v-card-text class="text-center text-caption text-white pb-2 pt-0">
         Conference starts: {{ formattedTargetDate }}
       </v-card-text>
     </v-card>
@@ -55,9 +55,10 @@ const formattedTargetDate = targetDate.toLocaleString('en-US', {
   timeZoneName: 'short'
 })
 
-// Responsive class
+// Enhanced responsive design
 const { mobile } = useDisplay()
-const wrapperClass = computed(() => (mobile.value ? 'bottom-timer' : 'sidebar-timer'))
+
+const wrapperClass = computed(() => mobile.value ? 'bottom-timer' : 'sidebar-timer')
 
 const calculateTimeLeft = () => {
   const now = Date.now()
@@ -91,7 +92,6 @@ onBeforeUnmount(() => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* Remove padding as it will be handled by the parent v-sheet */
   width: 100%;
 }
 
@@ -100,39 +100,103 @@ onBeforeUnmount(() => {
   width: 90%;
   margin: 0 auto;
   left: 5%;
-  padding: 8px; /* Keep padding for bottom-timer as it's not wrapped by another v-sheet */
+  padding: 8px;
   justify-content: center;
 }
 
 .countdown-card {
-  /* Remove background and border-radius here as they are now handled by Vuetify props */
-  color: white; /* Keep text color white */
-  padding: 16px; /* Keep internal padding for card content */
+  color: white;
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
 }
 
 .countdown-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .time-section {
   text-align: center;
+  flex: 1;
+  min-width: 0;
 }
 
 .time-value {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
 .time-label {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
 
 .time-divider {
   font-size: 1.5rem;
+  padding: 0 2px;
+}
+
+/* Step-down breakpoints */
+@media (max-width: 1765px) and (min-width: 601px) {
+  .seconds-section {
+    flex-basis: 100%;
+    margin-top: 10px;
+    order: 4;
+  }
+  
+  .time-divider:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 601px) {
+  .time-section:nth-child(5) {
+    flex-basis: 100%;
+    margin-top: 10px;
+    order: 3;
+  }
+  
+  .time-divider:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 601px) {
+  .time-section:nth-child(3) {
+    flex-basis: 100%;
+    margin-top: 10px;
+    order: 2;
+  }
+  
+  .time-divider:nth-child(2) {
+    display: none;
+  }
+}
+
+/* Mobile view - everything in one line */
+@media (max-width: 600px) {
+  .countdown-container {
+    flex-wrap: nowrap;
+  }
+  
+  .time-section {
+    flex: 1;
+  }
+  
+  .time-value {
+    font-size: 1.4rem;
+  }
+  
+  .time-label {
+    font-size: 0.65rem;
+  }
+  
+  .time-divider {
+    font-size: 1.2rem;
+    padding: 0 1px;
+  }
 }
 </style>

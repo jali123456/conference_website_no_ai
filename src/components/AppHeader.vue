@@ -5,7 +5,7 @@
       <!-- Top Row -->
       <v-row class="d-flex justify-space-between mb-6 align-stretch">
         <!-- Left section: Menu items -->
-        <v-col cols="4" :class="{'d-none': display.width.value <= 550}" class="mt-3">
+        <v-col cols="4" class="mt-3">
           <v-btn
             v-for="(item, index) in leftIcons"
             :key="index"
@@ -73,7 +73,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useDisplay } from 'vuetify'
-import router from '@/router'
 
 const display = useDisplay()
 const appBarHeight = computed(() => {

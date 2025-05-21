@@ -45,7 +45,7 @@
                     <v-icon color="primary" class="mr-4">mdi-email</v-icon>
                   </template>
                   <v-list-item-title>Email</v-list-item-title>
-                  <v-list-item-subtitle>contact@conference.org</v-list-item-subtitle>
+                  <v-list-item-subtitle>icelin@elmu.edu.my</v-list-item-subtitle>
                 </v-list-item>
 
                 <v-list-item>
@@ -61,7 +61,14 @@
                     <v-icon color="primary" class="mr-4">mdi-map-marker</v-icon>
                   </template>
                   <v-list-item-title>Address</v-list-item-title>
-                  <v-list-item-subtitle>123 Conference St, City, Country</v-list-item-subtitle>
+                  <v-list-item-subtitle>Persiaran Timur 1,
+                  Bandar Enstek, 71760 Nilai,
+                  Negeri Sembilan, MALAYSIA.
+
+                  Hotline No: 1-300-88-ELMU (3568)
+
+                  Email: enquiries@elmu.edu.my
+                  </v-list-item-subtitle>
                 </v-list-item>
               </v-list>
 

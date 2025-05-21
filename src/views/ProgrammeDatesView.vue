@@ -32,40 +32,48 @@
 
       <!-- Conference Programme -->
       <v-col cols="12">
-        <v-card>
-          <v-card-title class="text-h5">Conference Programme</v-card-title>
-          <v-card-text>
-            <v-tabs v-model="activeTab">
-              <v-tab value="day1">Day 1</v-tab>
-              <v-tab value="day2">Day 2</v-tab>
-            </v-tabs>
+          <v-card>
+            <v-card-title class="text-h5">Conference Programme</v-card-title>
+            <v-card-text>
+              <v-tabs v-model="activeTab">
+                <v-tab value="day1">Day 1</v-tab>
+                <v-tab value="day2">Day 2</v-tab>
+              </v-tabs>
 
-            <v-window v-model="activeTab">
-              <v-window-item
-                v-for="(day, index) in programme"
-                :key="index"
-                :value="'day' + (index + 1)"
-              >
-                <v-list lines="two">
-                  <template v-for="(session, sIndex) in day" :key="sIndex">
-                    <v-list-subheader>{{ session.time }}</v-list-subheader>
-                    <v-list-item >
-                      <v-list-item-title class="text-black">{{ session.title }}</v-list-item-title>
-                      <v-list-item-subtitle class="text-black">
-                        {{ session.location }}
-                        <template v-if="session.speaker">
-                          <br>Speaker: {{ session.speaker }}
-                        </template>
-                      </v-list-item-subtitle>
-                    </v-list-item>
-                    <v-divider v-if="sIndex < day.length - 1"></v-divider>
-                  </template>
-                </v-list>
-              </v-window-item>
-            </v-window>
-          </v-card-text>
-        </v-card>
-      </v-col>
+              <v-window v-model="activeTab">
+                <v-window-item
+                  v-for="(day, index) in programme"
+                  :key="index"
+                  :value="'day' + (index + 1)"
+                >
+                  <v-subheader class="text-h6 mt-4 mb-2">
+                    {{ day[0].date }}
+                  </v-subheader>
+                  <v-list lines="two">
+                    <template v-for="(session, sIndex) in day" :key="sIndex">
+                      <v-list-subheader>{{ session.time }}</v-list-subheader>
+                      <v-list-item>
+                        <v-list-item-title class="text-black">{{ session.title }}</v-list-item-title>
+                        <v-list-item-subtitle class="text-black">
+                          {{ session.location }}
+                          <template v-if="session.details && Array.isArray(session.details)">
+                            <div v-for="(detail, dIndex) in session.details" :key="dIndex">
+                              {{ detail }}
+                            </div>
+                          </template>
+                          <template v-if="session.speaker">
+                            <br>Speaker: {{ session.speaker }}
+                          </template>
+                        </v-list-item-subtitle>
+                      </v-list-item>
+                      <v-divider v-if="sIndex < day.length - 1"></v-divider>
+                    </template>
+                  </v-list>
+                </v-window-item>
+              </v-window>
+            </v-card-text>
+          </v-card>
+        </v-col>
     </v-row>
   </v-container>
 </template>
@@ -137,56 +145,140 @@ const programme = [
   [
     {
       time: '08:00 - 09:00',
-      title: 'Registration & Coffee',
-      location: 'Main Hall'
+      title: 'Registration',
+      location: 'The Waterfront Hotel, Kuching',
+      date: '12 August 2026'
     },
     {
-      time: '09:00 - 10:30',
-      title: 'Opening Ceremony & Keynote Speech',
-      location: 'Grand Auditorium',
-      speaker: 'Dr. Sarah Johnson'
+      time: '09:00 - 10:00',
+      title: 'Opening Ceremony',
+      location: 'The Waterfront Hotel, Kuching',
+      details: [
+        "Recitation of Du'a",
+        "Negaraku",
+        "Welcoming speech by Dean School of Investigative Sciences & Chairman ICELIn26",
+        "Welcoming speech by Premier of Sarawak",
+        "Welcoming speech by VC ELMU",
+        "Officiating Speech and Opening by Premier of Sarawak",
+        "Group Photo Session"
+      ]
     },
     {
-      time: '11:00 - 12:30',
-      title: 'Session 1: Academic Research in Popular Culture',
-      location: 'Room A'
+      time: '10:00 - 10:50',
+      title: 'FORUM SESSION: Title TBC',
+      location: 'The Waterfront Hotel, Kuching'
     },
     {
-      time: '14:00 - 15:30',
-      title: 'Session 2: Digital Media Studies',
-      location: 'Room B'
+      time: '10:50 - 11:30',
+      title: 'Morning Break',
+      location: 'The Waterfront Hotel, Kuching'
     },
     {
-      time: '16:00 - 17:30',
-      title: 'Panel Discussion: Future of Academia',
-      location: 'Grand Auditorium'
+      time: '11:30 - 13:00',
+      title: 'Parallel Session 1a',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '11:30 - 13:00',
+      title: 'Parallel Session 1b',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '11:30 - 13:00',
+      title: 'Parallel Session 1c',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '13:00 - 14:30',
+      title: 'Lunch Break',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '14:30 - 17:00',
+      title: 'Parallel Session 2a',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '14:30 - 17:00',
+      title: 'Parallel Session 2b',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '14:30 - 17:00',
+      title: 'Parallel Session 2c',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '17:00',
+      title: 'Tea Break',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '19:45 - 22:30',
+      title: 'Conference Dinner',
+      location: 'The Waterfront Hotel, Kuching'
     }
   ],
   // Day 2
   [
     {
-      time: '09:00 - 10:30',
-      title: 'Keynote Speech',
-      location: 'Grand Auditorium',
-      speaker: 'Prof. Takashi Yamamoto'
+      time: '08:30 - 10:30',
+      title: 'Parallel Session 3a',
+      location: 'The Waterfront Hotel, Kuching',
+      date: '13 August 2026'
     },
     {
-      time: '11:00 - 12:30',
-      title: 'Session 3: Interactive Media',
-      location: 'Room A'
+      time: '08:30 - 10:30',
+      title: 'Parallel Session 3b',
+      location: 'The Waterfront Hotel, Kuching'
     },
     {
-      time: '14:00 - 15:30',
-      title: 'Workshop: Digital Research Methods',
-      location: 'Computer Lab'
+      time: '08:30 - 10:30',
+      title: 'Parallel Session 3c',
+      location: 'The Waterfront Hotel, Kuching'
     },
     {
-      time: '16:00 - 17:30',
-      title: 'Poster Session',
-      location: 'Exhibition Hall'
+      time: '10:30 - 10:40',
+      title: 'Morning Break',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '10:40 - 13:00',
+      title: 'Parallel Session 4a',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '10:40 - 13:00',
+      title: 'Parallel Session 4b',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '10:40 - 13:00',
+      title: 'Parallel Session 4c',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '13:00 - 14:30',
+      title: 'Lunch Break',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '14:30 - 15:30',
+      title: 'Workshop',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '15:30 - 16:00',
+      title: 'Tea Break',
+      location: 'The Waterfront Hotel, Kuching'
+    },
+    {
+      time: '16:00 - 17:00',
+      title: 'Closing Remarks',
+      location: 'The Waterfront Hotel, Kuching'
     }
-  ],
-]
+  ]
+];
 </script>
 
 <style scoped>

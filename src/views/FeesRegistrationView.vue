@@ -10,39 +10,46 @@
         <v-card>
           <v-card-title class="text-h5">Registration Fees</v-card-title>
           <v-card-text>
-            <v-table>
-              <thead>
-                <tr>
-                  <th>Category</th>
-                  <th>Early Bird</th>
-                  <th>Regular</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Student</td>
-                  <td>$200</td>
-                  <td>$250</td>
-                </tr>
-                <tr>
-                  <td>Academic</td>
-                  <td>$300</td>
-                  <td>$350</td>
-                </tr>
-                <tr>
-                  <td>Industry</td>
-                  <td>$400</td>
-                  <td>$450</td>
-                </tr>
-              </tbody>
-            </v-table>
-
+          <v-table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Price per participant</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Local Student</td>
+                <td>RM800</td>
+              </tr>
+              <tr>
+                <td>International Student</td>
+                <td>USD 250</td>
+              </tr>
+              <tr>
+                <td>Local Participant</td>
+                <td>RM1,200</td>
+              </tr>
+              <tr>
+                <td>International Participant</td>
+                <td>USD 500</td>
+              </tr>
+              <tr>
+                <td>Non-presenting Participant</td>
+                <td>RM1,000</td>
+              </tr>
+              <tr>
+                <td>Dinner Fee</td>
+                <td>RM200</td>
+              </tr>
+            </tbody>
+          </v-table>
             <v-alert
               color="info"
               icon="mdi-information"
               class="mt-4"
             >
-              Early Bird registration ends on March 1, 2024
+              Early Bird registration ends on starts on 15 May 2026 - 15 June 2026
             </v-alert>
           </v-card-text>
         </v-card>

@@ -1,16 +1,13 @@
 <template>
-  <v-container>
+  <v-container fluid class="pa-0 pa-sm-2 pa-md-4">
     <v-row>
       <v-col cols="12">
         <h1 class="text-h3 mb-6 text-center">Conference Panel</h1>
-      </v-col>
-
-      <v-col cols="12">
-        <v-card>
+          <v-card>
           <v-img
             src="@/assets/speakers-banner.jpg"
-            height="1400"
-            cover
+            :height="bannerHeight"
+            contain
           ></v-img>
 
           <v-card-text class="text-center py-4">
@@ -20,57 +17,65 @@
             </p>
           </v-card-text>
         </v-card>
-      </v-col>
-
-      <v-col cols="12" class="mt-6">
-        <v-timeline align="start">
-          <v-timeline-item
+        <v-list class="mt-6" lines="three">
+          <v-list-item
             v-for="(speaker, index) in speakers"
             :key="index"
-            :dot-color="speaker.color"
-            size="small"
+            :title="speaker.name"
+            :subtitle="speaker.title"
           >
-            <template v-slot:opposite>
-              <div class="text-h6">{{ speaker.time }}</div>
+            <template v-slot:prepend>
+              <v-avatar :color="speaker.color" size="48">
+                <span class="text-h6 white--text">{{ speaker.name.charAt(0) }}</span>
+              </v-avatar>
             </template>
-            <v-card>
-              <v-card-title class="text-h6">
-                {{ speaker.name }}
-              </v-card-title>
-              <v-card-subtitle>
-                {{ speaker.title }}
-              </v-card-subtitle>
-              <v-card-text>
-                {{ speaker.description }}
-              </v-card-text>
-            </v-card>
-          </v-timeline-item>
-        </v-timeline>
+            <v-list-item-title class="text-h6 text-black">{{ speaker.name }}</v-list-item-title>
+            <v-list-item-subtitle class="text-black">{{ speaker.title }}</v-list-item-subtitle>
+            <v-list-item-text class="text-body-2 mt-2 text-black">
+              <div class="font-weight-medium">{{ speaker.time }}</div>
+              <div>{{ speaker.description }}</div>
+            </v-list-item-text>
+            <v-divider v-if="index < speakers.length - 1" class="my-4"></v-divider>
+          </v-list-item>
+        </v-list>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script setup lang="ts">
+import { useDisplay } from 'vuetify'
+import { computed } from 'vue'
+const { xs, sm, md, lg, xl, xxl } = useDisplay()
+
+const bannerHeight = computed(() => {
+  if (xs.value) return '440px' // Extra small: phones
+  if (sm.value) return '560px' // Small: tablets
+  if (md.value) return '700px' // Medium: larger tablets and small laptops
+  if (lg.value) return '1000px' // Large: MacBooks and standard laptops (More consistent increase)
+  if (xl.value) return '1300px' // Extra large: desktop monitors (Continuing the increase)
+  return '800px'               // XXL: 4K and ultrawide monitors (Further increase for largest screens)
+})
+
 const speakers = [
   {
-    name: 'Dr. Sarah Johnson',
-    title: 'Professor of Digital Media Studies',
+    name: 'YBhg. Datuk Hajah Sharifah Hasidah',
+    title: 'Deputy Minister',
     time: 'Day 1 - 9:00 AM',
     description: 'Opening keynote on the intersection of academic research and popular culture.',
     color: 'primary'
   },
   {
-    name: 'Prof. Takashi Yamamoto',
-    title: 'Director of Interactive Media Lab',
-    time: 'Day 2 - 10:00 AM',
+    name: `YBhg. Tan Sri Dato' Sri Haji Azam `,
+    title: 'Chief Commissioner of the Malaysian Anti-Corruption Commission (MACC)',
+    time: 'Day 1 - 10:00 AM',
     description: 'Exploring the future of academic conferences in the digital age.',
     color: 'secondary'
   },
   {
-    name: 'Dr. Emily Chen',
-    title: 'Research Director, Future Technologies Institute',
-    time: 'Day 3 - 9:30 AM',
+    name: 'Professor Datuk Dr. Kassim Noor Mohamed',
+    title: 'CEO and Vice Chancellor of ELMU',
+    time: 'Day 1 - 11:00 AM',
     description: 'Closing keynote on bridging traditional academia with modern media formats.',
     color: 'info'
   }
@@ -80,5 +85,28 @@ const speakers = [
 <style scoped>
 .v-timeline {
   padding-top: 2rem;
+}
+
+.v-card-title {
+  word-break: normal;
+}
+
+.v-card {
+  overflow: hidden;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 600px) {
+  .v-container {
+    padding: 0;
+  }
+  
+  .v-card {
+    border-radius: 0;
+  }
+}
+
+.position-relative {
+  position: relative;
 }
 </style> 
