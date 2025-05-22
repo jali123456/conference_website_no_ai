@@ -246,7 +246,7 @@ const accommodations = [
     phone: '+6082-222 888',
     rating: '⭐⭐⭐⭐⭐',
     image: pullmanKuchingImage,
-    bookingLink: 'https://www.pullmanhotels.com/gb/hotel-6332-pullman-kuching/index.shtml',
+    bookingLink: 'https://www.pullmanhotels.com/gb/hotel-6332-pullman-kuching/index.html',
     amenities: [
       { name: 'Free Wi-Fi', icon: 'mdi-wifi' },
       { name: 'Breakfast Included', icon: 'mdi-food' },

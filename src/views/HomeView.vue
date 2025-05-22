@@ -86,8 +86,8 @@
       <v-col cols="12" class="sponsor-section">
         <v-card class="mx-auto" max-width="1200">
           <v-img
-            src="https://placehold.co/1200x600?text=Sponsor+Logo"
-            alt="Sponsor Logo"
+            src="https://placehold.co/1200x600?text=Sponsor+Logos"
+            alt="Sponsor Logos"
             :height="sponsorHeight"
             width="100%"
             cover

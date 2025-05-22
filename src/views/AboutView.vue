@@ -51,31 +51,49 @@
         <v-card>
           <v-card-title class="text-h5">
             <v-icon start>mdi-account-group</v-icon>
-            Cluster
+            Sub-Theme
           </v-card-title>
           <v-card-text>
             <v-row>
               <v-col cols="12" md="4">
                 <v-card variant="outlined">
-                  <v-card-title>Enforcement</v-card-title>
+                  <v-card-title class="text-red">Enforcement & Law</v-card-title>
                   <v-card-text>
-                    At the heart of the ICELIn26 Conference is a commitment to enhancing the effectiveness and professionalism of law enforcement institutions. This theme explores current challenges faced by enforcement agencies and highlights innovative strategies to strengthen operational integrity, inter-agency collaboration, and public accountability. Through focused discussions and knowledge exchange, the conference aims to support enforcement bodies in upholding justice, protecting citizens' rights, and responding effectively to emerging threats in a rapidly evolving global landscape.
+                    -Points 1<br></br>
+                    -Points 2<br></br>
+                    -Etc
                   </v-card-text>
                 </v-card>
               </v-col>
               <v-col cols="12" md="4">
                 <v-card variant="outlined">
-                  <v-card-title>Law</v-card-title>
+                  <v-card-title class="text-red">Integrity & Leadership</v-card-title>
                   <v-card-text>
                     The theme of Law at ICELIn26 provides a critical platform to examine the foundations, evolution, and reform of legal systems. It brings together legal scholars, practitioners, and policymakers to discuss contemporary legal issues, legislative developments, and the need for responsive legal frameworks that reflect the values of fairness, equality, and the rule of law. By addressing gaps in legal access and judicial processes, this theme supports the development of a more inclusive and just legal environment, aligned with democratic principles and societal needs.
                   </v-card-text>
                 </v-card>
               </v-col>
-              <v-col cols="12" md="4">
+              <!-- <v-col cols="12" md="4">
                 <v-card variant="outlined">
                   <v-card-title>Integrity</v-card-title>
                   <v-card-text>
                     Integrity lies at the core of trustworthy governance and effective public institutions. This theme focuses on promoting ethical leadership, anti-corruption measures, and transparent governance practices. ICELIn26 will showcase best practices, case studies, and policy innovations aimed at embedding integrity into institutional culture across sectors. By fostering dialogue among stakeholders from academia, government, civil society, and the private sector, the conference encourages a shared commitment to accountability, ethical conduct, and the restoration of public trust in the justice system.
+                  </v-card-text>
+                </v-card>
+              </v-col> -->
+              <!-- <v-col cols="12" md="4">
+                <v-card variant="outlined">
+                  <v-card-title class="text-red">leadership</v-card-title>
+                  <v-card-text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam excepturi eligendi doloribus, dolorem pariatur blanditiis facere minus similique, provident aliquid, quidem cupiditate expedita vel placeat cum ea consequatur voluptatem error?
+                  </v-card-text>
+                </v-card>
+              </v-col> -->
+              <v-col cols="12" md="4">
+                <v-card variant="outlined">
+                  <v-card-title class="text-red">Disaster Science & Climate<br></br> Resilience</v-card-title>
+                  <v-card-text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam excepturi eligendi doloribus, dolorem pariatur blanditiis facere minus similique, provident aliquid, quidem cupiditate expedita vel placeat cum ea consequatur voluptatem error?
                   </v-card-text>
                 </v-card>
               </v-col>
