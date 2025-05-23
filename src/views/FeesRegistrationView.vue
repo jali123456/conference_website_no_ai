@@ -19,28 +19,28 @@
             </thead>
             <tbody>
               <tr>
-                <td>Local Student</td>
-                <td>RM800</td>
-              </tr>
-              <tr>
-                <td>International Student</td>
-                <td>USD 250</td>
-              </tr>
-              <tr>
                 <td>Local Participant</td>
                 <td>RM1,200</td>
               </tr>
               <tr>
-                <td>International Participant</td>
-                <td>USD 500</td>
+                <td>Local Student</td>
+                <td>RM800</td>
               </tr>
               <tr>
                 <td>Non-presenting Participant</td>
                 <td>RM1,000</td>
               </tr>
               <tr>
-                <td>Dinner Fee</td>
+                <td>Dinner Fee(Optional)</td>
                 <td>RM200</td>
+              </tr>
+              <tr>
+                <td>International Student</td>
+                <td>USD 350</td>
+              </tr>
+              <tr>
+                <td>International Participant</td>
+                <td>USD 700</td>
               </tr>
             </tbody>
           </v-table>

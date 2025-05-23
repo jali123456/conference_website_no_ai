@@ -53,7 +53,7 @@
                     <v-icon color="primary" class="mr-4">mdi-phone</v-icon>
                   </template>
                   <v-list-item-title>Phone</v-list-item-title>
-                  <v-list-item-subtitle>+1 (123) 456-7890</v-list-item-subtitle>
+                  <v-list-item-subtitle>1-300-88-ELMU (3568)</v-list-item-subtitle>
                 </v-list-item>
 
                 <v-list-item>
@@ -61,13 +61,11 @@
                     <v-icon color="primary" class="mr-4">mdi-map-marker</v-icon>
                   </template>
                   <v-list-item-title>Address</v-list-item-title>
-                  <v-list-item-subtitle>Persiaran Timur 1,
+                  <v-list-item-subtitle>
+                  <p>Persiaran Timur 1,
                   Bandar Enstek, 71760 Nilai,
                   Negeri Sembilan, MALAYSIA.
-
-                  Hotline No: 1-300-88-ELMU (3568)
-
-                  Email: enquiries@elmu.edu.my
+                  </p>
                   </v-list-item-subtitle>
                 </v-list-item>
               </v-list>
