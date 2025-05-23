@@ -59,6 +59,20 @@
               ></iframe>
             </div>
           </v-card-text>
+          <!-- Add a button to open Google Maps -->
+          <div class="text-center"> <v-btn
+              color="primary"
+              variant="flat"       
+              size="large"         
+              rounded="pill"       
+              elevation="4"        
+              prepend-icon="mdi-map-marker" 
+               class="my-4"         
+              @click="openGoogleMaps"
+            >
+              Open Google Maps
+            </v-btn>
+          </div>
         </v-card>
       </v-col>
 
@@ -120,9 +134,6 @@
 </template>
 
 <script setup lang="ts">
-const longitude = 110.34449804478993;
-const latitude = 1.5587105547653426;
-
 import theRaneeImage from '@/assets/images/hotel/hotel_8.jpg';
 import theMarianImage from '@/assets/images/hotel/hotel_7.jpg';
 import harbourViewImage from '@/assets/images/hotel/hotel_6.jpg';
@@ -131,6 +142,17 @@ import imperialRiverbankImage from '@/assets/images/hotel/hotel_4.jpg';
 import grandMargheritaImage from '@/assets/images/hotel/hotel_3.jpg';
 import pullmanKuchingImage from '@/assets/images/hotel/hotel_2.jpg';
 import sheratonKuchingImage from '@/assets/images/hotel/hotel_1.jpg';
+const longitude = 110.34449804478993;
+const latitude = 1.5587105547653426;
+
+const openGoogleMaps = (): void => {
+  // Construct the Google Maps URL with the provided latitude and longitude
+  const googleMapsUrl: string = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
+
+  // Open the URL in a new tab/window
+  window.open(googleMapsUrl, '_blank');
+};
+
 const transportation_data = [
   {
     mode: 'From Airport',
