@@ -39,7 +39,7 @@
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useDisplay } from 'vuetify'
 
-const targetDate = new Date('2026-08-12T00:00:00')
+const targetDate = new Date('2026-08-12T08:00:00')
 const days = ref(0)
 const hours = ref(0)
 const minutes = ref(0)
@@ -125,7 +125,7 @@ onBeforeUnmount(() => {
 }
 
 .time-value {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 

@@ -1,12 +1,12 @@
 <template>
-  <v-container fluid class="pa-0 pa-sm-2 pa-md-4">
+  <v-container fluid class="pa-0 pa-sm-2 pa-md-4" max-width="1400">
     <v-row>
       <v-col cols="12">
         <v-card class="mx-auto">
           <div class="position-relative">
+            <!-- :height="bannerHeight" -->
             <v-img
               src="@/assets/conference-banner.png"
-              :height="bannerHeight"
               width="100%"
               contain
               class="text-white"
@@ -20,7 +20,7 @@
             <p class="mb-4">
               Join us for the premier academic conference that bridges the worlds of technology, 
               academia, and popular culture. Our unique conference brings together scholars, 
-              researchers, and enthusiasts in an engaging environment inspired by anime conventions.
+              researchers, and enthusiasts in an engaging environment
             </p>
 
             <p class="mb-4">
@@ -33,7 +33,7 @@
               <v-col cols="12" sm="6" md="4">
                 <v-card class="mb-4 mb-sm-0">
                   <v-card-title :class="featureTitleClass">
-                    Innovative Format
+                    Enforcement & Law
                   </v-card-title>
                   <v-card-text>
                     Experience presentations in a dynamic environment that encourages interaction 
@@ -45,7 +45,7 @@
               <v-col cols="12" sm="6" md="4">
                 <v-card class="mb-4 mb-sm-0">
                   <v-card-title :class="featureTitleClass">
-                    Networking
+                    Integrity & Leadership
                   </v-card-title>
                   <v-card-text>
                     Connect with peers and experts in your field in a welcoming and exciting 
@@ -56,8 +56,8 @@
 
               <v-col cols="12" sm="6" md="4">
                 <v-card>
-                  <v-card-title :class="featureTitleClass">
-                    Publication Opportunities
+                  <v-card-title :class="featureTitleClass" class="text-wrap">
+                    Disaster Management & Climate Resilience
                   </v-card-title>
                   <v-card-text>
                     Present your research and get published in our peer-reviewed conference 
@@ -84,13 +84,23 @@
     </v-row>
     <v-row class="mt-6">
       <v-col cols="12" class="sponsor-section">
-        <v-card class="mx-auto" max-width="1200">
+        <v-card class="mx-auto">
           <v-img
-            src="https://placehold.co/1200x600?text=Sponsor+Logos"
+            src="@/assets/sponsor-opportunities-2.jpg"
             alt="Sponsor Logos"
-            :height="sponsorHeight"
             width="100%"
-            cover
+            contain
+          >
+            </v-img>
+        </v-card>
+      </v-col>
+      <v-col cols="12" class="sponsor-section">
+        <v-card class="mx-auto" max-width="1400">
+          <v-img
+            src="@/assets/sponsor-opportunities.jpg"
+            alt="Sponsor Logos"
+            width="100%"
+            contain
           >
             </v-img>
         </v-card>
@@ -106,24 +116,24 @@ import { computed } from 'vue'
 const { xs, sm, md, lg, xl, xxl } = useDisplay()
 
 // Responsive height for the banner image based on breakpoints
-const bannerHeight = computed(() => {
-  if (xs.value) return '160px' // Extra small: phones
-  if (sm.value) return '180px' // Small: tablets
-  if (md.value) return '350px' // Medium: larger tablets and small laptops
-  if (lg.value) return '600px' // Large: MacBooks and standard laptops
-  if (xl.value) return '700px' // Extra large: desktop monitors
-  return '600px'               // XXL: 4K and ultrawide monitors
-})
+// const bannerHeight = computed(() => {
+//   if (xs.value) return '160px' // Extra small: phones
+//   if (sm.value) return '180px' // Small: tablets
+//   if (md.value) return '350px' // Medium: larger tablets and small laptops
+//   if (lg.value) return '600px' // Large: MacBooks and standard laptops
+//   if (xl.value) return '700px' // Extra large: desktop monitors
+//   return '600px'               // XXL: 4K and ultrawide monitors
+// })
 
 // Responsive height for the sponsor image
-const sponsorHeight = computed(() => {
-  if (xs.value) return '120px'
-  if (sm.value) return '180px'
-  if (md.value) return '240px'
-  if (lg.value) return '400px'
-  if (xl.value) return '500px'
-  return '500px'
-})
+// const sponsorHeight = computed(() => {
+//   if (xs.value) return '120px'
+//   if (sm.value) return '180px'
+//   if (md.value) return '240px'
+//   if (lg.value) return '400px'
+//   if (xl.value) return '500px'
+//   return '500px'
+// })
 
 // Dynamic classes for the banner title
 const bannerTitleClass = computed(() => {

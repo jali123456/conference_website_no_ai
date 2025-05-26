@@ -1,3 +1,4 @@
+<!-- ProgrammeDatesView.vue -->
 <template>
   <v-container>
     <v-row>
@@ -10,19 +11,20 @@
         <v-card>
           <v-card-title class="text-h5">Important Dates</v-card-title>
           <v-card-text>
-            <v-timeline align="start">
+            <v-timeline>
               <v-timeline-item
                 v-for="(date, index) in importantDates"
                 :key="index"
                 :dot-color="date.color"
                 size="small"
+                class="text-wrap"
               >
                 <template v-slot:opposite>
-                  <div class="text-caption">{{ date.date }}</div>
+                  <div class="text-caption text-wrap text-break">{{ date.date }}</div>
                 </template>
-                <v-card>
-                  <v-card-title>{{ date.title }}</v-card-title>
-                  <v-card-text>{{ date.description }}</v-card-text>
+                <v-card class="text-wrap">
+                  <v-card-title class="text-wrap text-break">{{ date.title }}</v-card-title>
+                  <v-card-text class="text-wrap text-break">{{ date.description }}</v-card-text>
                 </v-card>
               </v-timeline-item>
             </v-timeline>
@@ -85,33 +87,27 @@ const activeTab = ref('day1')
 
 const importantDates = [
   {
-    date: 'August 1, 2025',
+    date: '1 August, 2025',
     title: 'Website & Social Media Launching',
     description: 'Official website and social media platforms go live',
     color: 'primary'
   },
   {
-    date: 'October 1, 2025',
+    date: '1 October, 2025',
     title: 'Call For Abstracts',
     description: 'Start of abstract submission period',
     color: 'info'
   },
   {
-    date: 'December 1, 2025',
-    title: 'Call For Papers',
-    description: 'Call for full paper submissions begins',
+    date: '1 December, 2025',
+    title: 'Acceptance Notification',
+    description: 'Acceptance Notification for the Absctracts',
     color: 'info'
   },
   {
-    date: 'March 31, 2026',
-    title: 'Extended Abstract / Paper Submission Deadline',
-    description: 'Final deadline for submitting extended abstracts or papers',
-    color: 'warning'
-  },
-  {
-    date: 'May 15, 2026',
-    title: 'Acceptance Notifications',
-    description: 'Authors will be notified of acceptance status',
+    date: '31 March, 2026',
+    title: 'Full Paper submission dateline ',
+    description: 'Full paper submission dateline open',
     color: 'success'
   },
   {
@@ -152,7 +148,7 @@ const programme = [
     {
       time: '09:00 - 10:00',
       title: 'Opening Ceremony',
-      location: 'The Waterfront Hotel, Kuching',
+      location: 'TBA',
       details: [
         "Recitation of Du'a",
         "Negaraku",
@@ -166,57 +162,57 @@ const programme = [
     {
       time: '10:00 - 10:50',
       title: 'FORUM SESSION: Title TBC',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '10:50 - 11:30',
       title: 'Morning Break',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '11:30 - 13:00',
       title: 'Parallel Session 1a',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '11:30 - 13:00',
       title: 'Parallel Session 1b',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '11:30 - 13:00',
       title: 'Parallel Session 1c',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '13:00 - 14:30',
       title: 'Lunch Break',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '14:30 - 17:00',
       title: 'Parallel Session 2a',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '14:30 - 17:00',
       title: 'Parallel Session 2b',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '14:30 - 17:00',
       title: 'Parallel Session 2c',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '17:00',
       title: 'Tea Break',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '19:45 - 22:30',
       title: 'Conference Dinner',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     }
   ],
   // Day 2
@@ -224,58 +220,58 @@ const programme = [
     {
       time: '08:30 - 10:30',
       title: 'Parallel Session 3a',
-      location: 'The Waterfront Hotel, Kuching',
+      location: 'TBA',
       date: '13 August 2026'
     },
     {
       time: '08:30 - 10:30',
       title: 'Parallel Session 3b',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '08:30 - 10:30',
       title: 'Parallel Session 3c',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '10:30 - 10:40',
       title: 'Morning Break',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '10:40 - 13:00',
       title: 'Parallel Session 4a',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '10:40 - 13:00',
       title: 'Parallel Session 4b',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '10:40 - 13:00',
       title: 'Parallel Session 4c',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '13:00 - 14:30',
       title: 'Lunch Break',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '14:30 - 15:30',
       title: 'Workshop',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '15:30 - 16:00',
       title: 'Tea Break',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     },
     {
       time: '16:00 - 17:00',
       title: 'Closing Remarks',
-      location: 'The Waterfront Hotel, Kuching'
+      location: 'TBA'
     }
   ]
 ];

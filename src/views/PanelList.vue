@@ -6,7 +6,6 @@
           <v-card>
           <v-img
             src="@/assets/speakers-banner.jpg"
-            :height="bannerHeight"
             contain
           ></v-img>
 
@@ -48,14 +47,14 @@ import { useDisplay } from 'vuetify'
 import { computed } from 'vue'
 const { xs, sm, md, lg, xl, xxl } = useDisplay()
 
-const bannerHeight = computed(() => {
-  if (xs.value) return '440px' // Extra small: phones
-  if (sm.value) return '560px' // Small: tablets
-  if (md.value) return '700px' // Medium: larger tablets and small laptops
-  if (lg.value) return '1000px' // Large: MacBooks and standard laptops (More consistent increase)
-  if (xl.value) return '1300px' // Extra large: desktop monitors (Continuing the increase)
-  return '800px'               // XXL: 4K and ultrawide monitors (Further increase for largest screens)
-})
+// const bannerHeight = computed(() => {
+//   if (xs.value) return '440px' // Extra small: phones
+//   if (sm.value) return '560px' // Small: tablets
+//   if (md.value) return '700px' // Medium: larger tablets and small laptops
+//   if (lg.value) return '1000px' // Large: MacBooks and standard laptops (More consistent increase)
+//   if (xl.value) return '1300px' // Extra large: desktop monitors (Continuing the increase)
+//   return '800px'               // XXL: 4K and ultrawide monitors (Further increase for largest screens)
+// })
 
 const speakers = [
   {

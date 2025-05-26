@@ -1,3 +1,4 @@
+<!-- FeesRegistrationView.vue -->
 <template>
   <v-container>
     <v-row>

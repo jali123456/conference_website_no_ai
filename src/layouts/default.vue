@@ -3,7 +3,7 @@
   <v-app>
     <app-header @update:drawer="drawer = !drawer" />
     <v-main>
-      <v-container fluid class="fill-height">
+      <v-container fluid class="fill-height pa-6">
         <v-row>
           <v-col
             cols="12"
@@ -45,12 +45,12 @@
               <CountdownTimer />
 
               <!-- Bottom List - Only shown on Home page -->
-              <v-sheet
+              <!-- <v-sheet
                 v-if="$route.path === '/'"
                 rounded="lg"
                 class="mt-auto"
               >
-                <!-- <v-list
+                <v-list
                   rounded="lg"
                   :bg-color="'rgba(18, 30, 57, 0.8)'"
                   class="py-2"
@@ -92,8 +92,8 @@
                     title="Quick Submit"
                     to="/paper-submission"
                   ></v-list-item>
-                </v-list> -->
-              </v-sheet>
+                </v-list> 
+              </v-sheet> -->
             </div>
           </v-col>
 
@@ -143,6 +143,44 @@ const menuItems = [
 .h-100 {
   height: 100%;
 }
+
+/* Sticky sidebar styling - Only for desktop (>959px)
+.sidebar-col {
+  position: relative;
+}
+
+/* Default mobile behavior 
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop sticky behavior 
+@media (min-width: 960px) {
+  .sidebar-content {
+    position: fixed;
+    top: 280px; /* Your header height 
+    left: 24px;
+    width: calc(16.666667% - 48px); /* Account for container padding 
+    height: calc(100vh - 280px - 358px - 20px); /* Viewport - Header - Footer - Extra padding 
+    max-height: calc(100vh - 280px - 358px - 20px); /* Ensure it never exceeds this 
+    overflow-y: auto;
+    z-index: 5;
+    padding-right: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Mobile behavior - keep sidebar static 
+@media (max-width: 959px) {
+  .sidebar-content {
+    position: static;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+} */
 
 :deep(.v-list-item) {
   padding: 0 16px !important;
