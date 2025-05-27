@@ -151,7 +151,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import emailjs from '@emailjs/browser'
 
 const valid = ref(false)
 const form = ref(null)
@@ -195,25 +194,38 @@ const registrationSteps = [
 
 const submitForm = async () => {
   try {
-    // Replace with your EmailJS service ID, template ID, and public key
-    await emailjs.send(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
-      {
-        to_name: `${formData.value.firstName} ${formData.value.lastName}`,
-        to_email: formData.value.email,
-        category: formData.value.category,
-        message: 'Thank you for registering for Conference 2024!'
+    const response = await fetch('https://api.jali123456.win/register.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-      'YOUR_PUBLIC_KEY'
-    )
-    alert('Registration submitted successfully! Check your email for confirmation.')
-    formData.value = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      category: '',
-      specialRequirements: ''
+      body: JSON.stringify({
+        firstName: formData.value.firstName,
+        lastName: formData.value.lastName,
+        email: formData.value.email,
+        category: formData.value.category,
+        specialRequirements: formData.value.specialRequirements
+      })
+    })
+
+    const result = await response.json()
+
+    if (response.ok && result.success) {
+      alert('Registration submitted successfully! Check your email for confirmation.')
+      // Reset form
+      formData.value = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        category: '',
+        specialRequirements: ''
+      }
+      // Reset form validation
+      if (form.value) {
+        form.value.reset()
+      }
+    } else {
+      throw new Error(result.message || 'Registration failed')
     }
   } catch (error) {
     console.error('Error:', error)
