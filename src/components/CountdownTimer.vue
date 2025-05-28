@@ -28,7 +28,7 @@
           <div class="time-label">Seconds</div>
         </div>
       </v-card-text>
-      <v-card-text class="text-center text-caption text-white pb-2 pt-0">
+      <v-card-text :class="{'d-none': $vuetify.display.width < 760}" class="text-center text-caption text-white pb-2 pt-0">
         Conference starts: {{ formattedTargetDate }}
       </v-card-text>
     </v-card>
@@ -107,7 +107,7 @@ onBeforeUnmount(() => {
 .countdown-card {
   color: white;
   width: 100%;
-  max-width: 320px;
+  /* max-width: 320px; */
 }
 
 .countdown-container {
@@ -164,7 +164,7 @@ onBeforeUnmount(() => {
   }
 }
 
-@media (max-width: 1200px) and (min-width: 601px) {
+/* @media (max-width: 1200px) and (min-width: 601px) {
   .time-section:nth-child(3) {
     flex-basis: 100%;
     margin-top: 10px;
@@ -174,7 +174,7 @@ onBeforeUnmount(() => {
   .time-divider:nth-child(2) {
     display: none;
   }
-}
+} */
 
 /* Mobile view - everything in one line */
 @media (max-width: 600px) {

@@ -1,9 +1,12 @@
+<!-- PanelList.vue -->
 <template>
-  <v-container fluid class="pa-0 pa-sm-2 pa-md-4">
+  <v-container>
     <v-row>
       <v-col cols="12">
         <h1 class="text-h3 mb-6 text-center">Conference Panel</h1>
-          <v-card>
+      </v-col>
+      <v-col cols="12" md="6">
+        <v-card>
           <v-img
             src="@/assets/speakers-banner.jpg"
             contain
@@ -16,6 +19,8 @@
             </p>
           </v-card-text>
         </v-card>
+      </v-col>
+      <v-col cols="12" md="6">
         <v-list class="mt-6" lines="three">
           <v-list-item
             v-for="(speaker, index) in speakers"
@@ -30,10 +35,10 @@
             </template>
             <v-list-item-title class="text-h6 text-black">{{ speaker.name }}</v-list-item-title>
             <v-list-item-subtitle class="text-black">{{ speaker.title }}</v-list-item-subtitle>
-            <v-list-item-text class="text-body-2 mt-2 text-black">
-              <div class="font-weight-medium">{{ speaker.time }}</div>
-              <div>{{ speaker.description }}</div>
-            </v-list-item-text>
+              <div class="text-body-2 mt-2 text-black">
+                <div class="font-weight-medium">{{ speaker.time }}</div>
+                <div>{{ speaker.description }}</div>
+              </div>
             <v-divider v-if="index < speakers.length - 1" class="my-4"></v-divider>
           </v-list-item>
         </v-list>
@@ -44,7 +49,7 @@
 
 <script setup lang="ts">
 import { useDisplay } from 'vuetify'
-import { computed } from 'vue'
+
 const { xs, sm, md, lg, xl, xxl } = useDisplay()
 
 // const bannerHeight = computed(() => {

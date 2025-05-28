@@ -4,7 +4,7 @@
     <app-header @update:drawer="drawer = !drawer" />
     <v-main>
       <v-container fluid class="fill-height pa-6">
-        <v-row>
+        <v-row >
           <v-col
             cols="12"
             md="2"
@@ -24,26 +24,24 @@
                     :to="item.path"
                     :prepend-icon="item.icon"
                     link
-                    :active="$route.path === item.path"
-                    :active-color="'primary'"
+                    :exact="item.path === '/'"
+                    :color="$route.path === item.path ? 'primary' : undefined"
                     class="mb-1 text-break"
                   ></v-list-item>
 
                   <v-divider class="my-2" color="grey"></v-divider>
 
                   <v-list-item
-                    color="grey-lighten-4"
                     title="Contact Us"
                     to="/contact"
                     prepend-icon="mdi-email"
                     link
-                    :active="$route.path === '/contact'"
-                    :active-color="'primary'"
+                    exact
+                    :color="$route.path === '/contact' ? 'primary' : 'grey-lighten-4'"
                   ></v-list-item>
                 </v-list>
               </v-sheet>
-              <CountdownTimer />
-
+              
               <!-- Bottom List - Only shown on Home page -->
               <!-- <v-sheet
                 v-if="$route.path === '/'"
@@ -96,10 +94,7 @@
               </v-sheet> -->
             </div>
           </v-col>
-
-          <v-col cols="12" md="10" class="pa-4">
             <router-view />
-          </v-col>
         </v-row>
       </v-container>
     </v-main>
@@ -204,10 +199,7 @@ const menuItems = [
   padding-right: 8px !important;
 }
 
-:deep(.v-list-item--active) {
-  background: rgba(255, 255, 255, 0.1) !important;
-}
-
+/* Remove the custom active state styling - let Vuetify handle it */
 :deep(.v-list-item:not(.v-list-item--active)) {
   color: rgba(255, 255, 255, 0.8) !important;
 }

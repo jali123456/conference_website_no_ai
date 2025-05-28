@@ -11,7 +11,8 @@
         <v-card>
           <v-card-title class="text-h5">Important Dates</v-card-title>
           <v-card-text>
-            <v-timeline>
+            <!-- Desktop/Tablet Timeline -->
+            <v-timeline v-if="!$vuetify.display.xs && !$vuetify.display.sm">
               <v-timeline-item
                 v-for="(date, index) in importantDates"
                 :key="index"
@@ -28,6 +29,31 @@
                 </v-card>
               </v-timeline-item>
             </v-timeline>
+
+            <!-- Mobile List Layout -->
+            <div v-else class="mobile-dates">
+              <v-card
+                v-for="(date, index) in importantDates"
+                :key="index"
+                class="mb-4"
+                variant="outlined"
+              >
+                <v-card-text>
+                  <div class="d-flex align-center mb-2">
+                    <v-icon 
+                      :color="date.color" 
+                      size="small" 
+                      class="mr-2"
+                    >
+                      mdi-circle
+                    </v-icon>
+                    <span class="text-caption font-weight-medium">{{ date.date }}</span>
+                  </div>
+                  <h3 class="text-h6 mb-2">{{ date.title }}</h3>
+                  <p class="text-body-2 mb-0">{{ date.description }}</p>
+                </v-card-text>
+              </v-card>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -63,9 +89,9 @@
                               {{ detail }}
                             </div>
                           </template>
-                          <template v-if="session.speaker">
+                          <!-- <template v-if="session.speaker">
                             <br>Speaker: {{ session.speaker }}
-                          </template>
+                          </template> -->
                         </v-list-item-subtitle>
                       </v-list-item>
                       <v-divider v-if="sIndex < day.length - 1"></v-divider>
@@ -281,4 +307,8 @@ const programme = [
 .v-timeline {
   padding-top: 2rem;
 }
-</style> 
+
+.mobile-dates {
+  padding-top: 1rem;
+}
+</style>

@@ -1,3 +1,4 @@
+<!-- VenueAccommodationView.vue -->
 <template>
   <v-container>
     <v-row>
@@ -55,19 +56,19 @@
                 marginheight="0"
                 marginwidth="0"
                 :src="`https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.002},${latitude - 0.002},${longitude + 0.002},${latitude + 0.002}&layer=mapnik&marker=${latitude},${longitude}&zoom=17`"
-                style="border: 1px solid #ccc"
               ></iframe>
             </div>
           </v-card-text>
           <!-- Add a button to open Google Maps -->
-          <div class="text-center"> <v-btn
+          <div class="text-center"> 
+            <v-btn
               color="primary"
               variant="flat"       
               size="large"         
               rounded="pill"       
               elevation="4"        
               prepend-icon="mdi-map-marker" 
-               class="my-4"         
+              class="my-4"         
               @click="openGoogleMaps"
             >
               Open Google Maps
@@ -77,13 +78,13 @@
       </v-col>
 
       <!-- Accommodation -->
-       <v-col cols="12" class="mt-6">
-        <v-card>
-          <v-card-title class="text-h5">Recommended Accommodation</v-card-title>
-          <v-card-text>
-            <v-row>
-              <v-col cols="12" md="6" v-for="(hotel, index) in accommodations" :key="index">
-                <v-card>
+      <v-col cols="12" class="mt-6">
+        <v-sheet>
+          <h2 class="text-h5 mb-6 pa-4">Recommended Accommodation</h2>
+          <v-row>
+            <v-col cols="12" md="6" v-for="(hotel, index) in accommodations" :key="index">
+              <v-sheet class="pa-4">
+                <v-card class="h-100">
                   <v-img
                     :src="hotel.image"
                     height="250"
@@ -122,13 +123,11 @@
                     </v-btn>
                   </v-card-actions>
                 </v-card>
-              </v-col>
-            </v-row>
-          </v-card-text>
-        </v-card>
+              </v-sheet>
+            </v-col>
+          </v-row>
+        </v-sheet>
       </v-col>
-      <!-- Transportation -->
-       <transportation />
     </v-row>
   </v-container>
 </template>
@@ -142,6 +141,7 @@ import imperialRiverbankImage from '@/assets/images/hotel/hotel_4.jpg';
 import grandMargheritaImage from '@/assets/images/hotel/hotel_3.jpg';
 import pullmanKuchingImage from '@/assets/images/hotel/hotel_2.jpg';
 import sheratonKuchingImage from '@/assets/images/hotel/hotel_1.jpg';
+
 const longitude = 110.34449804478993;
 const latitude = 1.5587105547653426;
 
@@ -177,14 +177,15 @@ const hotelAmenities = [
   { name: 'Fitness Center', icon: 'mdi-dumbbell' },
   { name: 'Conference Shuttle', icon: 'mdi-bus' }
 ]
+
 const accommodations = [
   {
     name: 'The Ranee Boutique Suites',
     address: 'No 6 & 7 Main Bazaar, 93000 Kuching, Sarawak',
     phone: '+6082-258 833',
     rating: '⭐⭐⭐⭐',
-    image: theRaneeImage, // You'll need to add images for these hotels
-    bookingLink: 'https://www.theranee.com/', // Example booking link
+    image: theRaneeImage,
+    bookingLink: 'https://www.theranee.com/',
     amenities: [
       { name: 'Free Wi-Fi', icon: 'mdi-wifi' },
       { name: 'Breakfast Included', icon: 'mdi-food' },
@@ -303,5 +304,4 @@ const accommodations = [
 .v-application {
   color: black !important;
 }
-
-</style> 
+</style>

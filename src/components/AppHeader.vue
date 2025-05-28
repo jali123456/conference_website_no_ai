@@ -1,24 +1,42 @@
 <!-- AppHeader.vue -->
 <template>
   <v-app-bar :height="appBarHeight" color="white">
-    <v-container fluid class="px-4">
+    <v-container fluid class="pa-0 mt-0 mb-0 fill-height">
       <!-- Top Row -->
-      <v-row class="d-flex justify-space-between mb-6 align-stretch">
+      <!-- class="d-flex justify-space-between mb-6 align-stretch"
+      -->
+      <v-row no-gutters class="fill-height">
         <!-- Left section: Menu items -->
-        <v-col cols="4" class="mt-3">
-          <v-btn
+        <v-col>
+          <v-col>
+            <v-btn
             v-for="(item, index) in leftIcons"
             :key="index"
             :to="item.to"
-            class="mx-1"
+            :size="$vuetify.display.xs ? 'small' : 'default'"
+            
           >
             <v-icon start>{{ item.icon }}</v-icon>
             <span class="text-h6">{{ item.text }}</span>
           </v-btn>
+            <v-chip
+              @click="toggleDrawer"
+              :class="{'d-none': $vuetify.display.width > 959}"
+              variant="elevated"
+              size="x-small"
+              color="primary"
+              class="pa-3 rounded-lg cursor-pointer"
+              prepend-icon="mdi-menu"
+            >
+              <template v-slot:append>
+                <v-icon size="small">mdi-chevron-down</v-icon>
+              </template>
+            </v-chip>  
+          </v-col>
         </v-col>
 
         <!-- Middle section: Logo -->
-        <v-col cols="4" :class="{'mx-auto': display.width.value <= 550}" class="text-center">
+        <v-col cols="12" :sm="display.width.value <= 700 ? 6 : 5" xs="12"md="5"lg="5"xl="5" :class="{'mx-auto': display.width.value <= 550}" class="text-center">
           <v-img
             src="@/assets/logo.png"
             :width="300"
@@ -26,11 +44,15 @@
             contain
             @click="navigateToHome"
             class="logo-image mx-auto"
-          ></v-img>
+          >
+          </v-img>
         </v-col>
-
+        <v-col>
+          <CountdownTimer />
+        </v-col>
+        
         <!-- Right section: Empty for now but reserved for future menu items -->
-        <v-col cols="4" :class="{'d-none': display.width.value <= 550}" class="text-right">
+        <!-- <v-col :class="{'d-none': display.width.value <= 550}" class="text-right"> -->
           <!-- Placeholder for future content -->
           <!-- <v-btn
             v-for="(item, index) in rightIcons"
@@ -41,11 +63,12 @@
             <v-icon start>{{ item.icon }}</v-icon>
             <span class="text-h6">{{ item.text }}</span>
           </v-btn> -->
-        </v-col>
+        <!-- </v-col> -->
+        <!-- Bottom Row -->
       </v-row>
 
       <!-- Bottom Row -->
-      <div class="d-flex justify-space-between align-center w-100">
+      <!-- <div class="d-flex justify-space-between align-center w-100">
         <v-sheet>
           <v-chip
             @click="toggleDrawer"
@@ -59,13 +82,13 @@
         </v-sheet>
 
         <v-sheet>
-          <!-- Empty sheet for balanced spacing -->
+
         </v-sheet>
 
         <v-sheet>
-          <!-- Empty sheet for balanced spacing -->
+
         </v-sheet>
-      </div>
+      </div> -->
     </v-container>
   </v-app-bar>
 </template>
@@ -76,7 +99,13 @@ import { useDisplay } from 'vuetify'
 
 const display = useDisplay()
 const appBarHeight = computed(() => {
-  return display.width.value <= 612 ? 300 : 250
+  if (display.width.value < 600) {
+    return 350 
+  } else if (display.width.value >= 600 && display.width.value <= 700) {
+    return 250 
+  } else {
+    return 250 
+  }
 })
 
 const navigateToHome = (): void => {
