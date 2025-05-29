@@ -13,7 +13,7 @@
             v-for="(item, index) in leftIcons"
             :key="index"
             :to="item.to"
-            :size="$vuetify.display.xs ? 'small' : 'default'"
+            :size="$vuetify.display.xs ? 'x-small' : 'default'"
             
           >
             <v-icon start>{{ item.icon }}</v-icon>
@@ -23,13 +23,13 @@
               @click="toggleDrawer"
               :class="{'d-none': $vuetify.display.width > 959}"
               variant="elevated"
-              size="x-small"
+              size="small"
               color="primary"
               class="pa-3 rounded-lg cursor-pointer"
               prepend-icon="mdi-menu"
-            >
+            > <b>Menu</b>
               <template v-slot:append>
-                <v-icon size="small">mdi-chevron-down</v-icon>
+                <v-icon size="x-small">mdi-chevron-down</v-icon>
               </template>
             </v-chip>  
           </v-col>

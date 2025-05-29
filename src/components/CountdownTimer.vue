@@ -138,6 +138,14 @@ onBeforeUnmount(() => {
   font-size: 1.5rem;
   padding: 0 2px;
 }
+@media (max-width:996px) and (min-width: 600px) {
+  .time-value{
+    font-size: 1.2rem;
+  }
+  .time-label{
+    font-size: 0.7rem;
+  }
+}
 
 /* Step-down breakpoints */
 @media (max-width: 1765px) and (min-width: 601px) {

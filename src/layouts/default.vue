@@ -4,7 +4,8 @@
     <app-header @update:drawer="drawer = !drawer" />
     <v-main>
       <v-container fluid class="fill-height pa-6">
-        <v-row >
+        <v-row no-gutters>
+          <!-- 1680 x 887 -->
           <v-col
             cols="12"
             md="2"
@@ -94,7 +95,11 @@
               </v-sheet> -->
             </div>
           </v-col>
-            <router-view />
+          <v-col
+          cols="12"
+          md="10"
+          >
+          <router-view /></v-col>
         </v-row>
       </v-container>
     </v-main>
