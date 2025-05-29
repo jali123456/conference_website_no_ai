@@ -1,0 +1,6 @@
+/* global.css */
+.text-wrap {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}

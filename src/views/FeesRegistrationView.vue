@@ -113,7 +113,7 @@
                     v-model="formData.firstName"
                     label="First Name"
                     required
-                    :rules="[v => !!v || 'First name is required']"
+                    :rules="nameRules"
                   ></v-text-field>
                 </v-col>
 
@@ -122,7 +122,7 @@
                     v-model="formData.lastName"
                     label="Last Name"
                     required
-                    :rules="[v => !!v || 'Last name is required']"
+                    :rules="nameRules"
                   ></v-text-field>
                 </v-col>
 
@@ -175,10 +175,25 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const valid = ref(false)
-const form = ref(null)
+// Type definitions for better TypeScript support
+interface FormData {
+  firstName: string
+  lastName: string
+  email: string
+  category: string
+  specialRequirements: string
+}
 
-const formData = ref({
+interface VForm {
+  reset: () => void
+  validate: () => Promise<{ valid: boolean }>
+  resetValidation: () => void
+}
+
+const valid = ref(false)
+const form = ref<VForm | null>(null)
+
+const formData = ref<FormData>({
   firstName: '',
   lastName: '',
   email: '',
@@ -192,9 +207,14 @@ const categories = [
   'Industry'
 ]
 
+// Properly typed validation rules
 const emailRules = [
-  v => !!v || 'Email is required',
-  v => /.+@.+\..+/.test(v) || 'Email must be valid'
+  (v: string) => !!v || 'Email is required',
+  (v: string) => /.+@.+\..+/.test(v) || 'Email must be valid'
+]
+
+const nameRules = [
+  (v: string) => !!v || 'This field is required'
 ]
 
 const registrationSteps = [
@@ -235,7 +255,7 @@ const submitForm = async () => {
 
     if (response.ok && result.success) {
       alert('Registration submitted successfully! Check your email for confirmation.')
-      // Reset form
+      // Reset form data
       formData.value = {
         firstName: '',
         lastName: '',
@@ -243,7 +263,7 @@ const submitForm = async () => {
         category: '',
         specialRequirements: ''
       }
-      // Reset form validation
+      // Reset form validation - now properly typed
       if (form.value) {
         form.value.reset()
       }
@@ -261,4 +281,4 @@ const submitForm = async () => {
 .v-table {
   width: 100%;
 }
-</style> 
+</style>

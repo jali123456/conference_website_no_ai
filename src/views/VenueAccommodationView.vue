@@ -3,39 +3,38 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h1 class="text-h3 mb-6 text-center">Venue & Accommodation</h1>
+        <h1 class="text-h3 mb-6 text-center text-wrap">Venue & Accommodation</h1>
       </v-col>
 
       <!-- Venue Information -->
-      <v-col cols="12" md="8">
+      <v-col cols="12" md="6">
         <v-card>
           <v-img
             src="@/assets/images/venue_1.jpg"
-            height="600"
-            cover
+            width="100%"
+            contain
           ></v-img>
-          
-          <v-card-title class="text-h5">Waterfront Hotel Kuching</v-card-title>
+          <v-card-title class="text-h5 text-wrap">Waterfront Hotel Kuching</v-card-title>
           <v-card-text>
-            <div class="text-h6 mb-2">Waterfront Events Hall</div>
-            <p class="mb-4">
-              68 Jalan Tun Abang Haji Openg,<br>
-              93000 Kuching, Sarawak<br>
+            <div class="text-h6 mb-2 text-wrap">Waterfront Events Hall </div>
+            <p class="mb-4 text-wrap">
+              68 Jalan Tun Abang Haji Openg,
+              93000 Kuching, Sarawak
               Malaysia
             </p>
             
-            <div class="text-h6 mb-2">Getting There</div>
-            <v-list >
+            <div class="text-h6 mb-2 text-wrap">Getting There</div>
+            <v-list class="text-wrap">
               <v-list-item
                 v-for="(transport, index) in transportation_data"
                 :key="index"
-                class="text-black"
+                class="text-black text-wrap"
               >
                 <template v-slot:prepend>
                   <v-icon color="black">{{ transport.icon }}</v-icon>
                 </template>
-                <v-list-item-title class="text-black" >{{ transport.mode }}</v-list-item-title>
-                <v-list-item-subtitle class="text-black">{{ transport.description }}</v-list-item-subtitle>
+                <v-list-item-title class="text-black text-wrap" >{{ transport.mode }}</v-list-item-title>
+                <v-list-item-subtitle class="text-black text-wrap">{{ transport.description }}</v-list-item-subtitle>
               </v-list-item>
             </v-list>
           </v-card-text>
@@ -43,9 +42,9 @@
       </v-col>
 
       <!-- Map -->
-      <v-col cols="12" md="4">
+      <v-col cols="12" md="6">
         <v-card>
-          <v-card-title class="text-h6">Location Map</v-card-title>
+          <v-card-title class="text-h6 text-wrap">Location Map</v-card-title>
           <v-card-text>
             <div class="map-placeholder">
               <iframe
@@ -60,7 +59,7 @@
             </div>
           </v-card-text>
           <!-- Add a button to open Google Maps -->
-          <div class="text-center"> 
+          <div class="text-center text-wrap"> 
             <v-btn
               color="primary"
               variant="flat"       
@@ -80,7 +79,7 @@
       <!-- Accommodation -->
       <v-col cols="12" class="mt-6">
         <v-sheet>
-          <h2 class="text-h5 mb-6 pa-4">Recommended Accommodation</h2>
+          <h2 class="text-h5 mb-6 pa-4 text-wrap">Recommended Accommodation</h2>
           <v-row>
             <v-col cols="12" md="6" v-for="(hotel, index) in accommodations" :key="index">
               <v-sheet class="pa-4">
@@ -90,16 +89,16 @@
                     height="250"
                     cover
                   ></v-img>
-                  <v-card-title>{{ hotel.name }}</v-card-title>
+                  <v-card-title class="text-wrap">{{ hotel.name }}</v-card-title>
                   <v-card-text>
-                    <p class="mb-2">⭐{{ hotel.rating }}</p>
-                    <p class="mb-2">{{ hotel.address }}</p>
-                    <p class="mb-2">Phone: {{ hotel.phone }}</p>
-                    <p class="mb-4" v-if="hotel.specialRate">
+                    <p class="mb-2 text-wrap">⭐{{ hotel.rating }}</p>
+                    <p class="mb-2 text-wrap">{{ hotel.address }}</p>
+                    <p class="mb-2 text-wrap">Phone: {{ hotel.phone }}</p>
+                    <p class="mb-4 text-wrap" v-if="hotel.specialRate">
                       Special conference rate: {{ hotel.specialRate}}<br>
                       Use code: {{ hotel.promoCode }}
                     </p>
-                    <v-list v-if="hotel.amenities && hotel.amenities.length > 0">
+                    <v-list v-if="hotel.amenities && hotel.amenities.length > 0" class="text-wrap">
                       <v-list-item
                         v-for="(amenity, amenityIndex) in hotel.amenities"
                         :key="amenityIndex"
@@ -107,7 +106,7 @@
                       <template v-slot:prepend>
                         <v-icon color="black">{{ amenity.icon }}</v-icon>
                       </template>
-                        <v-list-item-title class="text-black">{{ amenity.name }}</v-list-item-title>
+                        <v-list-item-title class="text-black text-wrap">{{ amenity.name }}</v-list-item-title>
                       </v-list-item>
                     </v-list>
                   </v-card-text>
@@ -118,6 +117,7 @@
                       block
                       :href="hotel.bookingLink"
                       target="_blank"
+                      class="text-wrap"
                     >
                       Book Now
                     </v-btn>
