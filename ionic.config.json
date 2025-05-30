@@ -1,0 +1,7 @@
+{
+  "name": "conference_website_no_ai",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
