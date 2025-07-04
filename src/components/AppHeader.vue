@@ -47,7 +47,7 @@
           >
           </v-img>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center align-center pt-md-3 pt-lg-3 pt-xl-3">
           <CountdownTimer />
         </v-col>
         

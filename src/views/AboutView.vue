@@ -59,9 +59,7 @@
                 <v-card variant="outlined">
                   <v-card-title class="text-red">Enforcement & Law</v-card-title>
                   <v-card-text>
-                    -Points 1<br></br>
-                    -Points 2<br></br>
-                    -Etc
+                    This sub-theme explores the evolving landscape of law enforcement and legal systems in a rapidly changing world. Topics include the modernization of enforcement agencies, the impact of technology on law enforcement, cross-border legal cooperation, and the challenges of upholding justice and the rule of law in the face of new threats. Participants will discuss best practices, policy reforms, and innovative strategies to strengthen legal frameworks and ensure effective, ethical enforcement.
                   </v-card-text>
                 </v-card>
               </v-col>
@@ -69,7 +67,7 @@
                 <v-card variant="outlined">
                   <v-card-title class="text-red">Integrity & Leadership</v-card-title>
                   <v-card-text>
-                    The theme of Law at ICELIn26 provides a critical platform to examine the foundations, evolution, and reform of legal systems. It brings together legal scholars, practitioners, and policymakers to discuss contemporary legal issues, legislative developments, and the need for responsive legal frameworks that reflect the values of fairness, equality, and the rule of law. By addressing gaps in legal access and judicial processes, this theme supports the development of a more inclusive and just legal environment, aligned with democratic principles and societal needs.
+                    This sub-theme focuses on the importance of integrity and ethical leadership in public and private institutions. It addresses anti-corruption measures, transparency, accountability, and the cultivation of values-based leadership. Sessions will highlight case studies, policy innovations, and frameworks that promote a culture of integrity, foster public trust, and empower leaders to drive positive change in their organizations and communities.
                   </v-card-text>
                 </v-card>
               </v-col>
@@ -93,7 +91,7 @@
                 <v-card variant="outlined">
                   <v-card-title class="text-red">Disaster Science & Climate<br></br> Resilience</v-card-title>
                   <v-card-text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam excepturi eligendi doloribus, dolorem pariatur blanditiis facere minus similique, provident aliquid, quidem cupiditate expedita vel placeat cum ea consequatur voluptatem error?
+                    This sub-theme examines the science of disaster risk reduction and strategies for building climate resilience. It covers topics such as disaster preparedness, emergency response, climate adaptation, and the integration of scientific research into policy and practice. Experts will share insights on strengthening community resilience, leveraging technology for disaster management, and fostering international collaboration to address the growing challenges posed by climate change and natural hazards.
                   </v-card-text>
                 </v-card>
               </v-col>
