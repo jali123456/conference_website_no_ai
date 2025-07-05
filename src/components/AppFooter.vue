@@ -13,20 +13,6 @@
            <p class="text-body-2 mb-1">
              Enforcement Leadership And Management University
            </p>
-           <p class="text-body-2 mb-1">
-            1, Persiaran Timur 1, Bandar Enstek,
-            <br>
-            71760 Nilai Negeri Sembilan, Malaysia
-           </p>
-           <p class="text-body-2 mb-1">
-             <v-icon small left>mdi-phone</v-icon> Tel: +0176063615
-           </p>
-           <p class="text-body-2 mb-1">
-             <v-icon small left>mdi-fax</v-icon> Faks: 
-           </p>
-           <p class="text-body-2 mb-0">
-             <v-icon small left>mdi-email</v-icon> Emel: 
-           </p>
          </v-col>
  
          <v-col cols="4" class="text-center mb-2 mb-sm-0 me-auto align-self-center">
@@ -51,6 +37,15 @@
             >
               <v-icon :icon="item.icon" size="18"></v-icon>
             </v-btn>
+          <p class="text-body-2 mb-1">
+             <v-icon small left>mdi-phone</v-icon> Tel: +0176063615
+           </p>
+           <p class="text-body-2 mb-1">
+             <v-icon small left>mdi-fax</v-icon> Faks: 
+           </p>
+           <p class="text-body-2 mb-0">
+             <v-icon small left>mdi-email</v-icon> Emel: 
+           </p>
          </v-col>
        </v-row>
  
