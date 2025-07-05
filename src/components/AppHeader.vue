@@ -1,6 +1,9 @@
 <!-- AppHeader.vue -->
 <template>
-  <v-app-bar :height="appBarHeight" color="white">
+  <v-app-bar 
+  flat
+  :height="appBarHeight" 
+  color="white">
     <v-container fluid class="pa-0 mt-0 mb-0 fill-height">
       <!-- Top Row -->
       <!-- class="d-flex justify-space-between mb-6 align-stretch"
@@ -39,8 +42,8 @@
         <v-col cols="12" :sm="display.width.value <= 700 ? 6 : 5" xs="12"md="5"lg="5"xl="5" :class="{'mx-auto': display.width.value <= 550}" class="text-center">
           <v-img
             src="@/assets/logo.png"
-            :width="300"
-            :height="200"
+            :width="display.width.value <= 550 ? 220 : 300"
+            :height="display.width.value <= 550 ? 210 : 200"
             contain
             @click="navigateToHome"
             class="logo-image mx-auto"
@@ -48,7 +51,6 @@
           </v-img>
         </v-col>
         <v-col class="d-flex justify-center align-center pt-md-3 pt-lg-3 pt-xl-3">
-          <CountdownTimer />
         </v-col>
         
         <!-- Right section: Empty for now but reserved for future menu items -->

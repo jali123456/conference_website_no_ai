@@ -36,8 +36,7 @@
                     Enforcement & Law
                   </v-card-title>
                   <v-card-text>
-                    Experience presentations in a dynamic environment that encourages interaction 
-                    and engagement.
+                    This sub-theme explores the evolving landscape of law enforcement and legal systems in a rapidly changing world. Topics include the modernization of enforcement agencies, the impact of technology on law enforcement, cross-border legal cooperation, and the challenges of upholding justice and the rule of law in the face of new threats. Participants will discuss best practices, policy reforms, and innovative strategies to strengthen legal frameworks and ensure effective, ethical enforcement.
                   </v-card-text>
                 </v-card>
               </v-col>
@@ -48,8 +47,7 @@
                     Integrity & Leadership
                   </v-card-title>
                   <v-card-text>
-                    Connect with peers and experts in your field in a welcoming and exciting 
-                    atmosphere.
+                    This sub-theme focuses on the importance of integrity and ethical leadership in public and private institutions. It addresses anti-corruption measures, transparency, accountability, and the cultivation of values-based leadership. Sessions will highlight case studies, policy innovations, and frameworks that promote a culture of integrity, foster public trust, and empower leaders to drive positive change in their organizations and communities.
                   </v-card-text>
                 </v-card>
               </v-col>
@@ -60,8 +58,7 @@
                     Disaster Management & Climate Resilience
                   </v-card-title>
                   <v-card-text>
-                    Present your research and get published in our peer-reviewed conference 
-                    proceedings.
+                    This sub-theme examines the science of disaster risk reduction and strategies for building climate resilience. It covers topics such as disaster preparedness, emergency response, climate adaptation, and the integration of scientific research into policy and practice. Experts will share insights on strengthening community resilience, leveraging technology for disaster management, and fostering international collaboration to address the growing challenges posed by climate change and natural hazards.
                   </v-card-text>
                 </v-card>
               </v-col>
@@ -82,7 +79,12 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-row class="mt-6">
+    <v-row>
+      <v-col cols="12" class="d-flex justify-center my-4">
+        <CountdownTimer />
+      </v-col>
+    </v-row>
+    <v-row cols="12" class="mt-6">
       <v-col cols="12" class="sponsor-section">
         <v-card class="mx-auto">
           <v-img
@@ -103,6 +105,99 @@
             contain
           >
             </v-img>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row cols="12">
+      <v-col cols="12">
+        <v-card class="mx-auto" max-width="1400">
+          <v-card-title class="font-weight-bold text-h5 text-center py-4" style="word-break:break-word; white-space:normal;">
+            <span class="d-block">SENARAI TETAMU JEMPUTAN (VIP)</span>
+            <span class="d-block text-body-1">International Conference on Enforcement, Law & Integrity 2026 (ICELIn26)</span>
+          </v-card-title>
+          <v-card-text>
+            <v-table density="comfortable">
+              <thead>
+                <tr>
+                  <th>Bil.</th>
+                  <th>Jawatan</th>
+                  <th>Nama</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Premier Sarawak</td>
+                  <td>YBhg. Datuk Patinggi Tan Sri (Dr) Abang Haji Abdul Rahman Zohari bin Tun Datuk Abang Haji Openg</td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>Hakim Besar Sabah dan Sarawak</td>
+                  <td>Yang Amat Arif Tan Sri Abdul Rahman bin Sebli</td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td>Setiausaha Kerajaan Negeri Sarawak</td>
+                  <td>YBhg. Datuk Amar Haji Mohamad Abu Bakar bin Marzuki</td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td>Timbalan Menteri di Jabatan Premier<br /><span class="text-caption">(Undang-undang, MA63, Negeri-Persekutuan)</span></td>
+                  <td>YBhg. Datuk Hajah Sharifah Hasidah Bt. Sayeed Aman Ghazali</td>
+                </tr>
+                <tr>
+                  <td>5.</td>
+                  <td>Ketua Pesuruhjaya SPRM<br /><span class="text-caption">(MACC Chief Commissioner)</span></td>
+                  <td>YBhg. Tan Sri Dato' Sri Haji Azam bin Baki</td>
+                </tr>
+                <tr>
+                  <td>6.</td>
+                  <td>Pesuruhjaya Polis Sarawak</td>
+                  <td>YBhg. CP Dato Mancha Anak Ata</td>
+                </tr>
+                <tr>
+                  <td>7.</td>
+                  <td>Ketua JPJKK PDRM Sarawak</td>
+                  <td>Dr. Parusuraman Subramaniam</td>
+                </tr>
+                <tr>
+                  <td>8.</td>
+                  <td>Pengarah SPRM Sarawak</td>
+                  <td>YBrs. Hasbilah bin Mohamad Salleh</td>
+                </tr>
+                <tr>
+                  <td>9.</td>
+                  <td>Pengarah Hutan Sarawak</td>
+                  <td>Datu Haji Hamden bin Haji Mohammad</td>
+                </tr>
+                <tr>
+                  <td>10.</td>
+                  <td>Naib Canselor UNIMAS</td>
+                  <td>Professor Dr. Ahmad Hata Rasit</td>
+                </tr>
+                <tr>
+                  <td>11.</td>
+                  <td>Naib Canselor ELMU</td>
+                  <td>Professor Datuk Dr. Kassim Noor Mohamed</td>
+                </tr>
+                <tr>
+                  <td>12.</td>
+                  <td>Pengarah Kampus UPM Bintulu</td>
+                  <td>Professor Dr. Shahrul Razid Sarbini</td>
+                </tr>
+                <tr>
+                  <td>13.</td>
+                  <td>Timbalan Ketua Pegawai Eksekutif Kumpulan & Presiden, Strategi ELMU</td>
+                  <td>Dato’ Hairul Ridza Hayata</td>
+                </tr>
+                <tr>
+                  <td>14.</td>
+                  <td>Ahli Lembaga Pengarah ELMU</td>
+                  <td>YBhg. Tan Sri Idrus Harun</td>
+                </tr>
+              </tbody>
+            </v-table>
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>

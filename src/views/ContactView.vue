@@ -33,7 +33,7 @@
                   rows="4"
                   class="mb-4"
                 ></v-textarea>
-                <v-btn color="primary" size="large" block>Send Message</v-btn>
+                <v-btn color="primary" size="large" block>Send Email</v-btn>
               </v-form>
             </v-col>
 

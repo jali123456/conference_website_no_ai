@@ -16,35 +16,42 @@
          </v-col>
  
          <v-col cols="4" class="text-center mb-2 mb-sm-0 me-auto align-self-center">
-           <v-btn variant="text" density="compact" color="white" :href="'https://elmu.edu.my/'" target="_blank" class="mx-1">Home</v-btn>
-              <v-btn variant="text" density="compact" color="white" :href="'https://elmu.edu.my/about'" target="_blank" class="mx-1">About</v-btn>
-              <v-btn variant="text" density="compact" color="white" :href="'https://elmu.edu.my/study'" target="_blank" class="mx-1">Services</v-btn>
-          </v-col>
- 
+           <h4 class="text-subtitle-1 mb-1 d-none d-sm-block">Follow Us</h4>
+           <div>
+             <v-btn
+               v-for="item in socialItems"
+               :key="item.title"
+               :href="item.href"
+               :title="item.title"
+               icon
+               variant="text"
+               density="compact"
+               class="mx-1 social-link-custom"
+               target="_blank"
+               rel="noopener noreferrer"
+             >
+               <v-icon :icon="item.icon" size="18"></v-icon>
+             </v-btn>
+           </div>
+           <div class="mt-2">
+             <v-btn variant="text" density="compact" color="white" :href="'https://elmu.edu.my/'" target="_blank" class="mx-1">Home</v-btn>
+             <v-btn variant="text" density="compact" color="white" :href="'https://elmu.edu.my/about'" target="_blank" class="mx-1">About</v-btn>
+             <v-btn variant="text" density="compact" color="white" :href="'https://elmu.edu.my/study'" target="_blank" class="mx-1">Services</v-btn>
+           </div>
+         </v-col>
+
          <v-col cols="4" class="text-center text-sm-right mb-2 mb-sm-0 me-auto align-self-center">
-            <h4 class="text-subtitle-1 mb-1 d-none d-sm-block">Follow Us</h4> 
-            <v-btn
-              v-for="item in socialItems"
-              :key="item.title"
-              :href="item.href"
-              :title="item.title"
-              icon
-              variant="text"
-              density="compact"
-              class="mx-1 social-link-custom"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <v-icon :icon="item.icon" size="18"></v-icon>
-            </v-btn>
-          <p class="text-body-2 mb-1">
-             <v-icon small left>mdi-phone</v-icon> Tel: +0176063615
+           <p class="text-body-2 mb-1">
+             Tel: +0176063615
+             <v-icon small left>mdi-phone</v-icon> 
            </p>
            <p class="text-body-2 mb-1">
-             <v-icon small left>mdi-fax</v-icon> Faks: 
+             Faks: +603-8925 1000
+             <v-icon small left>mdi-fax</v-icon>
            </p>
            <p class="text-body-2 mb-0">
-             <v-icon small left>mdi-email</v-icon> Emel: 
+             Emel: <a href="mailto:icelin@elmu.edu.my" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-white">icelin@elmu.edu.my</a>
+             <v-icon small left>mdi-email</v-icon>
            </p>
          </v-col>
        </v-row>

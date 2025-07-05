@@ -143,14 +143,22 @@ onBeforeUnmount(() => {
   text-align: center;
   flex: 0 1 auto;
   min-width: 0;
-  margin: 0 0.08rem;
+  margin: 0 1.2rem;
 }
 
 
+
 .time-value {
-  font-size: 1.1rem;
+  font-size: 2.2rem;
   font-weight: bold;
   letter-spacing: -0.5px;
+}
+
+.time-label {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  font-weight: 700;
 }
 
 
@@ -163,7 +171,7 @@ onBeforeUnmount(() => {
 
 .time-divider {
   font-size: 1.1rem;
-  padding: 0 0.08rem;
+  padding: 0 0.6rem;
 }
 
 @media (max-width:996px) and (min-width: 600px) {
@@ -215,23 +223,27 @@ onBeforeUnmount(() => {
 
 @media (max-width: 600px) {
   .countdown-container {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.08rem;
+    gap: 0.3rem;
   }
   .time-section {
-    flex: 0 1 auto;
-    margin: 0 0.05rem;
+    flex: 1 1 40%;
+    margin: 0.5rem 0.2rem;
+    min-width: 80px;
   }
   .time-value {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
   .time-label {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
   .time-divider {
-    font-size: 0.8rem;
-    padding: 0 0.05rem;
+    font-size: 1.2rem;
+    padding: 0 0.2rem;
+    flex-basis: 100%;
+    width: 100%;
+    text-align: center;
   }
 }
 

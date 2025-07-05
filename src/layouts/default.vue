@@ -127,7 +127,7 @@ onUnmounted(() => {
 
 const menuItems = [
   { title: 'Home', path: '/', icon: 'mdi-home' },
-  { title: 'Panel List', path: '/panel-list', icon: 'mdi-account-group' },
+  { title: 'Panel', path: '/panel-list', icon: 'mdi-account-group' },
   { title: 'Fees & Registration', path: '/fees-registration', icon: 'mdi-currency-usd' },
   { title: 'Venue & Accommodation', path: '/venue-accommodation', icon: 'mdi-map-marker' },
   { title: 'Programme & Dates', path: '/programme-dates', icon: 'mdi-calendar' },

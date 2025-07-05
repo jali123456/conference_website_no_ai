@@ -60,48 +60,81 @@
 
       <!-- Conference Programme -->
       <v-col cols="12">
-          <v-card>
-            <v-card-title class="text-h5">Conference Programme</v-card-title>
-            <v-card-text>
-              <v-tabs v-model="activeTab">
-                <v-tab value="day1">Day 1</v-tab>
-                <v-tab value="day2">Day 2</v-tab>
-              </v-tabs>
+        <v-card>
+          <v-card-title class="text-h5">Conference Programme</v-card-title>
+          <v-card-text>
+            <v-tabs v-model="activeTab" class="mb-4">
+              <v-tab value="day1">Day 1</v-tab>
+              <v-tab value="day2">Day 2</v-tab>
+            </v-tabs>
 
-              <v-window v-model="activeTab">
-                <v-window-item
-                  v-for="(day, index) in programme"
-                  :key="index"
-                  :value="'day' + (index + 1)"
-                >
-                  <v-subheader class="text-h6 mt-4 mb-2">
-                    {{ day[0].date }}
-                  </v-subheader>
-                  <v-list lines="two">
-                    <template v-for="(session, sIndex) in day" :key="sIndex">
-                      <v-list-subheader>{{ session.time }}</v-list-subheader>
-                      <v-list-item>
-                        <v-list-item-title class="text-black">{{ session.title }}</v-list-item-title>
-                        <v-list-item-subtitle class="text-black">
-                          {{ session.location }}
-                          <template v-if="session.details && Array.isArray(session.details)">
-                            <div v-for="(detail, dIndex) in session.details" :key="dIndex">
-                              {{ detail }}
-                            </div>
-                          </template>
-                          <!-- <template v-if="session.speaker">
-                            <br>Speaker: {{ session.speaker }}
-                          </template> -->
-                        </v-list-item-subtitle>
-                      </v-list-item>
-                      <v-divider v-if="sIndex < day.length - 1"></v-divider>
+            <!-- Desktop/Tablet Timeline Layout -->
+            <v-window v-if="!$vuetify.display.xs && !$vuetify.display.sm" v-model="activeTab">
+              <v-window-item
+                v-for="(day, index) in programme"
+                :key="index"
+                :value="'day' + (index + 1)"
+              >
+                <v-subheader class="text-h6 mt-4 mb-2 text-primary text-center">
+                  {{ day[0].date }}
+                </v-subheader>
+                <v-timeline side="end" align="start" class="programme-timeline">
+                  <v-timeline-item
+                    v-for="(session, sIndex) in day"
+                    :key="sIndex"
+                    :dot-color="'primary'"
+                    size="small"
+                  >
+                    <template v-slot:opposite>
+                      <div class="font-weight-bold text-caption text-primary">{{ session.time }}</div>
                     </template>
-                  </v-list>
-                </v-window-item>
-              </v-window>
-            </v-card-text>
-          </v-card>
-        </v-col>
+                    <v-card class="mb-2 programme-session-card">
+                      <v-card-title class="text-h6 text-wrap">{{ session.title }}</v-card-title>
+                      <v-card-subtitle class="text-caption text-grey-darken-1 mb-1">{{ session.location }}</v-card-subtitle>
+                      <v-card-text v-if="session.details && Array.isArray(session.details)">
+                        <ul class="programme-details-list">
+                          <li v-for="(detail, dIndex) in session.details" :key="dIndex">{{ detail }}</li>
+                        </ul>
+                      </v-card-text>
+                    </v-card>
+                  </v-timeline-item>
+                </v-timeline>
+              </v-window-item>
+            </v-window>
+
+            <!-- Mobile List Layout for Programme -->
+            <v-window v-else v-model="activeTab">
+              <v-window-item
+                v-for="(day, index) in programme"
+                :key="index"
+                :value="'day' + (index + 1)"
+              >
+                <div class="mobile-dates">
+                  <div class="text-h6 text-primary text-center mb-4">{{ day[0].date }}</div>
+                  <v-card
+                    v-for="(session, sIndex) in day"
+                    :key="sIndex"
+                    class="mb-4 programme-session-card"
+                    variant="outlined"
+                  >
+                    <v-card-text>
+                      <div class="d-flex align-center mb-2">
+                        <v-icon color="primary" size="small" class="mr-2">mdi-clock-outline</v-icon>
+                        <span class="text-caption font-weight-medium">{{ session.time }}</span>
+                      </div>
+                      <h3 class="text-h6 mb-1">{{ session.title }}</h3>
+                      <div class="text-caption text-grey-darken-1 mb-2">{{ session.location }}</div>
+                      <ul v-if="session.details && Array.isArray(session.details)" class="programme-details-list">
+                        <li v-for="(detail, dIndex) in session.details" :key="dIndex">{{ detail }}</li>
+                      </ul>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </v-window-item>
+            </v-window>
+          </v-card-text>
+        </v-card>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -188,7 +221,14 @@ const programme = [
     {
       time: '10:00 - 10:50',
       title: 'FORUM SESSION: Title TBC',
-      location: 'TBA'
+      location: 'TBA',
+      details:[
+        "Moderator: Datuk Mohd Shahrizan Bin Che Mat Din (Deputy Vice-Chancellor Academic Affairs, ELMU)",
+        `Panellists: 1.Yang Amat Arif Tan Sri Abdul Rahman bin Sebli
+        2.YBhg. Tan Sri Dato' Sri Haji Azam bin Baki
+        3.YBhg. Tan Sri Idrus Harun
+        4.Professor Datuk Dr. Kassim Noor Mohamed`,
+      ]
     },
     {
       time: '10:50 - 11:30',
@@ -310,5 +350,22 @@ const programme = [
 
 .mobile-dates {
   padding-top: 1rem;
+}
+/* Programme Timeline Styling */
+.programme-timeline {
+  padding-top: 1.5rem;
+}
+.programme-session-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.programme-details-list {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 1rem;
+}
+.programme-details-list li {
+  margin-bottom: 0.25em;
 }
 </style>

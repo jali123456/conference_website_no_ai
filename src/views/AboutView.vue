@@ -6,7 +6,7 @@
       </v-col>
 
       <!-- Conference Overview -->
-      <v-col cols="12">
+      <v-col cols="12" lg="6" md="6">
         <v-card class="mb-6">
           <v-card-title class="text-h5">
             <v-icon start>mdi-information-outline</v-icon>
@@ -30,7 +30,7 @@
         </v-card>
       </v-col>
       <!-- Objectives -->
-      <v-col cols="12">
+      <v-col cols="12" lg="6" md="6">
         <v-card class="mb-6">
           <v-card-title class="text-h5">
             <v-icon start>mdi-bullseye-arrow</v-icon>
@@ -57,7 +57,7 @@
             <v-row>
               <v-col cols="12" md="4">
                 <v-card variant="outlined">
-                  <v-card-title class="text-red">Enforcement & Law</v-card-title>
+                  <v-card-title >Enforcement & Law</v-card-title>
                   <v-card-text>
                     This sub-theme explores the evolving landscape of law enforcement and legal systems in a rapidly changing world. Topics include the modernization of enforcement agencies, the impact of technology on law enforcement, cross-border legal cooperation, and the challenges of upholding justice and the rule of law in the face of new threats. Participants will discuss best practices, policy reforms, and innovative strategies to strengthen legal frameworks and ensure effective, ethical enforcement.
                   </v-card-text>
@@ -65,31 +65,15 @@
               </v-col>
               <v-col cols="12" md="4">
                 <v-card variant="outlined">
-                  <v-card-title class="text-red">Integrity & Leadership</v-card-title>
+                  <v-card-title >Integrity & Leadership</v-card-title>
                   <v-card-text>
                     This sub-theme focuses on the importance of integrity and ethical leadership in public and private institutions. It addresses anti-corruption measures, transparency, accountability, and the cultivation of values-based leadership. Sessions will highlight case studies, policy innovations, and frameworks that promote a culture of integrity, foster public trust, and empower leaders to drive positive change in their organizations and communities.
                   </v-card-text>
                 </v-card>
               </v-col>
-              <!-- <v-col cols="12" md="4">
-                <v-card variant="outlined">
-                  <v-card-title>Integrity</v-card-title>
-                  <v-card-text>
-                    Integrity lies at the core of trustworthy governance and effective public institutions. This theme focuses on promoting ethical leadership, anti-corruption measures, and transparent governance practices. ICELIn26 will showcase best practices, case studies, and policy innovations aimed at embedding integrity into institutional culture across sectors. By fostering dialogue among stakeholders from academia, government, civil society, and the private sector, the conference encourages a shared commitment to accountability, ethical conduct, and the restoration of public trust in the justice system.
-                  </v-card-text>
-                </v-card>
-              </v-col> -->
-              <!-- <v-col cols="12" md="4">
-                <v-card variant="outlined">
-                  <v-card-title class="text-red">leadership</v-card-title>
-                  <v-card-text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam excepturi eligendi doloribus, dolorem pariatur blanditiis facere minus similique, provident aliquid, quidem cupiditate expedita vel placeat cum ea consequatur voluptatem error?
-                  </v-card-text>
-                </v-card>
-              </v-col> -->
               <v-col cols="12" md="4">
                 <v-card variant="outlined">
-                  <v-card-title class="text-red">Disaster Science & Climate<br></br> Resilience</v-card-title>
+                  <v-card-title >Disaster Science & Climate<br></br> Resilience</v-card-title>
                   <v-card-text>
                     This sub-theme examines the science of disaster risk reduction and strategies for building climate resilience. It covers topics such as disaster preparedness, emergency response, climate adaptation, and the integration of scientific research into policy and practice. Experts will share insights on strengthening community resilience, leveraging technology for disaster management, and fostering international collaboration to address the growing challenges posed by climate change and natural hazards.
                   </v-card-text>
