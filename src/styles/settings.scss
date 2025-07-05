@@ -5,6 +5,10 @@
  */
 
 // https://vuetifyjs.com/features/sass-variables/`
+
+body{
+    background-color: blue;
+}
 // @use 'vuetify/settings' with (
-//   $color-pack: false
+  // Add other variable overrides here if needed
 // );
