@@ -106,6 +106,10 @@
         <v-card>
           <v-card-title class="text-h5">Registration Form</v-card-title>
           <v-card-text>
+            <v-progress-linear v-if="isCheckingApi" indeterminate color="primary" class="mb-4" />
+            <v-alert v-else-if="!isApiAvailable" type="error" class="mb-4">
+              Registration is currently unavailable. Please try again later.
+            </v-alert>
             <v-form ref="form" v-model="valid">
               <v-row>
                 <v-col cols="12" md="6">
@@ -114,6 +118,7 @@
                     label="First Name"
                     required
                     :rules="nameRules"
+                    :disabled="!isApiAvailable || isCheckingApi"
                   ></v-text-field>
                 </v-col>
 
@@ -123,6 +128,7 @@
                     label="Last Name"
                     required
                     :rules="nameRules"
+                    :disabled="!isApiAvailable || isCheckingApi"
                   ></v-text-field>
                 </v-col>
 
@@ -133,6 +139,7 @@
                     type="email"
                     required
                     :rules="emailRules"
+                    :disabled="!isApiAvailable || isCheckingApi"
                   ></v-text-field>
                 </v-col>
 
@@ -142,6 +149,7 @@
                     :items="categories"
                     label="Registration Category"
                     required
+                    :disabled="!isApiAvailable || isCheckingApi"
                   ></v-select>
                 </v-col>
 
@@ -150,6 +158,7 @@
                     v-model="formData.specialRequirements"
                     label="Special Requirements"
                     rows="3"
+                    :disabled="!isApiAvailable || isCheckingApi"
                   ></v-textarea>
                 </v-col>
               </v-row>
@@ -160,7 +169,7 @@
             <v-spacer></v-spacer>
             <v-btn
               color="primary"
-              :disabled="!valid"
+              :disabled="!valid || !isApiAvailable || isCheckingApi"
               @click="submitForm"
             >
               Submit Registration
@@ -174,6 +183,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 
 // Type definitions for better TypeScript support
 interface FormData {
@@ -234,6 +244,41 @@ const registrationSteps = [
     color: 'success'
   }
 ]
+
+// API connectivity state
+const isApiAvailable = ref(false)
+const isCheckingApi = ref(true)
+let apiCheckInterval: number | undefined
+
+// Ping the API with a 10s timeout
+const pingApi = async (showLoading = false) => {
+  if (showLoading) isCheckingApi.value = true
+  try {
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 10000)
+    const response = await fetch('https://api.jali123456.win/register.php', {
+      method: 'HEAD',
+      signal: controller.signal
+    })
+    clearTimeout(timeoutId)
+    isApiAvailable.value = response.ok
+  } catch (e) {
+    isApiAvailable.value = false
+  } finally {
+    if (showLoading) isCheckingApi.value = false
+  }
+}
+
+onMounted(() => {
+  pingApi(true)
+  apiCheckInterval = window.setInterval(() => {
+    pingApi(false)
+  }, 60000)
+})
+
+onUnmounted(() => {
+  if (apiCheckInterval) clearInterval(apiCheckInterval)
+})
 
 const submitForm = async () => {
   try {

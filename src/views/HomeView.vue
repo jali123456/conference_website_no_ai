@@ -31,34 +31,40 @@
 
             <v-row class="mt-4 mt-sm-6">
               <v-col cols="12" sm="6" md="4">
-                <v-card class="mb-4 mb-sm-0">
+                <v-card class="mb-4 mb-sm-0 equal-height-card">
                   <v-card-title :class="featureTitleClass">
                     Enforcement & Law
                   </v-card-title>
                   <v-card-text>
-                    This sub-theme explores the evolving landscape of law enforcement and legal systems in a rapidly changing world. Topics include the modernization of enforcement agencies, the impact of technology on law enforcement, cross-border legal cooperation, and the challenges of upholding justice and the rule of law in the face of new threats. Participants will discuss best practices, policy reforms, and innovative strategies to strengthen legal frameworks and ensure effective, ethical enforcement.
+                    • Modernization of law enforcement and legal systems<br>
+                    • Technology's impact on justice and cross-border cooperation<br>
+                    • Best practices and policy reforms for effective enforcement
                   </v-card-text>
                 </v-card>
               </v-col>
 
               <v-col cols="12" sm="6" md="4">
-                <v-card class="mb-4 mb-sm-0">
+                <v-card class="mb-4 mb-sm-0 equal-height-card">
                   <v-card-title :class="featureTitleClass">
                     Integrity & Leadership
                   </v-card-title>
                   <v-card-text>
-                    This sub-theme focuses on the importance of integrity and ethical leadership in public and private institutions. It addresses anti-corruption measures, transparency, accountability, and the cultivation of values-based leadership. Sessions will highlight case studies, policy innovations, and frameworks that promote a culture of integrity, foster public trust, and empower leaders to drive positive change in their organizations and communities.
+                    • Integrity and ethical leadership in institutions<br>
+                    • Anti-corruption, transparency, and accountability<br>
+                    • Building public trust and positive change
                   </v-card-text>
                 </v-card>
               </v-col>
 
               <v-col cols="12" sm="6" md="4">
-                <v-card>
+                <v-card class="equal-height-card">
                   <v-card-title :class="featureTitleClass" class="text-wrap">
                     Disaster Management & Climate Resilience
                   </v-card-title>
                   <v-card-text>
-                    This sub-theme examines the science of disaster risk reduction and strategies for building climate resilience. It covers topics such as disaster preparedness, emergency response, climate adaptation, and the integration of scientific research into policy and practice. Experts will share insights on strengthening community resilience, leveraging technology for disaster management, and fostering international collaboration to address the growing challenges posed by climate change and natural hazards.
+                    • Disaster risk reduction and climate resilience<br>
+                    • Preparedness, response, and adaptation strategies<br>
+                    • Technology and collaboration for resilient communities
                   </v-card-text>
                 </v-card>
               </v-col>
@@ -108,7 +114,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-row cols="12">
+    <!-- <v-row cols="12">
       <v-col cols="12">
         <v-card class="mx-auto" max-width="1400">
           <v-card-title class="font-weight-bold text-h5 text-center py-4" style="word-break:break-word; white-space:normal;">
@@ -200,7 +206,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-    </v-row>
+    </v-row> -->
   </v-container>
 </template>
 
@@ -287,4 +293,17 @@ const featureTitleClass = computed(() => {
 .position-relative {
   position: relative;
 }
+/* Make feature cards have equal height */
+.equal-height-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.equal-height-card .v-card-title {
+  flex-shrink: 0;
+}
+.equal-height-card .v-card-text {
+  flex-grow: 1;
+}
+
 </style>
