@@ -161,7 +161,7 @@ const downloadCategories = [
         url: '@/assets/docs/venue_map.pdf'
       },
             {
-        name: 'Booklet',
+        name: 'Program Book',
         description: 'Conference booklet and informations',
         icon: 'mdi-book',
         url: '@/assets/docs/booklet.pdf'

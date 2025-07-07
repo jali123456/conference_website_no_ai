@@ -81,6 +81,11 @@ const MainRoutes = {
             name: 'Contact',
             component: () => import('@/views/ContactView.vue'),
         },
+        {
+            path: '/registration',
+            name: 'registration',
+            component: () => import('@/views/RegistrationPage.vue'),
+        },
     ]
 }
 
