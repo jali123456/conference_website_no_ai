@@ -3,7 +3,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h1 class="text-h3 mb-6 text-center">Conference Panel</h1>
+        <h1 class="text-h3 mb-6 text-center">Forum Panel</h1>
       </v-col>
       <v-col cols="12" md="6">
         <v-card>
@@ -63,22 +63,22 @@ const { xs, sm, md, lg, xl, xxl } = useDisplay()
 
 const speakers = [
   {
-    name: 'YBhg. Datuk Hajah Sharifah Hasidah',
-    title: 'Deputy Minister',
+    name: 'Panel List 1',
+    title: 'Title here',
     time: 'Day 1 - 9:00 AM',
     description: 'Opening keynote on the intersection of academic research and popular culture.',
     color: 'primary'
   },
   {
-    name: `YBhg. Tan Sri Dato' Sri Haji Azam `,
-    title: 'Chief Commissioner of the Malaysian Anti-Corruption Commission (MACC)',
+    name: `Panel List 2 `,
+    title: 'Title here',
     time: 'Day 1 - 10:00 AM',
     description: 'Exploring the future of academic conferences in the digital age.',
     color: 'secondary'
   },
   {
-    name: 'Professor Datuk Dr. Kassim Noor Mohamed',
-    title: 'CEO and Vice Chancellor of ELMU',
+    name: 'Panel List 3',
+    title: 'Title here',
     time: 'Day 1 - 11:00 AM',
     description: 'Closing keynote on bridging traditional academia with modern media formats.',
     color: 'info'

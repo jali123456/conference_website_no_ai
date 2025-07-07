@@ -20,28 +20,28 @@
             </thead>
             <tbody>
               <tr>
-                <td>Local Participant</td>
+                <td>Local Participant (Presenter)</td>
+                <td>RM1,600</td>
+              </tr>
+              <tr>
+                <td>Local Participant (Non-Presenter)</td>
                 <td>RM1,200</td>
               </tr>
               <tr>
-                <td>Local Student</td>
-                <td>RM800</td>
+                <td>International Participant (Presenter)</td>
+                <td>USD 500</td>
               </tr>
               <tr>
-                <td>Non-presenting Participant</td>
-                <td>RM1,000</td>
+                <td>International Participant (Non-Presenter)</td>
+                <td>USD 400</td>
               </tr>
               <tr>
-                <td>Dinner Fee(Optional)</td>
-                <td>RM200</td>
+                <td>Local Excursion/Networking Tour Fee</td>
+                <td>RM160</td>
               </tr>
               <tr>
-                <td>International Student</td>
-                <td>USD 350</td>
-              </tr>
-              <tr>
-                <td>International Participant</td>
-                <td>USD 700</td>
+                <td>International Excursion/Networking Tour Fee</td>
+                <td>USD 50</td>
               </tr>
             </tbody>
           </v-table>

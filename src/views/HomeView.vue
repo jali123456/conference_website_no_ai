@@ -68,6 +68,16 @@
                   </v-card-text>
                 </v-card>
               </v-col>
+              <v-col cols="12" sm="6" md="4">
+                <v-card class="equal-height-card">
+                  <v-card-title :class="featureTitleClass" class="text-wrap">
+                    Cybersecurity
+                  </v-card-title>
+                  <v-card-text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, esse cum. Facilis, architecto sint quaerat ab deserunt, assumenda accusantium inventore maxime vero, ullam tempore consequatur non alias sapiente molestiae dolorum.
+                  </v-card-text>
+                </v-card>
+              </v-col>
             </v-row>
           </v-card-text>
 

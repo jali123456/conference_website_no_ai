@@ -146,12 +146,6 @@ const activeTab = ref('day1')
 
 const importantDates = [
   {
-    date: '1 August, 2025',
-    title: 'Website & Social Media Launching',
-    description: 'Official website and social media platforms go live',
-    color: 'primary'
-  },
-  {
     date: '1 October, 2025',
     title: 'Call For Abstracts',
     description: 'Start of abstract submission period',

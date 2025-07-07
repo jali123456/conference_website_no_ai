@@ -4,7 +4,7 @@
       <v-container fluid class="pa-0">
        <v-row class="d-flex mb-6">
          <v-col cols="4" class="text-center text-sm-left mb-2 mb-sm-0 me-auto">
-           <h4 class="text-subtitle-1 mb-2">Hubungi Kami</h4>
+           
            <p class="text-body-2 mb-1 conference-title">
              1st International Conference on Enforcement,
              <br>
@@ -39,18 +39,14 @@
              <v-btn variant="text" density="compact" color="white" :href="'https://elmu.edu.my/study'" target="_blank" class="mx-1">Services</v-btn>
            </div>
          </v-col>
-
+         
          <v-col cols="4" class="text-center text-sm-right mb-2 mb-sm-0 me-auto align-self-center">
            <p class="text-body-2 mb-1">
-             Tel: +0176063615
+             Phone: +0176063615
              <v-icon small left>mdi-phone</v-icon> 
            </p>
-           <p class="text-body-2 mb-1">
-             Faks: +603-8925 1000
-             <v-icon small left>mdi-fax</v-icon>
-           </p>
            <p class="text-body-2 mb-0">
-             Emel: <a href="mailto:icelin@elmu.edu.my" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-white">icelin@elmu.edu.my</a>
+             Email: <a href="mailto:icelin@elmu.edu.my" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-white">icelin@elmu.edu.my</a>
              <v-icon small left>mdi-email</v-icon>
            </p>
          </v-col>
