@@ -32,6 +32,11 @@ export default defineConfig({
       fontsource: {
         families: [
           {
+            name: "Montserrat",
+            weights: [100, 300, 400, 500, 700, 900],
+            styles: ["normal", "italic"],
+          },
+          {
             name: "Roboto",
             weights: [100, 300, 400, 500, 700, 900],
             styles: ["normal", "italic"],

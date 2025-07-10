@@ -6,6 +6,7 @@
 
 <style>
 .v-application {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, 'Roboto', sans-serif;
 }
-</style> 
+
+</style>

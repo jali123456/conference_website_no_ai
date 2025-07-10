@@ -82,7 +82,6 @@ declare module 'vue' {
     Component_Why_Choose: typeof import('./components/Home/Component_Why_Choose.vue')['default']
     Component_Why_Sponsor: typeof import('./components/Exhibition/Component_Why_Sponsor.vue')['default']
     CountdownTimer: typeof import('./components/CountdownTimer.vue')['default']
-    Important_Dates: typeof import('./components/Important_Dates/Component_Important_Dates.vue')['default']
     Registration: typeof import('./components/Registration.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
