@@ -1,4 +1,4 @@
-// speakers.ts
+// Speakers_Data.ts
 import Speaker001 from '@/assets/images/Speaker_Images/Speaker-001.png';
 import Speaker002 from '@/assets/images/Speaker_Images/Speaker-002.png';
 import Speaker003 from '@/assets/images/Speaker_Images/Speaker-003.png';

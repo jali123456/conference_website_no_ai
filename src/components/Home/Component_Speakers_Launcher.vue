@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <h1 class="text-h3 text-center mb-4">SPEAKERS</h1>
+    <h3 class="text-h3 text-center mb-4">SPEAKERS</h3>
     <p class="text-body-1 text-center mb-4">
       The 1st International Conference on Enforcement, Law & Integrity 2025 brings together
       distinguished leaders, experts, and changemakers from the fields of law enforcement,
@@ -10,7 +10,7 @@
       strategies, promoting integrity, and advancing justice in an increasingly complex world.
     </p>
 
-    <h1 class="text-h3 text-center mb-4">OPENING AND KEYNOTE SPEECH</h1>
+    <h3 class="text-h3 text-center mb-4">OPENING AND KEYNOTE SPEECH</h3>
     <div class="d-flex justify-center mb-6">
       <div class="text-center">
         <!-- The v-avatar component uses the 'image' prop to load images -->

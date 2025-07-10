@@ -6,7 +6,7 @@
     contain
     >
     </v-img>
-    <v-row class="mb-2"justify="center">
+    <v-row class="mb-2 border-thin"justify="center">
         <v-col cols="11">
          <Component_About_Us/>
         </v-col>
@@ -16,8 +16,11 @@
     </v-row>
     <Component_Welcome_Location/>
     <Component_Intro_Video/>
-    <Component_Speakers_Launcher/>
+    <Component_Speakers_Launcher class="border-thin"/>
     <Component_Event_Calendar/>
+    <Component_Event_Subtheme class="border-thin"/>
+    <Component_About_Conference_Sponsor/>
+    <Component_Register_Banner/>
 </template>
 <script lang="ts" setup>
 //
