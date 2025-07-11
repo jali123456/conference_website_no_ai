@@ -36,9 +36,12 @@
   </v-container>
 </template>
 
-<script setup>
+<script lang="ts">
+import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
-
+export default defineComponent({
+  name: 'Component_Register_Banner',
+});
 const router = useRouter();
 
 const goToRegister = () => {

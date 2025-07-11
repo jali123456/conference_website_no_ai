@@ -20,7 +20,12 @@
     <Component_Event_Calendar/>
     <Component_Event_Subtheme class="border-thin"/>
     <Component_About_Conference_Sponsor/>
-    <Component_Register_Banner/>
+    <Component_Register_Banner class="mb-4"/>
+    <Component_Event_Highlights/>
+    <Component_Why_Choose/>
+    <Component_Event_Comments class="mb-4"/>
+    <Component_Event_Proceedings/>
+    <Component_FAQ/>
 </template>
 <script lang="ts" setup>
 //

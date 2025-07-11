@@ -12,7 +12,7 @@ declare module 'vue' {
     AppHeader: typeof import('./components/AppHeader.vue')['default']
     Component_About_Conference_Sponsor: typeof import('./components/Reused/Component_About_Conference_Sponsor.vue')['default']
     Component_About_Conferencelocation: typeof import('./components/Conference_City/Component_About_Conferencelocation.vue')['default']
-    Component_About_Us: typeof import('./components/Home/Component_About_Us.vue')['default']
+    Component_About_Us: typeof import('./components/Reused/Component_About_Us.vue')['default']
     Component_About_Venue: typeof import('./components/Conference_Venue/Component_About_Venue.vue')['default']
     Component_Abstract_Guidelines: typeof import('./components/Abstract_Submission/Component_Abstract_Guidelines.vue')['default']
     Component_Abstract_Keywords: typeof import('./components/Fullpaper_Submission/Component_Abstract_Keywords.vue')['default']

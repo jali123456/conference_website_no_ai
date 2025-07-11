@@ -121,7 +121,8 @@ const toggleDrawer = (): void => {
 }
 
 const leftIcons = [
-  { icon: 'mdi-information', text: 'About', to: '/about' },
+  { icon: 'mdi-calendar-clock', text:'Important Dates', to: '/important-dates'},
+  { icon: 'mdi-information', text: 'About', to: '/about-us' },
   { icon: 'mdi-frequently-asked-questions', text: 'FAQ', to: '/faq' },
   { icon: 'mdi-newspaper', text: 'News', to: '/news' },
   // { icon: 'mdi-calendar-clock', text: 'Schedule', to: '/schedule' }
