@@ -6,11 +6,11 @@
     contain
     >
     </v-img>
-    <v-row class="mb-2 border-thin"justify="center">
-        <v-col cols="11">
+    <v-row class="mx-2 my-4"justify="center">
+        <v-col cols="12">
          <Component_About_Us/>
         </v-col>
-        <v-col cols="10">
+        <v-col cols="12" md="10" lg="6">
             <Component_Countdown/>
         </v-col>
     </v-row>

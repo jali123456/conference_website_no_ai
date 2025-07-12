@@ -21,10 +21,13 @@
 </template>
 
 <script lang="ts">
-export default {
-    name: "ComponentEventProceedings",
-};
+import { defineComponent } from 'vue';
+export default defineComponent({
+    name: 'EventProceedings',
+});
+
 </script>
+
 <style scoped>
 
 </style>

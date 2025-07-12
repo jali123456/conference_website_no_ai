@@ -21,6 +21,10 @@
         </div>
     </v-img>
     <Component_About_Us/>
+    <Component_Legacy/>
+    <Component_Participants/>
+    <Component_Purpose/>
+    <Component_Committee/>
 </v-container>
 </template>
 

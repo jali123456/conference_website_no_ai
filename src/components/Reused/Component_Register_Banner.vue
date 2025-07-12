@@ -39,16 +39,21 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
+
 export default defineComponent({
   name: 'Component_Register_Banner',
+  setup(){
+    const router = useRouter();
+    const goToRegister = () => {
+    // Placeholder for your registration page route
+    // Replace '/' with the actual path, e.g., '/register', '/signup'
+    router.push('/');
+  };
+  return{
+    goToRegister
+  }
+  }
 });
-const router = useRouter();
-
-const goToRegister = () => {
-  // Placeholder for your registration page route
-  // Replace '/' with the actual path, e.g., '/register', '/signup'
-  router.push('/');
-};
 </script>
 
 <style scoped>
