@@ -13,7 +13,7 @@
           <v-row justify="center">
             <v-col cols="12" md="10" lg="8">
               <h2 class="text-h3 text-md-h2 font-weight-bold mb-4 text-white">
-                Ready To Revolutionize Remote Sensing?
+                Ready To Revolutionize Law Enforcement
               </h2>
               <p class="text-subtitle-1 text-md-h6 mb-8 text-white text-opacity-75">
                 Join experts and innovators in shaping a sustainable future.

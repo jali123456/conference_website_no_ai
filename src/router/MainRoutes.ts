@@ -19,8 +19,19 @@ const MainRoutes = {
         {
             path:'/about-us',
             name: 'About Us',
-            component: () => import('@/pages/About_Us.vue')
+            component: () => import('@/pages/About_Us.vue'),
         },
+        {
+            path: '/welcome-message',
+            name: 'Welcome Message',
+            component: () => import('@/pages/Welcome_Message.vue'),
+        },
+        {
+            path:'/Committee',
+            name: 'Committee',
+            component: () => import('@/pages/Committee.vue'),
+        },
+        
     ]
 }
 
