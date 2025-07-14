@@ -13,7 +13,9 @@
         sm="6"
         md="4"
         lg="4"
-        class="d-flex"
+        x="4"
+        xxl="4"
+        class="mx-2"
       >
         <v-card
           class="d-flex flex-column text-center pa-6 border-b-xl"

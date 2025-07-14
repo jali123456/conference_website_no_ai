@@ -56,7 +56,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineOptions } from 'vue';
 
 // Generate random styles for particles
 const getParticleStyle = (index: number) => {
@@ -76,9 +75,6 @@ const getParticleStyle = (index: number) => {
   };
 };
 
-defineOptions({
-  name: 'ContactUs'
-});
 </script>
 
 <style scoped>
