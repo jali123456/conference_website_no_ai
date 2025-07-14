@@ -31,6 +31,16 @@ const MainRoutes = {
             name: 'Committee',
             component: () => import('@/pages/Committee.vue'),
         },
+        {
+            path: '/call-for-paper',
+            name: 'Call For Paper',
+            component: () => import('@/pages/Call_For_Paper.vue')
+        },
+        {
+            path: '/registration-payment',
+            name: 'Registration Payment',
+            component: () => import('@/pages/Registration_Payment.vue'),
+        },
         
     ]
 }

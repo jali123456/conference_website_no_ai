@@ -28,15 +28,13 @@
                 v-for="(member, idx) in group.members"
                 :key="idx"
               >
-                <v-list-item-content>
-                    <v-list-item-title class="wrap-text font-weight-bold">
-                    {{ member.name }}
-                    </v-list-item-title>
+                  <v-list-item-title class="wrap-text font-weight-bold">
+                  {{ member.name }}
+                  </v-list-item-title>
 
-                    <v-list-item-subtitle v-if="member.title" class="text-break">
-                    {{ member.title }}
-                    </v-list-item-subtitle>
-                </v-list-item-content>
+                  <v-list-item-subtitle v-if="member.title" class="text-break">
+                  {{ member.title }}
+                  </v-list-item-subtitle>
               </v-list-item>
             </v-list>
           </v-col>

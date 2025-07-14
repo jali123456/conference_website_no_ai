@@ -15,7 +15,7 @@
                 <!-- Centered Button -->
                 <div class="text-center">
                 <v-btn
-                    color="teal-accent-3"
+                    color="elmubackground"
                     size="x-large"
                     rounded
                     class="elevation-6"

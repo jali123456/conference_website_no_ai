@@ -82,7 +82,7 @@
 import { defineComponent } from 'vue';
 import { data_subthemes } from './Subthemes_Data';
 export default defineComponent({
-    name: 'Component_Event_Subtheme',
+    name: 'EventSubtheme',
     data(){
         return {
             data_subthemes

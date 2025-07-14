@@ -2,7 +2,7 @@
 <v-container fluid class="pa-0">
     <v-img
         src="https://placehold.co/500x100"
-        lazy-src="https://via.placeholder.com/50x15/007bff/ffffff?text=Loading..."
+        lazy-src="https://placehold.co/500x100"
         cover
         min-height="250"
         class="align-center justify-center text-center"
@@ -21,6 +21,8 @@
         </div>
     </v-img>
     <Component_Committee_Text/>
+    <Component_Committee_Endtext/>
+    <Component_Contact_Us/>
 </v-container>
 </template>
 

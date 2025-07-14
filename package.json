@@ -16,9 +16,13 @@
     "@fontsource/montserrat": "^5.2.6",
     "@fontsource/roboto": "5.2.5",
     "@mdi/font": "7.4.47",
+    "@tsparticles/vue3": "^3.0.1",
     "@types/canvas-confetti": "^1.9.0",
     "canvas-confetti": "^1.9.3",
     "qrcode.vue": "^3.6.0",
+    "tsparticles": "^3.8.1",
+    "tsparticles-confetti": "^2.12.0",
+    "tsparticles-engine": "^2.12.0",
     "vue": "^3.5.13",
     "vuetify": "^3.8.1"
   },

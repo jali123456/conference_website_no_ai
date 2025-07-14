@@ -125,6 +125,8 @@ const leftIcons = [
   { icon: 'mdi-information', text: 'About', to: '/about-us' },
   { icon: "mdi-newspaper", text: "Welcome Message", to: "/welcome-message" },
   { icon: "mdi-account-group", text: "Committee", to: "/committee" },
+  { icon: "mdi-file-outline", text: "Call for Paper", to: "/call-for-paper" },
+  { icon: "mdi-form-textbox", text: "Registration & Payment", to: "/registration-payment" },
   { icon: 'mdi-frequently-asked-questions', text: 'FAQ', to: '/faq' },
   { icon: 'mdi-newspaper', text: 'News', to: '/news' },
   // { icon: 'mdi-calendar-clock', text: 'Schedule', to: '/schedule' }

@@ -18,6 +18,7 @@
     <Component_Intro_Video/>
     <Component_Speakers_Launcher class="border-thin"/>
     <Component_Event_Calendar/>
+    <Component_Event_Calendar_Programme/>
     <Component_Event_Subtheme class="border-thin"/>
     <Component_About_Conference_Sponsor/>
     <Component_Register_Banner class="mb-4"/>

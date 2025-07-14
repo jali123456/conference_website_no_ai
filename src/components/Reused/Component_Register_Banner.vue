@@ -2,9 +2,9 @@
   <v-container fluid class="pa-0">
     <v-img
       src="https://placehold.co/500x100"
-      lazy-src="https://via.placeholder.com/50x15/007bff/ffffff?text=Loading..."
+      lazy-src="https://placehold.co/500x100"
       cover
-      min-height="250"
+      min-height="350"
       class="align-center justify-center text-center"
       gradient="to top right, rgba(0,0,0,.5), rgba(0,0,0,.7)"
     >
