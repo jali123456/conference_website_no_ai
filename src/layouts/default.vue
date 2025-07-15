@@ -42,57 +42,6 @@
                   ></v-list-item>
                 </v-list>
               </v-sheet>
-              
-              <!-- Bottom List - Only shown on Home page -->
-              <!-- <v-sheet
-                v-if="$route.path === '/'"
-                rounded="lg"
-                class="mt-auto"
-              >
-                <v-list
-                  rounded="lg"
-                  :bg-color="'rgba(18, 30, 57, 0.8)'"
-                  class="py-2"
-                >
-                  <v-list-subheader class="text-white">Quick Access</v-list-subheader>
-                  
-                  <v-list-item
-                    prepend-icon="mdi-calendar-check"
-                    title="Important Dates"
-                    subtitle="Next deadline: Oct 15"
-                    class="mb-1"
-                  >
-                    <template v-slot:append>
-                      <v-badge
-                        color="success"
-                        content="3"
-                        inline
-                      ></v-badge>
-                    </template>
-                  </v-list-item>
-
-                  <v-list-item
-                    prepend-icon="mdi-bell"
-                    title="Announcements"
-                    subtitle="2 new updates"
-                    class="mb-1"
-                  >
-                    <template v-slot:append>
-                      <v-badge
-                        color="error"
-                        content="2"
-                        inline
-                      ></v-badge>
-                    </template>
-                  </v-list-item>
-
-                  <v-list-item
-                    prepend-icon="mdi-file-document"
-                    title="Quick Submit"
-                    to="/paper-submission"
-                  ></v-list-item>
-                </v-list> 
-              </v-sheet> -->
             </div>
           </v-col>
           <v-col
@@ -131,6 +80,8 @@ const menuItems = [
   { title: 'Fees & Registration', path: '/fees-registration', icon: 'mdi-currency-usd' },
   { title: 'Venue & Accommodation', path: '/venue-accommodation', icon: 'mdi-map-marker' },
   { title: 'Programme & Dates', path: '/programme-dates', icon: 'mdi-calendar' },
+  { title: 'Call for Reviewers', path: '/call-for-reviewers', icon: 'mdi-account-multiple-plus' },
+  { title: 'Sponsors', path: '/sponsors', icon: 'mdi-briefcase'},
   { title: 'Downloads', path: '/downloads', icon: 'mdi-file-document-outline' }
 ]
 </script>
@@ -143,44 +94,6 @@ const menuItems = [
 .h-100 {
   height: 100%;
 }
-
-/* Sticky sidebar styling - Only for desktop (>959px)
-.sidebar-col {
-  position: relative;
-}
-
-/* Default mobile behavior 
-.sidebar-content {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Desktop sticky behavior 
-@media (min-width: 960px) {
-  .sidebar-content {
-    position: fixed;
-    top: 280px; /* Your header height 
-    left: 24px;
-    width: calc(16.666667% - 48px); /* Account for container padding 
-    height: calc(100vh - 280px - 358px - 20px); /* Viewport - Header - Footer - Extra padding 
-    max-height: calc(100vh - 280px - 358px - 20px); /* Ensure it never exceeds this 
-    overflow-y: auto;
-    z-index: 5;
-    padding-right: 8px;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-/* Mobile behavior - keep sidebar static 
-@media (max-width: 959px) {
-  .sidebar-content {
-    position: static;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-  }
-} */
 
 :deep(.v-list-item) {
   padding: 0 16px !important;

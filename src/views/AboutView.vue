@@ -47,177 +47,69 @@
         </v-card>
       </v-col>
       <!-- Organizing Committee -->
-      <v-col cols="12">
-        <v-card>
-          <v-card-title class="text-h5">
-            <v-icon start>mdi-account-group</v-icon>
-            Sub-Theme
-          </v-card-title>
+      <v-col
+      v-for="(subtheme, index) in data_subthemes"
+      :key="subtheme.id"
+      cols="12"
+      sm="12"
+      md="6"
+      lg="4"
+  >
+      <v-card
+          class="d-flex flex-column text-center pa-4 hover-scale red-bottom-border"
+          color="elmubackground"
+          rounded="xl"
+          elevation="2"
+          height="100%"
+      >
           <v-card-text>
-            <v-row>
-              <v-col cols="12" md="4">
-                <v-card variant="outlined">
-                  <v-card-title >Enforcement & Law</v-card-title>
-                  <v-card-text>
-                    • Modernization of law enforcement and legal systems<br>
-                    • Technology's impact on justice and cross-border cooperation<br>
-                    • Best practices and policy reforms for effective enforcement
-                  </v-card-text>
-                </v-card>
-              </v-col>
-              <v-col cols="12" md="4">
-                <v-card variant="outlined">
-                  <v-card-title >Integrity & Leadership</v-card-title>
-                  <v-card-text>
-                    • Integrity and ethical leadership in institutions<br>
-                    • Anti-corruption, transparency, and accountability<br>
-                    • Building public trust and positive change
-                  </v-card-text>
-                </v-card>
-              </v-col>
-              <v-col cols="12" md="4">
-                <v-card variant="outlined">
-                  <v-card-title >Disaster Science & Climate<br></br> Resilience</v-card-title>
-                  <v-card-text>
-                    • Disaster risk reduction and climate resilience<br>
-                    • Preparedness, response, and adaptation strategies<br>
-                    • Technology and collaboration for resilient communities
-                  </v-card-text>
-                </v-card>
-              </v-col>
-            </v-row>
+              <div class="text-h5 font-weight-bold mb-4">{{ subtheme.title }}</div>
+              <p class="text-left text-subtitle-2" v-html="subtheme.description"></p>
           </v-card-text>
-        </v-card>
+
+          <v-spacer></v-spacer>
+
+          <v-card-actions class="justify-center pb-4">
+              <v-btn 
+                  class="px-8 py-2 text-none font-weight-bold"
+                  variant="outlined"
+                  color="info"
+                  rounded="pill"
+                  size="large"
+              >
+                  Read More
+              </v-btn>
+          </v-card-actions>
+      </v-card>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script setup lang="ts">
-const missionPoints = [
-  "Facilitate exchange of cutting-edge research",
-  "Promote interdisciplinary collaboration",
-  "Support early-career researchers",
-  "Bridge academia and industry",
-  "Disseminate knowledge through publications"
-]
+import { ref } from 'vue';
+import { data_subthemes } from '@/assets/data/Subthemes_Data';
+const data = ref(data_subthemes);
 
-const visionPoints = [
-  "Advance technology for societal benefit",
-  "Foster innovation across disciplines",
-  "Build a global community of researchers",
-  "Promote diversity in technological fields",
-  "Address grand challenges through collaboration"
-]
-
-const committeeMembers = [
-{
-    name: "Professor Datuk Dr. Kassim Noor Mohamed",
-    position: "Vice Chancellor",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Prof. Dr. Pakhriazad Hassan Zaki",
-    position: "Chairman",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Dr Marzanah A. Jabar",
-    position: "Vice-Chairman",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Ir. Dr. Nor Azhar Mohd Arif ",
-    position: "Advisory Committee",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Datuk Mohd Shahrizan Bin Che Mat Din ",
-    position: "Advisory Committee",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Prof. Madya Dr. Mohamad Maulana Magiman",
-    position: "Advisory Committee",
-    affiliation: "UPM",
-    bio: "Bio Here"
-  },
-  {
-    name: "Dato' Dr Yew Chong Hooi",
-    position: "Advisory Committee",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Dr. Siti Norbaini Sabtu",
-    position: "Secretary",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Yushairul bin Mohamad Yunus",
-    position: "Secretariat",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Nur Nazirah binti Johari",
-    position: "Secretariat",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Kong Li San",
-    position: "Treasure & Registration",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Shankar Durairaja",
-    position: "Techincal program",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Dr Rabieahtul Abu Bakar ",
-    position: "Publicity & Publication",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Yahurin binti Mohd Yassin ",
-    position: "Publicity & Publication",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Dr. Haji Norhafifi Haji Ismail ",
-    position: "Protocol",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Norashikin Binti Othman ",
-    position: "Protocol",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-  {
-    name: "Muhammad Ghazali Bin Hamzah",
-    position: "Website",
-    affiliation: "Elmu University",
-    bio: "Bio Here"
-  },
-]
 </script>
 
 <style scoped>
-.v-card {
+.red-bottom-border {
+  border-bottom: 4px solid red;
+}
+.v-card{
   height: 100%;
 }
+
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
 </style> 
