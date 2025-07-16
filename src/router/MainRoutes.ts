@@ -82,9 +82,15 @@ const MainRoutes = {
             component: () => import('@/views/ContactView.vue'),
         },
         {
-            path: '/registration',
-            name: 'registration',
-            component: () => import('@/views/RegistrationPage.vue'),
+            path: '/sponsors',
+            name: 'Sponsors',
+            component: () => import('@/views/SponsorsView.vue'),
+
+        },
+        {
+            path: '/call-for-reviewers',
+            name: 'CallForReviewers',
+            component: () => import('@/views/CallForReviewersView.vue'),
         },
     ]
 }

@@ -79,7 +79,10 @@
       <!-- Accommodation -->
       <v-col cols="12" class="mt-6">
         <v-sheet>
-          <h2 class="text-h5 mb-6 pa-4 text-wrap">Recommended Accommodation</h2>
+          <h5 class="text-h5 mb-6 pa-4 text-wrap">Recommended Accommodation</h5>
+          <p class="text-body-1 mx-4">Participants are advised to contact the respective hotels directly for room reservations. 
+            Please note that accommodation is not included in the conference registration fees and 
+            must be arranged separately by participants.’</p>
           <v-row>
             <v-col cols="12" md="6" v-for="(hotel, index) in accommodations" :key="index">
               <v-sheet class="pa-4">
@@ -98,7 +101,7 @@
                       Special conference rate: {{ hotel.specialRate}}<br>
                       Use code: {{ hotel.promoCode }}
                     </p>
-                    <v-list v-if="hotel.amenities && hotel.amenities.length > 0" class="text-wrap">
+                    <!-- <v-list v-if="hotel.amenities && hotel.amenities.length > 0" class="text-wrap">
                       <v-list-item
                         v-for="(amenity, amenityIndex) in hotel.amenities"
                         :key="amenityIndex"
@@ -108,7 +111,7 @@
                       </template>
                         <v-list-item-title class="text-black text-wrap">{{ amenity.name }}</v-list-item-title>
                       </v-list-item>
-                    </v-list>
+                    </v-list> -->
                   </v-card-text>
                   <v-card-actions v-if="hotel.bookingLink">
                     <v-btn
@@ -161,14 +164,9 @@ const transportation_data = [
   },
   {
     mode: 'Public Transport',
-    description: 'Metro Line A to University Station',
-    icon: 'mdi-train'
+    description: 'Bus, Grab and etc',
+    icon: 'mdi-bus'
   },
-  {
-    mode: 'Parking',
-    description: 'Available on-site (free for attendees)',
-    icon: 'mdi-parking'
-  }
 ]
 
 const hotelAmenities = [
@@ -186,12 +184,6 @@ const accommodations = [
     rating: '⭐⭐⭐⭐',
     image: theRaneeImage,
     bookingLink: 'https://www.theranee.com/',
-    amenities: [
-      { name: 'Free Wi-Fi', icon: 'mdi-wifi' },
-      { name: 'Breakfast Included', icon: 'mdi-food' },
-      { name: 'Fitness Center', icon: 'mdi-dumbbell' },
-      { name: 'Conference Shuttle', icon: 'mdi-bus' }
-    ]
   },
   {
     name: 'The Marian Boutique Lodging House',
@@ -200,12 +192,6 @@ const accommodations = [
     rating: '⭐⭐⭐',
     image: theMarianImage,
     bookingLink: 'https://www.themarian.com.my/',
-    amenities: [
-      { name: 'Free Wi-Fi', icon: 'mdi-wifi' },
-      { name: 'Breakfast Included', icon: 'mdi-food' },
-      { name: 'Fitness Center', icon: 'mdi-dumbbell' },
-      { name: 'Conference Shuttle', icon: 'mdi-bus' }
-    ]
   },
   {
     name: 'Harbour View Hotel',
@@ -214,12 +200,6 @@ const accommodations = [
     rating: '⭐⭐⭐',
     image: harbourViewImage,
     bookingLink: 'http://www.harbourviewhotelkuching.com/',
-    amenities: [
-      { name: 'Free Wi-Fi', icon: 'mdi-wifi' },
-      { name: 'Breakfast Included', icon: 'mdi-food' },
-      { name: 'Fitness Center', icon: 'mdi-dumbbell' },
-      { name: 'Conference Shuttle', icon: 'mdi-bus' }
-    ]
   },
   {
     name: 'Riverside Majestic Hotel - Astana Wing',
@@ -228,12 +208,6 @@ const accommodations = [
     rating: '⭐⭐⭐⭐',
     image: riversideMajesticAstanaImage,
     bookingLink: 'https://www.riversidemajestic.com/astana-wing/',
-    amenities: [
-      { name: 'Free Wi-Fi', icon: 'mdi-wifi' },
-      { name: 'Breakfast Included', icon: 'mdi-food' },
-      { name: 'Fitness Center', icon: 'mdi-dumbbell' },
-      { name: 'Conference Shuttle', icon: 'mdi-bus' }
-    ]
   },
   {
     name: 'Imperial Riverbank Hotel Kuching',
@@ -242,12 +216,6 @@ const accommodations = [
     rating: '⭐⭐⭐',
     image: imperialRiverbankImage,
     bookingLink: 'https://imperialriverbankhotel.com/',
-    amenities: [
-      { name: 'Free Wi-Fi', icon: 'mdi-wifi' },
-      { name: 'Breakfast Included', icon: 'mdi-food' },
-      { name: 'Fitness Center', icon: 'mdi-dumbbell' },
-      { name: 'Conference Shuttle', icon: 'mdi-bus' }
-    ]
   },
   {
     name: 'Grand Margherita Hotel',
@@ -256,12 +224,6 @@ const accommodations = [
     rating: '⭐⭐⭐⭐',
     image: grandMargheritaImage,
     bookingLink: 'https://www.grandmargherita.com/',
-    amenities: [
-      { name: 'Free Wi-Fi', icon: 'mdi-wifi' },
-      { name: 'Breakfast Included', icon: 'mdi-food' },
-      { name: 'Fitness Center', icon: 'mdi-dumbbell' },
-      { name: 'Conference Shuttle', icon: 'mdi-bus' }
-    ]
   },
   {
     name: 'Pullman Kuching',
@@ -270,12 +232,6 @@ const accommodations = [
     rating: '⭐⭐⭐⭐⭐',
     image: pullmanKuchingImage,
     bookingLink: 'https://www.pullmanhotels.com/gb/hotel-6332-pullman-kuching/index.html',
-    amenities: [
-      { name: 'Free Wi-Fi', icon: 'mdi-wifi' },
-      { name: 'Breakfast Included', icon: 'mdi-food' },
-      { name: 'Fitness Center', icon: 'mdi-dumbbell' },
-      { name: 'Conference Shuttle', icon: 'mdi-bus' }
-    ]
   },
   {
     name: 'Sheraton Kuching Hotel',
@@ -286,12 +242,6 @@ const accommodations = [
     bookingLink: 'https://www.marriott.com/en-us/hotels/kchsi-sheraton-kuching-hotel/overview/',
     specialRate: '$150/night',
     promoCode: 'CONF2024',
-    amenities: [
-      { name: 'Free Wi-Fi', icon: 'mdi-wifi' },
-      { name: 'Breakfast Included', icon: 'mdi-food' },
-      { name: 'Fitness Center', icon: 'mdi-dumbbell' },
-      { name: 'Conference Shuttle', icon: 'mdi-bus' }
-    ]
   }
 ];
 </script>

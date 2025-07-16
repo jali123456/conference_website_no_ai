@@ -14,7 +14,9 @@
                 cols="12"
                 md="6"
               >
-                <v-card>
+                <v-card
+                height="100%"
+                >
                   <v-card-title class="text-h6">
                     <v-icon start>{{ category.icon }}</v-icon>
                     {{ category.title }}
@@ -83,15 +85,9 @@ const downloadCategories = [
     icon: 'mdi-file-document-outline',
     files: [
       {
-        name: 'Paper Template (LaTeX)',
-        description: 'LaTeX template for full paper submission',
-        icon: 'mdi-language-cpp',
-        url: '@/assets/templates/paper_template_latex.zip'
-      },
-      {
-        name: 'Paper Template (Word)',
-        description: 'Microsoft Word template for full paper submission',
-        icon: 'mdi-microsoft-word',
+        name: 'Poster Template',
+        description: 'Poster template for the presenter',
+        icon: 'mdi-microsoft-powerpoint',
         url: '@/assets/templates/paper_template_word.docx'
       },
       {
@@ -100,6 +96,7 @@ const downloadCategories = [
         icon: 'mdi-microsoft-powerpoint',
         url: '@/assets/templates/presentation_template.pptx'
       }
+
     ]
   },
   {
@@ -107,23 +104,11 @@ const downloadCategories = [
     icon: 'mdi-book-open-page-variant',
     files: [
       {
-        name: 'Author Guidelines',
-        description: 'Detailed guidelines for paper submission',
-        icon: 'mdi-file-pdf-box',
-        url: '@/assets/docs/author_guidelines.pdf'
-      },
-      {
         name: 'Presentation Guidelines',
         description: 'Instructions for oral presentations',
         icon: 'mdi-file-pdf-box',
         url: '@/assets/docs/presentation_guidelines.pdf'
       },
-      {
-        name: 'Formatting Guide',
-        description: 'Detailed formatting instructions',
-        icon: 'mdi-file-pdf-box',
-        url: '@/assets/docs/formatting_guide.pdf'
-      }
     ]
   },
   {
@@ -131,17 +116,11 @@ const downloadCategories = [
     icon: 'mdi-form-select',
     files: [
       {
-        name: 'Copyright Form',
-        description: 'Required for paper publication',
-        icon: 'mdi-file-pdf-box',
-        url: '@/assets/forms/copyright_form.pdf'
-      },
-      {
         name: 'Registration Form',
         description: 'Offline registration form',
         icon: 'mdi-file-pdf-box',
         url: '@/assets/forms/registration_form.pdf'
-      }
+      },
     ]
   },
   {
@@ -161,7 +140,7 @@ const downloadCategories = [
         url: '@/assets/docs/venue_map.pdf'
       },
             {
-        name: 'Program Book',
+        name: 'Program Booklet',
         description: 'Conference booklet and informations',
         icon: 'mdi-book',
         url: '@/assets/docs/booklet.pdf'
@@ -171,24 +150,24 @@ const downloadCategories = [
 ]
 
 const additionalResources = [
-  {
-    name: 'IEEE Citation Guidelines',
-    description: 'Official IEEE reference formatting guidelines',
-    icon: 'mdi-book-open-variant',
-    url: 'https://ieee.org/citations'
-  },
-  {
-    name: 'LaTeX Tutorial',
-    description: 'Basic tutorial for LaTeX users',
-    icon: 'mdi-language-cpp',
-    url: 'https://latex-tutorial.com'
-  },
+  // {
+  //   name: 'IEEE Citation Guidelines',
+  //   description: 'Official IEEE reference formatting guidelines',
+  //   icon: 'mdi-book-open-variant',
+  //   url: 'https://ieee.org/citations'
+  // },
+  // {
+  //   name: 'LaTeX Tutorial',
+  //   description: 'Basic tutorial for LaTeX users',
+  //   icon: 'mdi-language-cpp',
+  //   url: 'https://latex-tutorial.com'
+  // },
   {
     name: 'Conference FAQ',
     description: 'Frequently asked questions about the conference',
     icon: 'mdi-frequently-asked-questions',
     url: '/faq'
-  }
+  },
 ]
 </script>
 

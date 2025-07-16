@@ -3,7 +3,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h1 class="text-h3 mb-6 text-center">Programme & Important Dates</h1>
+        <h3 class="text-h3 mb-6 text-center">Programme & Important Dates</h3>
       </v-col>
 
       <!-- Important Dates -->
@@ -64,8 +64,9 @@
           <v-card-title class="text-h5">Conference Programme</v-card-title>
           <v-card-text>
             <v-tabs v-model="activeTab" class="mb-4">
-              <v-tab value="day1">Day 1</v-tab>
-              <v-tab value="day2">Day 2</v-tab>
+              <v-tab class="text-h6 font-weight-medium" value="day1">Day 1</v-tab>
+              <v-tab class="text-h6 font-weight-medium" value="day2">Day 2</v-tab>
+              <v-tab class="text-h6 font-weight-medium" value="day3">Day 3 Sarawak Heritage Village (Optional)</v-tab>
             </v-tabs>
 
             <!-- Desktop/Tablet Timeline Layout -->
@@ -78,7 +79,7 @@
                 <v-subheader class="text-h6 mt-4 mb-2 text-primary text-center">
                   {{ day[0].date }}
                 </v-subheader>
-                <v-timeline side="end" align="start" class="programme-timeline">
+                <v-timeline justify="auto" side="end" align="start" class="programme-timeline">
                   <v-timeline-item
                     v-for="(session, sIndex) in day"
                     :key="sIndex"
@@ -90,7 +91,7 @@
                     </template>
                     <v-card class="mb-2 programme-session-card">
                       <v-card-title class="text-h6 text-wrap">{{ session.title }}</v-card-title>
-                      <v-card-subtitle class="text-caption text-grey-darken-1 mb-1">{{ session.location }}</v-card-subtitle>
+                      <v-card-subtitle class="text-body-2 font-weight-black">{{ session.location }}</v-card-subtitle>
                       <v-card-text v-if="session.details && Array.isArray(session.details)">
                         <ul class="programme-details-list">
                           <li v-for="(detail, dIndex) in session.details" :key="dIndex">{{ detail }}</li>
@@ -333,6 +334,15 @@ const programme = [
       title: 'Closing Remarks',
       location: 'TBA'
     }
+  ],
+  //day 3
+  [
+    {
+      time: '8:00-10:00',
+      title: 'Breakfast',
+      location: 'TBA',
+      date: '14 August 2026'
+    },
   ]
 ];
 </script>

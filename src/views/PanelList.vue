@@ -63,24 +63,24 @@ const { xs, sm, md, lg, xl, xxl } = useDisplay()
 
 const speakers = [
   {
-    name: 'Panel List 1',
-    title: 'Title here',
+    name: 'TBA',
+    title: 'TBA',
     time: 'Day 1 - 9:00 AM',
-    description: 'Opening keynote on the intersection of academic research and popular culture.',
+    description: 'TBA',
     color: 'primary'
   },
   {
-    name: `Panel List 2 `,
-    title: 'Title here',
+    name: `TBA`,
+    title: 'TBA',
     time: 'Day 1 - 10:00 AM',
-    description: 'Exploring the future of academic conferences in the digital age.',
+    description: 'TBA',
     color: 'secondary'
   },
   {
-    name: 'Panel List 3',
-    title: 'Title here',
+    name: 'TBA',
+    title: 'TBA',
     time: 'Day 1 - 11:00 AM',
-    description: 'Closing keynote on bridging traditional academia with modern media formats.',
+    description: 'TBA',
     color: 'info'
   }
 ]

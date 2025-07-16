@@ -20,7 +20,7 @@
             
           >
             <v-icon start>{{ item.icon }}</v-icon>
-            <span class="text-h6">{{ item.text }}</span>
+            <span class="text-body-1">{{ item.text }}</span>
           </v-btn>
             <v-chip
               @click="toggleDrawer"

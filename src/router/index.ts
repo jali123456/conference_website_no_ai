@@ -7,6 +7,7 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router/auto'
 import MainRoutes from './MainRoutes'
+import RegistrationRoutes from './RegistrationRoutes';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,6 +16,7 @@ const router = createRouter({
       component: () => import('@/views/authentication/Error.vue')
     },
     MainRoutes,
+    RegistrationRoutes,
   ]
 });
 

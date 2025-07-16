@@ -10,10 +10,17 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./components/AppFooter.vue')['default']
     AppHeader: typeof import('./components/AppHeader.vue')['default']
+    ContactSponsor: typeof import('./components/ContactSponsor.vue')['default']
     CountdownTimer: typeof import('./components/CountdownTimer.vue')['default']
+    RegisterBanner: typeof import('./components/RegisterBanner.vue')['default']
     Registration: typeof import('./components/Registration.vue')['default']
+    RegistrationFeesTable: typeof import('./components/RegistrationFeesTable.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SponsorsBanner: typeof import('./components/SponsorsBanner.vue')['default']
+    SponsorsPackage: typeof import('./components/SponsorsPackage.vue')['default']
+    SubthemeList: typeof import('./components/SubthemeList.vue')['default']
     Transportation: typeof import('./components/Transportation.vue')['default']
+    VipList: typeof import('./components/VipList.vue')['default']
   }
 }
