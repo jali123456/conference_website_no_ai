@@ -12,29 +12,19 @@
         <!-- Left section: Menu items -->
         <v-col>
           <v-col>
-            <v-btn
-            v-for="(item, index) in leftIcons"
-            :key="index"
-            :to="item.to"
-            :size="$vuetify.display.xs ? 'x-small' : 'default'"
-            
-          >
-            <v-icon start>{{ item.icon }}</v-icon>
-            <span class="text-body-1">{{ item.text }}</span>
-          </v-btn>
             <v-chip
-              @click="toggleDrawer"
-              :class="{'d-none': $vuetify.display.width > 959}"
+              v-for="(item, index) in leftIcons"
+              :key="index"
+              :to="item.to"
               variant="elevated"
-              size="small"
+              :size="$vuetify.display.xs ? 'small' : 'default'"
               color="primary"
-              class="pa-3 rounded-lg cursor-pointer"
-              prepend-icon="mdi-menu"
-            > <b>Menu</b>
-              <template v-slot:append>
-                <v-icon size="x-small">mdi-chevron-down</v-icon>
-              </template>
-            </v-chip>  
+              class="ma-1 pa-3 rounded-lg cursor-pointer nav-chip"
+              :prepend-icon="item.icon"
+              clickable
+            >
+              <span class="text-body-1 font-weight-medium">{{ item.text }}</span>
+            </v-chip>
           </v-col>
         </v-col>
 
@@ -49,6 +39,22 @@
             class="logo-image mx-auto"
           >
           </v-img>
+
+          <div class="mt-3">
+           <v-chip
+              @click="toggleDrawer"
+              :class="{'d-none': $vuetify.display.width > 959}"
+              variant="elevated"
+              size="large"
+              color=elmubackground
+              class="pa-3 rounded-lg cursor-pointer red-bottom-border"
+              prepend-icon="mdi-menu"
+            > <b>Menu</b>
+              <template v-slot:append>
+                <v-icon size="x-small">mdi-chevron-down</v-icon>
+              </template>
+            </v-chip> 
+          </div>
         </v-col>
         <v-col class="d-flex justify-center align-center pt-md-3 pt-lg-3 pt-xl-3">
         </v-col>
@@ -134,6 +140,10 @@ const rightIcons = [
 </script>
 
 <style scoped>
+.red-bottom-border {
+  border-bottom: 4px solid red;
+}
+
 .v-app-bar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }

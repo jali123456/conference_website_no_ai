@@ -90,17 +90,17 @@
                   <v-img
                     :src="hotel.image"
                     height="250"
-                    cover
+                    contain
                   ></v-img>
                   <v-card-title class="text-wrap">{{ hotel.name }}</v-card-title>
                   <v-card-text>
                     <p class="mb-2 text-wrap">⭐{{ hotel.rating }}</p>
                     <p class="mb-2 text-wrap">{{ hotel.address }}</p>
-                    <p class="mb-2 text-wrap">Phone: {{ hotel.phone }}</p>
-                    <p class="mb-4 text-wrap" v-if="hotel.specialRate">
+                    <!-- <p class="mb-2 text-wrap">Phone: {{ hotel.phone }}</p> -->
+                    <!-- <p class="mb-4 text-wrap" v-if="hotel.specialRate">
                       Special conference rate: {{ hotel.specialRate}}<br>
                       Use code: {{ hotel.promoCode }}
-                    </p>
+                    </p> -->
                     <!-- <v-list v-if="hotel.amenities && hotel.amenities.length > 0" class="text-wrap">
                       <v-list-item
                         v-for="(amenity, amenityIndex) in hotel.amenities"
@@ -240,8 +240,8 @@ const accommodations = [
     rating: '⭐⭐⭐⭐',
     image: sheratonKuchingImage,
     bookingLink: 'https://www.marriott.com/en-us/hotels/kchsi-sheraton-kuching-hotel/overview/',
-    specialRate: '$150/night',
-    promoCode: 'CONF2024',
+    // specialRate: '$150/night',
+    // promoCode: 'CONF2024',
   }
 ];
 </script>

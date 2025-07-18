@@ -15,17 +15,16 @@
           </v-card-title>
           <v-card-text>
             <p class="text-body-1">
-              The International Conference on Advanced Technologies brings together researchers, 
-              industry professionals, and academics from around the world to share cutting-edge 
-              research and developments in emerging fields of technology. Founded in 2010, 
-              the conference has grown to become one of the premier events in its field, 
-              attracting participants from over 50 countries.
+              The ICELIn26 Conference is organized to address key issues related to law enforcement, the legal system, and integrity in administration. 
+              Its goal is to strengthen best practices in law enforcement and enhance the effectiveness of good governance with integrity.
+              The conference also serves as a platform for academics, policymakers, legal practitioners, and enforcement officers to share ideas, discuss current challenges,
+              and explore innovative solutions to improve public trust in legal and enforcement institutions.
             </p>
             <p class="text-body-1 mt-3">
-              This year's conference focuses on breakthrough technologies in artificial intelligence, 
-              sustainable energy, biotechnology, and quantum computing. Through keynote speeches, 
-              technical sessions, workshops, and networking events, we aim to facilitate 
-              knowledge exchange and foster collaborations that drive innovation.
+              Additionally, ICELIn26 acts as an important avenue to reinforce collaboration between academic institutions, enforcement agencies, 
+              the private sector, and non-governmental organizations in promoting professionalism, transparency, and accountability in the justice system.
+              Through the presentation of current research, panel discussions, and interactive workshops, the conference aims 
+              to stimulate the development of more effective policies and practices in the fields of law, enforcement, and integrity.
             </p>
           </v-card-text>
         </v-card>

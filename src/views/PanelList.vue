@@ -8,7 +8,7 @@
       <v-col cols="12" md="6">
         <v-card>
           <v-img
-            src="@/assets/speakers-banner.jpg"
+            src="@/assets/speakers-banner.png"
             contain
           ></v-img>
 

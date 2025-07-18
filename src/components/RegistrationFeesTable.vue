@@ -15,17 +15,17 @@
             <tr>
             <td>Local Participant (Presenter)</td>
             <td>RM1,600</td>
-            <td class="early-bird">RM1,550</td>
+            <td class="early-bird">TBA</td>
             </tr>
             <tr>
             <td>Local Participant (Non-Presenter)</td>
             <td>RM1,200</td>
-            <td class="early-bird">RM1,150</td>
+            <td class="early-bird">TBA</td>
             </tr>
             <tr>
             <td>Local Excursion/Networking Tour Fee</td>
             <td>RM160</td>
-            <td class="early-bird">RM130</td>
+            <td class="early-bird">TBA</td>
             </tr>
         </tbody>
         </v-table>
@@ -55,17 +55,17 @@
             <tr>
             <td>International Participant (Presenter)</td>
             <td>USD 500</td>
-            <td class="early-bird">USD 490</td>
+            <td class="early-bird">TBA</td>
             </tr>
             <tr>
             <td>International Participant (Non-Presenter)</td>
             <td>USD 400</td>
-            <td class="early-bird">USD 390</td>
+            <td class="early-bird">TBA</td>
             </tr>
             <tr>
             <td>International Excursion/Networking Tour Fee</td>
             <td>USD 50</td>
-            <td class="early-bird">USD 45</td>
+            <td class="early-bird">TBA</td>
             </tr>
         </tbody>
         </v-table>

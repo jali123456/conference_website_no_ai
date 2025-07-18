@@ -12,7 +12,7 @@
             CALL FOR REVIEWER
             </p>
             <p class="text-body-1">
-            We would also like to invite you as a reviewer to help uphold the quality of submissions. If you are interested and not registered as student in any institution, please register in the following link. An electronic Certificate of Appreciation will be provided to all reviewers.
+            We would also like to invite you as a reviewer to help uphold the quality of submissions. If you are interested and not registered as student in any institution, please register in the following link.
             </p>
         </v-card>
         </v-col>

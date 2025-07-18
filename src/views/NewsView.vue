@@ -11,7 +11,7 @@
           <v-row>
             <v-col cols="12" md="5">
               <v-img
-                src="@/assets/speakers-banner.jpg"
+                src="@/assets/speakers-banner.png"
                 height="300"
                 cover
                 class="h-100"
