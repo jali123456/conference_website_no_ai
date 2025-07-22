@@ -12,6 +12,7 @@ declare module 'vue' {
     AppHeader: typeof import('./components/AppHeader.vue')['default']
     ContactSponsor: typeof import('./components/ContactSponsor.vue')['default']
     CountdownTimer: typeof import('./components/CountdownTimer.vue')['default']
+    LoginForm: typeof import('./components/auth/LoginForm.vue')['default']
     RegisterBanner: typeof import('./components/RegisterBanner.vue')['default']
     Registration: typeof import('./components/Registration.vue')['default']
     RegistrationFeesTable: typeof import('./components/RegistrationFeesTable.vue')['default']

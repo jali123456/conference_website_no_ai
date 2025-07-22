@@ -32,11 +32,6 @@ const MainRoutes = {
             component: () => import('@/views/ScheduleView.vue'),
         },
         {
-            path: '/profile',
-            name: 'Profile',
-            component: () => import('@/views/ProfileView.vue'),
-        },
-        {
             path: '/settings',
             name: 'Settings',
             component: () => import('@/views/SettingsView.vue'),

@@ -56,7 +56,7 @@
  
        <v-row no-gutters>
          <v-col class="text-center text-caption">
-            &copy; {{ new Date().getFullYear() }} Elmu University. All rights reserved.
+            &copy; {{ new Date().getFullYear() }} ELMU University. All rights reserved.
             <br class="d-sm-none"> <span class="d-none d-sm-inline"> | </span> Built by: Research Innovation And Graduate Studies Department
          </v-col>
        </v-row>
