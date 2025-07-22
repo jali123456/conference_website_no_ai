@@ -74,7 +74,7 @@
 
 <script setup lang="ts">
 function openRegistration() {
-  window.open('/registration', '_blank')
+  window.open('/auth/login', '_blank')
 }
 // import { ref } from 'vue'
 // import { onMounted, onUnmounted } from 'vue'

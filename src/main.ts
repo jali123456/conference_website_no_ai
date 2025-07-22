@@ -12,12 +12,16 @@ import App from './App.vue'
 
 // Composables
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 
 // Styles
 import 'unfonts.css'
 import '@/styles/global.css'
 
 const app = createApp(App)
+
+const pinia = createPinia()
+app.use(pinia)
 
 registerPlugins(app)
 
