@@ -12,7 +12,7 @@
             :class="{'d-none': !drawer && windowWidth < 959}"
           >
             <div class="d-flex flex-column h-100">
-              <v-sheet rounded="lg" class="mb-4">
+              <v-sheet rounded="lg" class="mb-4 red-bottom-border">
                 <v-list
                   rounded="lg"
                   :bg-color="'rgba(18, 30, 57, 1)'"
@@ -87,6 +87,10 @@ const menuItems = [
 </script>
 
 <style scoped>
+.red-bottom-border {
+  border-bottom: 4px solid red;
+}
+
 .v-main {
   background-color: #f5f5f5;
 }
