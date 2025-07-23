@@ -4,11 +4,11 @@ const RegistrationRoutes = {
     path: '/registration',
     component: () => import('@/layouts/RegistrationLayout.vue'),
     children: [
-        {
-            path: '',
-            name: 'Registration',
-            component: () => import('@/views/RegistrationPage.vue'), 
-        },
+        // {
+        //     path: '',
+        //     name: 'Registration',
+        //     component: () => import('@/views/RegistrationPage.vue'), 
+        // },
         {
             path: 'profile',
             name: 'Profile',

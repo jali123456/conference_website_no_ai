@@ -16,6 +16,7 @@ declare module 'vue' {
     RegisterBanner: typeof import('./components/RegisterBanner.vue')['default']
     Registration: typeof import('./components/Registration.vue')['default']
     RegistrationFeesTable: typeof import('./components/RegistrationFeesTable.vue')['default']
+    RegistrationForm: typeof import('./components/RegistrationForm.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SponsorsBanner: typeof import('./components/SponsorsBanner.vue')['default']
