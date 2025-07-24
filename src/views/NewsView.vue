@@ -18,21 +18,21 @@
               ></v-img>
             </v-col>
             <v-col cols="12" md="7">
-              <v-card-title class="text-h4">{{ featuredNews.title }}</v-card-title>
+              <v-card-title class="text-h5 text-break"  style="white-space: normal; word-break: break-word;">{{ featuredNews.title }}</v-card-title>
               <v-card-subtitle class="pt-2">
                 <v-icon small class="mr-1">mdi-calendar</v-icon>
                 {{ featuredNews.date }}
               </v-card-subtitle>
               <v-card-text>
-                <p class="text-body-1">{{ featuredNews.summary }}</p>
-                <v-btn
+                <p class="text-body-2">{{ featuredNews.summary }}</p>
+                <!-- <v-btn
                   color="primary"
                   variant="outlined"
                   class="mt-4"
                   :to="featuredNews.link"
                 >
                   Read More
-                </v-btn>
+                </v-btn> -->
               </v-card-text>
             </v-col>
           </v-row>
@@ -40,7 +40,7 @@
       </v-col>
 
       <!-- News Filters -->
-      <v-col cols="12">
+      <!-- <v-col cols="12">
         <div class="d-flex align-center flex-wrap mb-4">
           <h2 class="text-h5 mr-4 mb-0">Filter News:</h2>
           <v-chip-group
@@ -59,7 +59,7 @@
             </v-chip>
           </v-chip-group>
         </div>
-      </v-col>
+      </v-col> -->
 
       <!-- News List -->
       <template v-for="(newsItem, index) in filteredNewsItems" :key="index">
@@ -103,7 +103,7 @@
       </template>
 
       <!-- Newsletter Signup -->
-      <v-col cols="12" class="mt-6">
+      <!-- <v-col cols="12" class="mt-6">
         <v-card color="primary" class="text-center">
           <v-card-title class="text-h5 text-white">Stay Updated with Conference News</v-card-title>
           <v-card-text class="text-white pb-0">
@@ -132,7 +132,7 @@
             </v-form>
           </v-card-text>
         </v-card>
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 </template>
@@ -152,20 +152,14 @@ interface NewsItem {
 const email = ref('')
 const selectedCategories = ref<string[]>([])
 
-const subscribeNewsletter = () => {
-  // This would connect to a newsletter service in a real application
-  alert(`Thank you for subscribing with ${email.value}!`)
-  email.value = ''
-}
-
-const newsCategories = [
-  'Call for Papers',
-  'Registration',
-  'Keynote Speakers',
-  'Program Updates',
-  'Sponsors',
-  'Venue'
-]
+// const newsCategories = [
+//   'Call for Papers',
+//   'Registration',
+//   'Keynote Speakers',
+//   'Program Updates',
+//   'Sponsors',
+//   'Venue'
+// ]
 
 const featuredNews = {
   title: 'Renowned AI Expert Dr. Lisa Chen to Deliver Keynote',
@@ -177,54 +171,54 @@ const featuredNews = {
 }
 
 const newsItems: NewsItem[] = [
-  {
-    title: 'Paper Submission Deadline Extended',
-    date: 'May 20, 2026',
-    summary: 'Due to numerous requests, we have extended the paper submission deadline by two weeks to June 1, 2023. This is the final extension, and no further extensions will be granted.',
-    image: 'https://placehold.co/600x200',
-    link: '/news/submission-extended',
-    categories: ['Call for Papers']
-  },
-  {
-    title: 'Early Bird Registration Now Open',
-    date: 'May 15, 2026',
-    summary: 'Take advantage of our early bird registration rates before June 30. Early registrants receive a 20% discount on conference fees and guaranteed accommodation at our partner hotels.',
-    image: 'https://placehold.co/600x200',
-    link: '/news/early-registration',
-    categories: ['Registration']
-  },
-  {
-    title: 'New Platinum Sponsor Announced',
-    date: 'May 10, 2026',
-    summary: 'We are pleased to welcome TechInnovate as our newest Platinum sponsor. Their support will enable us to enhance the conference experience with additional networking events.',
-    image: 'https://placehold.co/600x200',
-    link: '/news/new-sponsor',
-    categories: ['Sponsors']
-  },
-  {
-    title: 'Workshop on Quantum Computing Added',
-    date: 'May 5, 2026',
-    summary: 'A new pre-conference workshop on "Practical Applications of Quantum Computing" has been added to the program. The workshop will be led by Dr. James Wilson from Quantum Labs.',
-    image: 'https://placehold.co/600x200',
-    link: '/news/quantum-workshop',
-    categories: ['Program Updates']
-  },
-  {
-    title: 'Virtual Attendance Option Available',
-    date: 'April 28, 2026',
-    summary: 'For those unable to travel, we now offer a comprehensive virtual attendance option. Virtual attendees will have access to livestreams of all main sessions and interactive networking opportunities.',
-    image: 'https://placehold.co/600x200',
-    link: '/news/virtual-option',
-    categories: ['Registration']
-  },
-  {
-    title: 'Conference Venue Tour Available Online',
-    date: 'April 20, 2026',
-    summary: 'Take a virtual tour of our conference venue and surrounding facilities. The tour includes the main hall, workshop rooms, dining areas, and nearby accommodations.',
-    image: 'https://placehold.co/600x200',
-    link: '/news/venue-tour',
-    categories: ['Venue']
-  }
+  // {
+  //   title: 'Paper Submission Deadline Extended',
+  //   date: 'May 20, 2026',
+  //   summary: 'Due to numerous requests, we have extended the paper submission deadline by two weeks to June 1, 2023. This is the final extension, and no further extensions will be granted.',
+  //   image: 'https://placehold.co/600x200',
+  //   link: '/news/submission-extended',
+  //   categories: ['Call for Papers']
+  // },
+  // {
+  //   title: 'Early Bird Registration Now Open',
+  //   date: 'May 15, 2026',
+  //   summary: 'Take advantage of our early bird registration rates before June 30. Early registrants receive a 20% discount on conference fees and guaranteed accommodation at our partner hotels.',
+  //   image: 'https://placehold.co/600x200',
+  //   link: '/news/early-registration',
+  //   categories: ['Registration']
+  // },
+  // {
+  //   title: 'New Platinum Sponsor Announced',
+  //   date: 'May 10, 2026',
+  //   summary: 'We are pleased to welcome TechInnovate as our newest Platinum sponsor. Their support will enable us to enhance the conference experience with additional networking events.',
+  //   image: 'https://placehold.co/600x200',
+  //   link: '/news/new-sponsor',
+  //   categories: ['Sponsors']
+  // },
+  // {
+  //   title: 'Workshop on Quantum Computing Added',
+  //   date: 'May 5, 2026',
+  //   summary: 'A new pre-conference workshop on "Practical Applications of Quantum Computing" has been added to the program. The workshop will be led by Dr. James Wilson from Quantum Labs.',
+  //   image: 'https://placehold.co/600x200',
+  //   link: '/news/quantum-workshop',
+  //   categories: ['Program Updates']
+  // },
+  // {
+  //   title: 'Virtual Attendance Option Available',
+  //   date: 'April 28, 2026',
+  //   summary: 'For those unable to travel, we now offer a comprehensive virtual attendance option. Virtual attendees will have access to livestreams of all main sessions and interactive networking opportunities.',
+  //   image: 'https://placehold.co/600x200',
+  //   link: '/news/virtual-option',
+  //   categories: ['Registration']
+  // },
+  // {
+  //   title: 'Conference Venue Tour Available Online',
+  //   date: 'April 20, 2026',
+  //   summary: 'Take a virtual tour of our conference venue and surrounding facilities. The tour includes the main hall, workshop rooms, dining areas, and nearby accommodations.',
+  //   image: 'https://placehold.co/600x200',
+  //   link: '/news/venue-tour',
+  //   categories: ['Venue']
+  // }
 ]
 
 const filteredNewsItems = computed(() => {

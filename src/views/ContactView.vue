@@ -13,27 +13,44 @@
           <v-row>
             <v-col cols="12" md="6">
               <h2 class="text-h5 mb-4">Get in Touch</h2>
-              <v-form>
+              <v-form ref="form" v-model="valid">
                 <v-text-field
+                  v-model="formData.name"
                   label="Name"
                   variant="outlined"
                   prepend-inner-icon="mdi-account"
                   class="mb-4"
+                  :rules="nameRules"
+                  required
                 ></v-text-field>
                 <v-text-field
+                  v-model="formData.email"
                   label="Email"
                   variant="outlined"
                   prepend-inner-icon="mdi-email"
                   class="mb-4"
+                  :rules="emailRules"
+                  required
                 ></v-text-field>
                 <v-textarea
+                  v-model="formData.message"
                   label="Message"
                   variant="outlined"
                   prepend-inner-icon="mdi-message"
                   rows="4"
                   class="mb-4"
+                  :rules="messageRules"
+                  required
                 ></v-textarea>
-                <v-btn color="primary" size="large" block>Send Email</v-btn>
+                <v-btn 
+                  color="primary" 
+                  size="large" 
+                  block 
+                  @click="sendEmail"
+                  :disabled="!valid"
+                >
+                  Send Email
+                </v-btn>
               </v-form>
             </v-col>
 
@@ -82,11 +99,87 @@
         </v-card>
       </v-col>
     </v-row>
+
+    <!-- Success Snackbar -->
+    <v-snackbar
+      v-model="snackbar"
+      :timeout="3000"
+      color="success"
+      location="top"
+    >
+      Email client opened successfully! Please check your default email application.
+      <template v-slot:actions>
+        <v-btn
+          color="white"
+          variant="text"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </v-container>
 </template>
 
 <script setup lang="ts">
-// No additional logic required for now
+import { ref, reactive } from 'vue'
+
+// Form data
+const formData = reactive({
+  name: '',
+  email: '',
+  message: ''
+})
+
+// Form validation
+const valid = ref(false)
+const snackbar = ref(false)
+
+// Validation rules
+const nameRules = [
+  (v: string) => !!v || 'Name is required',
+  (v: string) => v.length >= 2 || 'Name must be at least 2 characters'
+]
+
+const emailRules = [
+  (v: string) => !!v || 'Email is required',
+  (v: string) => /.+@.+\..+/.test(v) || 'Email must be valid'
+]
+
+const messageRules = [
+  (v: string) => !!v || 'Message is required',
+  (v: string) => v.length >= 10 || 'Message must be at least 10 characters'
+]
+
+// Send email function
+const sendEmail = () => {
+  if (!valid.value) return
+
+  // Create email content
+  const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`)
+  const body = encodeURIComponent(
+    `Hello,\n\n` +
+    `You have received a new message from your website contact form.\n\n` +
+    `Name: ${formData.name}\n` +
+    `Email: ${formData.email}\n\n` +
+    `Message:\n${formData.message}\n\n` +
+    `Best regards,\n${formData.name}`
+  )
+
+  // Create mailto link
+  const mailtoLink = `mailto:icelin@elmu.edu.my?subject=${subject}&body=${body}`
+
+  // Open email client
+  window.location.href = mailtoLink
+
+  // Show success message
+  snackbar.value = true
+
+  // Optional: Clear form after sending
+  // formData.name = ''
+  // formData.email = ''
+  // formData.message = ''
+}
 </script>
 
 <style scoped>
@@ -113,4 +206,4 @@
   opacity: 0.8;
   color: black;
 }
-</style> 
+</style>

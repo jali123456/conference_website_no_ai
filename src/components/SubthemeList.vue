@@ -1,5 +1,6 @@
 <!-- SubthemeList.vue -->
 <template>
+<v-row justify="center" class="mb-2">
 <v-col
     v-for="(subtheme, index) in data_subthemes"
     :key="subtheme.id"
@@ -16,7 +17,7 @@
         height="100%"
     >
         <v-card-text>
-            <div class="text-h5 font-weight-bold mb-4">{{ subtheme.title }}</div>
+            <div class="text-h5 font-weight-bold mb-4 text-decoration-underline">{{ subtheme.title }}</div>
             <p class="text-left text-subtitle-2" v-html="subtheme.description"></p>
         </v-card-text>
 
@@ -35,6 +36,7 @@
         </v-card-actions> -->
     </v-card>
 </v-col>
+</v-row>
 </template>
 
 <script setup lang="ts">

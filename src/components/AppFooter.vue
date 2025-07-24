@@ -11,7 +11,7 @@
              Law & Integrity 2026 (ICELIn26)
            </p>
            <p class="text-body-2 mb-1">
-             Enforcement Leadership And Management University
+             Enforcement, Leadership And Management University(ELMU)
            </p>
          </v-col>
  

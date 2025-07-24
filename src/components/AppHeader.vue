@@ -18,10 +18,10 @@
               :to="item.to"
               variant="elevated"
               :size="$vuetify.display.xs ? 'small' : 'default'"
-              color="primary"
-              class="ma-1 pa-3 rounded-lg cursor-pointer nav-chip"
+              class="ma-1 pa-3 rounded-lg cursor-pointer nav-chip red-bottom-border"
               :prepend-icon="item.icon"
               clickable
+              color="elmubackground"
             >
               <span class="text-body-1 font-weight-medium">{{ item.text }}</span>
             </v-chip>
@@ -141,7 +141,7 @@ const rightIcons = [
 
 <style scoped>
 .red-bottom-border {
-  border-bottom: 4px solid red;
+  border-bottom: 2px solid red;
 }
 
 .v-app-bar {

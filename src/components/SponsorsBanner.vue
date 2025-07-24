@@ -12,7 +12,7 @@
       <v-container>
         <v-row justify="center">
           <v-col cols="12" md="10" lg="8">
-              <h4 class="text-h3 font-weight-bold mb-4 text-white">
+              <h4 class="text-h4 font-weight-bold mb-4 text-white">
                 Partner With Us to Drive Real Impact
               </h4>
               <p class="text-subtitle-1 text-md-h6 mb-8 text-white text-opacity-85">

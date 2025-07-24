@@ -2,7 +2,11 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h3 class="text-h3 mb-6 text-center">Reviewer</h3>
+      <div class="d-flex align-center justify-center mb-6">
+        <v-divider class="flex-grow-1"></v-divider>
+        <h1 class="text-h mx-4 text-center font-weight-bold">Reviewer</h1>
+        <v-divider class="flex-grow-1"></v-divider>
+      </div>
       </v-col>
 
       <!-- Info Card -->
@@ -31,7 +35,7 @@
             <v-container>
               <v-row justify="center">
                 <v-col cols="12" md="10" lg="8">
-                  <h4 class="text-h3 font-weight-bold mb-4 text-white">
+                  <h4 class="text-h4 font-weight-bold mb-4 text-white">
                     Ready to Contribute as a Reviewer?
                   </h4>
                   <p class="text-subtitle-1 text-md-h6 mb-8 text-white text-opacity-85">

@@ -4,7 +4,11 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h1 class="text-h3 mb-6 text-center">Fees & Registration</h1>
+      <div class="d-flex align-center justify-center mb-6">
+        <v-divider class="flex-grow-1"></v-divider>
+        <h1 class="text-h mx-4 text-center font-weight-bold">Fees & Registration</h1>
+        <v-divider class="flex-grow-1"></v-divider>
+      </div>
       </v-col>
       
       <!-- Fees Table -->

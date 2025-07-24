@@ -2,9 +2,13 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12">
-        <h1 class="text-h3 mb-6 text-center">Forum Panel</h1>
-      </v-col>
+    <v-col cols="12">
+      <div class="d-flex align-center justify-center mb-6">
+        <v-divider class="flex-grow-1"></v-divider>
+        <h1 class="text-h mx-4 text-center font-weight-bold">Forum Panel</h1>
+        <v-divider class="flex-grow-1"></v-divider>
+      </div>
+    </v-col>
       <v-col cols="12" md="6">
         <v-card>
           <v-img
@@ -13,7 +17,7 @@
           ></v-img>
 
           <v-card-text class="text-center py-4">
-            <p class="text-body-1">
+            <p class="text-body-2">
               We are excited to announce our distinguished keynote speakers for Conference 2024.
               Stay tuned for updates as we reveal more speakers in the coming weeks.
             </p>

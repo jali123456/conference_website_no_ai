@@ -1,58 +1,61 @@
 <template>
   <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two_Tone|Material+Icons+Round|Material+Icons+Sharp&display=swap" rel="stylesheet">
-  
-  <div class="contact-container">
-    <!-- CSS Animated Background -->
-    <div class="animated-bg">
-      <div class="particle" v-for="i in 50" :key="i" :style="getParticleStyle(i)"></div>
-    </div>
-    
-    <!-- Content -->
-    <v-container fluid class="contact-us pa-10">
-      <v-row justify="center" class="text-center mb-6">
-        <v-col cols="12">
-          <h2 class="text-h4 font-weight-bold text-white">Reach Out To Us</h2>
-          <p class="text-subtitle-1 text-white">We'd Love to Hear From You</p>
-          <v-divider class="my-4" color="white" />
-        </v-col>
-      </v-row>
+  <v-row cols="12" class="mt-6">
+    <v-col cols="12" class="contact-section">
+      <v-card class="mx-auto contact-container" max-width="1400">
+        <!-- CSS Animated Background -->
+        <div class="animated-bg">
+          <div class="particle" v-for="i in 50" :key="i" :style="getParticleStyle(i)"></div>
+        </div>
+        
+        <!-- Content -->
+        <v-container fluid class="contact-us pa-10">
+          <v-row justify="center" class="text-center mb-6">
+            <v-col cols="12">
+              <h2 class="text-h4 font-weight-bold text-white">Reach Out To Us</h2>
+              <p class="text-subtitle-1 text-white">We'd Love to Hear From You</p>
+              <v-divider class="my-4" color="white" />
+            </v-col>
+          </v-row>
 
-      <v-row dense justify="center" class="text-center text-body-1">
-        <v-col cols="12" md="3">
-          <h3 class="text-h6 font-weight-medium text-white">Phone</h3>
-          <p class="text-white">+60193849495<br>(Dr. Rabieahtul)</p>
-        </v-col>
+          <v-row dense justify="center" class="text-center text-body-1">
+            <v-col cols="12" md="3">
+              <h3 class="text-h6 font-weight-medium text-white">Phone</h3>
+              <p class="text-white">+60193849495<br>(Dr. Rabieahtul)</p>
+            </v-col>
 
-        <v-col cols="12" md="3">
-          <h3 class="text-h6 font-weight-medium text-white">Email</h3>
-          <p class="text-white">icelin@elmu.edu.my</p>
-        </v-col>
+            <v-col cols="12" md="3">
+              <h3 class="text-h6 font-weight-medium text-white">Email</h3>
+              <p class="text-white">icelin@elmu.edu.my</p>
+            </v-col>
 
-        <v-col cols="12" md="3">
-          <h3 class="text-h6 font-weight-medium text-white">Address</h3>
-          <p class="text-white">1, Persiaran Timur 1, Bandar Enstek, 71760 Nilai, Negeri Sembilan</p>
-        </v-col>
+            <v-col cols="12" md="3">
+              <h3 class="text-h6 font-weight-medium text-white">Address</h3>
+              <p class="text-white">1, Persiaran Timur 1, Bandar Enstek, 71760 Nilai, Negeri Sembilan</p>
+            </v-col>
 
-        <v-col cols="12" md="3">
-          <h3 class="text-h6 font-weight-medium text-white">Social Media</h3>
-          <div class="d-flex justify-center ga-4 mt-2">
-            <a href="https://facebook.com/ELMUniversty/" target="_blank" class="social-link">
-              <v-icon size="28" color="blue-lighten-2">mdi-facebook</v-icon>
-            </a>
-            <a href="https://instagram.com/elmu_university/" target="_blank" class="social-link">
-              <v-icon size="28" color="pink-lighten-2">mdi-instagram</v-icon>
-            </a>
-            <a href="https://tiktok.com/@elmu.tv" target="_blank" class="social-link">
-              <v-icon size="28" color="white">mdi-music-note</v-icon>
-            </a>
-            <a href="https://youtube.com/@elmutv" target="_blank" class="social-link">
-              <v-icon size="28" color="red-lighten-2">mdi-youtube</v-icon>
-            </a>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
+            <v-col cols="12" md="3">
+              <h3 class="text-h6 font-weight-medium text-white">Social Media</h3>
+              <div class="d-flex justify-center ga-4 mt-2">
+                <a href="https://facebook.com/ELMUniversty/" target="_blank" class="social-link">
+                  <v-icon size="28" color="blue-lighten-2">mdi-facebook</v-icon>
+                </a>
+                <a href="https://instagram.com/elmu_university/" target="_blank" class="social-link">
+                  <v-icon size="28" color="pink-lighten-2">mdi-instagram</v-icon>
+                </a>
+                <a href="https://tiktok.com/@elmu.tv" target="_blank" class="social-link">
+                  <v-icon size="28" color="white">mdi-music-note</v-icon>
+                </a>
+                <a href="https://youtube.com/@elmutv" target="_blank" class="social-link">
+                  <v-icon size="28" color="red-lighten-2">mdi-youtube</v-icon>
+                </a>
+              </div>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <script setup lang="ts">

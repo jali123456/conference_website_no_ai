@@ -34,7 +34,7 @@
         icon="mdi-information"
         class="mt-4"
         >
-        Early Bird registration ends on starts on 15 May 2026 - 15 June 2026
+        Early Bird registration date: 15 May 2026 - 15 June 2026
         </v-alert>
     </v-card-text>
     </v-card>
@@ -74,7 +74,7 @@
         icon="mdi-information"
         class="mt-4"
         >
-        Early Bird registration ends on starts on 15 May 2026 - 15 June 2026
+        Early Bird registration date: 15 May 2026 - 15 June 2026
         </v-alert>
     </v-card-text>
     </v-card>

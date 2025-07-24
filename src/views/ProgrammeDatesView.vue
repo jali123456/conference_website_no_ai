@@ -3,7 +3,11 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h3 class="text-h3 mb-6 text-center">Programme & Important Dates</h3>
+      <div class="d-flex align-center justify-center mb-6">
+        <v-divider class="flex-grow-1"></v-divider>
+        <h1 class="text-h mx-4 text-center font-weight-bold">Programme & Important Dates</h1>
+        <v-divider class="flex-grow-1"></v-divider>
+      </div>
       </v-col>
 
       <!-- Important Dates -->

@@ -17,18 +17,18 @@
           </div>
 
           <v-card-text :class="contentTextClass">
-            <p class="text-body-1">
+            <p class="text-body-2">
               Join us for a dynamic and multidisciplinary conference that brings together scholars,
               practitioners, policymakers, and thought leaders to explore the evolving challenges and
               innovations in enforcement, integrity, and climate resilience.
               This year’s conference will delve into critical topics ranging from legal reforms and
               leadership ethics to climate adaptation and disaster response.
             </p>
-
-            <p class="text-body-1">
-              With dedicated tracks on <strong>Enforcement & Law</strong>,
-              <strong>Integrity & Leadership</strong>, and
-              <strong>Disaster Science & Climate Resilience</strong>, the conference provides a rich
+            <br/>
+            <p class="text-body-2">
+              With dedicated tracks on <strong class="text-decoration-underline">Enforcement & Law</strong>,
+              <strong class="text-decoration-underline">Integrity & Leadership</strong>, and
+              <strong class="text-decoration-underline">Disaster Science & Climate Resilience</strong>, the conference provides a rich
               platform for dialogue, collaboration, and knowledge exchange.
               Through keynote addresses, panel discussions, and research presentations, we aim to
               foster actionable insights that strengthen governance, promote ethical leadership, and

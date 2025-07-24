@@ -121,10 +121,6 @@ const menuItems = [
   padding-right: 8px !important;
 }
 
-/* Remove the custom active state styling - let Vuetify handle it */
-:deep(.v-list-item:not(.v-list-item--active)) {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
 
 :deep(.v-list-item:hover:not(.v-list-item--active)) {
   background: rgba(255, 255, 255, 0.05) !important;
@@ -133,4 +129,5 @@ const menuItems = [
 :deep(.v-list-subheader) {
   opacity: 0.8;
 }
+
 </style>

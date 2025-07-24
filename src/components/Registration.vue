@@ -53,7 +53,8 @@ const handleSubmit = async () => {
 
   if (result.success) {
     if (isLogin.value) {
-      authStore.login({ email: email.value }, remember.value)
+      // Pass email and password as separate arguments
+      authStore.login(email.value, password.value)
       router.push('/profile')
     } else {
       alert('Registration successful. You can now log in.')
