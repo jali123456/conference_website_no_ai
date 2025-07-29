@@ -42,7 +42,7 @@
          
          <v-col cols="4" class="text-center text-sm-right mb-2 mb-sm-0 me-auto align-self-center">
            <p class="text-body-2 mb-1">
-             Phone: +0176063615
+             Phone: +60176063615
              <v-icon small left>mdi-phone</v-icon> 
            </p>
            <p class="text-body-2 mb-0">

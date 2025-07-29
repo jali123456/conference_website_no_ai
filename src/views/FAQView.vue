@@ -66,7 +66,7 @@
             <h3 class="contact-title">Still have questions?</h3>
             <p class="contact-text">
               Contact us at <a href="mailto:icelin@elmu.edu.my" class="contact-link">icelin@elmu.edu.my</a>
-              and we'll respond within 1-2 working days.
+              and we'll respond as soon as possible.
             </p>
             <v-btn
               class="contact-button"
@@ -80,6 +80,7 @@
           </v-card-text>
         </v-card>
       </v-col>
+      <SponsorsBanner/>
     </v-row>
   </v-container>
 </template>

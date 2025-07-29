@@ -1,7 +1,7 @@
 <template>
   <v-container class="contact-container">
     <v-row justify="center">
-      <v-col cols="12" md="8">
+      <v-col cols="12" md="10">
         <v-card class="pa-6" elevation="4" rounded="lg">
           <h1 class="text-h3 mb-6 text-center primary--text">Contact Us</h1>
           <p class="text-body-1 mb-6 text-center">
@@ -70,7 +70,7 @@
                     <v-icon color="primary" class="mr-4">mdi-phone</v-icon>
                   </template>
                   <v-list-item-title>Phone</v-list-item-title>
-                  <v-list-item-subtitle>1-300-88-ELMU (3568)</v-list-item-subtitle>
+                  <v-list-item-subtitle>+60176063615</v-list-item-subtitle>
                 </v-list-item>
 
                 <v-list-item>
@@ -78,12 +78,11 @@
                     <v-icon color="primary" class="mr-4">mdi-map-marker</v-icon>
                   </template>
                   <v-list-item-title>Address</v-list-item-title>
-                  <v-list-item-subtitle>
-                  <p>Persiaran Timur 1,
-                  Bandar Enstek, 71760 Nilai,
-                  Negeri Sembilan, MALAYSIA.
-                  </p>
-                  </v-list-item-subtitle>
+                  <div>
+                    <v-list-item-subtitle>Persiaran Timur 1,</v-list-item-subtitle>
+                    <v-list-item-subtitle>Bandar Enstek, 71760 Nilai,</v-list-item-subtitle>
+                    <v-list-item-subtitle>Negeri Sembilan, MALAYSIA.</v-list-item-subtitle>
+                  </div>
                 </v-list-item>
               </v-list>
 

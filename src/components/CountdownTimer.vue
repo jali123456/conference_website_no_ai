@@ -8,11 +8,11 @@
       :color="'rgba(18, 30, 57, 1)'"
     >
       <v-card-text class="countdown-container pa-2 no-wrap-timer">
-        <div v-if="!isSmallest" class="time-section text-white"> 
+        <div class="time-section text-white"> 
           <div class="time-value">{{ days }}</div>
           <div class="time-label">Days</div>
         </div>
-        <div v-if="!isSmallest" class="time-divider text-white">:</div>
+        <div class="time-divider text-white">:</div>
         <div class="time-section text-white">
           <div class="time-value">{{ hours }}</div>
           <div class="time-label">Hours</div>
@@ -22,8 +22,8 @@
           <div class="time-value">{{ minutes }}</div>
           <div class="time-label">Minutes</div>
         </div>
-        <div v-if="!isSmallest && !conferenceStarted" class="time-divider text-white">:</div>
-        <div v-if="!isSmallest && !conferenceStarted" class="time-section text-white seconds-section">
+        <div v-if="!isSmallest" class="time-divider text-white">:</div>
+        <div v-if="!isSmallest" class="time-section text-white seconds-section">
           <div class="time-value">{{ seconds }}</div>
           <div class="time-label">Seconds</div>
         </div>

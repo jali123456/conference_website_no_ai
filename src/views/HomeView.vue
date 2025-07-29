@@ -51,7 +51,7 @@
     </v-row>
     <SponsorsPackage/>
     <v-row cols="12" class="mt-6">
-      <SponsorsBanner/>
+      <!-- <SponsorsBanner/> -->
     </v-row>
     <!-- Vip Table here if exits -->
     <!-- <VipList/> -->

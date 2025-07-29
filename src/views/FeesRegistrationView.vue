@@ -78,7 +78,7 @@
 
 <script setup lang="ts">
 function openRegistration() {
-  window.open('/auth/login', '_blank')
+  window.open('https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=HYyN1A9sYE64VQszNyyLObOQ6rcy5rVHq95xJgsnFWlUQjZWTDFQMzhFT01ERjNIUjBNSjNBR0ZFWS4u', '_blank')
 }
 // import { ref } from 'vue'
 // import { onMounted, onUnmounted } from 'vue'

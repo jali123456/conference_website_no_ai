@@ -20,9 +20,19 @@
               >
                 <v-card
                 height="100%"
+                :class="{ 'disabled-category': isDisabledCategory(category.title) }"
+                class="position-relative"
                 >
-                  <v-card-title class="text-h6">
-                    <v-icon start>{{ category.icon }}</v-icon>
+                  <!-- TBA Overlay -->
+                  <div 
+                    v-if="isDisabledCategory(category.title)"
+                    class="tba-overlay d-flex align-center justify-center"
+                    title="To Be Announced"
+                  >
+                    <span class="tba-text">TBA</span>
+                  </div>
+                  <v-card-title class="text-h6" :class="{ 'text-disabled': isDisabledCategory(category.title) }">
+                    <v-icon start :disabled="isDisabledCategory(category.title)">{{ category.icon }}</v-icon>
                     {{ category.title }}
                   </v-card-title>
 
@@ -31,16 +41,17 @@
                       v-for="(file, fIndex) in category.files"
                       :key="fIndex"
                       :prepend-icon="file.icon"
+                      :disabled="isDisabledCategory(category.title)"
                     >
-                      <v-list-item-title>{{ file.name }}</v-list-item-title>
-                      <v-list-item-subtitle>{{ file.description }}</v-list-item-subtitle>
+                      <v-list-item-title :class="{ 'text-disabled': isDisabledCategory(category.title) }">{{ file.name }}</v-list-item-title>
+                      <v-list-item-subtitle :class="{ 'text-disabled': isDisabledCategory(category.title) }">{{ file.description }}</v-list-item-subtitle>
                       <template v-slot:append>
                         <v-btn
                           color="primary"
                           variant="text"
                           :href="file.url"
                           download
-                          :disabled="!file.url"
+                          :disabled="!file.url || isDisabledCategory(category.title)"
                         >
                           Download
                           <v-icon end>mdi-download</v-icon>
@@ -83,6 +94,11 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
+// Set this to true when you want to disable specific categories
+const isDisabled = ref(true)
+
 const downloadCategories = [
   {
     title: 'Templates',
@@ -138,12 +154,6 @@ const downloadCategories = [
         url: '@/assets/docs/conference_schedule.pdf'
       },
       {
-        name: 'Venue Map',
-        description: 'Conference venue and facilities map',
-        icon: 'mdi-map',
-        url: '@/assets/docs/venue_map.pdf'
-      },
-            {
         name: 'Program Booklet',
         description: 'Conference booklet and informations',
         icon: 'mdi-book',
@@ -173,6 +183,12 @@ const additionalResources = [
     url: '/faq'
   },
 ]
+
+const disabledCategories = ['Templates', 'Guidelines', 'Forms', 'Conference Materials']
+
+const isDisabledCategory = (categoryTitle: string) => {
+  return isDisabled.value && disabledCategories.includes(categoryTitle)
+}
 </script>
 
 <style scoped>
@@ -193,4 +209,48 @@ const additionalResources = [
 :deep(.v-btn) {
   color: #1976D2 !important;
 }
-</style> 
+
+.disabled-category {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.text-disabled {
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+/* TBA Overlay */
+.tba-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  backdrop-filter: blur(1px);
+  cursor: default;
+  pointer-events: auto;
+}
+
+.tba-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme support */
+.theme--dark .tba-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.theme--dark .tba-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* For dark theme */
+.theme--dark .text-disabled {
+  color: rgba(255, 255, 255, 0.38) !important;
+}
+</style>

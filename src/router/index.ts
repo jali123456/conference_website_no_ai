@@ -19,8 +19,8 @@ const router = createRouter({
       component: () => import('@/views/authentication/Error.vue')
     },
     MainRoutes,
-    RegistrationRoutes,
-    AuthRoutes
+    // RegistrationRoutes,
+    // AuthRoutes
   ]
 });
 
