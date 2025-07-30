@@ -132,13 +132,18 @@ const registrationSteps = [
     color: 'primary'
   },
   {
-    title: 'Payment',
-    description: 'Process the payment for your registration category',
-    color: 'secondary'
+    title: 'Confirmation Email',
+    description: 'We will send you an email to confirm your registration details',
+    color: 'info'
   },
   {
-    title: 'Confirmation',
-    description: 'Receive confirmation email with registration details',
+    title: 'Payment',
+    description: 'Process the payment for your registration category and send the payment details through email icelin@elmu.edu.my',
+    color: 'warning'
+  },
+  {
+    title: 'Complete Registration',
+    description: 'Once we confirm the payment we will give you your registration details and a receipt through email icelin@elmu.edu.my',
     color: 'success'
   }
 ]

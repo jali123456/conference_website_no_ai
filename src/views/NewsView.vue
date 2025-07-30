@@ -11,14 +11,24 @@
           <v-row>
             <v-col cols="12" md="5">
               <v-img
-                src="@/assets/speakers-banner.png"
-                height="300"
+                :lazy-src="`https://picsum.photos/200/300`"
+                :src="featuredNews.image"
                 cover
-                class="h-100"
               ></v-img>
             </v-col>
             <v-col cols="12" md="7">
-              <v-card-title class="text-h5 text-break"  style="white-space: normal; word-break: break-word;">{{ featuredNews.title }}</v-card-title>
+              <v-card-title class="text-h5 text-break news-title" style="white-space: normal; word-break: break-word;">
+                <router-link
+                  v-if="featuredNews.link"
+                  :to="featuredNews.link"
+                  class="text-decoration-none news-link"
+                >
+                  {{ featuredNews.title }}
+                </router-link>
+                <template v-else>
+                  {{ featuredNews.title }}
+                </template>
+              </v-card-title>
               <v-card-subtitle class="pt-2">
                 <v-icon small class="mr-1">mdi-calendar</v-icon>
                 {{ featuredNews.date }}
@@ -66,6 +76,7 @@
         <v-col cols="12" md="6">
           <v-card height="100%">
             <v-img
+              :lazy-src="`https://picsum.photos/200/300`"
               :src="newsItem.image"
               height="200"
               cover
@@ -139,6 +150,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import websiteLaunchImage from '@/assets/news/website_launched.png'
 
 interface NewsItem {
   title: string
@@ -162,12 +174,12 @@ const selectedCategories = ref<string[]>([])
 // ]
 
 const featuredNews = {
-  title: 'Renowned AI Expert Dr. Lisa Chen to Deliver Keynote',
-  date: 'June 5, 2026',
-  summary: "We are thrilled to announce that Dr. Lisa Chen, leading AI researcher and CEO of FutureTech AI, will deliver the opening keynote address at this year's conference. Dr. Chen will discuss 'The Future of Ethical AI in Society' and share insights from her groundbreaking work in responsible AI development.",
-  image: '@/assets/news/keynote-announcement.jpg',
-  link: '/news/keynote-announcement',
-  categories: ['Keynote Speakers', 'Program Updates']
+  title: 'Conference Website Launch Announcement',
+  date: 'August 1, 2025',
+  summary: "We are excited to announce the launch of our official conference website. Starting August 1st, 2025, you'll have access to all the conference information, including Conference details, program updates, and submission guidelines. Stay tuned for more updates and announcements as we prepare for this exciting event.",
+  image: websiteLaunchImage,
+  link: '/',
+  categories: ['Info']
 }
 
 const newsItems: NewsItem[] = [
@@ -243,5 +255,41 @@ const filteredNewsItems = computed(() => {
 
 .newsletter-input :deep(label) {
   color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.news-title {
+  @media (max-width: 600px) {
+    font-size: 1.25rem !important;
+  }
+}
+
+.news-link {
+  color: rgb(25, 118, 210);
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  
+  &:hover {
+    color: rgb(21, 101, 192);
+    transform: translateX(4px);
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 </style> 
