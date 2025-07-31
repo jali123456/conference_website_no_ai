@@ -18,7 +18,7 @@
 
           <v-card-text class="text-center py-4">
             <p class="text-body-2">
-              We are excited to announce our distinguished keynote speakers for Conference 2024.
+              We are excited to announce our distinguished keynote speakers for Conference 2026.
               Stay tuned for updates as we reveal more speakers in the coming weeks.
             </p>
           </v-card-text>
@@ -37,8 +37,8 @@
                 <span class="text-h6 white--text">{{ speaker.name.charAt(0) }}</span>
               </v-avatar>
             </template>
-            <v-list-item-title class="text-h6 text-black">{{ speaker.name }}</v-list-item-title>
-            <v-list-item-subtitle class="text-black">{{ speaker.title }}</v-list-item-subtitle>
+            <!-- <v-list-item-title class="text-h6 text-black">{{ speaker.name }}</v-list-item-title> -->
+            <!-- <v-list-item-subtitle class="text-black">{{ speaker.title }}</v-list-item-subtitle> -->
               <div class="text-body-2 mt-2 text-black">
                 <div class="font-weight-medium">{{ speaker.time }}</div>
                 <div>{{ speaker.description }}</div>
@@ -67,24 +67,24 @@ const { xs, sm, md, lg, xl, xxl } = useDisplay()
 
 const speakers = [
   {
-    name: 'TBA',
+    name: 'Speaker 1',
     title: 'TBA',
     time: 'Day 1 - 9:00 AM',
-    description: 'TBA',
+    description: '',
     color: 'primary'
   },
   {
-    name: `TBA`,
+    name: `Speaker 2`,
     title: 'TBA',
     time: 'Day 1 - 10:00 AM',
-    description: 'TBA',
+    description: '',
     color: 'secondary'
   },
   {
-    name: 'TBA',
+    name: 'Speaker 3',
     title: 'TBA',
     time: 'Day 1 - 11:00 AM',
-    description: 'TBA',
+    description: '',
     color: 'info'
   }
 ]

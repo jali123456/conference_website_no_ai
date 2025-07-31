@@ -61,6 +61,72 @@
         </v-card>
       </v-col>
       
+      <!-- Payment Details Section -->
+      <v-col cols="12" class="mt-4">
+        <v-card>
+          <v-card-title class="text-h5 font-weight-bold">Payment Details</v-card-title>
+          <v-card-text>
+            
+            <!-- Local Participants Section -->
+            <div class="mb-6">
+              <h3 class="text-h6 font-weight-bold mb-3">Local Participants</h3>
+              <p class="text-body-1 mb-4">Payment should be made via the following bank account:</p>
+              
+              <div class="d-flex mb-2">
+                <span class="text-subtitle-2 font-weight-bold">Bank Name:</span>
+                <span class="text-body-1 ml-2">MBSB BANK BERHAD</span>
+              </div>
+              <div class="d-flex mb-2">
+                <span class="text-subtitle-2 font-weight-bold">Account Name:</span>
+                <span class="text-body-1 ml-2">RIGS</span>
+              </div>
+              <div class="d-flex mb-4">
+                <span class="text-subtitle-2 font-weight-bold">Account Number:</span>
+                <span class="text-body-1 ml-2">9005007000010200</span>
+              </div>
+              
+              <ul class="text-body-2 ml-4">
+                <li class="mb-2">Payment can be made via Bank Draft, payable to ELMU University or Internet Banking.</li>
+                <li class="mb-2">For Internet Banking, please enter "icelin2026" in the Payment Reference or Recipient Reference field. Ensure the account holder's full name appears clearly in the transaction slip. If using a third-party account, please include your name manually in the Other Details or Remarks field.</li>
+                <li class="mb-2">Kindly email a digital copy of the payment slip to: <strong>icelin@elmu.edu.my</strong></li>
+                <li>Receipts will be issued via email one week after the closing date of payment.</li>
+              </ul>
+            </div>
+            
+            <!-- International Participants Section -->
+            <div>
+              <h3 class="text-h6 font-weight-bold mb-3">International Participants</h3>
+              <p class="text-body-1 mb-4">Payment should be made via the following bank account:</p>
+              
+              <div class="d-flex mb-2">
+                <span class="text-subtitle-2 font-weight-bold">Bank Name:</span>
+                <span class="text-body-1 ml-2">MBSB BANK BERHAD</span>
+              </div>
+              <div class="d-flex mb-2">
+                <span class="text-subtitle-2 font-weight-bold">Account Name:</span>
+                <span class="text-body-1 ml-2">RIGS</span>
+              </div>
+              <div class="d-flex mb-2">
+                <span class="text-subtitle-2 font-weight-bold">Account Number:</span>
+                <span class="text-body-1 ml-2">9005007000010200</span>
+              </div>
+              <div class="d-flex mb-4">
+                <span class="text-subtitle-2 font-weight-bold">Swift Code:</span>
+                <span class="text-body-1 ml-2">AFBQMYKL</span>
+              </div>
+              
+              <ul class="text-body-2 ml-4">
+                <li class="mb-2">All payments must be accompanied by proof of payment (e.g., bank-in slip or official receipt) and emailed to the Secretariat at <strong>icelin@elmu.edu.my</strong>.</li>
+                <li class="mb-2">Participants who make payments via bank transfer are required to send a digital copy of the payment slip for our records.</li>
+                <li class="mb-2">Please note that payments via Telegraphic Transfer (TT) may incur additional charges depending on your bank. Kindly check with your respective bank.</li>
+                <li>Receipts will be issued via email one week after the closing date of payment.</li>
+              </ul>
+            </div>
+            
+          </v-card-text>
+        </v-card>
+      </v-col>
+
       <!-- Registration Form -->
       <v-col justify="center" align="center" cols="12" class="mt-6">
         <v-card>
@@ -72,6 +138,7 @@
           </v-card-text>
         </v-card>
       </v-col>
+
     </v-row>
   </v-container>
 </template>
