@@ -27,7 +27,7 @@
               Malaysia
             </p>
             
-            <div class="text-h6 mb-2 text-wrap">Getting There</div>
+            <!-- <div class="text-h6 mb-2 text-wrap">Getting There</div>
             <v-list class="text-wrap">
               <v-list-item
                 v-for="(transport, index) in transportation_data"
@@ -40,7 +40,7 @@
                 <v-list-item-title class="text-black text-wrap" >{{ transport.mode }}</v-list-item-title>
                 <v-list-item-subtitle class="text-black text-wrap">{{ transport.description }}</v-list-item-subtitle>
               </v-list-item>
-            </v-list>
+            </v-list> -->
           </v-card-text>
         </v-card>
       </v-col>

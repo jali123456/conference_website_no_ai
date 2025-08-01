@@ -51,8 +51,8 @@
                 <a href="https://instagram.com/elmu_university/" target="_blank" class="social-link">
                   <v-icon size="28" color="pink-lighten-2">mdi-instagram</v-icon>
                 </a>
-                <a href="https://tiktok.com/@elmu.tv" target="_blank" class="social-link">
-                  <v-icon size="28" color="white">mdi-music-note</v-icon>
+                <a href="https://www.linkedin.com/company/enforcement-leadership-and-management-university-elmu/" target="_blank" class="social-link">
+                  <v-icon size="28" color="white">mdi-linkedin</v-icon>
                 </a>
                 <a href="https://youtube.com/@elmutv" target="_blank" class="social-link">
                   <v-icon size="28" color="red-lighten-2">mdi-youtube</v-icon>

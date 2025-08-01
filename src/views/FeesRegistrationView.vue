@@ -89,7 +89,6 @@
                 <li class="mb-2">Payment can be made via Bank Draft, payable to ELMU University or Internet Banking.</li>
                 <li class="mb-2">For Internet Banking, please enter "icelin2026" in the Payment Reference or Recipient Reference field. Ensure the account holder's full name appears clearly in the transaction slip. If using a third-party account, please include your name manually in the Other Details or Remarks field.</li>
                 <li class="mb-2">Kindly email a digital copy of the payment slip to: <strong>icelin@elmu.edu.my</strong></li>
-                <li>Receipts will be issued via email one week after the closing date of payment.</li>
               </ul>
             </div>
             
@@ -119,7 +118,6 @@
                 <li class="mb-2">All payments must be accompanied by proof of payment (e.g., bank-in slip or official receipt) and emailed to the Secretariat at <strong>icelin@elmu.edu.my</strong>.</li>
                 <li class="mb-2">Participants who make payments via bank transfer are required to send a digital copy of the payment slip for our records.</li>
                 <li class="mb-2">Please note that payments via Telegraphic Transfer (TT) may incur additional charges depending on your bank. Kindly check with your respective bank.</li>
-                <li>Receipts will be issued via email one week after the closing date of payment.</li>
               </ul>
             </div>
             

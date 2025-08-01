@@ -88,10 +88,15 @@
 
               <h2 class="text-h5 mt-6 mb-4">Follow Us</h2>
               <div class="d-flex justify-space-around">
-                <v-btn icon="mdi-twitter" color="primary" variant="text" size="large"></v-btn>
-                <v-btn icon="mdi-facebook" color="primary" variant="text" size="large"></v-btn>
-                <v-btn icon="mdi-linkedin" color="primary" variant="text" size="large"></v-btn>
-                <v-btn icon="mdi-instagram" color="primary" variant="text" size="large"></v-btn>
+                <a href="https://facebook.com/ELMUniversty/" target="_blank">
+                  <v-btn icon="mdi-facebook" color="primary" variant="text" size="large"></v-btn>
+                </a>
+                <a href="https://www.linkedin.com/company/enforcement-leadership-and-management-university-elmu/" target="_blank">
+                  <v-btn icon="mdi-linkedin" color="primary" variant="text" size="large"></v-btn>
+                </a>
+                <a href="https://instagram.com/elmu_university/" target="_blank">
+                  <v-btn icon="mdi-instagram" color="primary" variant="text" size="large"></v-btn>
+                </a>
               </div>
             </v-col>
           </v-row>

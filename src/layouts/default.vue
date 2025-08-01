@@ -81,6 +81,7 @@ const menuItems = [
   { title: 'Venue & Accommodation', path: '/venue-accommodation', icon: 'mdi-map-marker' },
   { title: 'Programme & Dates', path: '/programme-dates', icon: 'mdi-calendar' },
   { title: 'Call for Reviewers', path: '/call-for-reviewers', icon: 'mdi-account-multiple-plus' },
+  { title: 'Call for Abstracts', path: '/call-for-abstracts', icon: 'mdi-file-document' },
   { title: 'Sponsors', path: '/sponsors', icon: 'mdi-briefcase'},
   { title: 'Downloads', path: '/downloads', icon: 'mdi-file-document-outline' }
 ]

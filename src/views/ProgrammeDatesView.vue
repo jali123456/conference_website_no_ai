@@ -70,7 +70,7 @@
             <v-tabs v-model="activeTab" class="mb-4">
               <v-tab class="text-h6 font-weight-medium" value="day1">Day 1</v-tab>
               <v-tab class="text-h6 font-weight-medium" value="day2">Day 2</v-tab>
-              <v-tab class="text-h6 font-weight-medium" value="day3">Day 3 Sarawak Heritage Village (Optional)</v-tab>
+              <v-tab class="text-h6 font-weight-medium" value="day3">Day 3</v-tab>
             </v-tabs>
 
             <!-- Desktop/Tablet Timeline Layout -->
@@ -83,7 +83,10 @@
                 <v-subheader class="text-h6 mt-4 mb-2 text-primary text-center">
                   {{ day[0].date }}
                 </v-subheader>
-                <v-timeline justify="auto" side="end" align="start" class="programme-timeline">
+                <div v-if="day[0].date === '14 August 2026'" class="d-flex justify-center align-center" style="min-height: 200px;">
+                  <h2 class="text-h2 font-weight-bold">Sarawak Heritage Village (Optional)</h2>
+                </div>
+                <v-timeline v-else justify="auto" side="end" align="start" class="programme-timeline">
                   <v-timeline-item
                     v-for="(session, sIndex) in day"
                     :key="sIndex"
@@ -208,76 +211,66 @@ const programme = [
       title: 'Opening Ceremony',
       location: 'TBA',
       details: [
-        "Recitation of Du'a",
-        "Negaraku",
-        "Welcoming speech by Dean School of Investigative Sciences & Chairman ICELIn26",
-        "Welcoming speech by Premier of Sarawak",
-        "Welcoming speech by VC ELMU",
-        "Officiating Speech and Opening by Premier of Sarawak",
-        "Group Photo Session"
       ]
     },
     {
       time: '10:00 - 10:50',
-      title: 'FORUM SESSION: Title TBC',
+      title: 'FORUM SESSION: Title TBA',
       location: 'TBA',
       details:[
-        "Moderator: Datuk Mohd Shahrizan Bin Che Mat Din (Deputy Vice-Chancellor Academic Affairs, ELMU)",
-        `Panellists: 1.Yang Amat Arif Tan Sri Abdul Rahman bin Sebli
-        2.YBhg. Tan Sri Dato' Sri Haji Azam bin Baki
-        3.YBhg. Tan Sri Idrus Harun
-        4.Professor Datuk Dr. Kassim Noor Mohamed`,
+        "Moderator: TBA",
+        `Panellists: TBA`,
       ]
     },
     {
       time: '10:50 - 11:30',
       title: 'Morning Break',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '11:30 - 13:00',
       title: 'Parallel Session 1a',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '11:30 - 13:00',
       title: 'Parallel Session 1b',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '11:30 - 13:00',
       title: 'Parallel Session 1c',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '13:00 - 14:30',
       title: 'Lunch Break',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '14:30 - 17:00',
       title: 'Parallel Session 2a',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '14:30 - 17:00',
       title: 'Parallel Session 2b',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '14:30 - 17:00',
       title: 'Parallel Session 2c',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '17:00',
       title: 'Tea Break',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '19:45 - 22:30',
       title: 'Conference Dinner',
-      location: 'TBA'
+      location: ''
     }
   ],
   // Day 2
@@ -285,65 +278,65 @@ const programme = [
     {
       time: '08:30 - 10:30',
       title: 'Parallel Session 3a',
-      location: 'TBA',
+      location: '',
       date: '13 August 2026'
     },
     {
       time: '08:30 - 10:30',
       title: 'Parallel Session 3b',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '08:30 - 10:30',
       title: 'Parallel Session 3c',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '10:30 - 10:40',
       title: 'Morning Break',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '10:40 - 13:00',
       title: 'Parallel Session 4a',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '10:40 - 13:00',
       title: 'Parallel Session 4b',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '10:40 - 13:00',
       title: 'Parallel Session 4c',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '13:00 - 14:30',
       title: 'Lunch Break',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '14:30 - 15:30',
       title: 'Workshop',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '15:30 - 16:00',
       title: 'Tea Break',
-      location: 'TBA'
+      location: ''
     },
     {
       time: '16:00 - 17:00',
       title: 'Closing Remarks',
-      location: 'TBA'
+      location: ''
     }
   ],
   //day 3
   [
     {
-      time: '8:00-10:00',
-      title: 'Breakfast',
+      time: '',
+      title: 'TBA',
       location: 'TBA',
       date: '14 August 2026'
     },

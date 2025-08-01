@@ -87,6 +87,11 @@ const MainRoutes = {
             name: 'CallForReviewers',
             component: () => import('@/views/CallForReviewersView.vue'),
         },
+        {
+            path: '/call-for-abstracts',
+            name: 'CallForAbstracts',
+            component: () => import('@/views/CallForAbstractsView.vue'),
+        }
     ]
 }
 
