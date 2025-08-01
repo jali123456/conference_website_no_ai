@@ -150,7 +150,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import websiteLaunchImage from '@/assets/news/website_launched.png'
+import websiteLaunchImage from '@/assets/news/website_launched.gif'
 
 interface NewsItem {
   title: string

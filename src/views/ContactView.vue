@@ -65,13 +65,13 @@
                   <v-list-item-subtitle>icelin@elmu.edu.my</v-list-item-subtitle>
                 </v-list-item>
 
-                <v-list-item>
+                <!-- <v-list-item>
                   <template v-slot:prepend>
                     <v-icon color="primary" class="mr-4">mdi-phone</v-icon>
                   </template>
                   <v-list-item-title>Phone</v-list-item-title>
                   <v-list-item-subtitle>+60176063615</v-list-item-subtitle>
-                </v-list-item>
+                </v-list-item> -->
 
                 <v-list-item>
                   <template v-slot:prepend>

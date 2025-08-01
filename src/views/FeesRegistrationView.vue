@@ -129,6 +129,10 @@
       <v-col justify="center" align="center" cols="12" class="mt-6">
         <v-card>
           <v-card-title class="text-h5">Ready to Register?</v-card-title>
+          <div class="d-flex align-center justify-center">
+            <span class="text-body-2">Registration opens on</span>
+            <span class="text-body-1 font-weight-bold primary--text">15 May 2026</span>
+          </div>
           <v-card-text>
             <v-btn color="primary" @click="openRegistration">
               Register Now

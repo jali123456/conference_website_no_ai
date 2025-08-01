@@ -1,6 +1,6 @@
 <!-- SubthemeList.vue -->
 <template>
-<v-row justify="center" class="mb-2">
+<v-row justify="center" class="mb-2 mx-2">
 <v-col
     v-for="(subtheme, index) in data_subthemes"
     :key="subtheme.id"
