@@ -40,15 +40,17 @@
            </div>
          </v-col>
          
-         <v-col cols="4" class="text-center text-sm-right mb-2 mb-sm-0 me-auto align-self-center">
+         <v-col cols="4" class="text-center text-sm-right mb-2 align-self-center">
            <!-- <p class="text-body-2 mb-1">
              Phone: +60193978679
              <v-icon small left>mdi-phone</v-icon> 
            </p> -->
-           <p class="text-body-2 mb-0">
-             Email: <a href="mailto:icelin@elmu.edu.my" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-white">icelin@elmu.edu.my</a>
-             <v-icon small left>mdi-email</v-icon>
-           </p>
+           <v-row class="align-center justify-center justify-sm-end">
+          <v-icon size="small" class="me-2">mdi-email</v-icon>
+          <span class="text-body-2">
+            Email: <a href="mailto:icelin@elmu.edu.my" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-break text-white">icelin@elmu.edu.my</a>
+          </span>
+          </v-row>
          </v-col>
        </v-row>
  

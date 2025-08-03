@@ -45,7 +45,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" class="d-flex justify-center my-4">
+      <v-col cols="12">
         <CountdownTimer />
       </v-col>
     </v-row>

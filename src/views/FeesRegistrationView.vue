@@ -71,7 +71,6 @@
             <div class="mb-6">
               <h3 class="text-h6 font-weight-bold mb-3">Local Participants</h3>
               <p class="text-body-1 mb-4">Payment should be made via the following bank account:</p>
-              
               <div class="d-flex mb-2">
                 <span class="text-subtitle-2 font-weight-bold">Bank Name:</span>
                 <span class="text-body-1 ml-2">MBSB BANK BERHAD</span>
@@ -298,13 +297,6 @@ const registrationSteps = [
 .cursor-pointer {
   cursor: pointer;
 }
-.v-table {
-  width: 100%;
-}
-.fees-table {
-  width: 100%;
-  margin-top: 16px;
-}
 .bg-primary {
   background-color: #1976d2 !important;
 }
@@ -316,12 +308,5 @@ const registrationSteps = [
 }
 .elevation-3 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
-}
-.early-bird {
-  color: #388e3c;
-  font-weight: 500;
-}
-.early-bird-header {
-  background-color: #e8f5e9;
 }
 </style>
