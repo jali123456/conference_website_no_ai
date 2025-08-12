@@ -15,6 +15,7 @@
         <v-card>
           <v-img
             src="@/assets/images/venue_1.jpg"
+            alt="Event Venue Image"
             width="100%"
             contain
           ></v-img>
@@ -94,6 +95,7 @@
                   <v-img
                     :src="hotel.image"
                     height="250"
+                    alt="Recommended Recommendation"
                     contain
                   ></v-img>
                   <v-card-title class="text-wrap">{{ hotel.name }}</v-card-title>

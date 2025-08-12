@@ -10,6 +10,7 @@
               width="100%"
               contain
               class="text-white"
+              alt="Conference Banner"
             >
               <v-card-title :class="bannerTitleClass">
                 </v-card-title>
@@ -17,6 +18,10 @@
           </div>
 
           <v-card-text :class="contentTextClass">
+            <!-- Add H1 here for SEO -->
+            <h1 class="text-h5 text-center font-weight-bold mb-4">
+              ICELIn 2026 - International Conference on Enforcement, Law & Integrity
+            </h1>
             <p class="text-body-2">
               Join us for a dynamic and multidisciplinary conference that brings together scholars,
               practitioners, policymakers, and thought leaders to explore the evolving challenges and

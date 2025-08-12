@@ -37,6 +37,7 @@
             contain
             @click="navigateToHome"
             class="logo-image mx-auto"
+            alt="ICELIn 2026 Conference Logo"
           >
           </v-img>
 

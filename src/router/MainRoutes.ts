@@ -27,16 +27,6 @@ const MainRoutes = {
             component: () => import('@/views/NewsView.vue'),
         },
         {
-            path: '/schedule',
-            name: 'Schedule',
-            component: () => import('@/views/ScheduleView.vue'),
-        },
-        {
-            path: '/settings',
-            name: 'Settings',
-            component: () => import('@/views/SettingsView.vue'),
-        },
-        {
             path: '/panel-list',
             name: 'PanelList',
             component: () => import('@/views/PanelList.vue'),
@@ -55,16 +45,6 @@ const MainRoutes = {
             path: '/programme-dates',
             name: 'ProgrammeDates',
             component: () => import('@/views/ProgrammeDatesView.vue'),
-        },
-        {
-            path: '/guidelines-publication',
-            name: 'GuidelinesPublication',
-            component: () => import('@/views/GuidelinesPublicationView.vue'),
-        },
-        {
-            path: '/paper-submission',
-            name: 'PaperSubmission',
-            component: () => import('@/views/PaperSubmissionView.vue'),
         },
         {
             path: '/downloads',

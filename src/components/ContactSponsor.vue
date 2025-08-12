@@ -1,5 +1,4 @@
 <template>
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two_Tone|Material+Icons+Round|Material+Icons+Sharp&display=swap" rel="stylesheet">
   <v-row cols="12" class="mt-6">
     <v-col cols="12" class="contact-section">
       <v-card class="mx-auto contact-container" max-width="1400">

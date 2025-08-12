@@ -13,6 +13,7 @@
         <v-card>
           <v-img
             src="@/assets/speakers-banner.png"
+            alt="Panel Banner"
             contain
           ></v-img>
 
