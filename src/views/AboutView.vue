@@ -100,6 +100,43 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'About the Conference | ICELIn 2026',
+  meta: [
+    {
+      name: 'description',
+      content: 'Learn about the ICELIn 2026 Conference, its objectives, and the organizer ELMU. Discover how the event fosters collaboration in law enforcement, legal systems, and integrity.'
+    },
+    {
+      property: 'og:title',
+      content: 'About the Conference | ICELIn 2026'
+    },
+    {
+      property: 'og:description',
+      content: 'Explore the mission, vision, and objectives of the ICELIn 2026 Conference and its organizer, ELMU.'
+    },
+    {
+      property: 'og:url',
+      content: 'https://icelin.my/about'
+    },
+    {
+      name: 'twitter:title',
+      content: 'About the Conference | ICELIn 2026'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Learn about the ICELIn 2026 Conference and the Enforcement, Leadership and Management University (ELMU).'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://icelin.my/about'
+    }
+  ]
+})
 
 </script>
 

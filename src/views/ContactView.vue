@@ -127,6 +127,43 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'Contact Us | ICELIn 2026 Conference',
+  meta: [
+    {
+      name: 'description',
+      content: 'Contact the ICELIn 2026 Conference team for inquiries, support, or feedback. Reach out via our contact form or social media.'
+    },
+    {
+      property: 'og:title',
+      content: 'Contact Us | ICELIn 2026 Conference'
+    },
+    {
+      property: 'og:description',
+      content: 'Get in touch with the ICELIn 2026 Conference organizers for any questions or assistance.'
+    },
+    {
+      property: 'og:url',
+      content: 'https://icelin.my/contact'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Contact Us | ICELIn 2026 Conference'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Contact the ICELIn 2026 Conference team for support and information.'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://icelin.my/contact'
+    }
+  ]
+})
 
 // Form data
 const formData = reactive({

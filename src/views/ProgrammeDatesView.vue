@@ -80,9 +80,9 @@
                 :key="index"
                 :value="'day' + (index + 1)"
               >
-                <v-subheader class="text-h6 mt-4 mb-2 text-primary text-center">
+                <div class="text-h6 mt-4 mb-2 text-primary text-center">
                   {{ day[0].date }}
-                </v-subheader>
+                </div>
                 <div v-if="day[0].date === '14 August 2026'" class="d-flex justify-center align-center" style="min-height: 200px;">
                   <h2 class="text-h2 font-weight-bold">Sarawak Heritage Village (Optional)</h2>
                 </div>
@@ -149,6 +149,43 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'Programme & Important Dates | ICELIn 2026',
+  meta: [
+    {
+      name: 'description',
+      content: 'Check the full conference programme and all important dates for ICELIn 2026, including abstract submission, registration deadlines, and event schedule.'
+    },
+    {
+      property: 'og:title',
+      content: 'Programme & Important Dates | ICELIn 2026'
+    },
+    {
+      property: 'og:description',
+      content: 'Stay informed about the ICELIn 2026 Conference schedule and key deadlines.'
+    },
+    {
+      property: 'og:url',
+      content: 'https://icelin.my/programme-dates'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Programme & Important Dates | ICELIn 2026'
+    },
+    {
+      name: 'twitter:description',
+      content: 'See the full programme and important dates for the ICELIn 2026 Conference.'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://icelin.my/programme-dates'
+    }
+  ]
+})
 
 const activeTab = ref('day1')
 

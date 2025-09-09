@@ -145,9 +145,47 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
 function openRegistration() {
   window.open('https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=HYyN1A9sYE64VQszNyyLObOQ6rcy5rVHq95xJgsnFWlUQjZWTDFQMzhFT01ERjNIUjBNSjNBR0ZFWS4u', '_blank')
 }
+
+useHead({
+  title: 'Registration & Fees | ICELIn 2026',
+  meta: [
+    {
+      name: 'description',
+      content: 'View registration fees, categories, and the registration process for the ICELIn 2026 Conference. Register now to secure your spot at this international event.'
+    },
+    {
+      property: 'og:title',
+      content: 'Registration & Fees | ICELIn 2026'
+    },
+    {
+      property: 'og:description',
+      content: 'Find out about registration fees and how to register for the ICELIn 2026 Conference.'
+    },
+    {
+      property: 'og:url',
+      content: 'https://icelin.my/fees-registration'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Registration & Fees | ICELIn 2026'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Register for the ICELIn 2026 Conference and view all fee details and categories.'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://icelin.my/fees-registration'
+    }
+  ]
+})
+
 // import { ref } from 'vue'
 // import { onMounted, onUnmounted } from 'vue'
 

@@ -4,7 +4,7 @@
       <v-col cols="12">
         <div class="d-flex align-center justify-center mb-6">
           <v-divider class="flex-grow-1"></v-divider>
-          <h1 class="text-h mx-4 text-center font-weight-bold">Reviewer</h1>
+          <!-- <h1 class="text-h mx-4 text-center font-weight-bold">Reviewer</h1> -->
           <v-divider class="flex-grow-1"></v-divider>
         </div>
       </v-col>
@@ -17,6 +17,11 @@
           </p>
           <p class="text-body-1">
             We invite you to submit your abstract for consideration. This is an excellent opportunity to share your research and insights with a global audience. If you are interested, please register in the following link.
+          </p>
+          <v-divider :thickness="4" class="border-opacity-50 mb-4 mt-2"></v-divider>
+          <p class="text-body-1">
+            Accepted papers will be featured in the conference proceedings or submitted for publication in a Scopus-indexed journal, subject to publication fees. 
+            Exceptional submissions will be considered for the best paper awards, with winners receiving special gift or voucher as recognition
           </p>
         </v-card>
       </v-col>
@@ -64,6 +69,44 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'Call for Abstracts | ICELIn 2026 Conference',
+  meta: [
+    {
+      name: 'description',
+      content: 'Submit your abstract for the ICELIn 2026 Conference. Share your research and insights with a global audience in enforcement, law, and integrity.'
+    },
+    {
+      property: 'og:title',
+      content: 'Call for Abstracts | ICELIn 2026 Conference'
+    },
+    {
+      property: 'og:description',
+      content: 'Submit your abstract and present your research at the ICELIn 2026 Conference.'
+    },
+    {
+      property: 'og:url',
+      content: 'https://icelin.my/call-for-abstracts'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Call for Abstracts | ICELIn 2026 Conference'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Submit your abstract for the ICELIn 2026 Conference and share your work with peers.'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://icelin.my/call-for-abstracts'
+    }
+  ]
+})
+
 const goToRegister = () => {
   window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=HYyN1A9sYE64VQszNyyLObOQ6rcy5rVHq95xJgsnFWlUOVdaMko5R1A4UkxTWTcxUk81UlNROFU5Si4u', '_blank')
 }

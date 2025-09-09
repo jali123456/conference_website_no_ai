@@ -95,6 +95,43 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'Downloads | ICELIn 2026 Conference',
+  meta: [
+    {
+      name: 'description',
+      content: 'Download conference materials, templates, guidelines, and forms for the ICELIn 2026 Conference.'
+    },
+    {
+      property: 'og:title',
+      content: 'Downloads | ICELIn 2026 Conference'
+    },
+    {
+      property: 'og:description',
+      content: 'Access important documents and resources for the ICELIn 2026 Conference.'
+    },
+    {
+      property: 'og:url',
+      content: 'https://icelin.my/downloads'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Downloads | ICELIn 2026 Conference'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Download conference materials and resources for ICELIn 2026.'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://icelin.my/downloads'
+    }
+  ]
+})
 
 // Set this to true when you want to disable specific categories
 const isDisabled = ref(true)

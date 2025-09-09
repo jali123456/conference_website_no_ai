@@ -4,7 +4,7 @@
       <v-col cols="12">
         <div class="d-flex align-center justify-center mb-6">
           <v-divider class="flex-grow-1"></v-divider>
-          <h1 class="text-h mx-4 text-center font-weight-bold">Reviewer</h1>
+          <!-- <h1 class="text-h mx-4 text-center font-weight-bold">Reviewer</h1> -->
           <v-divider class="flex-grow-1"></v-divider>
         </div>
       </v-col>
@@ -64,6 +64,44 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'Call for Reviewers | ICELIn 2026 Conference',
+  meta: [
+    {
+      name: 'description',
+      content: 'Join as a reviewer for the ICELIn 2026 Conference. Help uphold the quality of submissions and contribute to the academic community.'
+    },
+    {
+      property: 'og:title',
+      content: 'Call for Reviewers | ICELIn 2026 Conference'
+    },
+    {
+      property: 'og:description',
+      content: 'Apply to be a reviewer for the ICELIn 2026 Conference and support research excellence.'
+    },
+    {
+      property: 'og:url',
+      content: 'https://icelin.my/call-for-reviewers'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Call for Reviewers | ICELIn 2026 Conference'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Become a reviewer for the ICELIn 2026 Conference and help maintain high standards.'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://icelin.my/call-for-reviewers'
+    }
+  ]
+})
+
 const goToRegister = () => {
   window.open('https://forms.gle/placeholder-reviewer-form', '_blank')
 }

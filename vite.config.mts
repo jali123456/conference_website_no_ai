@@ -65,6 +65,7 @@ export default defineConfig({
     ],
   },
   server: {
+    host: '0.0.0.0', //importants for dockers
     port: 3000,
     allowedHosts: ['testing.jali123456.win', 'testing2.jali123456.win'],
   },

@@ -54,6 +54,43 @@
 
 <script setup lang="ts">
 import { useDisplay } from 'vuetify'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'Forum Panel | ICELIn 2026 Conference',
+  meta: [
+    {
+      name: 'description',
+      content: 'Meet the distinguished speakers and panelists at the ICELIn 2026 Conference. Explore the forum panel schedule and topics.'
+    },
+    {
+      property: 'og:title',
+      content: 'Forum Panel | ICELIn 2026 Conference'
+    },
+    {
+      property: 'og:description',
+      content: 'Discover the forum panel and keynote speakers for ICELIn 2026.'
+    },
+    {
+      property: 'og:url',
+      content: 'https://icelin.my/panel-list'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Forum Panel | ICELIn 2026 Conference'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Meet the speakers and panelists at ICELIn 2026.'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://icelin.my/panel-list'
+    }
+  ]
+})
 
 const { xs, sm, md, lg, xl, xxl } = useDisplay()
 

@@ -151,6 +151,54 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import websiteLaunchImage from '@/assets/news/website_launched.gif'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  // Override the title for this specific page
+  title: 'Latest News | ICELIn 2026 Conference',
+  
+  meta: [
+    // Override description for this page
+    {
+      name: 'description',
+      content: 'Latest news, announcements, and updates from the ICELIn 2026 International Conference on Enforcement, Law & Integrity'
+    },
+    
+    // Override Open Graph tags for this page
+    {
+      property: 'og:title',
+      content: 'Latest News | ICELIn 2026 Conference'
+    },
+    {
+      property: 'og:description',
+      content: 'Stay updated with the latest news and announcements from ICELIn 2026'
+    },
+    {
+      property: 'og:url',
+      content: 'https://icelin.my/news'
+    },
+    {
+      property: 'og:image',
+      content: websiteLaunchImage
+    },
+    
+    {
+      name: 'twitter:title',
+      content: 'Latest News | ICELIn 2026 Conference'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Stay updated with the latest news and announcements from ICELIn 2026'
+    }
+  ],
+
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://icelin.my/news'
+    }
+  ]
+})
 
 interface NewsItem {
   title: string

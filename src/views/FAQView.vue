@@ -87,6 +87,43 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'FAQ | ICELIn 2026 Conference',
+  meta: [
+    {
+      name: 'description',
+      content: 'Find answers to frequently asked questions about registration, fees, paper submission, and more for the ICELIn 2026 Conference.'
+    },
+    {
+      property: 'og:title',
+      content: 'FAQ | ICELIn 2026 Conference'
+    },
+    {
+      property: 'og:description',
+      content: 'Get answers to common questions about the ICELIn 2026 Conference, including registration and participation details.'
+    },
+    {
+      property: 'og:url',
+      content: 'https://icelin.my/faq'
+    },
+    {
+      name: 'twitter:title',
+      content: 'FAQ | ICELIn 2026 Conference'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Frequently asked questions about the ICELIn 2026 Conference.'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://icelin.my/faq'
+    }
+  ]
+})
 
 const searchQuery = ref('');
 
