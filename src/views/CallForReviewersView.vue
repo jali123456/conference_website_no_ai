@@ -10,16 +10,30 @@
       </v-col>
 
       <!-- Info Card -->
-      <v-col cols="12">
-        <v-card class="pa-6" elevation="2">
-          <p class="text-h4 text-center font-weight-bold mb-4">
-            CALL FOR REVIEWER
-          </p>
-          <p class="text-body-1">
-            We would also like to invite you as a reviewer to help uphold the quality of submissions. If you are interested and not registered as student in any institution, please register in the following link.
-          </p>
-        </v-card>
-      </v-col>
+        <v-col cols="12">
+          <v-card class="pa-6" elevation="2">
+            <p class="text-h4 text-center font-weight-bold mb-4">
+              CALL FOR REVIEWER
+            </p>
+            <p class="text-body-1 mb-6">
+              We would also like to invite you as a reviewer to help uphold the quality of submissions. If you are interested and not registered as student in any institution, please register in the following link.
+            </p>
+            <v-table class="modern-table" density="compact">
+              <thead>
+                <tr>
+                    <th class="text-left">No.</th>
+                    <th class="text-left">Reviewer Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr v-for="(reviewer, idx) in reviewerList" :key="reviewer.name">
+                    <td>{{ idx + 1 }}</td>
+                    <td>{{ reviewer.name }}</td>
+                </tr>
+              </tbody>
+            </v-table>
+          </v-card>
+        </v-col>
 
       <!-- Registration Banner with Pattern 4 -->
       <v-col cols="12">
@@ -65,6 +79,7 @@
 
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
+import { reviewerList } from '../data/reviewerinfo'
 
 useHead({
   title: 'Call for Reviewers | ICELIn 2026 Conference',
@@ -128,6 +143,38 @@ const getParticleStyle = (index: number) => {
 <style scoped>
 .red-bottom-border {
   border-bottom: 4px solid red;
+}
+
+.modern-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8fafc;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+}
+.modern-table th {
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 8px;
+  font-size: 1rem;
+}
+.modern-table td {
+  padding: 10px 8px;
+  font-size: 0.98rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.modern-table tr:last-child td {
+  border-bottom: none;
+}
+@media (max-width: 600px) {
+  .modern-table th, .modern-table td {
+    padding: 8px 4px;
+    font-size: 0.92rem;
+  }
+  .modern-table {
+    font-size: 0.92rem;
+  }
 }
 
 /* Pattern 4: Particle Wave Background */

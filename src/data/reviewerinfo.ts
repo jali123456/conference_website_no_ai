@@ -1,0 +1,23 @@
+export const reviewerList = [
+    { name: "Datuk Mohd Shahrizan Bin Che Mat Din" },
+    { name: "Dato' Dr. Yew Chong Hooi" },
+    { name: "Dr. Haji Norhafifi Bin Haji Ismail" },
+    { name: "Dr. Raja Azrul Hisham Bin Raja Ahmad" },
+    { name: "Dr. Siti Hafizah Binti Daud" },
+    { name: "Dr. Mohd Shah Bin Hussin Shah" },
+    { name: "Dr. Rabieahtul Binti Abu Bakar" },
+    { name: "Dr. Marzanah Binti A. Jabar" },
+    { name: "Lt. Colonel Dr. Abdul Rahman Bin Alavi" },
+    { name: "Dr. Nurul Aina Binti Ismail" },
+    { name: "Dr. Pakhriazad Bin Hassan Zaki" },
+    { name: "Dr. FuterI Jazeilya Binti Md Fadzil" },
+    { name: "Ts. Dr. Rozita Binti Husain" },
+    { name: "Siti Nurakmar Binti Sh. Ismail" },
+    { name: "Nurfahera Adriana Binti Zul Kifli" },
+    { name: "Norashikin Binti Othman" },
+    { name: "Nur Yasmin Maisara Binti Muhammad Yazid" },
+    { name: "Shankar A/L Durairaja" },
+    { name: "Yasin Bin Md Rafangi @ Md Rafee" },
+    { name: "Rahayu Saad" },
+    { name: "Dr. Shireen Muhammad" }
+];
