@@ -3,7 +3,7 @@
   <v-app-bar 
   flat
   :height="appBarHeight" 
-  color="white">
+  >
     <v-container fluid class="pa-0 mt-0 mb-0 fill-height">
       <!-- Top Row -->
       <!-- class="d-flex justify-space-between mb-6 align-stretch"
@@ -21,7 +21,7 @@
               class="ma-1 pa-3 rounded-lg cursor-pointer nav-chip red-bottom-border"
               :prepend-icon="item.icon"
               clickable
-              color="elmubackground"
+              color="primary"
             >
               <span class="text-body-1 font-weight-medium">{{ item.text }}</span>
             </v-chip>
@@ -32,8 +32,8 @@
         <v-col cols="12" :sm="display.width.value <= 700 ? 6 : 5" xs="12"md="5"lg="5"xl="5" :class="{'mx-auto': display.width.value <= 550}" class="text-center">
           <v-img
             src="@/assets/logo.png"
-            :width="display.width.value <= 550 ? 220 : 300"
-            :height="display.width.value <= 550 ? 210 : 200"
+            :width="display.width.value <= 550 ? 450 : 500"
+            :height="display.width.value <= 550 ? 210 : 250"
             contain
             @click="navigateToHome"
             class="logo-image mx-auto"
@@ -47,7 +47,7 @@
               :class="{'d-none': $vuetify.display.width > 959}"
               variant="elevated"
               size="large"
-              color=elmubackground
+              color="primary"
               class="pa-3 rounded-lg cursor-pointer red-bottom-border"
               prepend-icon="mdi-menu"
             > <b>Menu</b>
@@ -141,12 +141,15 @@ const rightIcons = [
 </script>
 
 <style scoped>
+
 .red-bottom-border {
   border-bottom: 2px solid red;
 }
 
+
 .v-app-bar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: #0d1c2f !important; /* blue */
 }
 
 .v-btn {

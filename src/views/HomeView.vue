@@ -75,20 +75,19 @@
         <div class="event-organizers mb-6 mt-6">
           <h5 class="text-h5 text-center mb-4">The event is organized by</h5>
           <v-row justify="center" align="center" class="ga-4">
-            <v-col cols="6" sm="4" md="3" class="text-center">
+            <v-col cols="12" sm="4" md="4" class="text-center">
               <v-img 
                 src="@/assets/logo.png" 
                 alt="ICELIn26 logo"
                 contain
-                max-height="200"
+                class="blue-bg"
               />
             </v-col>
-            <v-col cols="6" sm="4" md="3" class="text-center">
+            <v-col cols="12" sm="4" md="3" class="text-center">
               <v-img 
                 src="@/assets/icon/elmu_logo.png" 
                 alt="ELMU University Logo"
                 contain
-                max-height="200"
               />
             </v-col>
           </v-row>
@@ -142,6 +141,12 @@ const featureTitleClass = computed(() => {
 </script>
 
 <style scoped>
+.blue-bg {
+  background-color: #0d1c2f; /* Material Design Blue */
+  border-radius: 8px;
+  padding: 16px;
+}
+
 .v-card-title {
   word-break: normal;
 }

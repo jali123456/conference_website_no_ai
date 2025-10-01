@@ -78,7 +78,7 @@
             <v-img
               :lazy-src="`https://picsum.photos/200/300`"
               :src="newsItem.image"
-              height="200"
+              height="600"
               cover
             ></v-img>
             <v-card-title>{{ newsItem.title }}</v-card-title>
@@ -151,6 +151,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import websiteLaunchImage from '@/assets/news/website_launched.gif'
+import abstractLaunchImage from '@/assets/news/abstract_launched.jpeg'
 import { useHead } from '@unhead/vue'
 
 useHead({
@@ -222,23 +223,23 @@ const selectedCategories = ref<string[]>([])
 // ]
 
 const featuredNews = {
-  title: 'Conference Website Launch Announcement',
-  date: 'August 1, 2025',
-  summary: "We are excited to announce the launch of our official conference website. Starting August 1st, 2025, you'll have access to all the conference information, including Conference details, program updates, and submission guidelines. Stay tuned for more updates and announcements as we prepare for this exciting event.",
-  image: websiteLaunchImage,
-  link: '/',
+  title: 'Call for abstract',
+  date: 'October 1, 2025',
+  summary: "We are excited to announce that our Abstract Submissions is currently open",
+  image: abstractLaunchImage,
+  link: '/call-for-abstracts',
   categories: ['Info']
 }
 
 const newsItems: NewsItem[] = [
-  // {
-  //   title: 'Paper Submission Deadline Extended',
-  //   date: 'May 20, 2026',
-  //   summary: 'Due to numerous requests, we have extended the paper submission deadline by two weeks to June 1, 2023. This is the final extension, and no further extensions will be granted.',
-  //   image: 'https://placehold.co/600x200',
-  //   link: '/news/submission-extended',
-  //   categories: ['Call for Papers']
-  // },
+  {
+    title: 'Conference Website Launch Announcement',
+    date: 'August 1, 2025',
+    summary: "We are excited to announce the launch of our official conference website. Starting August 1st, 2025, you'll have access to all the conference information, including Conference details, program updates, and submission guidelines. Stay tuned for more updates and announcements as we prepare for this exciting event.",
+    image: websiteLaunchImage,
+    link: '/',
+    categories: ['Info']
+  },
   // {
   //   title: 'Early Bird Registration Now Open',
   //   date: 'May 15, 2026',
