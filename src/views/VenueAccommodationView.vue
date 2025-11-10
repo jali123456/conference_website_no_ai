@@ -100,7 +100,7 @@
                   ></v-img>
                   <v-card-title class="text-wrap">{{ hotel.name }}</v-card-title>
                   <v-card-text>
-                    <p class="mb-2 text-wrap">⭐{{ hotel.rating }}</p>
+                    <!-- <p class="mb-2 text-wrap">⭐{{ hotel.rating }}</p> -->
                     <p class="mb-2 text-wrap">{{ hotel.address }}</p>
                     <!-- <p class="mb-2 text-wrap">Phone: {{ hotel.phone }}</p> -->
                     <!-- <p class="mb-4 text-wrap" v-if="hotel.specialRate">

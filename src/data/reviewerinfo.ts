@@ -1,5 +1,4 @@
 export const reviewerList = [
-    { name: "Datuk Mohd Shahrizan Bin Che Mat Din" },
     { name: "Dato' Dr. Yew Chong Hooi" },
     { name: "Dr. Haji Norhafifi Bin Haji Ismail" },
     { name: "Dr. Raja Azrul Hisham Bin Raja Ahmad" },
@@ -17,7 +16,6 @@ export const reviewerList = [
     { name: "Norashikin Binti Othman" },
     { name: "Nur Yasmin Maisara Binti Muhammad Yazid" },
     { name: "Shankar A/L Durairaja" },
-    { name: "Yasin Bin Md Rafangi @ Md Rafee" },
     { name: "Rahayu Saad" },
     { name: "Dr. Shireen Muhammad" }
 ];

@@ -19,7 +19,7 @@
 
           <v-card-text class="text-center py-4">
             <p class="text-body-2">
-              We are excited to announce our distinguished keynote speakers for Conference 2026.
+              We are excited to announce our distinguished keynote speakers for ICELIn26.
               Stay tuned for updates as we reveal more speakers in the coming weeks.
             </p>
           </v-card-text>

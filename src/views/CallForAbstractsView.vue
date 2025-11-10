@@ -1,13 +1,6 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12">
-        <div class="d-flex align-center justify-center mb-6">
-          <v-divider class="flex-grow-1"></v-divider>
-          <!-- <h1 class="text-h mx-4 text-center font-weight-bold">Reviewer</h1> -->
-          <v-divider class="flex-grow-1"></v-divider>
-        </div>
-      </v-col>
 
       <!-- Info Card -->
       <v-col cols="12">
@@ -108,7 +101,8 @@ useHead({
 })
 
 const goToRegister = () => {
-  window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=HYyN1A9sYE64VQszNyyLObOQ6rcy5rVHq95xJgsnFWlUOVdaMko5R1A4UkxTWTcxUk81UlNROFU5Si4u', '_blank')
+  // window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=HYyN1A9sYE64VQszNyyLObOQ6rcy5rVHq95xJgsnFWlUOVdaMko5R1A4UkxTWTcxUk81UlNROFU5Si4u', '_blank')
+  window.open('https://easychair.org/conferences?conf=icelin26', '_blank')
 }
 
 // Generate random styles for particles (Pattern 4 style)

@@ -149,7 +149,7 @@ const rightIcons = [
 
 .v-app-bar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  background-color: #0d1c2f !important; /* blue */
+  background-color: #121e39 !important; /* blue */
 }
 
 .v-btn {

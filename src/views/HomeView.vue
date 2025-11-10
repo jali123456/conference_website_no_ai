@@ -6,7 +6,7 @@
           <div class="position-relative">
             <!-- :height="bannerHeight" -->
             <v-img
-              src="@/assets/conference-banner.png"
+              src="@/assets/conference-banner.jpg"
               width="100%"
               contain
               class="text-white"
