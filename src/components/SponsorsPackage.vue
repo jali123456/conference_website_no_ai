@@ -3,7 +3,8 @@
     <v-col cols="12" class="sponsor-section">
     <v-card class="mx-auto" max-width="1400">
         <v-img
-        src="@/assets/sponsor-opportunities-2.jpg"
+        src="@/assets/sponsor-2.jpg"
+        lazy-src="https://placehold.co/1200x600/000000/FFF?text=Loading Why Sponsor"
         alt="Sponsor Logos"
         width="100%"
         contain
@@ -11,17 +12,18 @@
         </v-img>
     </v-card>
     </v-col>
-    <v-col cols="12" class="sponsor-section">
+    <!-- <v-col cols="12" class="sponsor-section">
     <v-card class="mx-auto" max-width="1400">
         <v-img
-        src="@/assets/sponsor-opportunities.jpg"
+        src="@/assets/sponsor-1.jpg"
+        lazy-src="https://placehold.co/1200x600/000000/FFF?text=Loading Sponsor Packages"
         alt="Sponsor Logos"
         width="100%"
         contain
         >
         </v-img>
     </v-card>
-    </v-col>
+    </v-col> -->
 </v-row>
 </template>
 

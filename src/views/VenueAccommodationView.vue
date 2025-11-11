@@ -15,6 +15,7 @@
         <v-card>
           <v-img
             src="@/assets/images/venue_1.jpg"
+            lazy-src="https://placehold.co/800x600?text=Loading"
             alt="Event Venue Image"
             width="100%"
             contain
@@ -94,6 +95,7 @@
                 <v-card class="h-100">
                   <v-img
                     :src="hotel.image"
+                    lazy-src="https://placehold.co/1000x600/000000/FFF?text=Loading"
                     height="250"
                     alt="Recommended Recommendation"
                     contain

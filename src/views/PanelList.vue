@@ -13,6 +13,7 @@
         <v-card>
           <v-img
             src="@/assets/speakers-banner.png"
+            lazy-src="https://placehold.co/1400x2000/000000/FFF?text=Loading Forum Banner"
             alt="Panel Banner"
             contain
           ></v-img>

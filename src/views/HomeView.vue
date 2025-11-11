@@ -7,6 +7,7 @@
             <!-- :height="bannerHeight" -->
             <v-img
               src="@/assets/conference-banner.jpg"
+              lazy-src="https://placehold.co/1200x600/000000/FFF?text=Loading Conference Banner"
               width="100%"
               contain
               class="text-white"
@@ -75,7 +76,7 @@
         <div class="event-organizers mb-6 mt-6">
           <h5 class="text-h5 text-center mb-4">The event is organized by</h5>
           <v-row justify="center" align="center" class="ga-4">
-            <v-col cols="12" sm="4" md="4" class="text-center">
+            <v-col cols="9" sm="4" md="4" class="text-center">
               <v-img 
                 src="@/assets/logo.png" 
                 alt="ICELIn26 logo"
@@ -83,11 +84,12 @@
                 class="blue-bg"
               />
             </v-col>
-            <v-col cols="12" sm="4" md="3" class="text-center">
+            <v-col cols="9" sm="4" md="3" class="text-center">
               <v-img 
                 src="@/assets/icon/elmu_logo.png" 
                 alt="ELMU University Logo"
                 contain
+                max-height="200"
               />
             </v-col>
           </v-row>
