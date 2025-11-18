@@ -32,7 +32,7 @@
         <v-col cols="12" :sm="display.width.value <= 700 ? 6 : 5" xs="12"md="5"lg="5"xl="5" :class="{'mx-auto': display.width.value <= 550}" class="text-center">
           <v-img
             src="@/assets/logo.png"
-            :width="display.width.value <= 550 ? 450 : 500"
+            :width="display.width.value <= 550 ? 400 : 500"
             :height="display.width.value <= 550 ? 210 : 250"
             contain
             @click="navigateToHome"

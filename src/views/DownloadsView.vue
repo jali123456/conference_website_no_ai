@@ -41,17 +41,18 @@
                       v-for="(file, fIndex) in category.files"
                       :key="fIndex"
                       :prepend-icon="file.icon"
-                      :disabled="isDisabledCategory(category.title)"
+                      :disabled="isDisabledCategory(category.title) || file.disabled"
+                      lines="two"
                     >
-                      <v-list-item-title :class="{ 'text-disabled': isDisabledCategory(category.title) }">{{ file.name }}</v-list-item-title>
-                      <v-list-item-subtitle :class="{ 'text-disabled': isDisabledCategory(category.title) }">{{ file.description }}</v-list-item-subtitle>
+                      <v-list-item-title :class="{ 'text-disabled': isDisabledCategory(category.title) || file.disabled }" style="white-space: normal;">{{ file.name }}</v-list-item-title>
+                      <v-list-item-subtitle :class="{ 'text-disabled': isDisabledCategory(category.title) || file.disabled }" style="white-space: normal;">{{ file.description }}</v-list-item-subtitle>
                       <template v-slot:append>
                         <v-btn
                           color="primary"
                           variant="text"
                           :href="file.url"
                           download
-                          :disabled="!file.url || isDisabledCategory(category.title)"
+                          :disabled="!file.url || isDisabledCategory(category.title) || file.disabled"
                         >
                           Download
                           <v-icon end>mdi-download</v-icon>
@@ -145,13 +146,15 @@ const downloadCategories = [
         name: 'Poster Template',
         description: 'Poster template for the presenter',
         icon: 'mdi-microsoft-powerpoint',
-        url: '@/assets/templates/paper_template_word.docx'
+        url: '/downloads/paper_template_word.docx',
+        disabled: false
       },
       {
         name: 'Presentation Template',
         description: 'PowerPoint template for oral presentations',
         icon: 'mdi-microsoft-powerpoint',
-        url: '@/assets/templates/presentation_template.pptx'
+        url: '/downloads/presentation_template.pptx',
+        disabled: false
       }
 
     ]
@@ -164,7 +167,8 @@ const downloadCategories = [
         name: 'Presentation Guidelines',
         description: 'Instructions for oral presentations',
         icon: 'mdi-file-pdf-box',
-        url: '@/assets/docs/presentation_guidelines.pdf'
+        url: '/downloads/presentation_guidelines.pdf',
+        disabled: false
       },
     ]
   },
@@ -176,7 +180,8 @@ const downloadCategories = [
         name: 'Registration Form',
         description: 'Offline registration form',
         icon: 'mdi-file-pdf-box',
-        url: '@/assets/forms/registration_form.pdf'
+        url: '/downloads/registration_form.pdf',
+        disabled: false
       },
     ]
   },
@@ -185,16 +190,25 @@ const downloadCategories = [
     icon: 'mdi-folder-outline',
     files: [
       {
+        name: 'Conference Brochure',
+        description: 'Overview of the conference',
+        icon: 'mdi-file-pdf-box',
+        url: '/downloads/ICELIn26_Brochure.pdf',
+        disabled: false
+      },
+      {
         name: 'Conference Schedule',
         description: 'Detailed program schedule',
         icon: 'mdi-calendar',
-        url: '@/assets/docs/conference_schedule.pdf'
+        url: '/downloads/conference_schedule.pdf',
+        disabled: true
       },
       {
         name: 'Program Booklet',
         description: 'Conference booklet and informations',
         icon: 'mdi-book',
-        url: '@/assets/docs/booklet.pdf'
+        url: '/downloads/booklet.pdf',
+        disabled: true
       }
     ]
   }
@@ -221,7 +235,7 @@ const additionalResources = [
   },
 ]
 
-const disabledCategories = ['Templates', 'Guidelines', 'Forms', 'Conference Materials']
+const disabledCategories = ['Templates', 'Guidelines', 'Forms']
 
 const isDisabledCategory = (categoryTitle: string) => {
   return isDisabled.value && disabledCategories.includes(categoryTitle)
@@ -242,7 +256,6 @@ const isDisabledCategory = (categoryTitle: string) => {
 :deep(.v-card-subtitle) {
   color: rgba(0, 0, 0, 0.87) !important;
 }
-
 :deep(.v-btn) {
   color: #1976D2 !important;
 }

@@ -7,7 +7,7 @@
       rounded="lg"  
       :color="'rgba(18, 30, 57, 1)'"
     >
-      <v-card-text class="countdown-container pa-2 no-wrap-timer">
+  <v-card-text class="countdown-container pa-2">
         <div class="time-section text-white"> 
           <div class="time-value">{{ days }}</div>
           <div class="time-label">Days</div>
@@ -131,13 +131,6 @@ onBeforeUnmount(() => {
   gap: 0.2rem;
   min-width: 0;
 }
-
-.no-wrap-timer {
-  flex-wrap: nowrap !important;
-  overflow-x: auto;
-}
-
-
 
 .time-section {
   text-align: center;

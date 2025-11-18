@@ -32,7 +32,7 @@
           </tbody>
         </v-table>
         <v-alert color="info" icon="mdi-information" class="mt-4">
-          Early Bird registration date: 15 May 2026 - 15 June 2026
+          Early Bird registration date: 2 Jan 2026 - 15 June 2026
         </v-alert>
       </div>
     </div>
@@ -71,7 +71,7 @@
           </tbody>
         </v-table>
         <v-alert color="info" icon="mdi-information" class="mt-4">
-          Early Bird registration date: 15 May 2026 - 15 June 2026
+          Early Bird registration date: 2 Jan 2026 - 15 June 2026
         </v-alert>
       </div>
     </div>
