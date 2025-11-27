@@ -10,7 +10,20 @@
         <v-divider class="flex-grow-1"></v-divider>
       </div>
       </v-col>
-      
+      <v-col cols="12" md="12">
+        <v-card class="mb-4 scopus-popup pa-3" elevation="8">
+          <div class="d-flex align-center justify-space-between">
+            <div class="d-flex align-center">
+              <v-icon size="28" class="mr-2 scopus-icon-yellow">mdi-star</v-icon>
+              <div>
+                <div class="text-h6 font-weight-bold scopus-title">Scopus Indexed Journal Conference</div>
+                <div class="text-body-2">All accepted papers will be published on Scopus indexed journal (With Additional Charges applied)</div>
+              </div>
+            </div>
+
+          </div>
+        </v-card>
+      </v-col>
       <!-- Fees Table -->
       <RegistrationFeesTable/>
       
@@ -129,8 +142,8 @@
         <v-card>
           <v-card-title class="text-h5">Ready to Register?</v-card-title>
           <div class="d-flex align-center justify-center">
-            <span class="text-body-2">Registration opens on</span>
-            <span class="text-body-1 font-weight-bold primary--text">15 May 2026</span>
+            <span class="text-body-2">Registration opens on&nbsp;</span>
+            <span class="text-body-1 font-weight-bold primary--text">2 January 2026</span>
           </div>
           <v-card-text>
             <v-btn color="primary" @click="openRegistration">
@@ -147,23 +160,24 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
 function openRegistration() {
-  window.open('https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=HYyN1A9sYE64VQszNyyLObOQ6rcy5rVHq95xJgsnFWlUQjZWTDFQMzhFT01ERjNIUjBNSjNBR0ZFWS4u', '_blank')
+  alert("Sry but the Registration open on 2 January 2026")
+  // window.open('https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=HYyN1A9sYE64VQszNyyLObOQ6rcy5rVHq95xJgsnFWlUQjZWTDFQMzhFT01ERjNIUjBNSjNBR0ZFWS4u', '_blank')
 }
 
 useHead({
-  title: 'Registration & Fees | ICELIn 2026',
+  title: 'ICELIn 2026 Registration & Fees Details',
   meta: [
     {
       name: 'description',
-      content: 'View registration fees, categories, and the registration process for the ICELIn 2026 Conference. Register now to secure your spot at this international event.'
+      content: 'registration fees local and international, early bird, payment details, registration process for the ICELIn 2026 Conference.Registrations opening date.'
     },
     {
       property: 'og:title',
-      content: 'Registration & Fees | ICELIn 2026'
+      content: 'ICELIn26 Registration & Fees Details'
     },
     {
       property: 'og:description',
-      content: 'Find out about registration fees and how to register for the ICELIn 2026 Conference.'
+      content: 'Registration Date is 2 January 2026, Early bird date 2 Jan 2026 - 15 June 2026'
     },
     {
       property: 'og:url',
@@ -171,11 +185,11 @@ useHead({
     },
     {
       name: 'twitter:title',
-      content: 'Registration & Fees | ICELIn 2026'
+      content: 'ICELIn 2026 Registration & Fees Details'
     },
     {
       name: 'twitter:description',
-      content: 'Register for the ICELIn 2026 Conference and view all fee details and categories.'
+      content: 'Registration Date is 2 January 2026, Early bird date 2 Jan 2026 - 15 June 2026'
     }
   ],
   link: [
@@ -335,6 +349,18 @@ const registrationSteps = [
 .cursor-pointer {
   cursor: pointer;
 }
+  .scopus-popup {
+    border-left: 6px solid #f44336;
+    background: linear-gradient(90deg, rgba(255,235,59,0.06), rgba(244,67,54,0.02));
+    border-radius: 8px;
+    transform: translateY(-4px);
+  }
+  .scopus-icon-yellow {
+    color: #FFD600;
+  }
+  .scopus-title {
+    color: #b71c1c;
+  }
 .bg-primary {
   background-color: #1976d2 !important;
 }

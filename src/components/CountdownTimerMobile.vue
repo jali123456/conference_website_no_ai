@@ -1,44 +1,44 @@
 <template>
   <v-card
-    class="mx-auto my-4"
-    max-width="800"
-    elevation="8"
+    class="mx-auto my-2"
+    max-width="95%"
+    elevation="6"
     rounded="xl"
     color="rgba(18, 30, 57, 0.95)"
   >
-    <v-card-text v-if="!conferenceStarted" class="d-flex justify-space-around align-center py-8 px-6">
+    <v-card-text v-if="!conferenceStarted" class="d-flex justify-space-around align-center py-4 px-2">
       <div class="d-flex flex-column align-center time-block">
-        <div class="text-h3 font-weight-bold text-white mb-2">{{ days }}</div>
-        <div class="text-body-1 text-uppercase text-blue-lighten-3 font-weight-bold">Days</div>
+        <div class="text-h4 font-weight-bold text-white mb-1">{{ days }}</div>
+        <div class="text-caption text-uppercase text-blue-lighten-3 font-weight-bold">Days</div>
       </div>
       
-      <div class="text-h3 text-white opacity-50 mb-6">:</div>
+      <div class="text-h4 text-white opacity-50 mb-4">:</div>
       
       <div class="d-flex flex-column align-center time-block">
-        <div class="text-h3 font-weight-bold text-white mb-2">{{ hours }}</div>
-        <div class="text-body-1 text-uppercase text-blue-lighten-3 font-weight-bold">Hours</div>
+        <div class="text-h4 font-weight-bold text-white mb-1">{{ hours }}</div>
+        <div class="text-caption text-uppercase text-blue-lighten-3 font-weight-bold">Hours</div>
       </div>
       
-      <div class="text-h3 text-white opacity-50 mb-6">:</div>
+      <div class="text-h4 text-white opacity-50 mb-4">:</div>
       
       <div class="d-flex flex-column align-center time-block">
-        <div class="text-h3 font-weight-bold text-white mb-2">{{ minutes }}</div>
-        <div class="text-body-1 text-uppercase text-blue-lighten-3 font-weight-bold">Minutes</div>
+        <div class="text-h4 font-weight-bold text-white mb-1">{{ minutes }}</div>
+        <div class="text-caption text-uppercase text-blue-lighten-3 font-weight-bold">Mins</div>
       </div>
       
-      <div class="text-h3 text-white opacity-50 mb-6">:</div>
+      <div class="text-h4 text-white opacity-50 mb-4">:</div>
       
       <div class="d-flex flex-column align-center time-block">
-        <div class="text-h3 font-weight-bold text-white mb-2">{{ seconds }}</div>
-        <div class="text-body-1 text-uppercase text-blue-lighten-3 font-weight-bold">Seconds</div>
+        <div class="text-h4 font-weight-bold text-white mb-1">{{ seconds }}</div>
+        <div class="text-caption text-uppercase text-blue-lighten-3 font-weight-bold">Secs</div>
       </div>
     </v-card-text>
     
-    <v-card-text v-else class="text-center py-10">
-      <div class="text-h3 font-weight-bold text-white">Conference Started!</div>
+    <v-card-text v-else class="text-center py-6">
+      <div class="text-h4 font-weight-bold text-white">Conference Started!</div>
     </v-card-text>
     
-    <div class="text-center pb-4 text-subtitle-1 text-grey-lighten-1">
+    <div class="text-center pb-2 text-caption text-grey-lighten-1">
       Conference starts: {{ formattedTargetDate }}
     </div>
   </v-card>
@@ -55,13 +55,9 @@ const seconds = ref(0)
 const conferenceStarted = ref(false)
 
 const formattedTargetDate = targetDate.toLocaleString('en-US', {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
+  month: 'short',
   day: 'numeric',
-  hour: '2-digit',
-  minute: '2-digit',
-  timeZoneName: 'short'
+  year: 'numeric'
 })
 
 const calculateTimeLeft = () => {
@@ -94,6 +90,6 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .time-block {
-  min-width: 100px;
+  min-width: 60px;
 }
 </style>

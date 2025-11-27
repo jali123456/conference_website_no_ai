@@ -15,19 +15,22 @@
           <v-row justify="center">
             <v-col cols="12" md="10" lg="8">
               <h4 class="text-h4 font-weight-bold mb-4 text-white wave-text">
-                Ready To Revolutionize Law Enforcement
+                Send Your Abstract
               </h4>
-              <p class="text-subtitle-1 text-md-h6 mb-8 text-white text-opacity-85">
-                Registration open on <span style="color:#D4AF37;font-weight:700">2 January 2026</span> to <span style="color:#D4AF37;font-weight:700">30 June 2026</span>
+              <p class="text-subtitle-1 text-md-h6 mb-2 text-white text-opacity-85">
+                Abstract submission date <span style="color:#D4AF37;font-weight:700">1 October 2025</span>
+              </p>
+              <p class="text-subtitle-1 text-md-h6 mb-2 text-white text-opacity-85">
+                Abstract acceptance notification date <span style="color:#D4AF37;font-weight:700">28 February 2026</span>
               </p>
               <v-btn
                 color="elmubackground"
                 size="x-large"
                 rounded
                 class="elevation-6 red-bottom-border text-h6 font-weight-bold wave-button"
-                @click="goToRegister"
+                @click="goToBanner"
               >
-                REGISTER NOW
+                Submit Now
                 <v-icon end>mdi-arrow-right</v-icon>
               </v-btn>
             </v-col>
@@ -46,13 +49,13 @@ export default defineComponent({
   name: 'RegisterBanner',
   setup(){
     const router = useRouter();
-    const goToRegister = () => {
+    const goToBanner = () => {
       // Placeholder for your registration page route
       // Replace '/' with the actual path, e.g., '/register', '/signup'
-      router.push('/fees-registration');
+      router.push('/call-for-abstracts');
     };
     return{
-      goToRegister
+      goToBanner
     }
   },
   methods: {

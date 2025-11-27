@@ -197,7 +197,7 @@ const importantDates = [
     color: 'info'
   },
   {
-    date: '1 December, 2025',
+    date: '28 February, 2026',
     title: 'Acceptance Notification',
     description: 'Acceptance Notification for the Absctracts',
     color: 'info'

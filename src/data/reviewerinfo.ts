@@ -6,7 +6,7 @@ export const reviewerList = [
     { name: "Dr. Mohd Shah Bin Hussin Shah" },
     { name: "Dr. Rabieahtul Binti Abu Bakar" },
     { name: "Dr. Marzanah Binti A. Jabar" },
-    { name: "Lt. Colonel Dr. Abdul Rahman Bin Alavi" },
+    { name: "Rtd. Lt. Colonel Dr. Abdul Rahman Bin Alavi" },
     { name: "Dr. Nurul Aina Binti Ismail" },
     { name: "Dr. Pakhriazad Bin Hassan Zaki" },
     { name: "Dr. FuterI Jazeilya Binti Md Fadzil" },

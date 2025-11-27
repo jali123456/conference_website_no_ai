@@ -28,6 +28,7 @@
                     :exact="item.path === '/'"
                     :color="$route.path === item.path ? 'primary' : undefined"
                     class="mb-1 text-break"
+                    @click="drawer = false"
                   ></v-list-item>
 
                   <v-divider class="my-2" color="grey"></v-divider>
@@ -39,6 +40,7 @@
                     link
                     exact
                     :color="$route.path === '/contact' ? 'primary' : 'grey-lighten-4'"
+                    @click="drawer = false"
                   ></v-list-item>
                 </v-list>
               </v-sheet>

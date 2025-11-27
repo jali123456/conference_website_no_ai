@@ -110,8 +110,8 @@ const display = useDisplay()
 const appBarHeight = computed(() => {
   if (display.width.value < 600) {
     return 350 
-  } else if (display.width.value >= 600 && display.width.value <= 700) {
-    return 250 
+  } else if (display.width.value >= 600 && display.width.value <= 959) {
+    return 320 
   } else {
     return 250 
   }

@@ -14,7 +14,7 @@
               <thead>
                 <tr>
                     <th class="text-left">No.</th>
-                    <th class="text-left">Reviewer Name</th>
+                    <th class="text-left">List of Reviewer</th>
                 </tr>
               </thead>
               <tbody>
