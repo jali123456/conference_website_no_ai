@@ -49,4 +49,18 @@ export const data_subthemes: Subtheme[] = [
       • Enforcement Challenges in Climate-Induced Migration
     `
   },
+  {
+    id: 4,
+    title: 'Environmental, Sustainability & Natural Resources Enforcement',
+    description:`
+      • Green Criminology and Investigation of Environmental Crimes<br>
+      • Regulatory Frameworks for Sustainable Resource Extraction<br>
+      • Enforcement of ESG Standards and Corporate Accountability<br>
+      • Combating Illegal Wildlife Trade, Poaching, and Bio-Piracy<br>
+      • Indigenous Rights and Community-Led Conservation Enforcement<br>
+      • Transboundary Pollution and International Environmental Law<br>
+      • Waste Management, Circular Economy, and Plastic Pollution Control<br>
+      • Technological Solutions for Environmental Monitoring and Compliance
+    `
+  }
 ];

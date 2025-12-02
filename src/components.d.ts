@@ -13,7 +13,6 @@ declare module 'vue' {
     AppHeader: typeof import('./components/AppHeader.vue')['default']
     CallForAbstractBanner: typeof import('./components/CallForAbstractBanner.vue')['default']
     ContactSponsor: typeof import('./components/ContactSponsor.vue')['default']
-    Copy: typeof import('./components/RegisterBanner - Copy.vue')['default']
     CountdownTimer: typeof import('./components/CountdownTimer.vue')['default']
     CountdownTimerMobile: typeof import('./components/CountdownTimerMobile.vue')['default']
     LoginForm: typeof import('./components/auth/LoginForm.vue')['default']

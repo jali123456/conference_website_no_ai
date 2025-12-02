@@ -27,6 +27,73 @@
           </v-card>
         </v-col>
 
+      <!-- Reviewer Eligibility Section -->
+      <v-col cols="12">
+        <v-card class="pa-6 mb-6" elevation="2">
+          <h2 class="text-h4 font-weight-bold mb-6 text-center">Reviewer Eligibility</h2>
+          
+          <p class="text-body-1 mb-4">
+            The primary requirement for becoming a reviewer is a profound expertise in the respective research field, coupled with the ability to provide thorough, objective, and constructive evaluations of manuscripts.
+          </p>
+          
+          <p class="text-body-1 mb-4">
+            The qualifications and requirements for a potential reviewer are as follows:
+          </p>
+
+          <div class="mb-6">
+            <h3 class="text-h6 font-weight-bold mb-2">1. Academic and Professional Qualifications</h3>
+            <ul class="ml-6 mb-4">
+              <li>Must hold at least a Master’s degree in a relevant field; a PhD or equivalent professional experience is preferred.</li>
+              <li>Demonstrated subject-matter expertise aligned with the conference themes or specific tracks.</li>
+              <li>Active involvement in research, academic, or professional practice within the last 3–5 years.</li>
+            </ul>
+
+            <h3 class="text-h6 font-weight-bold mb-2">2. Research and Publication Experience</h3>
+            <ul class="ml-6 mb-4">
+              <li>Possess a strong publication record in reputable journals, conferences, or industry outlets.</li>
+              <li>Experience as an author, co-author, or reviewer in previous conferences or journals is an advantage.</li>
+              <li>Familiarity with research methodologies, academic writing standards, and ethical publication practices.</li>
+            </ul>
+
+            <h3 class="text-h6 font-weight-bold mb-2">3. Ethical and Professional Conduct</h3>
+            <ul class="ml-6 mb-4">
+              <li>Must agree to uphold academic integrity, including confidentiality and impartiality.</li>
+              <li>Must declare conflicts of interest related to assigned manuscripts (e.g., co-authorship, institutional affiliation, personal relationships).</li>
+              <li>Must commit to providing constructive, respectful, and unbiased feedback.</li>
+            </ul>
+
+            <h3 class="text-h6 font-weight-bold mb-2">4. Availability and Commitment</h3>
+            <ul class="ml-6 mb-4">
+              <li>Able to review the required number of submissions within the specified timeline.</li>
+              <li>Willing to engage in revisions, re-reviews, or discussions if needed.</li>
+              <li>Must follow conference review guidelines, scoring rubrics, and formatting requirements.</li>
+            </ul>
+
+            <h3 class="text-h6 font-weight-bold mb-2">5. Technical Competence</h3>
+            <ul class="ml-6 mb-4">
+              <li>Comfortable using the conference’s paper management system (EasyChair).</li>
+              <li>Capable of evaluating research design, methodology, results, and scholarly contribution.</li>
+            </ul>
+          </div>
+
+          <v-divider class="my-6"></v-divider>
+
+          <h2 class="text-h5 font-weight-bold mb-4">Requirements and Responsibilities of Reviewers</h2>
+          <p class="text-body-1 mb-4">
+            Reviewers are expected to provide a fair, objective, and timely evaluation of manuscripts. Reviewers are expected to:
+          </p>
+          <ul class="ml-6">
+            <li class="mb-2">Assess the scientific quality of the manuscript with their expert knowledge.</li>
+            <li class="mb-2">Prepare comprehensive and detailed review reports, and remain responsive throughout the peer review process.</li>
+            <li class="mb-2">Uphold the highest standards of professionalism and ethics, avoiding personal, financial, or intellectual biases, focusing solely on the research quality and written presentation of the manuscript.</li>
+            <li class="mb-2">Preserve confidentiality throughout the review process, not disclosing or using any unpublished information or communicating the manuscript content without prior consent.</li>
+            <li class="mb-2">Refrain from contacting the authors directly without permission.</li>
+            <li class="mb-2">Reviewers are asked to maintain their affiliation updated on their reviewer account to allow editors to identify potential conflicts of interest promptly.</li>
+            <li class="mb-2">Complete the review process by providing the review reports within 7-14 days. If unable to adhere to this timeline or an extension is needed, please promptly communicate with the ICELIn team.</li>
+          </ul>
+        </v-card>
+      </v-col>
+
       <!-- Registration Banner with Pattern 4 -->
       <v-col cols="12">
         <div class="particle-background">

@@ -8,6 +8,23 @@
         <h1 class="text-h mx-4 text-center font-weight-bold">Forum Panel</h1>
         <v-divider class="flex-grow-1"></v-divider>
       </div>
+      
+      <v-card 
+        class="mx-auto mb-8 pa-6 pa-md-8" 
+        elevation="4"
+        rounded="xl"
+        color="rgba(18, 30, 57, 0.95)"
+      >
+        <div class="text-overline text-center text-blue-lighten-3 mb-2 letter-spacing-widest">
+          Forum Session Title
+        </div>
+        <h4 class="text-h4 text-md-h4 text-center font-weight-bold text-white mb-2">
+          Governing with Integrity
+        </h4>
+        <p class="text-h6 text-md-h5 text-center text-blue-lighten-3 font-weight-medium">
+          Bridging Enforcement, Law, and Public Trust
+        </p>
+      </v-card>
     </v-col>
       <v-col cols="12" md="6">
         <v-card>
@@ -20,7 +37,7 @@
 
           <v-card-text class="text-center py-4">
             <p class="text-body-2">
-              We are excited to announce our distinguished keynote speakers for ICELIn26.
+              We are excited to announce our distinguished forum panel for ICELIn26.
               Stay tuned for updates as we reveal more speakers in the coming weeks.
             </p>
           </v-card-text>
