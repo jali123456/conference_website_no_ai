@@ -3,10 +3,12 @@
     <v-row>
       <!-- Info Card -->
         <v-col cols="12">
+        <div class="d-flex align-center justify-center mb-6">
+          <v-divider class="flex-grow-1 border-opacity-50"></v-divider>
+          <h1 class="text-h mx-4 text-center font-weight-bold">Call for Reviewers</h1>
+          <v-divider class="flex-grow-1 border-opacity-50"></v-divider>
+        </div>
           <v-card class="pa-6" elevation="2">
-            <p class="text-h4 text-center font-weight-bold mb-4">
-              CALL FOR REVIEWER
-            </p>
             <p class="text-body-1 mb-6">
               We would also like to invite you as a reviewer to help uphold the quality of submissions. If you are interested and not registered as student in any institution, please register in the following link.
             </p>

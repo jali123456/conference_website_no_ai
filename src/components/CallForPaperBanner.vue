@@ -15,21 +15,19 @@
           <v-row justify="center">
             <v-col cols="12" md="10" lg="8">
               <h4 class="text-h5 font-weight-bold mb-4 text-white wave-text">
-                Send Your Abstract
+                Submit Your Research Paper
               </h4>
-              <p class="text-subtitle-1 text-md-h6 mb-2 text-white text-opacity-85">
-                Abstract submission date <span style="color:#D4AF37;font-weight:700">1 October 2025</span>
-                <br></br>
-                Abstract acceptance notification date <span style="color:#D4AF37;font-weight:700">28 February 2026</span>
+              <p class="text-subtitle-1 text-md-h6 mb-8 text-white text-opacity-85">
+                Full Paper Submission Deadline: <span style="color:#D4AF37;font-weight:700">31 March 2026</span>
               </p>
               <v-btn
                 color="elmubackground"
                 size="x-large"
                 rounded
                 class="elevation-6 red-bottom-border text-h6 font-weight-bold wave-button"
-                @click="goToBanner"
+                @click="goToCallForPapers"
               >
-                Submit Now
+                SUBMIT PAPER
                 <v-icon end>mdi-arrow-right</v-icon>
               </v-btn>
             </v-col>
@@ -45,16 +43,14 @@ import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
 
 export default defineComponent({
-  name: 'RegisterBanner',
+  name: 'CallForPaperBanner',
   setup(){
     const router = useRouter();
-    const goToBanner = () => {
-      // Placeholder for your registration page route
-      // Replace '/' with the actual path, e.g., '/register', '/signup'
-      router.push('/call-for-abstracts');
+    const goToCallForPapers = () => {
+      router.push('/call-for-papers');
     };
     return{
-      goToBanner
+      goToCallForPapers
     }
   },
   methods: {

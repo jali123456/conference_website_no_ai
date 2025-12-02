@@ -4,9 +4,9 @@
     <v-row>
       <v-col cols="12">
       <div class="d-flex align-center justify-center mb-6">
-        <v-divider class="flex-grow-1"></v-divider>
+        <v-divider class="flex-grow-1 border-opacity-50 text-no-wrap"></v-divider>
         <h1 class="text-h mx-4 text-center font-weight-bold">Programme & Important Dates</h1>
-        <v-divider class="flex-grow-1"></v-divider>
+        <v-divider class="flex-grow-1 border-opacity-50 text-no-wrap"></v-divider>
       </div>
       </v-col>
 

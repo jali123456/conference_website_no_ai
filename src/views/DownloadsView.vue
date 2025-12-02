@@ -3,9 +3,9 @@
     <v-row>
       <v-col cols="12">
       <div class="d-flex align-center justify-center mb-6">
-        <v-divider class="flex-grow-1"></v-divider>
+        <v-divider class="flex-grow-1 border-opacity-50"></v-divider>
         <h1 class="text-h mx-4 text-center font-weight-bold">Downloads</h1>
-        <v-divider class="flex-grow-1"></v-divider>
+        <v-divider class="flex-grow-1 border-opacity-50"></v-divider>
       </div>
       </v-col>
       <v-col cols="12">

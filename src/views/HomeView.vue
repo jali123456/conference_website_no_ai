@@ -40,14 +40,17 @@
               support sustainable, resilient communities.
             </p>
             <v-row class="mt-2">
-              <v-col :cols="width < 959 ? 12 : 6">
+              <v-col :cols="width < 959 ? 12 : 4">
                 <CallForAbstractBanner/>
               </v-col>
-              <v-col :cols="width < 959 ? 12 : 6">
+              <v-col :cols="width < 959 ? 12 : 4">
+                <CallForPaperBanner/>
+              </v-col>
+              <v-col :cols="width < 959 ? 12 : 4">
                 <RegisterBanner/>
               </v-col>
             </v-row>
-            <v-row class="mt-4 mt-sm-6">
+            <v-row class="mt-2 mt-sm-6">
               <v-col cols="12"><h4 class="text-h4 text-center font-weight-medium">Subthemes</h4></v-col>
               
               <SubthemeList/>
@@ -59,7 +62,7 @@
                     Join Our Workshop!
                   </v-card-title>
                   <v-card-text class="text-body-1 text-center">
-                    Don’t miss our exclusive workshop sessions designed to provide in-depth insights and hands-on experience. Click below to learn more and register!
+                    Don’t miss our exclusive workshop sessions with renowned experts. Click below to learn more.
                   </v-card-text>
                   <v-card-actions class="d-flex justify-center">
                     <v-btn

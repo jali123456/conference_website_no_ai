@@ -80,6 +80,7 @@ const menuItems = [
   { title: 'Home', path: '/', icon: 'mdi-home' },
   { title: 'Forum & Workshop', path: '/panel-list', icon: 'mdi-account-group' },
   { title: 'Call for Abstracts', path: '/call-for-abstracts', icon: 'mdi-file-document' },
+  { title: 'Call for Papers', path: '/call-for-papers', icon: 'mdi-file-document-edit' },
   { title: 'Fees & Registration', path: '/fees-registration', icon: 'mdi-currency-usd' },
   { title: 'Call for Reviewers', path: '/call-for-reviewers', icon: 'mdi-account-multiple-plus' },
   { title: 'Programme & Dates', path: '/programme-dates', icon: 'mdi-calendar' },
