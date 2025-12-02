@@ -9,18 +9,18 @@
             CALL FOR ABSTRACT
           </p>
           <p class="text-body-1">
-            We invite you to submit your abstract for consideration. This is an excellent opportunity to share your research and insights with a global audience. If you are interested, please register in the following link.
+            We invite you to submit your abstract for consideration. This is an excellent opportunity to share your research and insights with a global audience. If you are interested, please register in the following link by clicking the button which will lead you to our <b>EasyChair</b> registration system.
           </p>
           <v-divider :thickness="4" class="border-opacity-50 mb-4 mt-2"></v-divider>
           <p class="text-body-1">
-            Accepted papers will be featured in the conference proceedings or submitted for publication in a Scopus-indexed journal, subject to publication fees. 
+            Accepted papers will be featured in the conference proceedings or submitted for publication in a <b>Scopus-indexed journal, subject to additional publication fees.</b> 
             Exceptional submissions will be considered for the best paper awards, with winners receiving special gift or voucher as recognition
           </p>
         </v-card>
       </v-col>
 
       <!-- Registration Banner with Pattern 4 -->
-      <v-col cols="12">
+      <v-container fluid class="pa-0">
         <div class="particle-background">
           <div class="particle-container">
             <div class="particle" v-for="i in 40" :key="i" :style="getParticleStyle(i)"></div>
@@ -56,7 +56,7 @@
             </v-container>
           </div>
         </div>
-      </v-col>
+      </v-container>
     </v-row>
   </v-container>
 </template>

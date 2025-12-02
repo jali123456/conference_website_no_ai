@@ -5,7 +5,8 @@
         <h5 class="text-h5 mb-2">Registration Fees (Local)</h5>
       </div>
       <div class="fees-card-body">
-        <v-table class="fees-table">
+        <!-- Desktop Table -->
+        <v-table class="fees-table d-none d-sm-block">
           <thead>
             <tr>
               <th>Category</th>
@@ -14,23 +15,29 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Local Participant (Presenter)</td>
-              <td>RM1,600</td>
-              <td class="early-bird">TBA</td>
-            </tr>
-            <tr>
-              <td>Local Participant (Non-Presenter)</td>
-              <td>RM1,200</td>
-              <td class="early-bird">TBA</td>
-            </tr>
-            <tr>
-              <td>Local Excursion/Networking Tour Fee</td>
-              <td>RM160</td>
-              <td class="early-bird">TBA</td>
+            <tr v-for="(item, i) in localFees" :key="i">
+              <td>{{ item.category }}</td>
+              <td>{{ item.price }}</td>
+              <td class="early-bird">{{ item.earlyBird }}</td>
             </tr>
           </tbody>
         </v-table>
+
+        <!-- Mobile View -->
+        <div class="d-sm-none mobile-fees-list">
+          <div v-for="(item, i) in localFees" :key="i" class="mobile-fee-item mb-3 pa-3 rounded border">
+            <div class="font-weight-bold mb-2">{{ item.category }}</div>
+            <div class="d-flex justify-space-between mb-1">
+              <span class="text-medium-emphasis">Price:</span>
+              <span class="font-weight-medium">{{ item.price }}</span>
+            </div>
+            <div class="d-flex justify-space-between">
+              <span class="text-medium-emphasis">Early Bird:</span>
+              <span class="early-bird">{{ item.earlyBird }}</span>
+            </div>
+          </div>
+        </div>
+
         <v-alert color="info" icon="mdi-information" class="mt-4">
           Early Bird registration date: 2 Jan 2026 - 15 June 2026
         </v-alert>
@@ -44,7 +51,8 @@
         <h5 class="text-h5 mb-2">Registration Fees (International)</h5>
       </div>
       <div class="fees-card-body">
-        <v-table class="fees-table">
+        <!-- Desktop Table -->
+        <v-table class="fees-table d-none d-sm-block">
           <thead>
             <tr>
               <th>Category</th>
@@ -53,23 +61,29 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>International Participant (Presenter)</td>
-              <td>USD 500</td>
-              <td class="early-bird">TBA</td>
-            </tr>
-            <tr>
-              <td>International Participant (Non-Presenter)</td>
-              <td>USD 400</td>
-              <td class="early-bird">TBA</td>
-            </tr>
-            <tr>
-              <td>International Excursion/Networking Tour Fee</td>
-              <td>USD 50</td>
-              <td class="early-bird">TBA</td>
+            <tr v-for="(item, i) in internationalFees" :key="i">
+              <td>{{ item.category }}</td>
+              <td>{{ item.price }}</td>
+              <td class="early-bird">{{ item.earlyBird }}</td>
             </tr>
           </tbody>
         </v-table>
+
+        <!-- Mobile View -->
+        <div class="d-sm-none mobile-fees-list">
+          <div v-for="(item, i) in internationalFees" :key="i" class="mobile-fee-item mb-3 pa-3 rounded border">
+            <div class="font-weight-bold mb-2">{{ item.category }}</div>
+            <div class="d-flex justify-space-between mb-1">
+              <span class="text-medium-emphasis">Price:</span>
+              <span class="font-weight-medium">{{ item.price }}</span>
+            </div>
+            <div class="d-flex justify-space-between">
+              <span class="text-medium-emphasis">Early Bird:</span>
+              <span class="early-bird">{{ item.earlyBird }}</span>
+            </div>
+          </div>
+        </div>
+
         <v-alert color="info" icon="mdi-information" class="mt-4">
           Early Bird registration date: 2 Jan 2026 - 15 June 2026
         </v-alert>
@@ -79,8 +93,18 @@
 </template>
 
 
-<script lang="ts">
+<script setup lang="ts">
+const localFees = [
+  { category: 'Local Participant (Presenter)', price: 'RM1,600', earlyBird: 'TBA' },
+  { category: 'Local Participant (Non-Presenter)', price: 'RM1,200', earlyBird: 'TBA' },
+  { category: 'Local Excursion/Networking Tour Fee', price: 'RM160', earlyBird: 'TBA' },
+]
 
+const internationalFees = [
+  { category: 'International Participant (Presenter)', price: 'USD 500', earlyBird: 'TBA' },
+  { category: 'International Participant (Non-Presenter)', price: 'USD 400', earlyBird: 'TBA' },
+  { category: 'International Excursion/Networking Tour Fee', price: 'USD 50', earlyBird: 'TBA' },
+]
 </script>
 
 <style scoped>
@@ -165,5 +189,10 @@
   background: transparent;
   padding: 0;
   display: block;
+}
+
+.mobile-fee-item {
+  border: 1px solid rgba(0,0,0,0.08);
+  background-color: rgba(0,0,0,0.01);
 }
 </style>

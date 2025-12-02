@@ -28,7 +28,7 @@
         </v-col>
 
       <!-- Registration Banner with Pattern 4 -->
-      <v-col cols="12">
+      <v-container fluid class="pa-0">
         <div class="particle-background">
           <div class="particle-container">
             <div class="particle" v-for="i in 40" :key="i" :style="getParticleStyle(i)"></div>
@@ -43,7 +43,7 @@
             <v-container>
               <v-row justify="center">
                 <v-col cols="12" md="10" lg="8">
-                  <h4 class="text-h4 font-weight-bold mb-4 text-white wave-text">
+                  <h4 class="text-h5 font-weight-bold mb-4 text-white wave-text">
                     Ready to Contribute as a Reviewer?
                   </h4>
                   <p class="text-subtitle-1 text-md-h6 mb-8 text-white text-opacity-85">
@@ -64,7 +64,7 @@
             </v-container>
           </div>
         </div>
-      </v-col>
+      </v-container>
     </v-row>
   </v-container>
 </template>

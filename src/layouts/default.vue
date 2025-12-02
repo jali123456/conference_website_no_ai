@@ -78,12 +78,12 @@ onUnmounted(() => {
 
 const menuItems = [
   { title: 'Home', path: '/', icon: 'mdi-home' },
-  { title: 'Panel', path: '/panel-list', icon: 'mdi-account-group' },
-  { title: 'Fees & Registration', path: '/fees-registration', icon: 'mdi-currency-usd' },
-  { title: 'Venue & Accommodation', path: '/venue-accommodation', icon: 'mdi-map-marker' },
-  { title: 'Programme & Dates', path: '/programme-dates', icon: 'mdi-calendar' },
-  { title: 'Call for Reviewers', path: '/call-for-reviewers', icon: 'mdi-account-multiple-plus' },
+  { title: 'Forum & Workshop', path: '/panel-list', icon: 'mdi-account-group' },
   { title: 'Call for Abstracts', path: '/call-for-abstracts', icon: 'mdi-file-document' },
+  { title: 'Fees & Registration', path: '/fees-registration', icon: 'mdi-currency-usd' },
+  { title: 'Call for Reviewers', path: '/call-for-reviewers', icon: 'mdi-account-multiple-plus' },
+  { title: 'Programme & Dates', path: '/programme-dates', icon: 'mdi-calendar' },
+  { title: 'Venue & Accommodation', path: '/venue-accommodation', icon: 'mdi-map-marker' },
   { title: 'Sponsors', path: '/sponsors', icon: 'mdi-briefcase'},
   { title: 'Downloads', path: '/downloads', icon: 'mdi-file-document-outline' }
 ]

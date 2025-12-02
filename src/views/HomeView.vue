@@ -17,7 +17,6 @@
                 </v-card-title>
             </v-img>
           </div>
-
           <v-card-text :class="contentTextClass">
             <!-- Add H1 here for SEO -->
             <h1 class="text-h5 text-center font-weight-bold mb-4">
@@ -40,14 +39,42 @@
               foster actionable insights that strengthen governance, promote ethical leadership, and
               support sustainable, resilient communities.
             </p>
+            <v-row class="mt-2">
+              <v-col :cols="width < 959 ? 12 : 6">
+                <CallForAbstractBanner/>
+              </v-col>
+              <v-col :cols="width < 959 ? 12 : 6">
+                <RegisterBanner/>
+              </v-col>
+            </v-row>
             <v-row class="mt-4 mt-sm-6">
               <v-col cols="12"><h4 class="text-h4 text-center font-weight-medium">Subthemes</h4></v-col>
               
               <SubthemeList/>
             </v-row>
+            <v-row class="mt-4">
+              <v-col cols="12">
+                <v-card class="mx-auto" max-width="800" color="elmubackground">
+                  <v-card-title class="text-h5 font-weight-bold text-center">
+                    Join Our Workshop!
+                  </v-card-title>
+                  <v-card-text class="text-body-1 text-center">
+                    Don’t miss our exclusive workshop sessions designed to provide in-depth insights and hands-on experience. Click below to learn more and register!
+                  </v-card-text>
+                  <v-card-actions class="d-flex justify-center">
+                    <v-btn
+                      color="primary"
+                      rounded
+                      class="elevation-2"
+                      @click="$router.push({ path: '/panel-list', query: { scrollTo: 'workshop-section' } })"
+                    >
+                      Learn More
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-col>
+            </v-row>
           </v-card-text>
-          <CallForAbstractBanner/>
-          <RegisterBanner class="mt-4 mt-sm-6"/>
         </v-card>
       </v-col>
     </v-row>
