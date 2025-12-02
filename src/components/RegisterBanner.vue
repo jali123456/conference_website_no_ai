@@ -10,7 +10,7 @@
           <div class="wave-line wave-4"></div>
         </div>
       </div>
-      <div class="banner-overlay d-flex align-center justify-center pa-4">
+      <div class="banner-overlay d-flex align-center justify-center">
         <v-container>
           <v-row justify="center">
             <v-col cols="12" md="10" lg="8">

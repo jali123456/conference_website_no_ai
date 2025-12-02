@@ -10,7 +10,7 @@
           <div class="wave-line wave-4"></div>
         </div>
       </div>
-      <div class="banner-overlay d-flex align-center justify-center pa-4">
+      <div class="banner-overlay d-flex align-center justify-center">
         <v-container>
           <v-row justify="center">
             <v-col cols="12" md="10" lg="8">
@@ -19,8 +19,7 @@
               </h4>
               <p class="text-subtitle-1 text-md-h6 mb-2 text-white text-opacity-85">
                 Abstract submission date <span style="color:#D4AF37;font-weight:700">1 October 2025</span>
-              </p>
-              <p class="text-subtitle-1 text-md-h6 mb-2 text-white text-opacity-85">
+                <br></br>
                 Abstract acceptance notification date <span style="color:#D4AF37;font-weight:700">28 February 2026</span>
               </p>
               <v-btn
