@@ -14,13 +14,15 @@
         <v-container>
           <v-row justify="center">
             <v-col cols="12" md="10" lg="8">
-              <h4 class="text-h5 font-weight-bold mb-4 text-white wave-text">
+              <h4 justify="start" class="text-h5 font-weight-bold mb-4 text-white wave-text">
                 Send Your Abstract
               </h4>
               <p class="text-subtitle-1 text-md-h6 mb-2 text-white text-opacity-85">
-                Abstract submission date <span style="color:#D4AF37;font-weight:700">1 October 2025</span>
+                Submission date <span style="color:#D4AF37;font-weight:700">1 October 2025</span>
                 <br></br>
-                Abstract acceptance notification date <span style="color:#D4AF37;font-weight:700">28 February 2026</span>
+                Acceptance notification date <span style="color:#D4AF37;font-weight:700">28 February 2026</span>
+                <br></br>
+                Deadline date <span style="color:#D4AF37;font-weight:700">30 June 2026</span>
               </p>
               <v-btn
                 color="elmubackground"
@@ -86,7 +88,7 @@ export default defineComponent({
 /* Particle Wave Background */
 .particle-background {
   position: relative;
-  min-height: 350px;
+  min-height: 450px;
   overflow: hidden;
   border-radius: 8px;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 70%, #475569 100%);
@@ -166,7 +168,7 @@ export default defineComponent({
 .banner-overlay {
   position: relative;
   z-index: 10;
-  height: 350px;
+  height: 450px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 </style>

@@ -57,7 +57,7 @@
             </v-row>
             <v-row class="mt-4">
               <v-col cols="12">
-                <v-card class="mx-auto" max-width="800" color="elmubackground">
+                <v-card class="mx-auto red-bottom-border" max-width="800" color="elmubackground" rounded="xl" >
                   <v-card-title class="text-h5 font-weight-bold text-center">
                     Join Our Workshop!
                   </v-card-title>
@@ -133,6 +133,9 @@ const featureTitleClass = computed(() => {
 </script>
 
 <style scoped>
+.red-bottom-border {
+  border-bottom: 4px solid red;
+}
 
 .v-card-title {
   word-break: normal;

@@ -5,7 +5,7 @@
     <v-col cols="12">
       <div class="d-flex align-center justify-center mb-6">
         <v-divider class="flex-grow-1 border-opacity-50"></v-divider>
-        <h1 class="text-h mx-4 text-center font-weight-bold">Forum Panel</h1>
+        <h1 class="text-h mx-4 text-center font-weight-bold">Forum Session</h1>
         <v-divider class="flex-grow-1 border-opacity-50"></v-divider>
       </div>
       
@@ -22,14 +22,14 @@
           Governing with Integrity
         </h4>
         <p class="text-h6 text-md-h5 text-center text-blue-lighten-3 font-weight-medium">
-          Bridging Enforcement, Law, and Public Trust
+          Bridging Enforcement, Law and Public Trust
         </p>
       </v-card>
     </v-col>
       <v-col cols="12" md="6">
         <v-card>
           <v-img
-            src="@/assets/speakers-banner.png"
+            src="@/assets/speakers-banner.jpg"
             lazy-src="https://placehold.co/1400x2000/000000/FFF?text=Loading Forum Banner"
             alt="Panel Banner"
             contain
@@ -44,27 +44,26 @@
         </v-card>
       </v-col>
       <v-col cols="12" md="6">
-        <v-list class="mt-6" lines="three">
-          <v-list-item
-            v-for="(speaker, index) in speakers"
-            :key="index"
-            :title="speaker.name"
-            :subtitle="speaker.title"
-          >
-            <template v-slot:prepend>
-              <v-avatar :color="speaker.color" size="48">
-                <span class="text-h6 white--text">{{ speaker.name.charAt(0) }}</span>
-              </v-avatar>
-            </template>
-            <!-- <v-list-item-title class="text-h6 text-black">{{ speaker.name }}</v-list-item-title> -->
-            <!-- <v-list-item-subtitle class="text-black">{{ speaker.title }}</v-list-item-subtitle> -->
-              <div class="text-body-2 mt-2 text-black">
-                <div class="font-weight-medium">{{ speaker.time }}</div>
-                <div>{{ speaker.description }}</div>
+        <div class="mt-6">
+          <template v-for="(speaker, index) in speakers" :key="index">
+            <div class="d-flex align-center">
+              <v-img
+                src="https://placehold.co/600x400?text=TBA"
+                width="200"
+                height="133"
+                cover
+                class="rounded-lg mr-4 flex-grow-0"
+              ></v-img>
+              <div class="flex-grow-1" style="min-width: 0;">
+                <div class="text-h5 font-weight-bold">{{ speaker.name }}</div>
+                <!-- <div class="text-h6">{{ speaker.title }}</div> -->
+                <!-- <div class="text-subtitle-1">{{ speaker.time }}</div> -->
+                <div class="text-body-2" style="word-break: break-word;">{{ speaker.description }}</div>
               </div>
-            <v-divider v-if="index < speakers.length - 1" class="my-4"></v-divider>
-          </v-list-item>
-        </v-list>
+            </div>
+            <v-divider v-if="index < speakers.length - 1" class="my-6"></v-divider>
+          </template>
+        </div>
       </v-col>
     </v-row>
 
@@ -72,12 +71,24 @@
     <v-row class="mt-8">
       <v-col cols="12">
         <div class="d-flex align-center justify-center mb-6">
-          <v-divider class="flex-grow-1"></v-divider>
+          <v-divider class="flex-grow-1 border-opacity-50"></v-divider>
           <h2 class="text-h4 mx-4 text-center font-weight-bold">Workshop</h2>
-          <v-divider class="flex-grow-1"></v-divider>
+          <v-divider class="flex-grow-1 border-opacity-50"></v-divider>
         </div>
       </v-col>
-
+      <v-card 
+        class="mx-auto mb-8 pa-6 pa-md-8" 
+        elevation="4"
+        rounded="xl"
+        color="rgba(18, 30, 57, 0.95)"
+      >
+        <div class="text-overline text-center text-blue-lighten-3 mb-2 letter-spacing-widest">
+          Workshop Session Title
+        </div>
+        <h4 class="text-h4 text-md-h4 text-center font-weight-bold text-white mb-2">
+          Writing & Publishing High Impact Journal Articles
+        </h4>
+      </v-card>
       <v-col cols="12" md="4">
         <v-card class="mx-auto" max-width="400">
           <v-img
@@ -87,9 +98,6 @@
             cover
             aspect-ratio="1"
           ></v-img>
-          <v-card-title class="text-center text-wrap">
-            High Impact Journal Writing Workshop
-          </v-card-title>
           <v-divider class="my-2"></v-divider>
           <v-card-text>
             <v-card-subtitle class="text-center">
@@ -249,21 +257,21 @@ const speakers = [
   {
     name: 'Speaker 1',
     title: 'TBA',
-    time: 'Day 1 - 9:00 AM',
+    // time: 'Day 1 - 9:00 AM',
     description: '',
     color: 'primary'
   },
   {
     name: `Speaker 2`,
     title: 'TBA',
-    time: 'Day 1 - 10:00 AM',
+    // time: 'Day 1 - 10:00 AM',
     description: '',
     color: 'secondary'
   },
   {
     name: 'Speaker 3',
     title: 'TBA',
-    time: 'Day 1 - 11:00 AM',
+    // time: 'Day 1 - 11:00 AM',
     description: '',
     color: 'info'
   }

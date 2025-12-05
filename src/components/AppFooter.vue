@@ -26,11 +26,11 @@
                icon
                variant="text"
                density="compact"
-               class="mx-1 social-link-custom"
+               class="mx-4 social-link-custom"
                target="_blank"
                rel="noopener noreferrer"
              >
-               <v-icon :icon="item.icon" size="18"></v-icon>
+               <v-icon :icon="item.icon" size="20"></v-icon>
              </v-btn>
            </div>
            <div class="mt-2">

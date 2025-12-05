@@ -25,15 +25,14 @@
                   <li><strong>Full Papers:</strong> describing significant research results, applications, or systems.</li>
                   <li><strong>Short Papers:</strong> describing ongoing research or new ideas.</li>
                 </ul>
-                <p class="mb-4">
+                <!-- <p class="mb-4">
                   Please submit your papers via the EasyChair submission system. All submissions will be peer-reviewed by at least two independent reviewers.
-                </p>
+                </p> -->
                 <v-btn
                   color="primary"
-                  href="https://easychair.org/conferences?conf=icelin26"
-                  target="_blank"
                   prepend-icon="mdi-upload"
                   class="mt-2"
+                  @click="showAlert"
                 >
                   Submit Paper
                 </v-btn>
@@ -57,8 +56,10 @@
                       <div class="font-weight-bold">Acceptance Notification</div>
                     </v-timeline-item>
                     <v-timeline-item dot-color="success" size="x-small">
-                      <div class="text-caption">31 March, 2026</div>
-                      <div class="font-weight-bold">Full Paper Submission</div>
+                      <div class="text-caption">
+                        31 March, 2026 <span class="font-weight-bold text-body-1 text-elmuaccent" >Attention</span>
+                      </div>
+                      <div class="font-weight-bold">Full Paper Submission Deadline</div>
                     </v-timeline-item>
                     <v-timeline-item dot-color="warning" size="x-small">
                       <div class="text-caption">1 June, 2026</div>
@@ -122,6 +123,10 @@ const contentTextClass = computed(() => {
     return [...baseClasses, 'text-body-1']
   }
 })
+
+const showAlert = () => {
+  alert('Paper submission is currently not available. Please check back later.');
+};
 </script>
 
 <style scoped>

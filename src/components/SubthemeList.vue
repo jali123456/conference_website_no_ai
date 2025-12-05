@@ -1,13 +1,13 @@
 <!-- SubthemeList.vue -->
 <template>
-<v-row justify="center" class="mb-2">
+<v-row justify="center" class="mb-2 mx-2">
 <v-col
     v-for="(subtheme, index) in data_subthemes"
     :key="subtheme.id"
     cols="12"
     sm="12"
     md="6"
-    lg="4"
+    lg="6"
 >
     <v-card
         class="d-flex flex-column text-center pa-4 hover-scale red-bottom-border"

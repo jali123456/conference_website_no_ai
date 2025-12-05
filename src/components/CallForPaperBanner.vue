@@ -82,7 +82,7 @@ export default defineComponent({
 /* Particle Wave Background */
 .particle-background {
   position: relative;
-  min-height: 350px;
+  min-height: 450px;
   overflow: hidden;
   border-radius: 8px;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 70%, #475569 100%);

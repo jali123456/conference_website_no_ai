@@ -9,34 +9,20 @@ export interface Subtheme {
 export const data_subthemes: Subtheme[] = [
   {
     id: 1,
-    title: 'Enforcement & Law',
-    description: `
-      • Legal Reforms and Policy Effectiveness<br>
-      • Criminal Justice and Law Enforcement Innovations<br>
-      • Technology and AI in Policing and Investigation<br>
-      • Cybercrime, Digital Forensics, and Legal Challenges<br>
-      • Human Rights in Law Enforcement<br>
-      • Community Policing and Public Safety<br>
-      • Border Security and Transnational Crime<br>
-      • Environmental and Wildlife Law Enforcement
+    title: 'Environmental, Sustainability & Natural Resources Enforcement',
+    description:`
+      • Law and Enforcement of Environmental Crimes<br>
+      • Regulatory Frameworks for Sustainable Resource Extraction<br>
+      • Enforcement of ESG Standards and Corporate Accountability<br>
+      • Combating Illegal Wildlife Trade, Poaching, and Bio-Piracy<br>
+      • Indigenous Rights and Community-Led Conservation Enforcement<br>
+      • Transboundary Pollution and International Environmental Law<br>
+      • Waste Management, Circular Economy, and Pollution Control<br>
+      • Technological Solutions for Environmental Monitoring and Compliance
     `
   },
   {
     id: 2,
-    title: 'Integrity & Leadership',
-    description: `
-      • Governance Ethics and Accountability<br>
-      • Institutional Integrity and Anti-Corruption Strategies<br>
-      • Leadership in Public Institutions and Enforcement Bodies<br>
-      • Transparency and Public Trust<br>
-      • Integrity in Higher Education and Research<br>
-      • Ethical Decision-Making in Crisis and Conflict<br>
-      • Building a Culture of Integrity in Organizations<br>
-      • Values-Based Leadership for Sustainable Governance
-    `
-  },
-  {
-    id: 3,
     title: 'Disaster Science & Climate Resilience',
     description: `
       • Enforcement of Environmental and Climate Regulations<br>
@@ -50,17 +36,31 @@ export const data_subthemes: Subtheme[] = [
     `
   },
   {
-    id: 4,
-    title: 'Environmental, Sustainability & Natural Resources Enforcement',
-    description:`
-      • Green Criminology and Investigation of Environmental Crimes<br>
-      • Regulatory Frameworks for Sustainable Resource Extraction<br>
-      • Enforcement of ESG Standards and Corporate Accountability<br>
-      • Combating Illegal Wildlife Trade, Poaching, and Bio-Piracy<br>
-      • Indigenous Rights and Community-Led Conservation Enforcement<br>
-      • Transboundary Pollution and International Environmental Law<br>
-      • Waste Management, Circular Economy, and Plastic Pollution Control<br>
-      • Technological Solutions for Environmental Monitoring and Compliance
+    id: 3,
+    title: 'Enforcement & Law',
+    description: `
+      • Legal Reforms and Policy Effectiveness<br>
+      • Criminal Justice and Law Enforcement Innovations<br>
+      • Technology and AI in Policing and Investigation<br>
+      • Cybercrime, Digital Forensics, and Legal Challenges<br>
+      • Human Rights in Law Enforcement<br>
+      • Community Policing and Public Safety<br>
+      • Border Security and Transnational Crime<br>
+      • Environmental and Wildlife Law Enforcement
     `
-  }
+  },
+  {
+    id: 4,
+    title: 'Integrity & Leadership',
+    description: `
+      • Governance Ethics and Accountability<br>
+      • Institutional Integrity and Anti-Corruption Strategies<br>
+      • Leadership in Public Institutions and Enforcement Bodies<br>
+      • Transparency and Public Trust<br>
+      • Integrity in Higher Education and Research<br>
+      • Ethical Decision-Making in Crisis and Conflict<br>
+      • Building a Culture of Integrity in Organizations<br>
+      • Values-Based Leadership for Sustainable Governance
+    `
+  },
 ];
