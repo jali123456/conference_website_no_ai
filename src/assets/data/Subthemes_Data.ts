@@ -9,34 +9,6 @@ export interface Subtheme {
 export const data_subthemes: Subtheme[] = [
   {
     id: 1,
-    title: 'Environmental, Sustainability & Natural Resources Enforcement',
-    description:`
-      • Law and Enforcement of Environmental Crimes<br>
-      • Regulatory Frameworks for Sustainable Resource Extraction<br>
-      • Enforcement of ESG Standards and Corporate Accountability<br>
-      • Combating Illegal Wildlife Trade, Poaching, and Bio-Piracy<br>
-      • Indigenous Rights and Community-Led Conservation Enforcement<br>
-      • Transboundary Pollution and International Environmental Law<br>
-      • Waste Management, Circular Economy, and Pollution Control<br>
-      • Technological Solutions for Environmental Monitoring and Compliance
-    `
-  },
-  {
-    id: 2,
-    title: 'Disaster Science & Climate Resilience',
-    description: `
-      • Enforcement of Environmental and Climate Regulations<br>
-      • Climate Justice and Legal Frameworks<br>
-      • Disaster Risk Management and Emergency Response Systems<br>
-      • Interagency Coordination during Crises<br>
-      • Policy and Leadership in Climate Adaptation<br>
-      • Community Resilience and Local Governance<br>
-      • Technology in Disaster Preparedness and Monitoring<br>
-      • Enforcement Challenges in Climate-Induced Migration
-    `
-  },
-  {
-    id: 3,
     title: 'Enforcement & Law',
     description: `
       • Legal Reforms and Policy Effectiveness<br>
@@ -50,7 +22,7 @@ export const data_subthemes: Subtheme[] = [
     `
   },
   {
-    id: 4,
+    id: 2,
     title: 'Integrity & Leadership',
     description: `
       • Governance Ethics and Accountability<br>
@@ -61,6 +33,34 @@ export const data_subthemes: Subtheme[] = [
       • Ethical Decision-Making in Crisis and Conflict<br>
       • Building a Culture of Integrity in Organizations<br>
       • Values-Based Leadership for Sustainable Governance
+    `
+  },
+  {
+    id: 3,
+    title: 'Environmental, Sustainability & Natural Resources Enforcement',
+    description:`
+      • Law and Enforcement of Environmental Crimes<br>
+      • Regulatory Frameworks for Sustainable Resource Extraction<br>
+      • Enforcement of ESG Standards and Corporate Accountability<br>
+      • Combating Illegal Wildlife Trade, Poaching, and Bio-Piracy<br>
+      • Indigenous Rights and Community-Led Conservation Enforcement<br>
+      • Transboundary Pollution and International Environmental Law<br>
+      • Waste Management, Circular Economy, and Pollution Control<br>
+      • Technological Solutions for Environmental Monitoring and Compliance
+    `
+  },
+  {
+    id: 4,
+    title: 'Disaster Science & Climate Resilience',
+    description: `
+      • Enforcement of Environmental and Climate Regulations<br>
+      • Climate Justice and Legal Frameworks<br>
+      • Disaster Risk Management and Emergency Response Systems<br>
+      • Interagency Coordination during Crises<br>
+      • Policy and Leadership in Climate Adaptation<br>
+      • Community Resilience and Local Governance<br>
+      • Technology in Disaster Preparedness and Monitoring<br>
+      • Enforcement Challenges in Climate-Induced Migration
     `
   },
 ];
