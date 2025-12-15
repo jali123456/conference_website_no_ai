@@ -169,7 +169,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'registration fees local and international, early bird, payment details, registration process for the ICELIn 2026 Conference.Registrations opening date.'
+      content: 'ICELIn26 earlybird registration date is 2 Jan 2026 - 15 June 2026'
     },
     {
       property: 'og:title',

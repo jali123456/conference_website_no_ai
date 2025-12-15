@@ -9,9 +9,11 @@
       </div>
         <v-card class="mx-auto">
           <v-card-text :class="contentTextClass">
-            <p class="text-body-1 text-center mb-6">
+            <p class="text-body-1 mb-2">
               We invite scholars, researchers, practitioners, and policymakers to submit their original research papers for the International Conference on Enforcement, Law & Integrity (ICELIn 2026).
             </p>
+            <p class="text-body-1">All accepted papers will be published in the ICELIn26 Conference Proceedings in the Enforcement, Leadership & Management Journal (ELMJ).
+Selected papers may be extended and submitted to indexed journals (<strong>Scopus</strong>, <strong>Web of Science (WoS)</strong>, <strong>ACI</strong>, <strong>Cabells Journalytics</strong>, <strong>MyCite</strong>, <strong>DOAJ</strong>, <strong>Google Scholar</strong>), subject to additional fees and journal review processes.</p>
 
             <v-divider class="my-6"></v-divider>
 
@@ -41,6 +43,10 @@
                 <p>
                   Accepted papers will be featured in the conference proceedings. Selected high-quality papers will be recommended for publication in Scopus-indexed journals, subject to additional review and publication fees.
                 </p>
+                <h2 class="text-h5 font-weight-bold mb-4">Paper Categories</h2>
+                <p class="mb-4 text-h6">
+                    Authors are invited to submit full paper describing original research work in areas including, but are not limited to:
+                </p>
               </v-col>
 
               <v-col cols="12" md="4">
@@ -52,21 +58,21 @@
                       <div class="font-weight-bold">Call For Abstracts</div>
                     </v-timeline-item>
                     <v-timeline-item dot-color="info" size="x-small">
-                      <div class="text-caption">28 February, 2026</div>
+                      <div class="text-caption">31 March, 2026</div>
+                      <div class="font-weight-bold">Close Abstract Date</div>
+                    </v-timeline-item>
+                    <v-timeline-item dot-color="info" size="x-small">
+                      <div class="text-caption">15 April, 2026</div>
                       <div class="font-weight-bold">Acceptance Notification</div>
                     </v-timeline-item>
                     <v-timeline-item dot-color="success" size="x-small">
                       <div class="text-caption">
-                        31 March, 2026 <span class="font-weight-bold text-body-1 text-elmuaccent" >Attention</span>
+                        31 May, 2026 <span class="font-weight-bold text-body-1 text-elmuaccent" >Attention</span>
                       </div>
-                      <div class="font-weight-bold">Full Paper Submission Deadline</div>
-                    </v-timeline-item>
-                    <v-timeline-item dot-color="warning" size="x-small">
-                      <div class="text-caption">1 June, 2026</div>
-                      <div class="font-weight-bold">Camera Ready Submission</div>
+                      <div class="font-weight-bold">Full Paper Submission/Camera Ready Deadline</div>
                     </v-timeline-item>
                     <v-timeline-item dot-color="error" size="x-small">
-                      <div class="text-caption">12-13 August, 2026</div>
+                      <div class="text-caption">12-14 August, 2026</div>
                       <div class="font-weight-bold">Conference Dates</div>
                     </v-timeline-item>
                   </v-timeline>
@@ -75,7 +81,6 @@
             </v-row>
             
             <v-row class="mt-8">
-              <v-col cols="12"><h4 class="text-h4 text-center font-weight-medium">Conference Subthemes</h4></v-col>
               <SubthemeList/>
             </v-row>
           </v-card-text>
@@ -125,7 +130,7 @@ const contentTextClass = computed(() => {
 })
 
 const showAlert = () => {
-  alert('Paper submission is currently not available. Please check back later.');
+  window.open('https://easychair.org/conferences?conf=icelin26', '_blank');
 };
 </script>
 

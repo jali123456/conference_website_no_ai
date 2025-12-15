@@ -15,10 +15,10 @@
           <v-row justify="center">
             <v-col cols="12" md="10" lg="8">
               <h4 class="text-h5 font-weight-bold mb-4 text-white wave-text">
-                Submit Your Research Paper
+                Call For Papers is Now Open!
               </h4>
               <p class="text-subtitle-1 text-md-h6 mb-8 text-white text-opacity-85">
-                Full Paper Submission Deadline: <span style="color:#D4AF37;font-weight:700">31 March 2026</span>
+                Full Paper Submission Deadline: <span style="color:#D4AF37;font-weight:700">31 May 2026</span>
               </p>
               <v-btn
                 color="elmubackground"

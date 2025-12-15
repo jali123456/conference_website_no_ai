@@ -18,7 +18,7 @@
                 Ready To Revolutionize Law Enforcement?
               </h4>
               <p class="text-subtitle-1 text-md-h6 mb-8 text-white text-opacity-85">
-                Registration open on <span style="color:#D4AF37;font-weight:700">2 January 2026</span> to <span style="color:#D4AF37;font-weight:700">30 June 2026</span>
+                Registration open on <span style="color:#D4AF37;font-weight:700">2 January 2026</span> to <span style="color:#D4AF37;font-weight:700">15 July 2026</span>
               </p>
               <v-btn
                 color="elmubackground"

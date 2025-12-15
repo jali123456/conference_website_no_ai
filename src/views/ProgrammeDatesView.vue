@@ -197,31 +197,25 @@ const importantDates = [
     color: 'info'
   },
   {
-    date: '28 February, 2026',
+    date: '15 April, 2026',
     title: 'Acceptance Notification',
     description: 'Acceptance Notification for the Absctracts',
     color: 'info'
   },
   {
-    date: '31 March, 2026',
-    title: 'Full Paper submission dateline ',
+    date: '31 May, 2026',
+    title: 'Full Paper Submission/Camera Ready Deadline',
     description: 'Full paper submission dateline open',
     color: 'success'
   },
   {
-    date: 'May 15 – June 15, 2026',
+    date: '2 January – 15 June, 2026',
     title: 'Early Bird Registration Open',
     description: 'Discounted registration period for early participants',
     color: 'success'
   },
   {
-    date: 'June 1, 2026',
-    title: 'Camera Ready Submission',
-    description: 'Deadline for submitting final camera-ready papers',
-    color: 'warning'
-  },
-  {
-    date: 'June 30, 2026',
+    date: '15 July, 2026',
     title: 'Registration Deadline',
     description: 'Last day to complete conference registration',
     color: 'warning'
@@ -231,6 +225,12 @@ const importantDates = [
     title: 'Conference Dates',
     description: 'Main conference sessions and activities',
     color: 'error'
+  },
+  {
+    date: '14 August, 2026',
+    title: 'Networking Tour',
+    description: 'Optional tour to Sarawak Heritage Village',
+    color: 'primary'
   }
 ]
 

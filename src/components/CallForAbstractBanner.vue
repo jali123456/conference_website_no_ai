@@ -20,9 +20,9 @@
               <p class="text-subtitle-1 text-md-h6 mb-2 text-white text-opacity-85">
                 Submission date <span style="color:#D4AF37;font-weight:700">1 October 2025</span>
                 <br></br>
-                Acceptance notification date <span style="color:#D4AF37;font-weight:700">28 February 2026</span>
+                Acceptance notification date <span style="color:#D4AF37;font-weight:700">15 April 2026</span>
                 <br></br>
-                Deadline date <span style="color:#D4AF37;font-weight:700">30 June 2026</span>
+                Deadline date <span style="color:#D4AF37;font-weight:700">31 March 2026</span>
               </p>
               <v-btn
                 color="elmubackground"

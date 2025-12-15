@@ -31,10 +31,12 @@
             </p>
             <br/>
             <p class="text-body-2">
-              With dedicated tracks on <strong class="text-decoration-underline">Enforcement & Law</strong>,
-              <strong class="text-decoration-underline">Integrity & Leadership</strong>, and
-              <strong class="text-decoration-underline">Disaster Science & Climate Resilience</strong>, the conference provides a rich
-              platform for dialogue, collaboration, and knowledge exchange.
+              With dedicated tracks on
+              <strong class="text-decoration-underline">{{ data_subthemes[0].title }}</strong>,
+              <strong class="text-decoration-underline">{{ data_subthemes[1].title }}</strong>,
+              <strong class="text-decoration-underline">{{ data_subthemes[2].title }}</strong>, and
+              <strong class="text-decoration-underline">{{ data_subthemes[3].title }}</strong>,
+              the conference provides a rich platform for dialogue, collaboration, and knowledge exchange.
               Through keynote addresses, panel discussions, and research presentations, we aim to
               foster actionable insights that strengthen governance, promote ethical leadership, and
               support sustainable, resilient communities.
@@ -52,8 +54,11 @@
             </v-row>
             <v-row class="mt-2 mt-sm-6">
               <v-col cols="12"><h4 class="text-h4 text-center font-weight-medium">Subthemes</h4></v-col>
-              
+                <p class="mb-4 text-h6">
+                    Authors are invited to submit full paper describing original research work in areas including, but are not limited to:
+                </p>
               <SubthemeList/>
+              
             </v-row>
             <v-row class="mt-4">
               <v-col cols="12">
@@ -95,6 +100,7 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify'
 import { computed } from 'vue'
+import { data_subthemes } from '@/assets/data/Subthemes_Data';
 
 const { xs, sm, md, lg, xl, xxl, width } = useDisplay()
 
@@ -130,6 +136,9 @@ const featureTitleClass = computed(() => {
     return 'text-h5'
   }
 })
+
+// Ensure `data_subthemes` is available in the template context
+const subthemes = data_subthemes;
 </script>
 
 <style scoped>

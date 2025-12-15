@@ -33,7 +33,7 @@
           <v-img
             src="@/assets/logo.png"
             :width="display.width.value <= 550 ? 350 : 500"
-            :height="display.width.value <= 550 ? 210 : 250"
+            :height="display.width.value <= 550 ? 210 : 180"
             contain
             @click="navigateToHome"
             class="logo-image mx-auto"

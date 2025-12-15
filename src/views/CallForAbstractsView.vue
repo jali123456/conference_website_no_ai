@@ -17,6 +17,15 @@
             Accepted papers will be featured in the conference proceedings or submitted for publication in a <b>Scopus-indexed journal, subject to additional publication fees.</b> 
             Exceptional submissions will be considered for the best paper awards, with winners receiving special gift or voucher as recognition
           </p>
+          <v-divider :thickness="4" class="border-opacity-50 mb-4 mt-4"></v-divider>
+          <p class="text-subtitle-1 mb-2 font-weight-bold">Important Dates:</p>
+          <p class="text-body-1">
+            Submission date <span style="color:#000000;font-weight:700">1 October 2025</span>
+            <br></br>
+            Acceptance notification date <span style="color:#000000;font-weight:700">15 April 2026</span>
+            <br></br>
+            Deadline date <span style="color:#000000;font-weight:700">31 March 2026</span>
+          </p>
         </v-card>
       </v-col>
 
@@ -41,6 +50,13 @@
                   </h4>
                   <p class="text-subtitle-1 text-md-h6 mb-8 text-white text-opacity-85">
                     Join our community in sharing knowledge and advancing research. Register now and submit your abstract.
+                  </p>
+                  <p class="text-subtitle-1 text-md-h6 mb-2 text-opacity-85">
+                    Submission date <span style="color:#000000;font-weight:700">1 October 2025</span>
+                    <br></br>
+                    Acceptance notification date <span style="color:#000000;font-weight:700">15 April 2026</span>
+                    <br></br>
+                    Deadline date <span style="color:#000000;font-weight:700">31 March 2026</span>
                   </p>
                   <v-btn
                     color="elmubackground"
