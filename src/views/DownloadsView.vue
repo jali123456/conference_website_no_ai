@@ -143,17 +143,17 @@ const downloadCategories = [
     icon: 'mdi-file-document-outline',
     files: [
       {
-        name: 'Poster Template',
-        description: 'Poster template for the presenter',
-        icon: 'mdi-microsoft-powerpoint',
-        url: '/downloads/paper_template_word.docx',
+        name: 'Abstract Template ICELIn26 ',
+        description: 'Abstract Template in Word format',
+        icon: 'mdi-microsoft-word',
+        url: '/downloads/ICELIn26_Abstract_Template.docx',
         disabled: false
       },
       {
-        name: 'Presentation Template',
-        description: 'PowerPoint template for oral presentations',
-        icon: 'mdi-microsoft-powerpoint',
-        url: '/downloads/presentation_template.pptx',
+        name: 'Paper Template ICELIn26 ',
+        description: 'Full Paper Template in Word format',
+        icon: 'mdi-microsoft-word',
+        url: '/downloads/ICELIn26_Paper_Template.docx',
         disabled: false
       }
 
@@ -235,7 +235,7 @@ const additionalResources = [
   },
 ]
 
-const disabledCategories = ['Templates', 'Guidelines', 'Forms']
+const disabledCategories = [ 'Guidelines', 'Forms']
 
 const isDisabledCategory = (categoryTitle: string) => {
   return isDisabled.value && disabledCategories.includes(categoryTitle)

@@ -25,7 +25,7 @@
             src="@/assets/logo.png" 
             alt="ICELIn26 logo"
             contain
-            class="blue-bg"
+            class="border-md rounded-lg"
             />
         </v-col>
         <v-col cols="9" sm="4" md="3" class="text-center">
@@ -44,10 +44,5 @@
 </template>
 
 <style lang="css">
-.blue-bg {
-  background-color: #0d1c2f; /* Material Design Blue */
-  border-radius: 8px;
-  padding: 16px;
-}
 
 </style>

@@ -12,12 +12,12 @@
           <p class="text-body-1">
             We invite you to submit your abstract for consideration. This is an excellent opportunity to share your research and insights with a global audience. If you are interested, please register in the following link by clicking the button which will lead you to our <b>EasyChair</b> registration system.
           </p>
-          <v-divider :thickness="4" class="border-opacity-50 mb-4 mt-2"></v-divider>
+          <v-divider :thickness="3" class="border-opacity-50 mb-4 mt-2"></v-divider>
           <p class="text-body-1">
             Accepted papers will be featured in the conference proceedings or submitted for publication in a <b>Scopus-indexed journal, subject to additional publication fees.</b> 
             Exceptional submissions will be considered for the best paper awards, with winners receiving special gift or voucher as recognition
           </p>
-          <v-divider :thickness="4" class="border-opacity-50 mb-4 mt-4"></v-divider>
+          <v-divider :thickness="3" class="border-opacity-50 mb-4 mt-4"></v-divider>
           <p class="text-subtitle-1 mb-2 font-weight-bold">Important Dates:</p>
           <p class="text-body-1">
             Submission date <span style="color:#000000;font-weight:700">1 October 2025</span>
@@ -25,6 +25,10 @@
             Acceptance notification date <span style="color:#000000;font-weight:700">15 April 2026</span>
             <br></br>
             Deadline date <span style="color:#000000;font-weight:700">31 March 2026</span>
+          </p>
+          <v-divider :thickness="3" class="border-opacity-50 mb-4 mt-4"></v-divider>
+          <p class="text-body-1">
+            Please refer the <strong>Abstract Submission Template</strong> in the <router-link to="/downloads">Downloads</router-link> Section
           </p>
         </v-card>
       </v-col>

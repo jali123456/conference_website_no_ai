@@ -22,7 +22,7 @@ export const data_subthemes: Subtheme[] = [
   },
   {
     id: 2,
-    title: 'Environmental, Sustainability, Natural Resources Enforcement & Tourism',
+    title: 'Environmental, Sustainability, Natural Resources & Tourism Enforcement',
     description:`
       • Law and Enforcement of Environmental Crimes<br>
       • Regulatory Frameworks for Sustainable Resource Extraction<br>

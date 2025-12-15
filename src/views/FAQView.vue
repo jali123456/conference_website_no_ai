@@ -135,9 +135,8 @@ const faqCategories = [
       {
         question: "What are the registration deadlines?",
         answer: `<ul>
-          <li><strong>Early Bird Registration:</strong> Ends on May 15</li>
-          <li><strong>Regular Registration:</strong> Ends on June 30</li>
-          <li><strong>Late Registration:</strong> Closes on July 15</li>
+          <li><strong>Early Bird Registration:</strong> From 2 January 2026 - 15 June 2026</li>
+          <li><strong>Regular Registration:</strong> Ends on 15 July 2026</li>
         </ul>`
       },
       {
@@ -162,8 +161,7 @@ const faqCategories = [
         question: "What payment methods are accepted?",
         answer: `We accept payments via:
         <ol>
-          <li>Online banking (for Malaysian participants)</li>
-          <li>Credit/Debit card (via secure payment gateway)</li>
+          <li>Online banking</li>
           <li>Telegraphic transfer (for international participants)</li>
         </ol>
         Payment instructions will be provided after abstract acceptance or during registration.`
@@ -180,18 +178,19 @@ const faqCategories = [
     items: [
       {
         question: "How do I submit my abstract?",
-        answer: "Abstracts must be submitted through the official submission form available on the ICELIn26 website or by scanning the QR code provided in the conference brochure."
+        answer: `Abstracts must be submitted through the official EasyChair system available on the <a href="/call-for-abstracts">ICELIn26 website</a> or by scanning the QR code provided in the conference brochure.`
       },
       {
         question: "What is the abstract format and word limit?",
-        answer: `Abstracts should not exceed 300 words and must be submitted in English. The submission should include:
+        answer: `Abstracts should not exceed 250 words, the ideal format is between 200-250 words and must be submitted in English. The submission should include:
         <ul>
           <li>Title</li>
-          <li>Author(s) and affiliation(s)</li>
+          <li>Author(s),affiliation(s),Institution(s),Country</li>
           <li>Abstract body (no tables, images, or figures)</li>
           <li>Keywords (3–5)</li>
         </ul>
-        Templates and detailed guidelines are available on the website.`
+        Templates and detailed guidelines are available on the <a href="/downloads"> website</a>.`
+
       },
       {
         question: "How many abstracts can I submit?",
@@ -199,7 +198,7 @@ const faqCategories = [
       },
       {
         question: "When will I be notified if my abstract is accepted?",
-        answer: "Authors will be notified of their abstract acceptance by 1st December 2025 via email from icelin@elmu.edu.my. Please ensure your email address is accurate during submission and check your inbox (including the spam folder) regularly."
+        answer: "Authors will be notified of their abstract acceptance by 15 April 2026 via email from icelin@elmu.edu.my. Please ensure your email address is accurate during submission and check your inbox (including the spam folder) regularly."
       },
       {
         question: "What are the presentation formats available?",

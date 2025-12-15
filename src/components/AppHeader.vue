@@ -21,7 +21,7 @@
               class="ma-1 pa-3 rounded-lg cursor-pointer nav-chip red-bottom-border"
               :prepend-icon="item.icon"
               clickable
-              color="primary"
+              color="elmubackground"
             >
               <span class="text-body-1 font-weight-medium">{{ item.text }}</span>
             </v-chip>

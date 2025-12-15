@@ -20,7 +20,7 @@
           <v-card-text :class="contentTextClass">
             <!-- Add H1 here for SEO -->
             <h1 class="text-h5 text-center font-weight-bold mb-4">
-              ICELIn 2026 - International Conference on Enforcement, Law & Integrity
+              1st International Conference on Enforcement, Law & Integrity 2026 (ICELIn 2026) 
             </h1>
             <p class="text-body-2">
               Join us for a dynamic and multidisciplinary conference that brings together scholars,
@@ -42,13 +42,13 @@
               support sustainable, resilient communities.
             </p>
             <v-row class="mt-2">
-              <v-col :cols="width < 959 ? 12 : 4">
+              <v-col :cols="width < 959 ? 12 : (width <= 1160 ? 6 : 4)">
                 <CallForAbstractBanner/>
               </v-col>
-              <v-col :cols="width < 959 ? 12 : 4">
+              <v-col :cols="width < 959 ? 12 : (width <= 1160 ? 6 : 4)">
                 <CallForPaperBanner/>
               </v-col>
-              <v-col :cols="width < 959 ? 12 : 4">
+              <v-col :cols="width < 959 ? 12 : (width <= 1160 ? 6 : 4)">
                 <RegisterBanner/>
               </v-col>
             </v-row>

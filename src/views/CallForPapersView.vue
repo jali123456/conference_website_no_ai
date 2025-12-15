@@ -20,13 +20,18 @@ Selected papers may be extended and submitted to indexed journals (<strong>Scopu
             <v-row>
               <v-col cols="12" md="8">
                 <h2 class="text-h5 font-weight-bold mb-4">Submission Guidelines</h2>
-                <p class="mb-4">
+                <p class="mb-4 text-body-1">
                   All papers must be original and not simultaneously submitted to another journal or conference. The following paper categories are welcome:
                 </p>
+
                 <ul class="ml-6 mb-4">
                   <li><strong>Full Papers:</strong> describing significant research results, applications, or systems.</li>
                   <li><strong>Short Papers:</strong> describing ongoing research or new ideas.</li>
                 </ul>
+
+                <p class="text-body-1">
+                  Please refer the <strong>Paper Submission Template</strong> in the <router-link to="/downloads">Downloads</router-link> Section
+                </p>
                 <!-- <p class="mb-4">
                   Please submit your papers via the EasyChair submission system. All submissions will be peer-reviewed by at least two independent reviewers.
                 </p> -->
@@ -43,8 +48,8 @@ Selected papers may be extended and submitted to indexed journals (<strong>Scopu
                 <p>
                   Accepted papers will be featured in the conference proceedings. Selected high-quality papers will be recommended for publication in Scopus-indexed journals, subject to additional review and publication fees.
                 </p>
-                <h2 class="text-h5 font-weight-bold mb-4">Paper Categories</h2>
-                <p class="mb-4 text-h6">
+                <h2 class="text-h5 font-weight-bold mt-8 mb-4">Paper Categories</h2>
+                <p class="mb-4 text-body-1">
                     Authors are invited to submit full paper describing original research work in areas including, but are not limited to:
                 </p>
               </v-col>

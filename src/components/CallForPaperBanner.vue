@@ -24,10 +24,10 @@
                 color="elmubackground"
                 size="x-large"
                 rounded
-                class="elevation-6 red-bottom-border text-h6 font-weight-bold wave-button"
+                class="elevation-6 red-bottom-border text-h6 text-break font-weight-bold wave-button"
                 @click="goToCallForPapers"
               >
-                SUBMIT PAPER
+                Submit Paper
                 <v-icon end>mdi-arrow-right</v-icon>
               </v-btn>
             </v-col>
@@ -162,7 +162,7 @@ export default defineComponent({
 .banner-overlay {
   position: relative;
   z-index: 10;
-  height: 350px;
+  height: 450px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 </style>
