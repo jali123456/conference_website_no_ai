@@ -88,13 +88,13 @@
 
               <h2 class="text-h5 mt-6 mb-4">Follow Us</h2>
               <div class="d-flex justify-space-around">
-                <a href="https://facebook.com/ELMUniversty/" target="_blank">
+                <a href="https://www.facebook.com/people/ICELIn/61582930324491/" target="_blank">
                   <v-btn icon="mdi-facebook" color="primary" variant="text" size="large"></v-btn>
                 </a>
-                <a href="https://www.linkedin.com/company/enforcement-leadership-and-management-university-elmu/" target="_blank">
+                <a href="https://www.linkedin.com/in/icelin-elmu-635a42390/" target="_blank">
                   <v-btn icon="mdi-linkedin" color="primary" variant="text" size="large"></v-btn>
                 </a>
-                <a href="https://instagram.com/elmu_university/" target="_blank">
+                <a href="https://www.instagram.com/icelin.2026/" target="_blank">
                   <v-btn icon="mdi-instagram" color="primary" variant="text" size="large"></v-btn>
                 </a>
               </div>

@@ -71,17 +71,17 @@ const socialItems = [
   {
     title: 'Facebook',
     icon: 'mdi-facebook',
-    href: 'https://facebook.com/ELMUniversty/',
+    href: 'https://www.facebook.com/people/ICELIn/61582930324491/',
   },
   {
     title: 'instagram',
     icon: 'mdi-instagram',
-    href: 'https://instagram.com/elmu_university/',
+    href: 'https://www.instagram.com/icelin.2026/',
   },
   {
     title: 'LinkedIn',
     icon: 'mdi-linkedin',
-    href: 'https://www.linkedin.com/company/enforcement-leadership-and-management-university-elmu/',
+    href: 'https://www.linkedin.com/in/icelin-elmu-635a42390/',
   },
 ];
 </script>
