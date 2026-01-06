@@ -34,56 +34,58 @@
       </v-col>
 
       <!-- Registration Banner with Pattern 4 -->
-      <v-container fluid class="pa-0">
-        <div class="particle-background">
-          <div class="particle-container">
-            <div class="particle" v-for="i in 40" :key="i" :style="getParticleStyle(i)"></div>
-            <div class="wave-lines">
-              <div class="wave-line wave-1"></div>
-              <div class="wave-line wave-2"></div>
-              <div class="wave-line wave-3"></div>
-              <div class="wave-line wave-4"></div>
+      <v-col :cols="width < 959 ? 12 : (width <= 1160 ? 6 : 12)">
+        <v-container fluid class="pa-0">
+          <div class="particle-background">
+            <div class="particle-container">
+              <div class="particle" v-for="i in 40" :key="i" :style="getParticleStyle(i)"></div>
+              <div class="wave-lines">
+                <div class="wave-line wave-1"></div>
+                <div class="wave-line wave-2"></div>
+                <div class="wave-line wave-3"></div>
+                <div class="wave-line wave-4"></div>
+              </div>
+            </div>
+            <div class="banner-overlay d-flex align-center justify-center pa-4">
+              <v-container>
+                <v-row justify="center">
+                  <v-col cols="12" md="10" lg="8">
+                    <h4 class="text-h4 font-weight-bold mb-4 text-white wave-text">
+                      Ready to send your abstract?
+                    </h4>
+                      <p class="text-subtitle-1 text-md-h6 mb-2 text-white text-opacity-85">
+                        Submission date <span style="color:#D4AF37;font-weight:700">1 October 2025</span>
+                        <br></br>
+                        Acceptance notification date <span style="color:#D4AF37;font-weight:700">15 April 2026</span>
+                        <br></br>
+                        Deadline date <span style="color:#D4AF37;font-weight:700">31 March 2026</span>
+                      </p>
+                    <v-btn
+                      color="elmubackground"
+                      size="x-large"
+                      rounded
+                      class="elevation-6 red-bottom-border text-h6 font-weight-bold wave-button"
+                      @click="goToRegister"
+                    >
+                      SUBMIT NOW
+                      <v-icon end>mdi-arrow-right</v-icon>
+                    </v-btn>
+                  </v-col>
+                </v-row>
+              </v-container>
             </div>
           </div>
-          <div class="banner-overlay d-flex align-center justify-center pa-4">
-            <v-container>
-              <v-row justify="center">
-                <v-col cols="12" md="10" lg="8">
-                  <h4 class="text-h4 font-weight-bold mb-4 text-white wave-text">
-                    Ready to send your abstract?
-                  </h4>
-                  <p class="text-subtitle-1 text-md-h6 mb-8 text-white text-opacity-85">
-                    Join our community in sharing knowledge and advancing research. Register now and submit your abstract.
-                  </p>
-                  <p class="text-subtitle-1 text-md-h6 mb-2 text-opacity-85">
-                    Submission date <span style="color:#000000;font-weight:700">1 October 2025</span>
-                    <br></br>
-                    Acceptance notification date <span style="color:#000000;font-weight:700">15 April 2026</span>
-                    <br></br>
-                    Deadline date <span style="color:#000000;font-weight:700">31 March 2026</span>
-                  </p>
-                  <v-btn
-                    color="elmubackground"
-                    size="x-large"
-                    rounded
-                    class="elevation-6 red-bottom-border text-h6 font-weight-bold wave-button"
-                    @click="goToRegister"
-                  >
-                    SUBMIT NOW
-                    <v-icon end>mdi-arrow-right</v-icon>
-                  </v-btn>
-                </v-col>
-              </v-row>
-            </v-container>
-          </div>
-        </div>
-      </v-container>
+        </v-container>
+      </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
+import { useDisplay } from 'vuetify'
+
+const { xs, sm, md, lg, xl, xxl, width } = useDisplay()
 
 useHead({
   title: 'Call for Abstracts | ICELIn 2026 Conference',

@@ -197,16 +197,22 @@ const importantDates = [
     color: 'info'
   },
   {
+    date: '31 March,2026',
+    title: 'Close Abstract Date',
+    description: 'Deadline for abstract submissions',
+    color: 'error'
+  },
+  {
     date: '15 April, 2026',
     title: 'Acceptance Notification',
     description: 'Acceptance Notification for the Absctracts',
-    color: 'info'
+    color: 'success'
   },
   {
     date: '31 May, 2026',
     title: 'Full Paper Submission/Camera Ready Deadline',
     description: 'Full paper submission dateline open',
-    color: 'success'
+    color: 'info'
   },
   {
     date: '2 January – 15 June, 2026',
@@ -218,7 +224,7 @@ const importantDates = [
     date: '15 July, 2026',
     title: 'Registration Deadline',
     description: 'Last day to complete conference registration',
-    color: 'warning'
+    color: 'error'
   },
   {
     date: 'August 12 – 13, 2026',

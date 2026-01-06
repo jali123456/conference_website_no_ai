@@ -197,6 +197,13 @@ const downloadCategories = [
         disabled: false
       },
       {
+        name: 'Call for Abstracts Poster',
+        description: 'Poster detailing the conference',
+        icon: 'mdi-image-outline',
+        url: '/downloads/IceLin-Call-For-Abstract.jpg',
+        disabled: false
+      },
+      {
         name: 'Conference Schedule',
         description: 'Detailed program schedule',
         icon: 'mdi-calendar',
