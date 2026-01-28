@@ -160,8 +160,9 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
 function openRegistration() {
-  alert("Sry but the Registration open on 2 January 2026")
+  // alert("Sry but the Registration open on 2 January 2026")
   // window.open('https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=HYyN1A9sYE64VQszNyyLObOQ6rcy5rVHq95xJgsnFWlUQjZWTDFQMzhFT01ERjNIUjBNSjNBR0ZFWS4u', '_blank')
+  window.open('https://form.icelin.my', '_blank')
 }
 
 useHead({

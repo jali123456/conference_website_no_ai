@@ -155,6 +155,13 @@ const downloadCategories = [
         icon: 'mdi-microsoft-word',
         url: '/downloads/ICELIn26_Paper_Template.docx',
         disabled: false
+      },
+      {
+        name: 'Poster Template ICELIn26 ',
+        description: 'Poster Template in PowerPoint format',
+        icon: 'mdi-microsoft-powerpoint',
+        url: '/downloads/ICELIn26 Poster Template.pptx',
+        disabled: false
       }
 
     ]
@@ -202,7 +209,7 @@ const downloadCategories = [
         icon: 'mdi-image-outline',
         url: '/downloads/IceLin-Call-For-Abstract.jpg',
         disabled: false
-      },
+      },s
       {
         name: 'Conference Schedule',
         description: 'Detailed program schedule',

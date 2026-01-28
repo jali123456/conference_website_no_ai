@@ -12,7 +12,7 @@
         </v-img>
     </v-card>
     </v-col>
-    <!-- <v-col cols="12" class="sponsor-section">
+    <v-col cols="12" class="sponsor-section">
     <v-card class="mx-auto" max-width="1400">
         <v-img
         src="@/assets/sponsor-1.jpg"
@@ -23,7 +23,7 @@
         >
         </v-img>
     </v-card>
-    </v-col> -->
+    </v-col>
 </v-row>
 </template>
 

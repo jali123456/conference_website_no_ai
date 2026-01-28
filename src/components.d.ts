@@ -18,7 +18,6 @@ declare module 'vue' {
     CountdownTimerMobile: typeof import('./components/CountdownTimerMobile.vue')['default']
     LoginForm: typeof import('./components/auth/LoginForm.vue')['default']
     RegisterBanner: typeof import('./components/RegisterBanner.vue')['default']
-    Registration: typeof import('./components/Registration.vue')['default']
     RegistrationFeesTable: typeof import('./components/RegistrationFeesTable.vue')['default']
     RegistrationForm: typeof import('./components/RegistrationForm.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

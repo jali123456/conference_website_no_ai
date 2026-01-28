@@ -95,15 +95,15 @@
 
 <script setup lang="ts">
 const localFees = [
-  { category: 'Local Participant (Presenter)', price: 'RM1,600', earlyBird: 'TBA' },
-  { category: 'Local Participant (Non-Presenter)', price: 'RM1,200', earlyBird: 'TBA' },
-  { category: 'Local Excursion/Networking Tour Fee', price: 'RM160', earlyBird: 'TBA' },
+  { category: 'Local Participant (Presenter - Oral/Poster)', price: 'RM1,600', earlyBird: '1440' },
+  { category: 'Local Participant (Non-Presenter)', price: 'RM1,200', earlyBird: '1080' },
+  { category: 'Local Excursion/Networking Tour Fee', price: 'RM160', earlyBird: '-' },
 ]
 
 const internationalFees = [
-  { category: 'International Participant (Presenter)', price: 'USD 500', earlyBird: 'TBA' },
-  { category: 'International Participant (Non-Presenter)', price: 'USD 400', earlyBird: 'TBA' },
-  { category: 'International Excursion/Networking Tour Fee', price: 'USD 50', earlyBird: 'TBA' },
+  { category: 'International Participant (Presenter - Oral/Poster)', price: 'USD 500', earlyBird: '450' },
+  { category: 'International Participant (Non-Presenter)', price: 'USD 400', earlyBird: '360' },
+  { category: 'International Excursion/Networking Tour Fee', price: 'USD 50', earlyBird: '-' },
 ]
 </script>
 

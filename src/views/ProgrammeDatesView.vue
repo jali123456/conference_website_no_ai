@@ -83,10 +83,7 @@
                 <div class="text-h6 mt-4 mb-2 text-primary text-center">
                   {{ day[0].date }}
                 </div>
-                <div v-if="day[0].date === '14 August 2026'" class="d-flex justify-center align-center" style="min-height: 200px;">
-                  <h2 class="text-h2 font-weight-bold">Sarawak Heritage Village (Optional)</h2>
-                </div>
-                <v-timeline v-else justify="auto" side="end" align="start" class="programme-timeline">
+                <v-timeline justify="auto" side="end" align="start" class="programme-timeline">
                   <v-timeline-item
                     v-for="(session, sIndex) in day"
                     :key="sIndex"
@@ -244,94 +241,85 @@ const programme = [
   // Day 1
   [
     {
-      time: '08:00 - 09:00',
+      time: '08:00 - 08:30',
       title: 'Registration',
       location: 'The Waterfront Hotel, Kuching',
       date: '12 August 2026'
     },
     {
-      time: '09:00 - 10:00',
+      time: '09:00 - 11:00',
       title: 'Opening Ceremony',
       location: 'TBA',
       details: [
-      ]
+        `Recitation of Du'a`,
+        'Negaraku National Anthem',
+        'Welcoming speech by ELMU Vice-Chancellor',
+        'Welcoming speech by Director of Forest, Sarawak',
+        'Welcoming speech by Premier of Sarawak',
+        'Officiating Speech and Opening by Premier of Sarawak',
+        'Group Photo Session'
+      ],
     },
     {
-      time: '10:00 - 10:50',
-      title: 'FORUM SESSION: Title TBA',
+      time: '11:00 - 11:30',
+      title: 'Morning Break',
+      location: 'TBA',
+    },
+    {
+      time: '11:30 - 12:30',
+      title: 'Forum Session',
       location: 'TBA',
       details:[
-        "Moderator: TBA",
-        `Panellists: TBA`,
+        'Topic:"Governing with integrity: Bridging Enforcement, Law and Public Trust"'
       ]
     },
     {
-      time: '10:50 - 11:30',
-      title: 'Morning Break',
-      location: ''
-    },
-    {
-      time: '11:30 - 13:00',
-      title: 'Parallel Session 1a',
-      location: ''
-    },
-    {
-      time: '11:30 - 13:00',
-      title: 'Parallel Session 1b',
-      location: ''
-    },
-    {
-      time: '11:30 - 13:00',
-      title: 'Parallel Session 1c',
-      location: ''
-    },
-    {
-      time: '13:00 - 14:30',
+      time: '12:30 - 14:30',
       title: 'Lunch Break',
-      location: ''
+      location: 'TBA'
     },
     {
       time: '14:30 - 17:00',
-      title: 'Parallel Session 2a',
-      location: ''
+      title: 'Parallel Session 1a',
+      location: 'TBA'
     },
     {
       time: '14:30 - 17:00',
-      title: 'Parallel Session 2b',
-      location: ''
+      title: 'Parallel Session 1b',
+      location: 'TBA'
     },
     {
       time: '14:30 - 17:00',
-      title: 'Parallel Session 2c',
-      location: ''
+      title: 'Parallel Session 1c',
+      location: 'TBA'
     },
     {
       time: '17:00',
       title: 'Tea Break',
-      location: ''
+      location: 'TBA'
     },
     {
       time: '19:45 - 22:30',
       title: 'Conference Dinner',
-      location: ''
-    }
+      location: 'TBA'
+    },
   ],
   // Day 2
   [
     {
       time: '08:30 - 10:30',
-      title: 'Parallel Session 3a',
+      title: 'Parallel Session 2a',
       location: '',
       date: '13 August 2026'
     },
     {
       time: '08:30 - 10:30',
-      title: 'Parallel Session 3b',
+      title: 'Parallel Session 2b',
       location: ''
     },
     {
       time: '08:30 - 10:30',
-      title: 'Parallel Session 3c',
+      title: 'Parallel Session 2c',
       location: ''
     },
     {
@@ -341,17 +329,17 @@ const programme = [
     },
     {
       time: '10:40 - 13:00',
-      title: 'Parallel Session 4a',
+      title: 'Parallel Session 3a',
       location: ''
     },
     {
       time: '10:40 - 13:00',
-      title: 'Parallel Session 4b',
+      title: 'Parallel Session 3b',
       location: ''
     },
     {
       time: '10:40 - 13:00',
-      title: 'Parallel Session 4c',
+      title: 'Parallel Session 3c',
       location: ''
     },
     {
@@ -378,9 +366,12 @@ const programme = [
   //day 3
   [
     {
-      time: '',
-      title: 'TBA',
+      time: '9:30-13.00',
+      title: 'Sarawak Heritage Village Tour(Optional)',
       location: 'TBA',
+      details:[
+        'Social Events - Education Tour of Sarawak Heritage Village'
+      ],
       date: '14 August 2026'
     },
   ]
