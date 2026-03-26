@@ -189,20 +189,20 @@ const activeTab = ref('day1')
 const importantDates = [
   {
     date: '1 October, 2025',
-    title: 'Call For Abstracts',
-    description: 'Start of abstract submission period',
+    title: 'Call For Abstracts/Poster',
+    description: 'Start of abstract/poster submission period',
     color: 'info'
   },
   {
     date: '31 March,2026',
-    title: 'Close Abstract Date',
-    description: 'Deadline for abstract submissions',
+    title: 'Close Abstract/Poster Date',
+    description: 'Deadline for abstract/poster submissions',
     color: 'error'
   },
   {
     date: '15 April, 2026',
     title: 'Acceptance Notification',
-    description: 'Acceptance Notification for the Absctracts',
+    description: 'Acceptance Notification for the Absctracts/Poster',
     color: 'success'
   },
   {
@@ -253,10 +253,12 @@ const programme = [
       details: [
         `Recitation of Du'a`,
         'Negaraku National Anthem',
-        'Welcoming speech by ELMU Vice-Chancellor',
-        'Welcoming speech by Director of Forest, Sarawak',
-        'Welcoming speech by Premier of Sarawak',
-        'Officiating Speech and Opening by Premier of Sarawak',
+        'TBA',
+        // 'Welcoming speech by ELMU Vice-Chancellor',
+        // 'Welcoming speech by Director of Forest, Sarawak',
+        // 'Welcoming speech by Premier of Sarawak',
+        // 'Officiating Speech by Premier of Sarawak',
+        'Opening Ceremony ICELIn26',
         'Group Photo Session'
       ],
     },
@@ -281,17 +283,27 @@ const programme = [
     {
       time: '14:30 - 17:00',
       title: 'Parallel Session 1a',
-      location: 'TBA'
+      location: 'TBA',
+      details:[
+        'Subtheme 1:"Enforcement & Law"',
+        'Subtheme 2:"Integrity & Leadership"'
+      ]
     },
     {
       time: '14:30 - 17:00',
       title: 'Parallel Session 1b',
-      location: 'TBA'
+      location: 'TBA',
+      details:[
+        'Subtheme 1:"Environmental, Sustainability, Natural Resources & Tourism Enforcement"'
+      ]
     },
     {
       time: '14:30 - 17:00',
       title: 'Parallel Session 1c',
-      location: 'TBA'
+      location: 'TBA',
+      details:[
+        'Subtheme 1:"Disaster Science & Climate Resilience"'
+      ]
     },
     {
       time: '17:00',
@@ -309,53 +321,73 @@ const programme = [
     {
       time: '08:30 - 10:30',
       title: 'Parallel Session 2a',
-      location: '',
+      location: 'TBA',
+      details:[
+        'Subtheme 1:"Enforcement & Law"',
+        'Subtheme 2:"Integrity & Leadership"'
+      ],
       date: '13 August 2026'
     },
     {
       time: '08:30 - 10:30',
       title: 'Parallel Session 2b',
-      location: ''
+      details:[
+        'Subtheme 1:"Environmental, Sustainability, Natural Resources & Tourism Enforcement"'
+      ],
+      location: 'TBA'
     },
     {
       time: '08:30 - 10:30',
       title: 'Parallel Session 2c',
-      location: ''
+      details:[
+        'Subtheme 1:"Disaster Science & Climate Resilience"'
+      ],
+      location: 'TBA'
     },
     {
       time: '10:30 - 10:40',
       title: 'Morning Break',
-      location: ''
+      location: 'TBA'
     },
     {
       time: '10:40 - 13:00',
       title: 'Parallel Session 3a',
-      location: ''
+      details:[
+        'Subtheme 1:"Enforcement & Law"',
+        'Subtheme 2:"Integrity & Leadership"'
+      ],
+      location: 'TBA'
     },
     {
       time: '10:40 - 13:00',
       title: 'Parallel Session 3b',
-      location: ''
+      details:[
+        'Subtheme 1:"Environmental, Sustainability, Natural Resources & Tourism Enforcement"'
+      ],
+      location: 'TBA'
     },
     {
       time: '10:40 - 13:00',
       title: 'Parallel Session 3c',
-      location: ''
+      details:[
+        'Subtheme 1:"Disaster Science & Climate Resilience"'
+      ],
+      location: 'TBA'
     },
     {
       time: '13:00 - 14:30',
       title: 'Lunch Break',
-      location: ''
+      location: 'TBA'
     },
     {
       time: '14:30 - 15:30',
       title: 'Workshop',
-      location: ''
+      location: 'TBA'
     },
     {
       time: '15:30 - 16:00',
       title: 'Tea Break',
-      location: ''
+      location: 'TBA'
     },
     {
       time: '16:00 - 17:00',

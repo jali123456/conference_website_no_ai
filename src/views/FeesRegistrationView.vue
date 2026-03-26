@@ -26,7 +26,28 @@
       </v-col>
       <!-- Fees Table -->
       <RegistrationFeesTable/>
-      
+
+      <!-- Participants Package -->
+      <v-col cols="12" md="12">
+        <v-card>
+          <v-card-title class="text-h5">Participants Package</v-card-title>
+          <v-card-text>
+            <p class="text-body-1 mb-4">Registered participant/presenter will be receiving the following:</p>
+            <v-list density="compact">
+              <v-list-item
+                v-for="(item, index) in participantPackage"
+                :key="index"
+              >
+                <template #prepend>
+                  <v-icon :color="item.color">{{ item.icon }}</v-icon>
+                </template>
+                <v-list-item-title class="text-body-1 text-black">{{ item.label }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
       <!-- Registration Process -->
       <v-col cols="12" md="12">
         <v-card>
@@ -40,10 +61,10 @@
                 size="small"
               >
                 <v-card 
-                  :class="{ 'cursor-pointer': index === 0 }"
-                  @click="index === 0 ? openRegistration() : null"
+                  :class="{ 'cursor-pointer': index === 0 || index === 2 }"
+                  @click="index === 0 ? goToAbstracts() : index === 2 ? openRegistration() : null"
                 >
-                  <v-card-title :class="{ 'text-primary': index === 0 }">{{ step.title }}</v-card-title>
+                  <v-card-title :class="{ 'text-primary': index === 0 || index === 2 }">{{ step.title }}</v-card-title>
                   <v-card-text>{{ step.description }}</v-card-text>
                 </v-card>
               </v-timeline-item>
@@ -55,8 +76,8 @@
                 :key="index" 
                 class="mb-4" 
                 variant="outlined"
-                :class="{ 'cursor-pointer': index === 0 }"
-                @click="index === 0 ? openRegistration() : null"
+                :class="{ 'cursor-pointer': index === 1 || index === 2 }"
+                @click="index === 1 ? goToAbstracts() : index === 2 ? openRegistration() : null"
               >
                 <v-card-text>
                   <div class="d-flex align-center mb-2">
@@ -65,7 +86,7 @@
                     </v-icon>
                     <span class="text-caption font-weight-medium">Step {{ index + 1 }}: {{ step.title }}</span>
                   </div>
-                  <h3 class="text-h6 mb-2" :class="{ 'text-primary': index === 0 }">{{ step.title }}</h3>
+                  <h3 class="text-h6 mb-2" :class="{ 'text-primary': index === 1 || index === 2 }">{{ step.title }}</h3>
                   <p class="text-body-2 mb-0">{{ step.description }}</p>
                 </v-card-text>
               </v-card>
@@ -159,10 +180,18 @@
 
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
 function openRegistration() {
   // alert("Sry but the Registration open on 2 January 2026")
   // window.open('https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=HYyN1A9sYE64VQszNyyLObOQ6rcy5rVHq95xJgsnFWlUQjZWTDFQMzhFT01ERjNIUjBNSjNBR0ZFWS4u', '_blank')
   window.open('https://form.icelin.my', '_blank')
+}
+
+function goToAbstracts() {
+  router.push('/call-for-abstracts')
 }
 
 useHead({
@@ -246,21 +275,32 @@ useHead({
 //   (v: string) => !!v || 'This field is required'
 // ]
 
+const participantPackage = [
+  { label: 'Conference kit', icon: 'mdi-check-circle', color: 'error' },
+  { label: 'Certificate', icon: 'mdi-check-circle', color: 'error' },
+  { label: 'Gala dinner', icon: 'mdi-check-circle', color: 'error' }
+]
+
 const registrationSteps = [
   {
-    title: 'Register Now',
-    description: 'Fill in the form to complete the registration with your details',
+    title: 'Send Your Abstract/Poster',
+    description: 'Submit your abstract/poster for review to initiate the registration process',
+    color: 'secondary'
+  },
+  {
+    title: 'Abstract/Poster Review',
+    description: 'Our committee will review your abstract/poster and notify you of the outcome through email icelin@elmu.edu.my',
+    color: 'error'
+  },
+  {
+    title: 'Registration & Payment',
+    description: 'Fill in the form to complete the registration with your details after you get confirmation from the abstract/poster review',
     color: 'primary'
   },
   {
     title: 'Confirmation Email',
     description: 'We will send you an email to confirm your registration details',
     color: 'info'
-  },
-  {
-    title: 'Payment',
-    description: 'Process the payment for your registration category and send the payment details through email icelin@elmu.edu.my',
-    color: 'warning'
   },
   {
     title: 'Complete Registration',

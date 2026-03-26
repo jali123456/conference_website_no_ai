@@ -209,7 +209,7 @@ const downloadCategories = [
         icon: 'mdi-image-outline',
         url: '/downloads/IceLin-Call-For-Abstract.jpg',
         disabled: false
-      },s
+      },
       {
         name: 'Conference Schedule',
         description: 'Detailed program schedule',
