@@ -44,17 +44,14 @@
             <v-col cols="12" md="3">
               <h3 class="text-h6 font-weight-medium text-white contact-heading">Social Media</h3>
               <div class="d-flex justify-center ga-4 mt-2">
-                <a href="https://facebook.com/ELMUniversty/" target="_blank" class="social-link">
+                <a href="https://facebook.com/people/ICELIn/61582930324491/" target="_blank" class="social-link">
                   <v-icon size="28" color="blue-lighten-2">mdi-facebook</v-icon>
                 </a>
-                <a href="https://instagram.com/elmu_university/" target="_blank" class="social-link">
+                <a href="https://www.instagram.com/icelin.2026/" target="_blank" class="social-link">
                   <v-icon size="28" color="pink-lighten-2">mdi-instagram</v-icon>
                 </a>
-                <a href="https://www.linkedin.com/company/enforcement-leadership-and-management-university-elmu/" target="_blank" class="social-link">
+                <a href="https://www.linkedin.com/in/icelin-elmu-635a42390/" target="_blank" class="social-link">
                   <v-icon size="28" color="white">mdi-linkedin</v-icon>
-                </a>
-                <a href="https://youtube.com/@elmutv" target="_blank" class="social-link">
-                  <v-icon size="28" color="red-lighten-2">mdi-youtube</v-icon>
                 </a>
               </div>
             </v-col>

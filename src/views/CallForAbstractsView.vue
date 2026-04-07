@@ -10,12 +10,16 @@
       </div>
         <v-card class="pa-6" elevation="2">
           <p class="text-body-1">
-            We invite you to submit your abstract for consideration. This is an excellent opportunity to share your research and insights with a global audience. If you are interested, please register in the following link by clicking the button which will lead you to our <b>EasyChair</b> registration system.
+            We invite you to submit your abstract for consideration. This is an excellent opportunity to share your research and insights with a global audience. If you are interested, please register using the following link by clicking the button, which will lead you to our
+            <b><a href="https://easychair.org/" target="_blank" rel="noopener noreferrer">EasyChair</a></b>
+            registration system.  
           </p>
           <v-divider :thickness="3" class="border-opacity-50 mb-4 mt-2"></v-divider>
           <p class="text-body-1">
-            Accepted papers will be featured in the conference proceedings or submitted for publication in a <b>Scopus-indexed journal, subject to additional publication fees.</b> 
-            Exceptional submissions will be considered for the best paper awards, with winners receiving special gift or voucher as recognition
+            All accepted manuscripts will be published in <b>Scopus-indexed book chapters</b>.
+             Selected high-quality papers will be invited for submission to a special issue of the 
+            <b>Pertanika Journal of Social Sciences & Humanities</b>, subject to substantial revisions after peer review and applicable 
+            <b>Article Processing Charges (APC)</b>.
           </p>
           <v-divider :thickness="3" class="border-opacity-50 mb-4 mt-4"></v-divider>
           <p class="text-subtitle-1 mb-2 font-weight-bold">Important Dates:</p>

@@ -12,8 +12,11 @@
             <p class="text-body-1 mb-2">
               We invite scholars, researchers, practitioners, and policymakers to submit their original research papers for the International Conference on Enforcement, Law & Integrity (ICELIn 2026).
             </p>
-            <p class="text-body-1">All accepted papers will be published in the ICELIn26 Conference Proceedings in the Enforcement, Leadership & Management Journal (ELMJ).
-Selected papers may be extended and submitted to indexed journals (<strong>Scopus</strong>, <strong>Web of Science (WoS)</strong>, <strong>ACI</strong>, <strong>Cabells Journalytics</strong>, <strong>MyCite</strong>, <strong>DOAJ</strong>, <strong>Google Scholar</strong>), subject to additional fees and journal review processes.</p>
+            <p class="text-body-1">All accepted manuscripts will be published in <b>Scopus-indexed book chapters</b>.
+             Selected high-quality papers will be invited for submission to a special issue of the 
+            <b>Pertanika Journal of Social Sciences & Humanities</b>, subject to substantial revisions after peer review and applicable 
+            <b>Article Processing Charges (APC)</b>.
+            </p>
 
             <v-divider class="my-6"></v-divider>
 
