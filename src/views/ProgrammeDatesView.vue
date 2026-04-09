@@ -25,7 +25,10 @@
                 class="text-wrap"
               >
                 <template v-slot:opposite>
-                  <div class="text-caption text-wrap text-break">{{ date.date }}</div>
+                  <div class="text-caption text-wrap text-break">
+                    <span :class="{ 'text-decoration-line-through': date.strikethrough }">{{ date.date }}</span>
+                    <span v-if="date.newDate"> → {{ date.newDate }}</span>
+                  </div>
                 </template>
                 <v-card class="text-wrap">
                   <v-card-title class="text-wrap text-break">{{ date.title }}</v-card-title>
@@ -51,7 +54,10 @@
                     >
                       mdi-circle
                     </v-icon>
-                    <span class="text-caption font-weight-medium">{{ date.date }}</span>
+                    <span class="text-caption font-weight-medium">
+                      <span :class="{ 'text-decoration-line-through': date.strikethrough }">{{ date.date }}</span>
+                      <span v-if="date.newDate"> → {{ date.newDate }}</span>
+                    </span>
                   </div>
                   <h3 class="text-h6 mb-2">{{ date.title }}</h3>
                   <p class="text-body-2 mb-0">{{ date.description }}</p>
@@ -194,10 +200,12 @@ const importantDates = [
     color: 'info'
   },
   {
-    date: '31 March,2026',
+    date: '31 March, 2026',
+    newDate: '1 May 2026',
     title: 'Close Abstract/Poster Date',
     description: 'Deadline for abstract/poster submissions',
-    color: 'error'
+    color: 'error',
+    strikethrough: true
   },
   {
     date: '15 April, 2026',
@@ -254,14 +262,14 @@ const programme = [
         `Recitation of Du'a`,
         'Negaraku National Anthem',
         'TBA',
-        // 'Welcoming speech by ELMU Vice-Chancellor',
-        // 'Welcoming speech by Director of Forest, Sarawak',
-        // 'Welcoming speech by Premier of Sarawak',
-        // 'Officiating Speech by Premier of Sarawak',
         'Opening Ceremony ICELIn26',
         'Group Photo Session'
       ],
     },
+      // 'Welcoming speech by ELMU Vice-Chancellor',
+        // 'Welcoming speech by Director of Forest, Sarawak',
+        // 'Welcoming speech by Premier of Sarawak',
+        // 'Officiating Speech by Premier of Sarawak',
     {
       time: '11:00 - 11:30',
       title: 'Morning Break',

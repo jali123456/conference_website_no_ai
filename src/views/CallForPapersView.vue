@@ -63,11 +63,11 @@ Selected papers may be extended and submitted to indexed journals (<strong>Scopu
                       <div class="font-weight-bold">Call For Abstracts</div>
                     </v-timeline-item>
                     <v-timeline-item dot-color="info" size="x-small">
-                      <div class="text-caption">31 March, 2026</div>
+                      <div class="text-caption text-decoration-line-through">31 March, 2026</div><div class="text-caption">1 May, 2026</div>
                       <div class="font-weight-bold">Close Abstract Date</div>
                     </v-timeline-item>
                     <v-timeline-item dot-color="info" size="x-small">
-                      <div class="text-caption">15 April, 2026</div>
+                      <div class="text-caption">Starting 15 April, 2026</div>
                       <div class="font-weight-bold">Acceptance Notification</div>
                     </v-timeline-item>
                     <v-timeline-item dot-color="success" size="x-small">

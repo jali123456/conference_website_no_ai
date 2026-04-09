@@ -4,18 +4,57 @@
       <v-col cols="12">
         <v-card class="mx-auto">
           <div class="position-relative">
-            <!-- :height="bannerHeight" -->
-            <v-img
-              src="@/assets/conference-banner.jpg"
-              lazy-src="https://placehold.co/1200x600/000000/FFF?text=Loading Conference Banner"
-              width="100%"
-              contain
-              class="text-white"
-              alt="Conference Banner"
-            >
-              <v-card-title :class="bannerTitleClass">
-                </v-card-title>
-            </v-img>
+            <div class="banner-container">
+              <v-window v-model="currentSlide">
+                <!-- Slide 1: Conference Banner (default) -->
+                <v-window-item :value="0">
+                  <v-img
+                    src="@/assets/conference-banner.jpg"
+                    lazy-src="https://placehold.co/1200x600/000000/FFF?text=Loading Conference Banner"
+                    width="100%"
+                    height="100%"
+                    contain
+                    class="text-white banner-slide"
+                    alt="Conference Banner"
+                  >
+                    <v-card-title :class="bannerTitleClass" />
+                  </v-img>
+                </v-window-item>
+                <!-- Add more v-window-item slides below -->
+                <v-window-item :value="1">
+                  <div class="banner-slide d-flex align-center justify-center bg-primary">
+                    <div class="text-center text-white pa-4">
+                      <div :class="['font-weight-bold', ...bannerTitleClass]">Add Your Second Slide Here</div>
+                    </div>
+                  </div>
+                </v-window-item>
+              </v-window>
+            </div>
+            <!-- Custom arrows overlaid on banner -->
+            <v-btn
+              class="banner-arrow banner-arrow-left"
+              icon="mdi-chevron-left"
+              variant="plain"
+              @click="prev"
+            />
+            <v-btn
+              class="banner-arrow banner-arrow-right"
+              icon="mdi-chevron-right"
+              variant="plain"
+              @click="next"
+            />
+            <!-- Slide indicator dots -->
+            <div class="banner-dots d-flex justify-center ga-2 py-2">
+              <v-btn
+                v-for="(_, i) in bannerSlides"
+                :key="i"
+                :color="currentSlide === i ? 'primary' : 'grey-lighten-1'"
+                density="compact"
+                icon
+                size="x-small"
+                @click="goToSlide(i)"
+              />
+            </div>
           </div>
           <v-card-text :class="contentTextClass">
             <!-- Add H1 here for SEO -->
@@ -99,10 +138,47 @@
 
 <script setup lang="ts">
 import { useDisplay } from 'vuetify'
-import { computed } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { data_subthemes } from '@/assets/data/Subthemes_Data';
 
 const { xs, sm, md, lg, xl, xxl, width } = useDisplay()
+
+// Banner slideshow
+const currentSlide = ref(0)
+const bannerSlides = [0, 1] // extend this array when adding more slides
+let slideInterval: ReturnType<typeof setInterval> | null = null
+
+function next() {
+  currentSlide.value = currentSlide.value + 1 >= bannerSlides.length ? 0 : currentSlide.value + 1
+  resetInterval()
+}
+
+function prev() {
+  currentSlide.value = currentSlide.value - 1 < 0 ? bannerSlides.length - 1 : currentSlide.value - 1
+  resetInterval()
+}
+
+function goToSlide(index: number) {
+  currentSlide.value = index
+  resetInterval()
+}
+
+function resetInterval() {
+  if (slideInterval) clearInterval(slideInterval)
+  slideInterval = setInterval(() => {
+    currentSlide.value = (currentSlide.value + 1) % bannerSlides.length
+  }, 10000)
+}
+
+onMounted(() => {
+  slideInterval = setInterval(() => {
+    currentSlide.value = (currentSlide.value + 1) % bannerSlides.length
+  }, 10000)
+})
+
+onUnmounted(() => {
+  if (slideInterval) clearInterval(slideInterval)
+})
 
 // Dynamic classes for the banner title
 const bannerTitleClass = computed(() => {
@@ -167,6 +243,45 @@ const subthemes = data_subthemes;
 
 .position-relative {
   position: relative;
+}
+
+.banner-container {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  background: black;
+  overflow: hidden;
+}
+
+.banner-container .v-window {
+  height: 100%;
+}
+
+.banner-container :deep(.v-window__container) {
+  height: 100%;
+}
+
+.banner-container :deep(.v-window-item) {
+  height: 100%;
+}
+
+.banner-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: white;
+  font-size: 2rem;
+}
+.banner-arrow-left {
+  left: 8px;
+}
+.banner-arrow-right {
+  right: 8px;
 }
 /* Make feature cards have equal height */
 .equal-height-card {
