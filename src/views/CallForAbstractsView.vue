@@ -10,9 +10,10 @@
       </div>
         <v-card class="pa-6" elevation="2">
           <p class="text-body-1">
-            We invite you to submit your abstract for consideration. This is an excellent opportunity to share your research and insights with a global audience. If you are interested, please register using the following link by clicking the button, which will lead you to our
-            <b><a href="https://easychair.org/" target="_blank" rel="noopener noreferrer">EasyChair</a></b>
-            registration system.  
+            Sorry this event is postponed due to multiple reasons. Please refer to the <b><a href="/postpone" target="_blank" rel="noopener noreferrer">postponement notice</a></b> for more details.
+            <!-- We invite you to submit your abstract for consideration. This is an excellent opportunity to share your research and insights with a global audience. If you are interested, please register using the following link by clicking the button, which will lead you to our -->
+            <!-- <b><a href="https://easychair.org/conferences?conf=icelin26 target="_blank" rel="noopener noreferrer">EasyChair</a></b> -->
+            <!-- registration system.   -->
           </p>
           <v-divider :thickness="3" class="border-opacity-50 mb-4 mt-2"></v-divider>
           <p class="text-body-1">
@@ -26,7 +27,8 @@
           <p class="text-body-1">
             Submission date <span style="color:#000000;font-weight:700">1 October 2025</span>
             <br></br>
-            Acceptance notification date <span style="color:#000000;font-weight:700">Starting 15 April 2026</span>
+            <!-- previously 15 April 2026 -->
+            Acceptance notification date <span style="color:#000000;font-weight:700" class="text-decoration-line-through">Starting 15 April 2026</span><span style="color:#000000;font-weight:700"> Starting 17 April 2026</span>
             <br></br>
             Deadline date <span style="color:#000000;font-weight:700" class="text-decoration-line-through">31 March 2026</span> <span style="color:#000000;font-weight:700" > 1 May 2026</span>
           </p>
@@ -129,7 +131,8 @@ useHead({
 
 const goToRegister = () => {
   // window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=HYyN1A9sYE64VQszNyyLObOQ6rcy5rVHq95xJgsnFWlUOVdaMko5R1A4UkxTWTcxUk81UlNROFU5Si4u', '_blank')
-  window.open('https://easychair.org/conferences?conf=icelin26', '_blank')
+  // window.open('https://easychair.org/conferences?conf=icelin26', '_blank')
+  window.open('/postpone', '_blank')
 }
 
 // Generate random styles for particles (Pattern 4 style)

@@ -44,7 +44,7 @@
                   class="mt-2"
                   @click="showAlert"
                 >
-                  Submit Paper
+                  The event has been postponed
                 </v-btn>
 
                 <h2 class="text-h5 font-weight-bold mt-8 mb-4">Publication Opportunities</h2>
@@ -70,12 +70,12 @@
                       <div class="font-weight-bold">Close Abstract Date</div>
                     </v-timeline-item>
                     <v-timeline-item dot-color="info" size="x-small">
-                      <div class="text-caption">Starting 15 April, 2026</div>
+                      <div class="text-caption text-decoration-line-through">Starting 15 April, 2026</div><div class="text-caption">Starting 17 April, 2026</div>
                       <div class="font-weight-bold">Acceptance Notification</div>
                     </v-timeline-item>
                     <v-timeline-item dot-color="success" size="x-small">
                       <div class="text-caption">
-                        31 May, 2026 <span class="font-weight-bold text-body-1 text-elmuaccent" >Attention</span>
+                        15 May, 2026 <span class="font-weight-bold text-body-1 text-elmuaccent" >Attention</span>
                       </div>
                       <div class="font-weight-bold">Full Paper Submission/Camera Ready Deadline</div>
                     </v-timeline-item>
@@ -138,7 +138,7 @@ const contentTextClass = computed(() => {
 })
 
 const showAlert = () => {
-  window.open('https://easychair.org/conferences?conf=icelin26', '_blank');
+  window.open('/postpone', '_blank');
 };
 </script>
 

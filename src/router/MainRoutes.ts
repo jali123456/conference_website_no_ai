@@ -76,6 +76,11 @@ const MainRoutes = {
             path: '/call-for-papers',
             name: 'CallForPapers',
             component: () => import('@/views/CallForPapersView.vue'),
+        },
+        {
+            path: '/postpone',
+            name: 'Postpone',
+            component: () => import('@/views/PostponeView.vue'),
         }
     ]
 }

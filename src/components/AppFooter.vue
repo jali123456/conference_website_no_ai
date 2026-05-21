@@ -1,6 +1,6 @@
 <!-- Appfooter.vue -->
 <template>
-    <v-footer class="bg-custom-dark text-white footer-border pa-4">
+    <v-footer class="bg-custom-dark text-white footer-border pa-6">
       <v-container fluid class="pa-0">
        <v-row class="d-flex mb-6">
          <v-col cols="4" class="text-center text-sm-left mb-2 mb-sm-0 me-auto">
@@ -13,10 +13,16 @@
            <p class="text-body-2 mb-1">
              Enforcement, Leadership And Management University(ELMU)
            </p>
+
+           <div class="footer-logo-strip">
+             <img :src="mainLogo" alt="Conference Logo" class="footer-logo" />
+             <img :src="pertanikaLogo" alt="Pertanika Logo" class="footer-logo" />
+             <img :src="scopusLogo" alt="Scopus Logo" class="footer-logo" />
+           </div>
          </v-col>
  
          <v-col cols="4" class="text-center mb-2 mb-sm-0 me-auto align-self-center">
-           <h4 class="text-subtitle-1 mb-1 d-none d-sm-block">Follow Us</h4>
+           <h4 class="text-h6 mb-2 d-none d-sm-block">Follow Us</h4>
            <div>
              <v-btn
                v-for="item in socialItems"
@@ -25,18 +31,18 @@
                :title="item.title"
                icon
                variant="text"
-               density="compact"
+               density="comfortable"
                class="mx-4 social-link-custom"
                target="_blank"
                rel="noopener noreferrer"
              >
-               <v-icon :icon="item.icon" size="20"></v-icon>
+               <v-icon :icon="item.icon" size="26"></v-icon>
              </v-btn>
            </div>
            <div class="mt-2">
-             <v-btn variant="text" density="compact" color="white" :href="'https://elmu.edu.my/'" target="_blank" class="mx-1">Home</v-btn>
-             <v-btn variant="text" density="compact" color="white" :href="'https://elmu.edu.my/about'" target="_blank" class="mx-1">About</v-btn>
-             <v-btn variant="text" density="compact" color="white" :href="'https://elmu.edu.my/study'" target="_blank" class="mx-1">Services</v-btn>
+             <v-btn variant="text" density="comfortable" color="white" :href="'https://elmu.edu.my/'" target="_blank" class="mx-1">Home</v-btn>
+             <v-btn variant="text" density="comfortable" color="white" :href="'https://elmu.edu.my/about'" target="_blank" class="mx-1">About</v-btn>
+             <v-btn variant="text" density="comfortable" color="white" :href="'https://elmu.edu.my/study'" target="_blank" class="mx-1">Services</v-btn>
            </div>
          </v-col>
          
@@ -46,7 +52,7 @@
              <v-icon small left>mdi-phone</v-icon> 
            </p> -->
            <v-row class="align-center justify-center justify-sm-end">
-          <v-icon size="small" class="me-2">mdi-email</v-icon>
+          <v-icon size="default" class="me-2">mdi-email</v-icon>
           <span class="text-body-2">
             Email: <a href="mailto:icelin@elmu.edu.my" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-break text-white">icelin@elmu.edu.my</a>
           </span>
@@ -67,6 +73,10 @@
 </template>
 
 <script setup>
+import mainLogo from '@/assets/logo.png'
+import pertanikaLogo from '@/assets/footerLogo/Pertanika_logo.png'
+import scopusLogo from '@/assets/footerLogo/Scopus_logo.svg'
+
 const socialItems = [
   {
     title: 'Facebook',
@@ -89,6 +99,10 @@ const socialItems = [
 <style scoped>
 .bg-custom-dark {
   background-color: #121e39 !important;
+}
+
+.v-footer {
+  font-size: 1.05rem;
 }
 
 .footer-border {
@@ -133,13 +147,41 @@ const socialItems = [
 }
 
 .conference-title {
+  font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.4;
   color: white !important;
 }
 
+.footer-logo-strip {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+@media (min-width: 600px) {
+  .footer-logo-strip {
+    justify-content: flex-start;
+  }
+}
+
 .v-footer p {
-  line-height: 1.5;
+  font-size: 1.02rem;
+  line-height: 1.6;
   margin-bottom: 0.5rem !important;
+}
+
+.v-footer .text-caption {
+  font-size: 0.95rem !important;
 }
 </style>

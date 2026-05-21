@@ -9,24 +9,64 @@
                 <!-- Slide 1: Conference Banner (default) -->
                 <v-window-item :value="0">
                   <v-img
-                    src="@/assets/conference-banner.jpg"
+                    src="@/assets/homeBanner/conference-banner-postpone.jpeg"
                     lazy-src="https://placehold.co/1200x600/000000/FFF?text=Loading Conference Banner"
                     width="100%"
                     height="100%"
                     contain
                     class="text-white banner-slide"
+                    :class="{ 'clickable-banner': !isPhone }"
                     alt="Conference Banner"
+                    @click="openImagePreview(conferenceBannerImagePath, 'Conference Banner', 'conference-banner-postpone.jpeg')"
                   >
                     <v-card-title :class="bannerTitleClass" />
                   </v-img>
                 </v-window-item>
                 <!-- Add more v-window-item slides below -->
                 <v-window-item :value="1">
-                  <div class="banner-slide d-flex align-center justify-center bg-primary">
-                    <div class="text-center text-white pa-4">
-                      <div :class="['font-weight-bold', ...bannerTitleClass]">Add Your Second Slide Here</div>
-                    </div>
-                  </div>
+                  <v-img
+                    src="@/assets/homeBanner/workshop.webp"
+                    lazy-src="https://placehold.co/1200x600/000000/FFF?text=Loading workshop banner"
+                    width="100%"
+                    height="100%"
+                    contain
+                    class="text-white banner-slide"
+                    :class="{ 'clickable-banner': !isPhone }"
+                    alt="Workshop Banner"
+                    @click="openImagePreview(workshopImagePath, 'Workshop Banner', 'workshop-banner.jpg')"
+                  >
+                    <v-card-title :class="bannerTitleClass" />
+                  </v-img>
+                </v-window-item>
+                <v-window-item :value="2">
+                  <v-img
+                    src="@/assets/homeBanner/important-deadline.jpg"
+                    lazy-src="https://placehold.co/1200x600/000000/FFF?text=Loading important deadline banner"
+                    width="100%"
+                    height="100%"
+                    contain
+                    class="text-white banner-slide"
+                    :class="{ 'clickable-banner': !isPhone }"
+                    alt="Important Deadline Banner"
+                    @click="openImagePreview(importantDeadlineImagePath, 'Important Deadline Banner', 'important-deadline-banner.jpg')"
+                  >
+                    <v-card-title :class="bannerTitleClass" />
+                  </v-img>
+                </v-window-item>
+                <v-window-item :value="3">
+                  <v-img
+                    src="@/assets/homeBanner/yuran.jpg"
+                    lazy-src="https://placehold.co/1200x600/000000/FFF?text=Loading fees banner"
+                    width="100%"
+                    height="100%"
+                    contain
+                    class="text-white banner-slide"
+                    :class="{ 'clickable-banner': !isPhone }"
+                    alt="Fees Registration Banner"
+                    @click="openImagePreview(feesBannerImagePath, 'Fees Registration Banner', 'fees-registration-banner.jpg')"
+                  >
+                    <v-card-title :class="bannerTitleClass" />
+                  </v-img>
                 </v-window-item>
               </v-window>
             </div>
@@ -55,6 +95,45 @@
                 @click="goToSlide(i)"
               />
             </div>
+
+            <!-- Desktop-only image preview with zoom and download -->
+            <v-dialog v-model="isImagePreviewOpen" max-width="1100" :fullscreen="false">
+              <v-card>
+                <v-toolbar density="comfortable" color="surface">
+                  <v-toolbar-title>{{ selectedPreviewTitle }}</v-toolbar-title>
+                  <v-spacer />
+                  <v-btn
+                    icon="mdi-minus"
+                    variant="text"
+                    :disabled="zoomLevel <= MIN_ZOOM"
+                    @click="zoomOut"
+                  />
+                  <v-btn icon="mdi-refresh" variant="text" @click="resetZoom" />
+                  <v-btn
+                    icon="mdi-plus"
+                    variant="text"
+                    :disabled="zoomLevel >= MAX_ZOOM"
+                    @click="zoomIn"
+                  />
+                  <v-btn
+                    :href="selectedPreviewImagePath"
+                    :download="selectedPreviewDownloadName"
+                    icon="mdi-download"
+                    variant="text"
+                  />
+                  <v-btn icon="mdi-close" variant="text" @click="closeImagePreview" />
+                </v-toolbar>
+
+                <v-card-text class="preview-image-wrapper pa-4">
+                  <img
+                    :src="selectedPreviewImagePath"
+                    :alt="`${selectedPreviewTitle} (Preview)`"
+                    class="preview-image"
+                    :style="{ transform: `scale(${zoomLevel})` }"
+                  />
+                </v-card-text>
+              </v-card>
+            </v-dialog>
           </div>
           <v-card-text :class="contentTextClass">
             <!-- Add H1 here for SEO -->
@@ -143,9 +222,26 @@ import { data_subthemes } from '@/assets/data/Subthemes_Data';
 
 const { xs, sm, md, lg, xl, xxl, width } = useDisplay()
 
+const conferenceBannerImagePath = new URL('@/assets/homeBanner/conference-banner.webp', import.meta.url).href
+const workshopImagePath = new URL('@/assets/homeBanner/workshop.webp', import.meta.url).href
+const importantDeadlineImagePath = new URL('@/assets/homeBanner/important-deadline.jpg', import.meta.url).href
+const feesBannerImagePath = new URL('@/assets/homeBanner/yuran.jpg', import.meta.url).href
+
+const isPhone = computed(() => xs.value)
+
+const MIN_ZOOM = 1
+const MAX_ZOOM = 3
+const ZOOM_STEP = 0.25
+
+const isImagePreviewOpen = ref(false)
+const zoomLevel = ref(MIN_ZOOM)
+const selectedPreviewImagePath = ref(feesBannerImagePath)
+const selectedPreviewTitle = ref('Fees Registration Banner')
+const selectedPreviewDownloadName = ref('fees-registration-banner.jpg')
+
 // Banner slideshow
 const currentSlide = ref(0)
-const bannerSlides = [0, 1] // extend this array when adding more slides
+const bannerSlides = [0] // extend this array when adding more slides
 let slideInterval: ReturnType<typeof setInterval> | null = null
 
 function next() {
@@ -161,6 +257,33 @@ function prev() {
 function goToSlide(index: number) {
   currentSlide.value = index
   resetInterval()
+}
+
+function openImagePreview(imagePath: string, title: string, downloadName: string) {
+  if (isPhone.value) return
+
+  selectedPreviewImagePath.value = imagePath
+  selectedPreviewTitle.value = title
+  selectedPreviewDownloadName.value = downloadName
+  resetZoom()
+  isImagePreviewOpen.value = true
+}
+
+function closeImagePreview() {
+  isImagePreviewOpen.value = false
+  resetZoom()
+}
+
+function zoomIn() {
+  zoomLevel.value = Math.min(MAX_ZOOM, Number((zoomLevel.value + ZOOM_STEP).toFixed(2)))
+}
+
+function zoomOut() {
+  zoomLevel.value = Math.max(MIN_ZOOM, Number((zoomLevel.value - ZOOM_STEP).toFixed(2)))
+}
+
+function resetZoom() {
+  zoomLevel.value = MIN_ZOOM
 }
 
 function resetInterval() {
@@ -248,7 +371,7 @@ const subthemes = data_subthemes;
 .banner-container {
   width: 100%;
   aspect-ratio: 2 / 1;
-  background: black;
+  background: rgb(80, 86, 127);
   overflow: hidden;
 }
 
@@ -267,6 +390,26 @@ const subthemes = data_subthemes;
 .banner-slide {
   width: 100%;
   height: 100%;
+}
+
+.clickable-banner {
+  cursor: zoom-in;
+}
+
+.preview-image-wrapper {
+  max-height: 80vh;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #101010;
+}
+
+.preview-image {
+  max-width: 100%;
+  height: auto;
+  transform-origin: top center;
+  transition: transform 0.2s ease;
 }
 
 .banner-arrow {

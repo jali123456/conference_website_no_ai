@@ -3,6 +3,15 @@
   <v-app>
     <app-header @update:drawer="drawer = !drawer" />
     <v-main>
+      <v-alert
+        type="warning"
+        variant="tonal"
+        class="delay-banner mt-6 mx-6 mb-0"
+        border="start"
+      >
+        Sorry, the conference is postponed
+        <a href="/postpone" class="delay-banner-link">View Postponement Notice</a>.
+      </v-alert>
       <v-container fluid class="fill-height pa-6">
         <v-row no-gutters>
           <!-- 1680 x 887 -->
@@ -22,25 +31,27 @@
                     v-for="item in menuItems"
                     :key="item.title"
                     :title="item.title"
-                    :to="item.path"
+                    :to="item.disabled ? undefined : item.path"
                     :prepend-icon="item.icon"
-                    link
+                    :link="!item.disabled"
                     :exact="item.path === '/'"
-                    :color="$route.path === item.path ? 'primary' : undefined"
+                    :disabled="item.disabled"
+                    :color="$route.path === item.path ? 'primary' : item.disabled ? 'grey-lighten-4' : undefined"
                     class="mb-1 text-break"
-                    @click="drawer = false"
+                    @click="handleMenuItemClick(item)"
                   ></v-list-item>
 
                   <v-divider class="my-2" color="grey"></v-divider>
 
                   <v-list-item
                     title="Contact Us"
-                    to="/contact"
+                    :to="undefined"
                     prepend-icon="mdi-email"
-                    link
+                    :link="false"
+                    :disabled="true"
                     exact
                     :color="$route.path === '/contact' ? 'primary' : 'grey-lighten-4'"
-                    @click="drawer = false"
+                    @click="() => {}"
                   ></v-list-item>
                 </v-list>
               </v-sheet>
@@ -64,6 +75,13 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const drawer = ref(false)
 const windowWidth = ref(window.innerWidth)
 
+type MenuItem = {
+  title: string
+  path: string
+  icon: string
+  disabled: boolean
+}
+
 const handleResize = () => {
   windowWidth.value = window.innerWidth
 }
@@ -76,18 +94,24 @@ onUnmounted(() => {
   window.removeEventListener('resize', handleResize)
 })
 
-const menuItems = [
-  { title: 'Home', path: '/', icon: 'mdi-home' },
-  { title: 'Forum & Workshop', path: '/panel-list', icon: 'mdi-account-group' },
-  { title: 'Call for Abstracts', path: '/call-for-abstracts', icon: 'mdi-file-document' },
-  { title: 'Call for Papers', path: '/call-for-papers', icon: 'mdi-file-document-edit' },
-  { title: 'Fees & Registration', path: '/fees-registration', icon: 'mdi-currency-usd' },
-  { title: 'Call for Reviewers', path: '/call-for-reviewers', icon: 'mdi-account-multiple-plus' },
-  { title: 'Programme & Dates', path: '/programme-dates', icon: 'mdi-calendar' },
-  { title: 'Venue & Accommodation', path: '/venue-accommodation', icon: 'mdi-map-marker' },
-  { title: 'Sponsors', path: '/sponsors', icon: 'mdi-briefcase'},
-  { title: 'Downloads', path: '/downloads', icon: 'mdi-file-document-outline' }
+const menuItems: MenuItem[] = [
+  { title: 'Home', path: '/', icon: 'mdi-home', disabled: false },
+  { title: 'Forum & Workshop', path: '/panel-list', icon: 'mdi-account-group', disabled: true },
+  { title: 'Call for Abstracts', path: '/call-for-abstracts', icon: 'mdi-file-document', disabled: true },
+  { title: 'Call for Papers', path: '/call-for-papers', icon: 'mdi-file-document-edit', disabled: true },
+  { title: 'Fees & Registration', path: '/fees-registration', icon: 'mdi-currency-usd', disabled: true },
+  { title: 'Call for Reviewers', path: '/call-for-reviewers', icon: 'mdi-account-multiple-plus', disabled: true },
+  { title: 'Programme & Dates', path: '/programme-dates', icon: 'mdi-calendar', disabled: true },
+  { title: 'Venue & Accommodation', path: '/venue-accommodation', icon: 'mdi-map-marker', disabled: true },
+  { title: 'Sponsors', path: '/sponsors', icon: 'mdi-briefcase', disabled: true },
+  { title: 'Downloads', path: '/downloads', icon: 'mdi-file-document-outline', disabled: true }
 ]
+
+const handleMenuItemClick = (item: MenuItem) => {
+  if (!item.disabled) {
+    drawer.value = false
+  }
+}
 </script>
 
 <style scoped>
@@ -97,6 +121,22 @@ const menuItems = [
 
 .v-main {
   background-color: #f5f5f5;
+}
+
+.delay-banner {
+  background-color: #fff3e0 !important;
+  color: #bf360c !important;
+  border-color: #fb8c00 !important;
+}
+
+.delay-banner-link {
+  color: #e65100;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.delay-banner-link:hover {
+  color: #bf360c;
 }
 
 .h-100 {

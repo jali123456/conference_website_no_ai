@@ -209,12 +209,14 @@ const importantDates = [
   },
   {
     date: '15 April, 2026',
+    newDate: '17 April, 2026',
     title: 'Acceptance Notification',
     description: 'Acceptance Notification for the Absctracts/Poster',
-    color: 'success'
+    color: 'success',
+    strikethrough: true
   },
   {
-    date: '31 May, 2026',
+    date: '15 May, 2026',
     title: 'Full Paper Submission/Camera Ready Deadline',
     description: 'Full paper submission dateline open',
     color: 'info'
